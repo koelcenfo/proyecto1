@@ -1,0 +1,67 @@
+*{
+    font-family: 'PT Sans',sans-serif;
+}
+body{
+    background: #222629;
+}
+#columna_izquierda{
+    float: left;
+    padding: 50px;
+}
+#columna_izquierda form{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+#columna_izquierda label{
+    font-size: 30px;
+    color:#fff;
+}
+#columna_izquierda select{
+    font-size: 20px;
+}
+
+#columna_derecha {
+    float: right;
+    background-color: #6B6E70;
+    padding: 50px;
+    border-radius: 20px;
+    color: #fff;
+    
+    margin-top:150px; 
+    margin-right: 200px;
+}
+#tabla_util{
+    border:2px solid #000;
+    font-size: 20px;
+}
+#tabla_util thead{
+    background: #474B4F;
+    
+
+}
+#tabla_util tbody td{
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000; 
+}
+#tabla_util tbody input{
+    width: 200px;
+    height: 20px;
+    font-size: 20px;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+#btn_enviar{
+float: right;
+margin-top: 20px;
+font-size: 20px;
+}
+
+
+
+.error_input{
+    border-color: red;
+}
