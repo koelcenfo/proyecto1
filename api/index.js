@@ -59,11 +59,11 @@ app.use( function(req, res, next) {
   next();
 });
 
-const utiles=require('./componentes/registrar_util.route');
+const utiles=require('./componentes/Utiles/registrar_util.route');
 
 app.use('/api',utiles);
 
-const preguntas=require('./componentes/registrar_seccion_preguntas.route');
+const preguntas=require('./componentes/Preguntas/registrar_seccion_preguntas.route');
 app.use('/api',preguntas);
 
 
