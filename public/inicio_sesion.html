@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">  
+    <link rel="stylesheet" href="css/inicio_sesion.css">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+        <div id="inicio_sesion">
+            <h1 id="top_h">Iniciar Sesión</h1>
+                <select id="tipo_usuario" name="tipo_usuario">
+                        <option hidden>Tipo de Usuario</option>
+                        <option value="institucion">Institución</option>
+                        <option value="padre_familia">Padre de familia</option>
+                </select>
+                         <form id="padre_familia" class="hidden">
+                            <div>
+                                <label for="txt_padre_cedula" id="padre_label">Cedula</label>
+                                <input type="number" id="txt_padre_cedula">
+                            </div>
+                            <div>
+                                <label for="txt_padre_contrasena"id="padre_label">Contraseña</label>
+                                <input type="password" id="txt_padre_contrasena">
+                            </div>
+                            <button type="button" id="btn_ingresar_padre">Ingresar</button>
+                         </form>
+                         
+                         <form id="institucion" class="hidden">
+                                <div>
+                                        <label for="txt_institucion_cedula"id="institucion_label">Cedula Juridica</label>
+                                        <input type="number" id="txt_institucion_cedula">
+                                    </div>
+                                    <div>
+                                        <label for="txt_institucion_contrasena"id="institucion_label">Contraseña</label>
+                                        <input type="password" id="txt_institucion_contrasena">
+                                    </div>
+                            <button type="button" id="btn_ingresar_institucion">Ingresar</button>
+                         </form>
+        </div>
+        
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_inicio.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+html, body{
+    font-family: 'PT Sans', sans-serif; 
+    
+}
+#top_h{
+    width: 60%;
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.div_registro{
+    margin: auto; 
+    height: 95%;    
+    width: 60%; 
+    background-color: #b3c2bfea;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+}
+.div_registro_izquierda{
+    display: inline-block;
+    width: 50%; 
+    height: 560px;
+    text-align: left;
+
+}
+#fotografia_institucion{
+    width: 100%;
+    height: 270px;
+}
+.div_registro_derecha{
+    display: inline-block;
+    height: 560px;
+    float: right;
+    width: 50%;
+}
+label{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;    
+    font-size: 20px;
+    color: #3b3a36;
+
+}
+select{
+    display: block;
+    width: 60%;
+    height: 26px;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #e9ece5;
+    color: #3b3a36;
+    outline: none;
+}
+input{
+    display: block;
+    width: 60%;
+    margin: auto;
+    height: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #e9ece5;
+    border: #555555;
+    color: #3b3a36;
+    outline: none;
+}
+button{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: px15;
+    background-color:  #3b3a36;
+    color: #c0dfd9;
+    margin-left: 20%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    outline: none;
+}
+#btn_seleccionar_imagen{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+#image_preview{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    border: solid 1px;border-radius: 20px;
+}
+.error_input{
+border: solid 1px #ED4C67;
+}
+
+body{
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+background: url('../img/registro_padre/a.jpg');
+background-repeat: none;
+background-size: cover;
+animation: slide 20s forwards;
+}
+@keyframes slide{
+    20%{
+        background-image: url('../img/registro_padre/b.jpg');
+        background-size: cover;
+    }
+    80%{
+        background-image: url('../img/registro_padre/c.jpg');
+        background-size: cover;
+    }
+
+}
+
