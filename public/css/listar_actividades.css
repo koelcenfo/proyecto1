@@ -1,0 +1,63 @@
+html{
+    background-color: #c0dfd9;
+    color: #e9ece5;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 25px;
+}
+
+label{
+    color: #3b3a36; 
+    margin-left: 20px;
+}
+
+#txt_filtro{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: #3b3a36;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#tbl_actividades tr th{
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    background-color: #3b3a36;
+    color: #e9ece5;
+}
+
+#tbl_actividades{
+  color: #3b3a36;
+}
+
+/* #tbl_actividades thead th:hover{
+    background-color: #c0dfd9;
+    color:#222629;
+} */
+
+#tbl_actividades tbody td{
+    vertical-align: middle; /*no hace cambios , eliminar*/ 
+    border: 1px solid #3b3a36;
+    text-align: center;
+    padding: 10px;  
+}
+
+#tbl_actividades tr td:hover{
+    background-color: #e9ece5;
+}
+
+#logo{
+    
+    margin-left: 41%;
+    width: 20%;
+    height: 15%;
+}
+
+#contenedor_logo{
+    background-color: #3b3a36;
+}
