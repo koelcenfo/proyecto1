@@ -2,8 +2,9 @@
     font-family: 'PT Sans',sans-serif;
 }
 body{
-    background: #222629;
+    background: #ccc;
 }
+
 #columna_izquierda{
     float: left;
     padding: 50px;
@@ -14,7 +15,7 @@ body{
 }
 #columna_izquierda label{
     font-size: 30px;
-    color:#fff;
+    color:#000;
 }
 #columna_izquierda select{
     font-size: 20px;
@@ -46,7 +47,12 @@ body{
 }
 #tabla_util tbody input{
     width: 200px;
-    height: 20px;
+    height: 25px;
+    font-size: 20px;
+}
+#tabla_util tbody select{
+    width: 200px;
+    height: 30px;
     font-size: 20px;
 }
 h1{
@@ -54,10 +60,11 @@ h1{
     text-align: center;
     margin: 10px;
 }
-#btn_enviar{
+#btn_registrar{
 float: right;
 margin-top: 20px;
 font-size: 20px;
+border-radius: 30px;
 }
 
 
