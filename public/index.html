@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">  
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link rel="stylesheet" href="css/barra_lateral.css">
+    <link rel="stylesheet" href="css/pie_de_pagina.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Prometeo</title>
+</head>
+<body>
+    <!--Barra Lateral-->
+    <div id="barra_lateral">
+        <div id="Ranking_tittle">
+            <h1>Ranking's</h1>
+        </div>
+        <div id="Rankings">
+            <h2>Ranking del MEP</h1>
+        </div>
+    </div>
+    <!--Contenido de la Pagina-->
+    <div id="contenido">
+            <header>
+                    <nav class="barra_navegacion">
+                        <div class="imagen_barra_navegacion"></div>
+                        <!--Visitante-->
+                        <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                        <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                        <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                        <!--Conectado-->
+                        <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                        <a href="/public/buscar_infomacion.html">Buscar</a>
+                        <!--<div class="conectado">
+                            <div class="imagen_conectado"></div>
+                            <div class="nombre_conectado"></div>
+                        </div>-->
+
+                    </nav>
+                </header>
+                
+                <div id="contenedor_imagen">
+                    <div id="prometeo_imagen"></div>
+                </div>
+                <div id="info">
+                    <div id="info_carta"><div class="info_imagen" id="imagen_1"></div>
+                    <h1 id="info_texto">Encuentra el mejor centro educativo para tus hijos</h1>
+                    </div>
+                    <div id="info_carta"><div class="info_imagen" id="imagen_2"></div>
+                    <h1 id="info_texto">La herramienta del MEP para la implementación de los centros educativos en la red</h1>  
+                    </div>
+                    <div id="info_carta"><div class="info_imagen" id="imagen_3"></div>
+                    <h1 id="info_texto">Localiza tu institución favorita, con los servicios que mas te gusten</h1>  
+                    </div>
+                    <div id="info_carta"><div class="info_imagen" id="imagen_4"></div>
+                    <h1 id="info_texto">Descubre instituciones a lo largo del país</h1> 
+                    </div>
+                </div>
+                <!--Pie de Pagina-->
+                <div id="pie_de_pagina">
+                    <div id="pie_de_pagina_carta">
+                        <div class="pie_de_pagina_imagen" id="pie_de_pagina_nosotros"></div>
+                        <h1 id="info_pie_de_pagina">Sobre Nosotros</h1>
+                        <p>Somos un equipo emprendedor y dedicado en crear soluciones innovadores por medio del software</p>
+                    </div>
+                    <div id="pie_de_pagina_carta">
+                        <div class="pie_de_pagina_imagen" id="pie_de_pagina_contacto"></div>
+                        <h1 id="info_pie_de_pagina">Contacto</h1>
+                        <ul>
+                            <li>koelcenfo@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div id="pie_de_pagina_carta">
+                        <div class="pie_de_pagina_imagen" id="pie_de_pagina_navegacion"></div>
+                        <h1 id="info_pie_de_pagina">Navegación</h1>
+                        <ul>
+                            <li><a href="http://localhost:3000/public/index.html">Inicio</a></li>
+                            <li><a href="http://localhost:3000/public/registro_padre.html">Registro Padre de Familia</a></li>
+                            <li><a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a></li>
+                        </ul>
+                    </div>
+                    <div id="pie_de_pagina_carta">
+                        <div class="pie_de_pagina_imagen" id="pie_de_pagina_mep"></div>
+                        <ul>
+                            <li><a href="https://www.mep.go.cr/">Ministerio de Educación Publica</a></li>
+                            <li><a href="https://www.facebook.com/Ministerio-de-Educaci%C3%B3n-P%C3%BAblica-MEP-132635836805605/">Facebook del MEP</a></li>
+                            <li><a href="https://twitter.com/mep_cr?lang=es">Twitter del MEP</a></li>
+                        </ul>
+                    </div>
+                </div>
+    </div>  
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/controlador_perfil.js"></script>
+</body>
+</html>

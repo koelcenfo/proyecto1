@@ -14,7 +14,7 @@ const express = require('express'),
  * Se definen las variables necesarias para la conexión con MongoDB
  */
 let db = mongoose.connection,
-    dburl = 'mongodb+srv://koeladmins:Grupokoel2019@proyecto-xwswr.mongodb.net/preguntas?retryWrites=true',
+    dburl = 'mongodb+srv://koeladmins:Grupokoel2019@proyecto-xwswr.mongodb.net/test?retryWrites=true',
     port = 4000;
 
 /**
@@ -65,6 +65,21 @@ app.use('/api',utiles);
 
 const preguntas=require('./componentes/Preguntas/registrar_seccion_preguntas.route');
 app.use('/api',preguntas);
+
+const actividades=require('./componentes/actividades/actividades.route');
+
+app.use('/api',actividades);
+
+const citas=require('./componentes/citas/citas.route');
+app.use('/api',citas);
+
+const registro_padre=require('./componentes/registro_padre/usuarios_padre.route');
+app.use('/api',registro_padre);
+
+const registro_institucion=require('./componentes/registro_institucion/usuarios_institucion.route');
+app.use('/api',registro_institucion);
+
+
 
 
 
