@@ -15,7 +15,7 @@ let schema_padre = new mongoose.Schema(
         padre_contrasena : {type : String, required:false},
         padre_imagen : {type : String, required:false},
         tipo_usuario : {type : String, required: false},
-        padre_id :{type : String, required: true}
+        padre_id :{type : String, required: false}
     }
 );
 

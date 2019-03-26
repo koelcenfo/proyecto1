@@ -79,8 +79,11 @@ app.use('/api',registro_padre);
 const registro_institucion=require('./componentes/registro_institucion/usuarios_institucion.route');
 app.use('/api',registro_institucion);
 
+const ranking = require('./componentes/ranking_mep/ranking_mep.route')
+app.use('./api', ranking);
 
-
+const lista_oficial = require('./componentes/lista_oficial/lista_oficial.route')
+app.use('./api', lista_oficial);
 
 
 
