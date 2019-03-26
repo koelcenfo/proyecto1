@@ -4,20 +4,20 @@ const resultado=document.querySelector('#resultado');
 
 
 const centros_educativos=[
-    {nombre: 'Colegio Claretiano', pagina: 'https://www.google.com/'},
-    {nombre: 'American international school', pagina: 'https://www.google.com/'},
-    {nombre: 'Centro educativo Yori', pagina: 'https://www.google.com/'},
-    {nombre: 'Valle dorado', pagina: 'https://www.google.com/'},
-    {nombre: 'Liceo Samuel Sáenz', pagina: 'https://www.google.com/'},
-    {nombre: 'Instituto educativo ABC', pagina: 'https://www.google.com/'},
-    {nombre: 'Escuela Cubujuqui', pagina: 'https://www.google.com/'},
-    {nombre: 'Caspari Montessori School', pagina: 'https://www.google.com/'},
-    {nombre: 'Centro Educativo Santa Inés', pagina: 'https://www.google.com/'},
-    {nombre: 'Liceo Ingeniero Manuel Benavides Rodríguez', pagina: 'https://www.google.com/'},
-    {nombre: 'Colegio Técnico Profesional de Limón', pagina: 'https://www.google.com/'},
-    {nombre: 'Escuela San Marcos. Limón. Costa Rica', pagina: 'https://www.google.com/'},
-    {nombre: 'Colegio Científico Costarricense - Puntarenas', pagina: 'https://www.google.com/'},
-    {nombre: 'Colegio Laboratorio Puntarenas', pagina: 'https://www.google.com/'}
+    {nombre: 'Colegio Claretiano'},
+    {nombre: 'American international school'},
+    {nombre: 'Centro educativo Yori'},
+    {nombre: 'Valle dorado'},
+    {nombre: 'Liceo Samuel Sáenz'},
+    {nombre: 'Instituto educativo ABC'},
+    {nombre: 'Escuela Cubujuqui'},
+    {nombre: 'Caspari Montessori School'},
+    {nombre: 'Centro Educativo Santa Inés'},
+    {nombre: 'Liceo Ingeniero Manuel Benavides Rodríguez'},
+    {nombre: 'Colegio Técnico Profesional de Limón'},
+    {nombre: 'Escuela San Marcos. Limón. Costa Rica'},
+    {nombre: 'Colegio Científico Costarricense - Puntarenas'},
+    {nombre: 'Colegio Laboratorio Puntarenas'}
 ]
 
 // const enlazar=()=>{
@@ -37,7 +37,7 @@ const filtrar=()=>{
         let nombre= centro_educativo.nombre.toLowerCase();
         if (nombre.indexOf(texto)!== -1) {
             resultado.innerHTML += `
-            <li>${centro_educativo.nombre} -> pagina: ${centro_educativo.pagina}</li>
+            <li>${centro_educativo.nombre}</li>
             `
             resultado.innerHTML 
         } 

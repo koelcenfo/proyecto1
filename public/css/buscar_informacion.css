@@ -52,12 +52,18 @@ h1{
 }
 
 li{
-    color: #e9ece5;
-    font-size: 20px;
-    margin-top: 3%;
+    margin: auto;
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #c0dfd9;
+    color: #3b3a36;
+    font-size: 35px;
+    margin-top: 20px;
     padding: 8px;
       /* background-color: #6B6E70;
     padding: 7px;*/
+    text-align: center;
 }
 
 li:hover{
