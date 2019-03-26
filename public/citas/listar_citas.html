@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>visualizar citas de padres de familia</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/citas/listar_citas.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
+
+</head>
+
+<body>
+
+        <div id="contenedor_logo">
+                <img id="logo" src="imgs/Prometeo_logo.png" alt="Prometeo_logo">
+        </div>
+
+    <h1>Sección de citas de los padres de familia</h1>
+    <main>
+            <label for="txt_filtro">Filtrar</label>
+            <input type="text" id="txt_filtro">
+        <div>
+        <table id="tbl_citas">
+            <thead>
+                <tr>
+                    <th>Nombre de la cita</th>
+                    <th>Nombre del familiar</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Descripción</th>
+                    <!-- <th>Selecione la opción</th> -->
+
+                </tr>
+            </thead>
+
+            <tbody>
+                 
+
+                    <!-- <input type="button" id="btn_aceptar" value="Aceptar"> -->
+                    <!-- <input type="button" value="Denegar"> -->
+             
+                
+            </tbody>
+
+        </table>
+    </div>
+    </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/citas/servicio_citas.js"></script>
+<script src="js/citas/controlador_listar_citas.js"></script>
+<!-- <script src="js/buscador/buscar_informacion.js"></script> -->
+
+</html>

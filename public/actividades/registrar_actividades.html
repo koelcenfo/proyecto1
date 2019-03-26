@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="css/registrar_actividades.css">
+        <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
+
+        <title>Nueva actividad</title>
+    </head>
+
+    <body>
+        <div id="contenedor_logo">
+        <img id="logo" src="imgs/Prometeo_logo.png" alt="Prometeo_logo">
+        </div>
+        <form id="frm_actividades">
+            <h1>Añadir nueva actividad</h1>
+              <!-- Para que el usuario añada una imagen a la actividad -->
+                <!-- <img id="img_agregar" src="imgs/agregarimg.png" alt="agregar imagen">
+
+                <div class="marco_btn_imagen">  
+                   <input type="button" value="agregar imagen" id="btn_agregar">
+                </div> -->
+            <div class="marco">
+                <label for="txt_nombre">Nombre de la actividad</label>
+                <input type="text" id="txt_nombre" placeholder="Escriba el nombre de la actividad">
+            </div>
+            <div class="marco" >
+                <label for="dt_fecha" class="label_fecha">Fecha de la actividad</label>
+                <input type="date" id="dt_fecha">
+            </div>
+            <div class="marco">
+                <label for="txt_hora">Hora de la actividad</label>
+                <input type="time" id="txt_hora">
+            </div class="marco">
+            <div class="marco">
+                <label for="txt_lugar">Lugar de la actividad</label>
+                <input type="text" id="txt_lugar" placeholder="Lugar">
+            </div>
+            <div class="marco_descripcion">
+                <label for="txt_descripcion">Descripción de la actividad</label>
+                <textarea id="txt_descripcion"placeholder="Describe la actividad"></textarea>
+            </div class="marco">
+            <div >
+                <button type="button" id="btn_aceptar">Aceptar</button>
+            </div>
+        </form>
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script> 
+    <script src="js/servicio.js"></script>
+    <script src="js/controlador_registrar_actividades.js"></script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/listar_actividades.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
+        <title>Listar Actividades</title>
+    </head>
+    <body>
+
+            <div id="contenedor_logo">
+                    <img id="logo" src="imgs/Prometeo_logo.png" alt="Prometeo_logo">
+            </div>
+
+       <h1>Actividades</h1>
+        <main>
+            <label for="txt_filtro">Filtrar</label>
+            <input type="text" id="txt_filtro">
+            <table id="tbl_actividades">
+                <thead>
+                    <tr>
+                        <th>Nombre de la actividad</th>
+                        <th>Fecha de la actividad</th>
+                        <th>Hora de la actividad</th>
+                        <th>Lugar de la actividad</th>
+                        <th>Descripción de la actividad</th>
+                        <!-- <th id="imagen">Imagen</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                          
+                </tbody>
+            </table>
+        </main>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio.js"></script>
+    <script src="js/controlador_listar_actividades.js"></script>
+    
+</html>
