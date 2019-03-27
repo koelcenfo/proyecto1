@@ -15,4 +15,10 @@ router.route('/validar_institucion')
         api_institucion.validar_institucion(req, res);
     }
 );
+router.route('/listar_institucion')
+    .get(
+        function (req, res){
+            api_institucion.listar_institucion(req, res);
+        }
+    );
 module.exports = router;

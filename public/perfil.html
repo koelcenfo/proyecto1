@@ -4,36 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/barra_lateral.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
     <title>Perfil</title>
 </head>
 <body>
+        <!--Barra Lateral-->
+    <div id="barra_lateral">
+        <div id="Ranking_tittle">
+            <h1>Ranking's</h1>
+        </div>
+        <div id="Rankings">
+            <h2>Ranking del MEP</h1>
+        </div>
+    </div>
+    
+    <header>
 
-    <table id="tbl_padres">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Correo electronico</th>
-                <th>Hijos</th>
-                <th>fecha</th>
-                <th>direccion</th>
-                <th>telefono</th>
-                <th>nacionalidad</th>
-                <th>cedula</th>
-                <th>contrasena</th>
-                <th>imagen</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                
-            </tr>
-        </tbody>
-    </table>
+    <div id="contenido">
+            <nav class="barra_navegacion">
+                    <div class="imagen_barra_navegacion"> </div>
+                    <!--Visitante-->
+                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                    <!--Conectado-->
+                    <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                    <a href="/public/buscar_infomacion.html">Buscar</a>
+                    <!--<div class="conectado">
+                        <div class="imagen_conectado"></div>
+                        <div class="nombre_conectado"></div>
+                    </div>-->
+        
+                </nav>
+            </header>
+            <section id="sct_usuario">
+            </section>
+    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     
     <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_perfil.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/controlador_perfil.js"></script>
 </body>
 </html>

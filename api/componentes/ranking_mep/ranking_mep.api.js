@@ -15,7 +15,6 @@ module.exports.registrar = (req, res) => {
             puesto8 : req.body.puesto8,
             puesto9 : req.body.puesto9,
             puesto10 : req.body.puesto10,
-            /**De donde saco los  valores que quiero guardar(Del body del request) */
         }
     );
     nuevo_ranking.save(function(error) {

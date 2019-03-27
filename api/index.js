@@ -48,7 +48,9 @@ app.use(express.static(path.join(__dirname, 'public')));
  * Le indicamos a la aplicación que el formato de los datos va a ser JSON
  */
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(morgan('dev'));
 // sin esto no nos va a funcionar el servidor y no nos va atender lo que ocupamos 
 app.use( function(req, res, next) {

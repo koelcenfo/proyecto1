@@ -5,6 +5,7 @@ const model_padre = require('./usuarios_padre.model');
 module.exports.registrar_padre = (req, res) => {
     let nuevo_padre = new model_padre(
         {
+            padre_id: req.body.ObjectId,
             padre_nombre: req.body.padre_nombre,
             padre_apellido: req.body.padre_apellido,
             padre_correo_electronico: req.body.padre_correo_electronico,
@@ -16,8 +17,7 @@ module.exports.registrar_padre = (req, res) => {
             padre_cedula: req.body.padre_cedula,
             padre_contrasena: req.body.padre_contrasena,
             padre_imagen: req.body.padre_imagen,
-            tipo_usuario: "Padre",
-            padre_id : req.body.padre_id
+            tipo_usuario: "Padre", 
         }
     );
     nuevo_padre.save(function (error) {

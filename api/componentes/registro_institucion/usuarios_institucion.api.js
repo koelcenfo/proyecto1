@@ -4,6 +4,7 @@ const model_institucion = require ('./usuarios_institucion.model');
 module.exports.registrar_institucion = (req, res) =>{
     let nuevo_institucion = new model_institucion(
         {
+            institucion_id: req.body.ObjectId,
             institucion_nombre_encargado : req.body.institucion_nombre_encargado,
             institucion_departamento_encargado : req.body.institucion_departamento_encargado,
             institucion_telefono : req.body.institucion_telefono,
@@ -27,7 +28,7 @@ module.exports.registrar_institucion = (req, res) =>{
             institucion_sitio_web : req.body.institucion_sitio_web,
             institucion_fax : req.body.institucion_fax,
             institucion_imagen : req.body.institucion_imagen,
-            tipo_usuario : "Institucion"
+            tipo_usuario : "Institucion",
         }
     );
     nuevo_institucion.save(function(error){
@@ -70,6 +71,28 @@ module.exports.validar_institucion = function (req, res){
                     success: false,
                     msg: 'El usuario no existe'
                 });
+            }
+        }
+    )
+};
+
+module.exports.listar_institucion = (req, res) => {
+    model_institucion.find().then(
+        function (instituciones) {
+            if(instituciones.length > 0) {
+                res.json(
+                    {
+                        success: true,
+                        instituciones : instituciones
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        instituciones: 'No se encontraron instituciones'
+                    }
+                )
             }
         }
     )

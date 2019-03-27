@@ -4,6 +4,7 @@ const mongoose = require ('mongoose');
 let schema_usuarios = new mongoose.Schema( //Definicion del esquema de la base datos llamado Usuarios
     {
         //Datos que va a contener el esquema
+        institucion_id : { type: mongoose.Schema.ObjectId, auto: true },
         institucion_nombre_encargado : {type : String, required:true},//Nombre del encargado de la institucion
         institucion_departamento_encargado : {type : String, required:true},//Nombre del departamento del encargado
         institucion_telefono : {type : Number, required:true, unique:true},//Numero de telefono de la institucion

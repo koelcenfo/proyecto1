@@ -1,7 +1,7 @@
 'use strict'
 
 
-let validar_padre = (ppadre_cedula, ppadre_contrasena, callback,ppadre_id) => {
+let validar_padre = (ppadre_cedula, ppadre_contrasena, callback) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/validar_padre",
         type: "post",
@@ -17,7 +17,8 @@ let validar_padre = (ppadre_cedula, ppadre_contrasena, callback,ppadre_id) => {
     request.done(function (response) {
         callback(response);
         sessionStorage.setItem('conectado', response.success);
-        sessionStorage.setItem('tipo_usuario', response.usuario_padre.tipo_usuario); 
+        sessionStorage.setItem('tipo_usuario', response.usuario_padre.tipo_usuario);
+        sessionStorage.setItem('id_usuario', response.usuario_padre.padre_id);
     });
 
     request.fail(function (response) {
@@ -26,6 +27,13 @@ let validar_padre = (ppadre_cedula, ppadre_contrasena, callback,ppadre_id) => {
             type: 'error',
             title: 'Error',
             text: `El usuario no esta registrado o la contraseña de ${padre_cedula} es incorrecta`,
+        })
+    });
+    request.fail(function (response) {
+        Swal.fire({
+            type: 'error',
+            title: 'Error',
+            text: `El usuario no esta registrado o la contraseña es incorrecta`,
         })
     });
 
@@ -70,6 +78,7 @@ let validar_institucion = (pinstitucion_cedula, pinstitucion_constrasena, callba
         callback(response);
         sessionStorage.setItem('conectado', response.success);
         sessionStorage.setItem('tipo_usuario', response.usuario_institucion.tipo_usuario);
+        sessionStorage.setItem('id_usuario', response.usuario_institucion.institucion_id);
     });
     request.fail(function (response) {
         Swal.fire({
@@ -78,4 +87,27 @@ let validar_institucion = (pinstitucion_cedula, pinstitucion_constrasena, callba
             text: `El usuario no esta registrado o la contraseña es incorrecta`,
         })
     });
+};
+
+let listar_institucion = () => {
+    let listar_institucion = [];
+    let request = $.ajax({
+        url: "http://localhost:4000/api/listar_institucion",
+        method: "GET",
+        data: {
+
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+    });
+    request.done(function (res) {
+        listar_institucion = res.instituciones;
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+
+    return listar_institucion;
 };
