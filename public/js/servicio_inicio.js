@@ -15,6 +15,7 @@ let validar_padre = (pinstitucion_correo_electronico, ppadre_contrasena, callbac
     });
 
     request.done(function (response) {
+
         callback(response);
         sessionStorage.setItem('conectado', response.success);
         sessionStorage.setItem('tipo_usuario', response.usuario_padre.tipo_usuario);
@@ -74,6 +75,7 @@ let validar_institucion = (pinstitucion_correo_electronico, pinstitucion_constra
         }
     });
     request.done(function (response) {
+        
         callback(response);
         sessionStorage.setItem('conectado', response.success);
         sessionStorage.setItem('tipo_usuario', response.usuario_institucion.tipo_usuario);

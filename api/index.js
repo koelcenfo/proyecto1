@@ -14,7 +14,8 @@ const express = require('express'),
  * Se definen las variables necesarias para la conexión con MongoDB
  */
 let db = mongoose.connection,
-    dburl = 'mongodb+srv://koeladmins:Grupokoel2019@proyecto-xwswr.mongodb.net/test?retryWrites=true',
+    dburl = 
+    'mongodb://koeladmins:Grupokoel2019@proyecto-shard-00-00-xwswr.mongodb.net:27017,proyecto-shard-00-01-xwswr.mongodb.net:27017,proyecto-shard-00-02-xwswr.mongodb.net:27017/test?ssl=true&replicaSet=proyecto-shard-0&authSource=admin&retryWrites=true',
     port = 4000;
 
 /**

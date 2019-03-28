@@ -6,7 +6,7 @@
     display: block;
     float: left;
     width: 88%;
-    height: 100%;
+    height: 90%;
 }
 
 .institucion_imagen_div{
@@ -88,6 +88,11 @@
     font-size: 30px;
     text-align: center;
     box-shadow: 0 0 1px black;
+}
+#abc{
+width: 100%;
+height: 500px;
+background-color: red;
 }
 .info{
     display: inline-block;
