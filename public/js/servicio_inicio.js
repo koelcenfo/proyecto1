@@ -1,7 +1,7 @@
 'use strict'
 
 
-let validar_padre = (ppadre_cedula, ppadre_contrasena, callback) => {
+let validar_padre = (pinstitucion_correo_electronico, ppadre_contrasena, callback) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/validar_padre",
         type: "post",
@@ -9,7 +9,7 @@ let validar_padre = (ppadre_cedula, ppadre_contrasena, callback) => {
         dataType: "json",
         /*async:false,*/
         data: {
-            padre_cedula: ppadre_cedula,
+            institucion_correo_electronico: pinstitucion_correo_electronico,
             padre_contrasena: ppadre_contrasena
         }
     });
@@ -62,18 +62,17 @@ let listar_padre = () => {
     return lista_padre;
 };
 
-let validar_institucion = (pinstitucion_cedula, pinstitucion_constrasena, callback) => {
+let validar_institucion = (pinstitucion_correo_electronico, pinstitucion_constrasena, callback) => {
     let request = $.ajax({
         url: 'http://localhost:4000/api/validar_institucion',
         contenType: 'application/x-www-form-urlencoded; charset=UTF-8',
         type: "post",
         dataType: "json",
         data: {
-            institucion_cedula: pinstitucion_cedula,
+            institucion_correo_electronico: pinstitucion_correo_electronico,
             institucion_contrasena: pinstitucion_constrasena
         }
     });
-
     request.done(function (response) {
         callback(response);
         sessionStorage.setItem('conectado', response.success);

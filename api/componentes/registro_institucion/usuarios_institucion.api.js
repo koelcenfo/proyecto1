@@ -1,5 +1,14 @@
 'use strict'
+/*const nodeMailer = require('nodemailer');*/   
 const model_institucion = require ('./usuarios_institucion.model');
+
+/*const transporter =  nodeMailer.createTransport({
+    service : 'gmail',
+    auth:{
+        user : 'koelcenfo@gmail.com',
+        pass : 'koel12345'
+    }
+});*/
 
 module.exports.registrar_institucion = (req, res) =>{
     let nuevo_institucion = new model_institucion(
@@ -40,19 +49,30 @@ module.exports.registrar_institucion = (req, res) =>{
                 }
             );
         }else{
-            res.json(
-                {
+            res.json({
                     success : true,
                     msg : `Se registro satisfactoriamente el usuario`
+                    });
+            /*let mailOptions = {
+                from : 'koelcenfo@gmail.com',
+                to : 'lurizarm@ucenfotec.ac.cr',
+                subject :'Bienvenido a Prometeo ',
+                text : `hola`
+            };
+            transporter.sendMail(mailOptions, function(error, info){
+                if(error){
+                    console.log(error);
+                }else{
+                    console.log('Correo Enviado' + info.response);
                 }
-            );
+            });*/
         }
 
     });
 };
 
 module.exports.validar_institucion = function (req, res){
-    model_institucion.findOne({institucion_cedula: req.body.institucion_cedula}).then(
+    model_institucion.findOne({institucion_correo_electronico: req.body.institucion_correo_electronico}).then(
         function(usuario_institucion){
             if(usuario_institucion){
                 if(usuario_institucion.institucion_contrasena == req.body.institucion_contrasena){

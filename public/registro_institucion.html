@@ -8,7 +8,58 @@
     <link rel="stylesheet" href="css/registro_institucion.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <title>Registro</title>
-    
+    <script type="text/javascript">
+    /**Función de populate, que permite cambiar los select dependiendo de la opcion seleccionada previamente */ 
+        function populate(provincia, canton){
+
+        var provincia = document.getElementById(provincia);
+
+        var canton = document.getElementById(canton);
+
+        canton.innerHTML = "";
+
+        var arreglo_opciones = [];
+
+        switch (provincia.value) {
+
+            case "San Jose":
+                arreglo_opciones = ["|","San José|San José","Acosta|Acosta","Alajuelita|Alajuelita", "Aserrí|Aserrí", "Curridabat|Curridabat", "Desamparados|Desamparados", "Dota|Dota", "Escazú|Escazú", "Goicoechea|Goicoechea", "León Cortés|León Cortés", "Montes de Oca|Montes de Oca", "Mora|Mora", "Moravia|Moravia" ,"Pérez Zeledón|Pérez Zeledón", "Puriscal|Puriscal", "Santa Ana|Santa Ana", "Tarrazú|Tarrazú", "Tibás|Tibás", "Turrubares|Turrubares", "Vázquez de Coronado|Vázquez de Coronado"];
+                break;
+            case "Alajuela":
+                arreglo_opciones = ["|","Alajuela|Alajuela","Atenas|Atenas","Grecia|Grecia", "Grecia|Grecia", "Los Chiles|Los Chiles", "Naranjo|Naranjo", "Orotina|Orotina", "Palmares|Palmares", "Poás|Poás", "Río Cuarto|Río Cuarto", "San Carlos|San Carlos", "San Mateo|San Mateo", "San Ramón|San Ramón" ,"Upala|Upala", "Valverde Vega|Valverde Vega", "Zarcero|Zarcero"];
+                break;
+            case "Heredia":
+                arreglo_opciones = ["|","Heredia|Heredia","Barva|Barva","Belén|Belén", "Flores|Flores", "San Isidro|San Isidro", "San Pablo|San Pablo", "San Rafael|San Rafael", "Santa Bárbara|Santa Bárbara", "Santo Domingo|Santo Domingo", "Sarapiquí|Sarapiquí"];
+                break;
+            case "Puntarenas":
+                arreglo_opciones = ["|","Puntarenas|Puntarenas","Buenos Aires|Buenos Aires","Corredores|Corredores", "Coto Brus|Coto Brus", "Esparza|Esparza", "Garabito|Garabito", "Golfito|Golfito", "Montes de Oro|Montes de Oro", "Osa|Osa", "Parrita|Parrita", "Quepos|Quepos"];
+                break;
+            
+            case "Guanacaste":
+            arreglo_opciones = ["|","Liberia|Liberia","Abangares|Abangares","Bagaces|Bagaces", "Cañas|Cañas", "Carrillo|Carrillo", "Hojancha|Hojancha", "Dota|Dota", "La Cruz|La Cruz", "Nandayure|Nandayure", "Nicoya|Nicoya", "Santa Cruz|Santa Cruz", "Tilarán|Tilarán"];
+                break;
+            
+            case "Cartago":
+            arreglo_opciones = ["|","Cartago|Cartago","Alvarado|Alvarado","El Guarco|El Guarco", "Jiménez|Jiménez", "La Unión|La Unión", "Oreamuno|Oreamuno", "Paraíso|Paraíso", "Turrialba|Turrialba"];
+            break;
+
+            case "Limon":
+                arreglo_opciones = ["|","Limón|Limón","Guácimo|Guácimo","Matina|Matina", "Pococí|Pococí", "Siquirres|Siquirres", "Talamanca|Talamanca"];
+                break;
+            }
+            
+            for(var opcion in arreglo_opciones){
+                var pair = arreglo_opciones[opcion].split("|");
+                var nueva_opcion = document.createElement("option");
+                nueva_opcion.value = pair[0];
+                nueva_opcion.innerHTML = pair [1];
+                canton.options.add(nueva_opcion);
+            }
+   
+        }
+
+        
+    </script>
 </head>
 
 <body>
@@ -47,12 +98,12 @@
                     <div id="rbt_opciones">
                         <label for="rbt_si">Si</label>
                         <input type="radio" id="rbt_si" name="rbt_bachillerato_internacional" value="Si">
-                            
+
                         <label for="rbt_no">No</label>
-                        <input type="radio" id="rbt_no" name="rbt_bachillerato_internacional" value="No">     
+                        <input type="radio" id="rbt_no" name="rbt_bachillerato_internacional" value="No">
                     </div>
                 </fieldset>
-    
+
                 <label for="slt_institucion_tipo">Tipo de Institución</label>
                 <select id="slt_institucion_tipo">
                     <option value="">Elija el tipo de Institución</option>
@@ -70,13 +121,13 @@
 
                         <label for="rbt_frances">Francés</label>
                         <input type="radio" id="rbt_frances" name="France" value="Frances">
-                        
+
                         <label for="rbt_portugues">Portugués</label>
                         <input type="radio" id="rbt_portugues" name="Portugues" value="Portugues">
-                        
+
                         <label for="rbt_japones">Japonés</label>
                         <input type="radio" id="rbt_japones" name="Japones" value="Japones">
-                        
+
                         <label for="rbt_mandarin">Mandarín</label>
                         <input type="radio" id="rbt_mandarin" name="Mandarin" value="Mandarin">
                     </div>
@@ -88,13 +139,14 @@
                     <option value="femenino">Femenino</option>
                     <option value="mixto">Mixto</option>
                 </select>
-            </form>     
+            </form>
         </div>
         <div class="div_registro_derecha">
             <form>
                 <div id="fotografia_institucion">
                     <figure class="image_holder">
-                            <img src="img/registro_padre/image_placeholder/image_placeholder.jpeg" alt="seleccionar_imagen" id="image_preview">
+                        <img src="img/registro_padre/image_placeholder/image_placeholder.jpeg" alt="seleccionar_imagen"
+                            id="image_preview">
                     </figure>
                     <button type="button" id="btn_seleccionar_imagen" class="boton_imagen">Subir Imagen</button>
                 </div>
@@ -106,29 +158,24 @@
                 <input type="text" id="txt_institucion_referencia">
                 <label for="txt_institucion_cedula">Número de Cedula Jurídica</label>
                 <input type="number" id="txt_institucion_cedula">
+
                 <label for="slt_institucion_provincia">Provincia</label>
-                <select id="slt_institucion_provincia">
+                <select id="slt_institucion_provincia" onchange="populate('slt_institucion_provincia','slt_institucion_canton')">
+
                     <option value="" hidden>Elija una provincia</option>
-                    <option value="san_jose" id="san_jose">San José</option>
-                    <option value="alajuela" id="alajuela">Alajuela</option>
-                    <option value="heredia" id="heredia">Heredia</option>
-                    <option value="puntarenas" id="puntarenas">Puntarenas</option>
-                    <option value="guanacaste" id="guanacaste">Guanacaste</option>
-                    <option value="cartago" id="cartago">Cartago</option>
-                    <option value="limon" id="limon">Limón</option>
+                    <option value="San Jose">San José</option>
+                    <option value="Alajuela">Alajuela</option>
+                    <option value="Heredia">Heredia</option>
+                    <option value="Puntarenas">Puntarenas</option>
+                    <option value="Guanacaste">Guanacaste</option>
+                    <option value="Cartago">Cartago</option>
+                    <option value="Limon">Limón</option>
+
                 </select>
                 <label for="slt_institucion_canton">Cantón</label>
-                <select id="slt_institucion_canton">
-                    <option value="">Elija un canton</option>
-                    <option value="San_isidro">San Isidro</option>
-                    <option value="San_rafael">San Rafael</option>
-                </select>
-                <label for="slt_institucion_distrito">Distrito</label>
-                <select id="slt_institucion_distrito">
-                    <option value="" hidden>Elija un distrito</option>
-                    <option value="San_Josecito">San Josecito</option>
-                    <option value="Santa_cecilia">Santa Cecilia</option>
-                </select>
+                <select id="slt_institucion_canton"></select>
+                <label for="txt_institucion_distrito">Distrito</label>
+                <input type="text" id="txt_institucion_distrito">
                 <label for="txt_institucion_direccion">Dirección Exacta</label>
                 <input type="text" id="txt_institucion_direccion" placeholder="500m Norte de la fuente...">
                 <label for="txt_institucion_sitio_web">Sitio Web</label>
@@ -137,16 +184,17 @@
                 <input type="text" id="txt_institucion_fax" placeholder="155762450464">
                 <button type="button" id="btn_registrar">Registrar</button>
             </form>
-                
+
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio.registro_institucion.js"></script>
-    <script src="js/controlador.registro_institucion.js"></script> 
-        <!--Scripts Cloudinary-->
-    <script src="https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js" type="text/javascript"></script>
+    <script src="js/controlador.registro_institucion.js"></script>
+    <!--Scripts Cloudinary-->
+    <script src="https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js"
+        type="text/javascript"></script>
     <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
     <script src="js/servicio_imagen.js"></script>
 </body>
