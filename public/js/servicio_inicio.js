@@ -1,7 +1,7 @@
 'use strict'
 
 
-let validar_padre = (pinstitucion_correo_electronico, ppadre_contrasena, callback) => {
+let validar_padre = (ppadre_cedula, ppadre_contrasena, callback) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/validar_padre",
         type: "post",
@@ -9,7 +9,7 @@ let validar_padre = (pinstitucion_correo_electronico, ppadre_contrasena, callbac
         dataType: "json",
         /*async:false,*/
         data: {
-            institucion_correo_electronico: pinstitucion_correo_electronico,
+            padre_cedula: ppadre_cedula,
             padre_contrasena: ppadre_contrasena
         }
     });
