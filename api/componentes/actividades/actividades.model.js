@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
  y como lo vamos a guardar*/
 let schema_actividades=new mongoose.Schema(
     {
+        id_actividades: {type: mongoose.Schema.ObjectId, auto:true},
         nombre : {type:String,required:true},//me define la estructura de ese dato
         fecha : {type: String,required:true},
         hora :{type: String,required:true}, 
