@@ -4,6 +4,7 @@ const modelo_citas=require('./citas.model');
 module.exports.registrar=(req,res)=>{
     let nueva_cita=new modelo_citas(
         {
+            id_citas: req.body.ObjectId,
             nombre_cita: req.body.nombre_cita,
             nombre_familiar: req.body.nombre_familiar,
             fecha : req.body.fecha,
