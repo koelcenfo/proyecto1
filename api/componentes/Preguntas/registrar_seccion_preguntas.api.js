@@ -3,6 +3,7 @@ const modelo_pregunta = require('./registrar_seccion_preguntas.model');
 module.exports.registrar = (req, res) => {
     let nueva_pregunta = new modelo_pregunta(
         {
+            id_pregunta:req.body.ObjectId,
             titulo: req.body.titulo,
             pregunta: req.body.pregunta
 
