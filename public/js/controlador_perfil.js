@@ -4,12 +4,12 @@ const section_usuario = document.querySelector('#sct_usuario');
 
 let mostrar_datos = () => {
     
-    let padres = listar_padre();
+   /* let padres = listar_padre();*/
     let instituciones = listar_institucion();
     let tipo_usuario = sessionStorage.getItem('tipo_usuario');
     let id = sessionStorage.getItem('id_usuario');
     switch (tipo_usuario) {
-        case "Padre":
+        case "Padre":/*
             for (let i = 0; i < padres.length; i++) {
 
                 if(padres[i]['padre_id'] == id){
@@ -18,7 +18,7 @@ let mostrar_datos = () => {
                 }else{
                 }
             }
-        
+        */
         break;
         case "Institucion":
             for (let i = 0; i < instituciones.length; i++) {
