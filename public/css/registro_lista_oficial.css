@@ -1,10 +1,10 @@
 html{
     font-family: 'PT Sans', sans-serif;
-    color: #ffffff;
+    color: #e9ece5;
 }
 
 body{
-    background-color: #222629;
+    background-color: #3b3a36;
     font-size: 18px;
 }
 
@@ -16,7 +16,7 @@ body{
 
 #columna_izquierda{
     float: left;
-    background-color: #6B6E70;
+    background-color: #b3c2bf;
     padding-left: 5%;
     padding-bottom: 3%;
     padding-right: 5%;
@@ -27,8 +27,7 @@ body{
 #columna_derecha{
     clear: both;
     display: inline-block;
-    float: right;
-    background-color: #6B6E70;
+    background-color: #b3c2bf;
     padding-left: 5%;
     padding-bottom: 4%;
     padding-right: 5%;
@@ -47,12 +46,13 @@ tr{
 h1{
     text-align: center;
     font-weight: bold;
-    color: #EF6C00;
+    color: #e9ece5;
     margin: 18px;
     font-size: 30px;
 }
 
 #btn_registrar{
+    color: #3b3a36;
     float: right;
     display: inline-block;
     padding: 8px 15px;
@@ -60,14 +60,13 @@ h1{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    background-color: #FF9800;
-    color: #ffffff;
     cursor: pointer;
     border-radius: 5px;
 }
 
-#btn_registrar:hover{
-    background-color: #EF6C00;
+#btn_registrar button:hover{
+    color: #3b3a36;
+    background-color: #b3c2bf;
 }
 
 .error_input{
