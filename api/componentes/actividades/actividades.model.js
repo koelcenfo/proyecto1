@@ -6,6 +6,7 @@ const mongoose=require('mongoose');
 let schema_actividades=new mongoose.Schema(
     {
         id_actividades: {type: mongoose.Schema.ObjectId, auto:true},
+        id_institucion:{type: String, required: false},
         nombre : {type:String,required:true},//me define la estructura de ese dato
         fecha : {type: String,required:true},
         hora :{type: String,required:true}, 

@@ -6,6 +6,7 @@ module.exports.registrar=(req,res)=>{
     let nueva_actividad=new modelo_actividades(
         {
             id_actividades: req.body.ObjectId,
+            id_institucion: req.body.id_institucion,
             nombre : req.body.nombre,
             fecha : req.body.fecha,
             hora : req.body.hora,

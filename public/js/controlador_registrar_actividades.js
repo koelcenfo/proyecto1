@@ -6,6 +6,7 @@ const input_hora=document.querySelector('#txt_hora');
 const input_lugar=document.querySelector('#txt_lugar');
 const textarea_descripcion=document.querySelector('#txt_descripcion');
 const boton_aceptar=document.querySelector('#btn_aceptar');
+const id_usuario=sessionStorage.getItem('id_usuario');
 
 let validacion=()=>{
     let error=false;
@@ -49,14 +50,14 @@ let validacion=()=>{
 
 let obtener_datos=()=>{
     if (validacion()==false) {
-        
+        let id_institucion=id_usuario;
         let nombre=input_nombre.value;
         let fecha=input_fecha.value;
         let hora=input_hora.value;
         let lugar=input_lugar.value;
         let descripcion=textarea_descripcion.value;
 
-        registrar_actividades(nombre,fecha,hora,lugar,descripcion);
+        registrar_actividades(nombre,fecha,hora,lugar,descripcion,id_institucion);
 
     } else {
         swal.fire({

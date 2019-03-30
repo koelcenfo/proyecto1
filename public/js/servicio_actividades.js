@@ -24,7 +24,7 @@ let listar_actividades=()=>{
     return listar_actividades;
 };
 
-let registrar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion)=>{
+let registrar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion, pid_institucion)=>{
     let request= $.ajax({
         url: "http://localhost:4000/api/registrar_actividades",
         method: "POST",
@@ -33,7 +33,8 @@ let registrar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion)=>{
             fecha: pfecha,
             hora: phora,
             lugar: plugar,
-            descripcion : pdescripcion
+            descripcion : pdescripcion,
+            id_institucion: pid_institucion
         },
         contentType:'application/x-www-form-urlencoded; charset=UTF-8',
         dataType: "json"

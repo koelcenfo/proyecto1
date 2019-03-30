@@ -11,13 +11,13 @@
     <body>
 
             <div id="contenedor_logo">
-                    <img id="logo" src="imgs/Prometeo_logo.png" alt="Prometeo_logo">
+                    <img id="logo" src="img/Prometeo_logo.png" alt="Prometeo_logo">
             </div>
 
        <h1>Actividades</h1>
         <main>
             <label for="txt_filtro">Filtrar</label>
-            <input type="text" id="txt_filtro">
+            <input type="text" id="txt_filtro"onkeyup="filtrar();">
             <table id="tbl_actividades">
                 <thead>
                     <tr>
@@ -36,7 +36,9 @@
         </main>
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/servicio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_inicio.js"></script>
+    <script src="js/servicio_actividades.js"></script>
     <script src="js/controlador_listar_actividades.js"></script>
     
 </html>
