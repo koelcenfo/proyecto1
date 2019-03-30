@@ -4,6 +4,7 @@ module.exports.registrar = (req, res) => {
     let nueva_pregunta = new modelo_pregunta(
         {
             id_pregunta:req.body.ObjectId,
+            id_institucion:req.body.id_institucion,
             titulo: req.body.titulo,
             pregunta: req.body.pregunta
 
