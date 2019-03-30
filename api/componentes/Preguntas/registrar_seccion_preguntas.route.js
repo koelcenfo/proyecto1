@@ -11,4 +11,11 @@ function (req,res) {
 
 
 );
+router.route('/listar_pregunta')
+.get(
+    function (req,res) {
+        api_preguntas.listar_pregunta(req,res);
+    }
+)
+
 module.exports=router;

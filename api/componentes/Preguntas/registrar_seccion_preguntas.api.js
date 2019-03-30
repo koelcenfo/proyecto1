@@ -25,3 +25,28 @@ module.exports.registrar = (req, res) => {
     });
 
 };
+module.exports.listar_pregunta = (req, res) => {
+    modelo_pregunta.find().then(
+        function (pregunta) {
+            if (pregunta.length > 0) {
+                res.json(
+                    {
+                        success: true,
+                        pregunta: pregunta
+                    }
+                );
+            } else {
+                res.json(
+                    {
+                        success:false,
+                        msg:`no se encontró pregunta alguna`
+
+                    }
+                )
+
+            }
+        }
+
+    )
+
+};

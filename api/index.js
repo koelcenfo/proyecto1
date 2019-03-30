@@ -64,6 +64,7 @@ const utiles=require('./componentes/Utiles/registrar_util.route');
 app.use('/api',utiles);
 
 const preguntas=require('./componentes/Preguntas/registrar_seccion_preguntas.route');
+
 app.use('/api',preguntas);
 
 const actividades=require('./componentes/actividades/actividades.route');
@@ -79,8 +80,16 @@ app.use('/api',registro_padre);
 const registro_institucion=require('./componentes/registro_institucion/usuarios_institucion.route');
 app.use('/api',registro_institucion);
 
+<<<<<<< HEAD
 const ranking = require('./componentes/ranking_mep/ranking_mep.route')
 app.use('./api', ranking);
+=======
+const registrar_ranking=require('./componentes/ranking_mep/ranking_mep.route');
+app.use('/api',registrar_ranking);
+
+
+
+>>>>>>> cef069d163f39be1d06468930879530297cd2faf
 
 const lista_oficial = require('./componentes/lista_oficial/lista_oficial.route')
 app.use('./api', lista_oficial);
