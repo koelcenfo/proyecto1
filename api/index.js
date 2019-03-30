@@ -83,23 +83,20 @@ app.use('/api',registro_padre);
 const registro_institucion=require('./componentes/registro_institucion/usuarios_institucion.route');
 app.use('/api',registro_institucion);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 const ranking = require('./componentes/ranking_mep/ranking_mep.route')
 app.use('./api', ranking);
-=======
-=======
->>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084
+
+
 const registrar_ranking=require('./componentes/ranking_mep/ranking_mep.route');
 app.use('/api',registrar_ranking);
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084
 
->>>>>>> cef069d163f39be1d06468930879530297cd2faf
+
+
+
 
 const lista_oficial = require('./componentes/lista_oficial/lista_oficial.route')
 app.use('./api', lista_oficial);
