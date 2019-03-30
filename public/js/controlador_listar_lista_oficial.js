@@ -115,4 +115,4 @@ let mostrar_datos = (lista_oficial) => {
 };
 
 bindings();
-listbylevel('Prescolar');
+listbylevel('Preescolar');

@@ -14,7 +14,8 @@ const express = require('express'),
  * Se definen las variables necesarias para la conexión con MongoDB
  */
 let db = mongoose.connection,
-    dburl = 'mongodb+srv://koeladmins:Grupokoel2019@proyecto-xwswr.mongodb.net/test?retryWrites=true',
+    dburl = 
+    'mongodb://koeladmins:Grupokoel2019@proyecto-shard-00-00-xwswr.mongodb.net:27017,proyecto-shard-00-01-xwswr.mongodb.net:27017,proyecto-shard-00-02-xwswr.mongodb.net:27017/test?ssl=true&replicaSet=proyecto-shard-0&authSource=admin&retryWrites=true',
     port = 4000;
 
 /**
@@ -48,7 +49,9 @@ app.use(express.static(path.join(__dirname, 'public')));
  * Le indicamos a la aplicación que el formato de los datos va a ser JSON
  */
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({extended: false}));
+
 app.use(morgan('dev'));
 // sin esto no nos va a funcionar el servidor y no nos va atender lo que ocupamos 
 app.use( function(req, res, next) {
@@ -81,13 +84,20 @@ const registro_institucion=require('./componentes/registro_institucion/usuarios_
 app.use('/api',registro_institucion);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ranking = require('./componentes/ranking_mep/ranking_mep.route')
 app.use('./api', ranking);
 =======
+=======
+>>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084
 const registrar_ranking=require('./componentes/ranking_mep/ranking_mep.route');
 app.use('/api',registrar_ranking);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084
 
 >>>>>>> cef069d163f39be1d06468930879530297cd2faf
 

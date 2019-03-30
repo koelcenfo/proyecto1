@@ -2,9 +2,12 @@
 const mongoose = require('mongoose');
 let schema_pregunta = new mongoose.Schema(
     {
-        titulo:{type:String,required:true},
-        pregunta:{type:String,required:true}
+
+        id_pregunta: { type: mongoose.Schema.ObjectId, auto: true },
+        id_institucion: { type: String, required: true }, /*se necesita para guardar quien me registró eso*/
+        titulo: { type: String, required: true },
+        pregunta: { type: String, required: true }
 
     }
 );
-module.exports=mongoose.model('pregunta',schema_pregunta);
+module.exports = mongoose.model('pregunta', schema_pregunta);

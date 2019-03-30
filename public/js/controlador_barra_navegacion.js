@@ -21,7 +21,7 @@ if(conectado){
             enlaces[1].classList.add('ocultar');
             enlaces[2].classList.add('ocultar');
             enlaces[3].classList.add('mostrar');
-            enlaces[4].classList.add('mostrar');
+            enlaces[4].classList.add('ocultar');
         break;
     }
 }else{

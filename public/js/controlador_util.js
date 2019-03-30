@@ -1,6 +1,4 @@
 'use strict';
-
-
 const input_util1 = document.querySelector('#slt_util_1');
 const input_util2 = document.querySelector('#slt_util_2');
 const input_util3 = document.querySelector('#slt_util_3');
@@ -31,10 +29,11 @@ const cantidad_7 = document.querySelector('#nmb_cantidad_7');
 const cantidad_8 = document.querySelector('#nmb_cantidad_8');
 const cantidad_9 = document.querySelector('#nmb_cantidad_9');
 const cantidad_10 = document.querySelector('#nmb_cantidad_10');
-
-
 const select_nivel = document.querySelector('#slt_nivel');
-const boton_enviar = document.querySelector('#btn_enviar');
+const boton_enviar = document.querySelector('#btn_registrar');
+const id_usuario = sessionStorage.getItem('id_usuario');
+
+
 let validar = () => {
     let error = false;
 
@@ -100,61 +99,61 @@ let validar = () => {
     } else {
         input_descripcion10.classList.remove('error_input');
     }
-    if (cantidad_1.value == '' || cantidad_1.value<0) {
+    if (cantidad_1.value == '' || cantidad_1.value < 0) {
         error = true;
         cantidad_1.classList.add('error_input');
     } else {
         cantidad_1.classList.remove('error_input');
     }
-    if (cantidad_2.value == '' || cantidad_2.value<0) {
+    if (cantidad_2.value == '' || cantidad_2.value < 0) {
         error = true;
         cantidad_2.classList.add('error_input');
     } else {
         cantidad_2.classList.remove('error_input');
     }
-    if (cantidad_3.value == '' || cantidad_3.value<0) {
+    if (cantidad_3.value == '' || cantidad_3.value < 0) {
         error = true;
         cantidad_3.classList.add('error_input');
     } else {
         cantidad_3.classList.remove('error_input');
     }
-    if (cantidad_4.value == '' || cantidad_4.value<0) {
+    if (cantidad_4.value == '' || cantidad_4.value < 0) {
         error = true;
         cantidad_4.classList.add('error_input');
     } else {
         cantidad_4.classList.remove('error_input');
     }
-    if (cantidad_5.value == ''|| cantidad_5.value<0) {
+    if (cantidad_5.value == '' || cantidad_5.value < 0) {
         error = true;
         cantidad_5.classList.add('error_input');
     } else {
         cantidad_5.classList.remove('error_input');
     }
-    if (cantidad_6.value == '' || cantidad_6.value<0) {
+    if (cantidad_6.value == '' || cantidad_6.value < 0) {
         error = true;
         cantidad_6.classList.add('error_input');
     } else {
         cantidad_6.classList.remove('error_input');
     }
-    if (cantidad_7.value == '' || cantidad_7.value<0) {
+    if (cantidad_7.value == '' || cantidad_7.value < 0) {
         error = true;
         cantidad_7.classList.add('error_input');
     } else {
         cantidad_7.classList.remove('error_input');
     }
-    if (cantidad_8.value == '' || cantidad_8.value<0) {
+    if (cantidad_8.value == '' || cantidad_8.value < 0) {
         error = true;
         cantidad_8.classList.add('error_input');
     } else {
         cantidad_8.classList.remove('error_input');
     }
-    if (cantidad_9.value == '' || cantidad_9<0) {
+    if (cantidad_9.value == '' || cantidad_9 < 0) {
         error = true;
         cantidad_9.classList.add('error_input');
     } else {
         cantidad_9.classList.remove('error_input');
     }
-    if (cantidad_10.value == '' || cantidad_10.value<0) {
+    if (cantidad_10.value == '' || cantidad_10.value < 0) {
         error = true;
         cantidad_10.classList.add('error_input');
     } else {
@@ -171,8 +170,12 @@ let validar = () => {
 
 
 };
+
 let obtener_datos = () => {
     if (validar() == false) {
+
+        let id_institucion = id_usuario;
+        let nivel = select_nivel.value;
         let util1 = input_util1.value;
         let util2 = input_util2.value;
         let util3 = input_util3.value;
@@ -183,7 +186,7 @@ let obtener_datos = () => {
         let util8 = input_util8.value;
         let util9 = input_util9.value;
         let util10 = input_util10.value;
-        
+
 
         let descrp1 = input_descripcion1.value;
         let descrp2 = input_descripcion2.value;
@@ -195,7 +198,7 @@ let obtener_datos = () => {
         let descrp8 = input_descripcion8.value;
         let descrp9 = input_descripcion9.value;
         let descrp10 = input_descripcion10.value;
-        
+
 
         let cantdd1 = cantidad_1.value;
         let cantdd2 = cantidad_2.value;
@@ -209,7 +212,9 @@ let obtener_datos = () => {
         let cantdd10 = cantidad_10.value;
 
 
-        registrar_utiles(util1, util2, util3, util4,util5,util6,util7,util8,util9,util10,descrp1,descrp2,descrp3,descrp4,descrp5,descrp6,descrp7,descrp8,descrp9,descrp10,cantdd1, cantdd2, cantdd3, cantdd4,cantdd5,cantdd6,cantdd7,cantdd8,cantdd9,cantdd10);
+
+
+        registrar_utiles( nivel,util1, util2, util3, util4, util5, util6, util7, util8, util9, util10, descrp1, descrp2, descrp3, descrp4, descrp5, descrp6, descrp7, descrp8, descrp9, descrp10, cantdd1, cantdd2, cantdd3, cantdd4, cantdd5, cantdd6, cantdd7, cantdd8, cantdd9, cantdd10, id_institucion);
 
     } else {
         swal.fire(
@@ -221,29 +226,34 @@ let obtener_datos = () => {
     }
 
 
+
 };
+
+
+
+
 boton_enviar.addEventListener('click', obtener_datos)
-select_nivel.addEventListener('change',function () {
-    input_descripcion1.value='';
-    input_descripcion2.value='';
-    input_descripcion3.value='';
-    input_descripcion4.value='';
-    input_descripcion5.value='';
-    input_descripcion6.value='';
-    input_descripcion7.value='';
-    input_descripcion8.value='';
-    input_descripcion9.value='';
-    input_descripcion10.value='';
-    cantidad_1.value='';
-    cantidad_2.value='';
-    cantidad_3.value='';
-    cantidad_4.value='';
-    cantidad_5.value='';
-    cantidad_6.value='';
-    cantidad_7.value='';
-    cantidad_8.value='';
-    cantidad_9.value='';
-    cantidad_10.value='';
-    
-    
+select_nivel.addEventListener('change', function () {
+    input_descripcion1.value = '';
+    input_descripcion2.value = '';
+    input_descripcion3.value = '';
+    input_descripcion4.value = '';
+    input_descripcion5.value = '';
+    input_descripcion6.value = '';
+    input_descripcion7.value = '';
+    input_descripcion8.value = '';
+    input_descripcion9.value = '';
+    input_descripcion10.value = '';
+    cantidad_1.value = '';
+    cantidad_2.value = '';
+    cantidad_3.value = '';
+    cantidad_4.value = '';
+    cantidad_5.value = '';
+    cantidad_6.value = '';
+    cantidad_7.value = '';
+    cantidad_8.value = '';
+    cantidad_9.value = '';
+    cantidad_10.value = '';
+
+
 })

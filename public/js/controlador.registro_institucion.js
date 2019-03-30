@@ -18,12 +18,13 @@ const input_institucion_referencia = document.querySelector('#txt_institucion_re
 const input_institucion_cedula = document.querySelector('#txt_institucion_cedula');
 const select_institucion_provincia = document.querySelector('#slt_institucion_provincia');
 const select_institucion_canton = document.querySelector('#slt_institucion_canton');
-const select_institucion_distrito = document.querySelector('#slt_institucion_distrito');
+const select_institucion_distrito = document.querySelector('#txt_institucion_distrito');
 const input_institucion_direccion = document.querySelector('#txt_institucion_direccion');
 const input_institucion_sitio_web = document.querySelector('#txt_institucion_sitio_web');
 const input_institucion_fax = document.querySelector('#txt_institucion_fax');
 const imagen_institucion = document.querySelector('#image_preview');
 const boton_registrar = document.querySelector('#btn_registrar');
+
 
 let validar = () => {
 

@@ -1,52 +1,45 @@
-const formulario= document.querySelector('#formulario');
-const boton=document.querySelector('#btn_buscar');
-const resultado=document.querySelector('#resultado');
+'use strict';
+
+const tabla = document.querySelector('#tbl_instituciones tbody');
 
 
-const centros_educativos=[
-    {nombre: 'Colegio Claretiano'},
-    {nombre: 'American international school'},
-    {nombre: 'Centro educativo Yori'},
-    {nombre: 'Valle dorado'},
-    {nombre: 'Liceo Samuel Sáenz'},
-    {nombre: 'Instituto educativo ABC'},
-    {nombre: 'Escuela Cubujuqui'},
-    {nombre: 'Caspari Montessori School'},
-    {nombre: 'Centro Educativo Santa Inés'},
-    {nombre: 'Liceo Ingeniero Manuel Benavides Rodríguez'},
-    {nombre: 'Colegio Técnico Profesional de Limón'},
-    {nombre: 'Escuela San Marcos. Limón. Costa Rica'},
-    {nombre: 'Colegio Científico Costarricense - Puntarenas'},
-    {nombre: 'Colegio Laboratorio Puntarenas'}
-]
+let mostrar_datos = () => {
+    
+    let institucion = listar_institucion();
 
-// const enlazar=()=>{
-//     resultado.value=`<a></a> ${centros_educativos.nombre}`
-// };
+    for(let i = 0; i < institucion.length; i++){
 
-// if (nombre=='Liceo Samuel Sáenz') {
-//     nombre='https://www.google.com/';
-// }
+        let fila = tabla.insertRow();
 
-const filtrar=()=>{
-    // console.log(formulario.value);
-    resultado.innerHTML='';
-    const texto=formulario.value.toLowerCase();
-
-    for(let centro_educativo of centros_educativos){
-        let nombre= centro_educativo.nombre.toLowerCase();
-        if (nombre.indexOf(texto)!== -1) {
-            resultado.innerHTML += `
-            <li>${centro_educativo.nombre}</li>
-            `
-            resultado.innerHTML 
-        } 
-    }
-    if (resultado.innerHTML==='') {
-        resultado.innerHTML += `
-            <li>Centro educativo no encontrado...</li>
-        `
-    }
+        fila.insertCell().innerHTML = institucion[i]['institucion_nombre'];
+        fila.insertCell().innerHTML = institucion[i]['institucion_provincia'];
+        fila.insertCell().innerHTML = institucion[i]['institucion_tipo'];
+        fila.insertCell().innerHTML = document.createElement('a');
+        tabla.rows[i].style.display = 'none';
+    };          
 };
 
-boton.addEventListener('click',filtrar);
+function Buscar() {
+    var tabla = document.getElementById('tbl_instituciones');
+    var busqueda = document.getElementById('txtBusqueda').value.toLowerCase();
+    var cellsOfRow="";
+    var found=false;
+    var compareWith="";
+    for (var i = 1; i < tabla.rows.length; i++) {
+        cellsOfRow = tabla.rows[i].getElementsByTagName('td');
+        found = false;
+        for (var j = 0; j < cellsOfRow.length && !found; j++) { compareWith = cellsOfRow[j].innerHTML.toLowerCase(); if (busqueda.length == 0 || (compareWith.indexOf(busqueda) > -1))
+            {
+                found = true;
+            }
+        }
+        if(found)
+        {
+            tabla.rows[i].style.display = '';
+        } else {
+            tabla.rows[i].style.display = 'none';
+        }
+    }
+}
+
+mostrar_datos();

@@ -5,6 +5,7 @@
 const input_titulo = document.querySelector('#txt_titulo');
 const input_pregunta = document.querySelector('#txt_pregunta');
 const boton_registrar = document.querySelector('#btn_registrar');
+const id_usuario = sessionStorage.getItem('id_usuario');
 let validar = () => {
     let error = false;
     if (input_titulo.value == '') {
@@ -26,9 +27,10 @@ let validar = () => {
 };
 let obtener_informacion = () => {
     if (validar() == false) {
+        let id_institucion = id_usuario;
         let titulo = input_titulo.value;
         let pregunta = input_pregunta.value;
-        registrar_pregunta(titulo, pregunta) 
+        registrar_pregunta(titulo, pregunta,id_institucion)
     } else {
         swal.fire({
             type: 'error',

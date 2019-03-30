@@ -1,9 +1,19 @@
 'use strict'
+/*const nodeMailer = require('nodemailer');*/   
 const model_institucion = require ('./usuarios_institucion.model');
+
+/*const transporter =  nodeMailer.createTransport({
+    service : 'gmail',
+    auth:{
+        user : 'koelcenfo@gmail.com',
+        pass : 'koel12345'
+    }
+});*/
 
 module.exports.registrar_institucion = (req, res) =>{
     let nuevo_institucion = new model_institucion(
         {
+            institucion_id: req.body.ObjectId,
             institucion_nombre_encargado : req.body.institucion_nombre_encargado,
             institucion_departamento_encargado : req.body.institucion_departamento_encargado,
             institucion_telefono : req.body.institucion_telefono,
@@ -27,7 +37,7 @@ module.exports.registrar_institucion = (req, res) =>{
             institucion_sitio_web : req.body.institucion_sitio_web,
             institucion_fax : req.body.institucion_fax,
             institucion_imagen : req.body.institucion_imagen,
-            tipo_usuario : "Institucion"
+            tipo_usuario : "Institucion",
         }
     );
     nuevo_institucion.save(function(error){
@@ -39,19 +49,30 @@ module.exports.registrar_institucion = (req, res) =>{
                 }
             );
         }else{
-            res.json(
-                {
+            res.json({
                     success : true,
                     msg : `Se registro satisfactoriamente el usuario`
+                    });
+            /*let mailOptions = {
+                from : 'koelcenfo@gmail.com',
+                to : 'lurizarm@ucenfotec.ac.cr',
+                subject :'Bienvenido a Prometeo ',
+                text : `hola`
+            };
+            transporter.sendMail(mailOptions, function(error, info){
+                if(error){
+                    console.log(error);
+                }else{
+                    console.log('Correo Enviado' + info.response);
                 }
-            );
+            });*/
         }
 
     });
 };
 
 module.exports.validar_institucion = function (req, res){
-    model_institucion.findOne({institucion_cedula: req.body.institucion_cedula}).then(
+    model_institucion.findOne({institucion_correo_electronico: req.body.institucion_correo_electronico}).then(
         function(usuario_institucion){
             if(usuario_institucion){
                 if(usuario_institucion.institucion_contrasena == req.body.institucion_contrasena){
@@ -70,6 +91,28 @@ module.exports.validar_institucion = function (req, res){
                     success: false,
                     msg: 'El usuario no existe'
                 });
+            }
+        }
+    )
+};
+
+module.exports.listar_institucion = (req, res) => {
+    model_institucion.find().then(
+        function (instituciones) {
+            if(instituciones.length > 0) {
+                res.json(
+                    {
+                        success: true,
+                        instituciones : instituciones
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        instituciones: 'No se encontraron instituciones'
+                    }
+                )
             }
         }
     )

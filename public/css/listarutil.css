@@ -21,7 +21,7 @@ div{
     width: 490px;
 }
 #tabla_utiles tbody td{
-    
+    font-size: 30px;
     border: 2px solid #000;
     text-align: center;
 }

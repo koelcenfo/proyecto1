@@ -38,12 +38,19 @@ let registrar_usuario = (pinstitucion_nombre_encargado, pinstitucion_departament
         swal.fire({
             type: 'success',
             tittle: 'Usuario Registrado Correctamente',
-            text: `Saludos ${pinstitucion_nombre_encargado} su institución con el nombre de ${pinstitucion_nombre} ha sido registrada exitosamente en el sistema. Puede Iniciar sesión con el correo ${pinstitucion_correo_electronico} y la contraseña que ingresó`
+            text: `Saludos ${pinstitucion_nombre_encargado} su institución con el nombre de ${pinstitucion_nombre} ha sido registrada exitosamente en el sistema. Puede Iniciar sesión con el correo ${pinstitucion_correo_electronico} y la contraseña que ingresó`,
+            showConfirmButton: false,
+            timer: 4000
         });
+        setTimeout("window.location.href = 'index.html';",4500);
     });
-
-    request.fail(function(jqXHR, textStatus){
-
+    
+    request.fail(function(msg){
+        Swal.fire({
+            type: 'error',
+            title: 'Error',
+            text: 'Ocurrió un error!',
+          });
     });
 };
 
