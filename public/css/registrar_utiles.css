@@ -2,7 +2,7 @@
     font-family: 'PT Sans',sans-serif;
 }
 body{
-    background: #ccc;
+    background: #3b3a36;
 }
 
 #columna_izquierda{
@@ -15,7 +15,7 @@ body{
 }
 #columna_izquierda label{
     font-size: 30px;
-    color:#000;
+    color:#e9ece5;
 }
 #columna_izquierda select{
     font-size: 20px;
@@ -23,7 +23,7 @@ body{
 
 #columna_derecha {
     float: right;
-    background-color: #6B6E70;
+    background-color: #b3c2bf;
     padding: 50px;
     border-radius: 20px;
     color: #fff;
@@ -59,12 +59,14 @@ h1{
     font-size: 30px;
     text-align: center;
     margin: 10px;
+    color: #3b3a36;
 }
 #btn_registrar{
 float: right;
 margin-top: 20px;
 font-size: 20px;
 border-radius: 30px;
+cursor: pointer;
 }
 
 

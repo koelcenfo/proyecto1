@@ -73,13 +73,9 @@ let mostrar_datos = () => {
                 fila10.insertCell().innerHTML = utiles[i]['descripcion10'];
                 fila10.insertCell().innerHTML = utiles[i]['cantidad10'];
             };
+            break;
         }else{
-            swal.fire(
-                {
-                    type: 'error',
-                    title: 'No se han encontrado lista de utiles'
-    
-                });
+           
         }
 
         

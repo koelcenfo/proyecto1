@@ -33,6 +33,7 @@ const select_nivel = document.querySelector('#slt_nivel');
 const boton_enviar = document.querySelector('#btn_registrar');
 const id_usuario = sessionStorage.getItem('id_usuario');
 
+
 let validar = () => {
     let error = false;
 
@@ -227,6 +228,10 @@ let obtener_datos = () => {
 
 
 };
+
+
+
+
 boton_enviar.addEventListener('click', obtener_datos)
 select_nivel.addEventListener('change', function () {
     input_descripcion1.value = '';
