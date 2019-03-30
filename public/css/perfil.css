@@ -2,7 +2,20 @@
     font-family: 'PT Sans', sans-serif;
     background-color: #c0dfd9;
 }
-#contenido, #sct_usuario{
+#contenido{
+    display: block;
+    float: left;
+    width: 88%;
+    height: 90%;
+}
+#abc{
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    background-color: #3b3a36;
+    bottom: 0;
+}
+#sct_usuario{   
     display: block;
     float: left;
     width: 88%;
@@ -89,9 +102,6 @@
     text-align: center;
     box-shadow: 0 0 1px black;
 }
-#abc{
-
-}
 .info{
     display: inline-block;
     margin-top: 40px;
@@ -110,13 +120,13 @@
 .div_info_izquierda{
     float: left;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
 
 }
 .div_info_derecha{
     float: right;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
 
 }
 .label{
@@ -133,4 +143,20 @@
     border: solid 1px black;
     border-radius: 100px;
     font-size: 25px;
+}
+button{
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 40px;
+    float: left;
+    width: 20%;
+    height: 47px;
+    padding-top: 7px;
+    text-align: center;
+    background-color: #e9ece5;
+    color: #3b3a36;
+    border: none;
+    border-radius: 100px;
+    font-size: 25px;
+    cursor: pointer;
 }

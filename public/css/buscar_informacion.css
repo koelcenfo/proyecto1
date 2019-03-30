@@ -23,6 +23,7 @@ h1{
     border: 1px;
     border-radius: 100px;
     color: #3b3a36;
+    outline: none;
 }
 table{
     border-top-right-radius: 20px;

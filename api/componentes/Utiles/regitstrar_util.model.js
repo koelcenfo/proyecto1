@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 let schema_utiles = new mongoose.Schema(
   {
     id_nivel: { type: mongoose.Schema.ObjectId, auto: true },
+    id_institucion: {type: String, required: false},
     nivel: { type: String, required: true },
     util1: { type: String, required: true },
     util2: { type: String, required: true },
@@ -14,8 +15,6 @@ let schema_utiles = new mongoose.Schema(
     util8: { type: String, required: true },
     util9: { type: String, required: true },
     util10: { type: String, required: true },
-
-
     descripcion1: { type: String, required: true },
     descripcion2: { type: String, required: true },
     descripcion3: { type: String, required: true },

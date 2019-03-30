@@ -1,6 +1,4 @@
 'use strict';
-
-
 const input_util1 = document.querySelector('#slt_util_1');
 const input_util2 = document.querySelector('#slt_util_2');
 const input_util3 = document.querySelector('#slt_util_3');
@@ -31,10 +29,10 @@ const cantidad_7 = document.querySelector('#nmb_cantidad_7');
 const cantidad_8 = document.querySelector('#nmb_cantidad_8');
 const cantidad_9 = document.querySelector('#nmb_cantidad_9');
 const cantidad_10 = document.querySelector('#nmb_cantidad_10');
-
-
 const select_nivel = document.querySelector('#slt_nivel');
 const boton_enviar = document.querySelector('#btn_registrar');
+const id_usuario = sessionStorage.getItem('id_usuario');
+
 let validar = () => {
     let error = false;
 
@@ -171,8 +169,11 @@ let validar = () => {
 
 
 };
+
 let obtener_datos = () => {
     if (validar() == false) {
+
+        let id_institucion = id_usuario;
         let nivel = select_nivel.value;
         let util1 = input_util1.value;
         let util2 = input_util2.value;
@@ -210,7 +211,9 @@ let obtener_datos = () => {
         let cantdd10 = cantidad_10.value;
 
 
-        registrar_utiles( nivel,util1, util2, util3, util4, util5, util6, util7, util8, util9, util10, descrp1, descrp2, descrp3, descrp4, descrp5, descrp6, descrp7, descrp8, descrp9, descrp10, cantdd1, cantdd2, cantdd3, cantdd4, cantdd5, cantdd6, cantdd7, cantdd8, cantdd9, cantdd10);
+
+
+        registrar_utiles( nivel,util1, util2, util3, util4, util5, util6, util7, util8, util9, util10, descrp1, descrp2, descrp3, descrp4, descrp5, descrp6, descrp7, descrp8, descrp9, descrp10, cantdd1, cantdd2, cantdd3, cantdd4, cantdd5, cantdd6, cantdd7, cantdd8, cantdd9, cantdd10, id_institucion);
 
     } else {
         swal.fire(
@@ -220,6 +223,7 @@ let obtener_datos = () => {
 
             });
     }
+
 
 
 };

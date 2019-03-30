@@ -1,6 +1,6 @@
 'use strict'
 
-const input_padre_cedula = document.querySelector('#txt_padre_cedula');
+const input_padre_correo_electronico = document.querySelector('#txt_padre_correo_electronico');
 const input_padre_contrasena = document.querySelector('#txt_padre_contrasena');
 const boton_ingresar_padre = document.querySelector('#btn_ingresar_padre');
 
@@ -11,15 +11,15 @@ $('#tipo_usuario').on('change', function() {
     $('#' + val).show();
 });
 function obtener_datos_padre(){
-    let padre_cedula = input_padre_cedula.value;
+    let padre_correo_electronico = input_padre_correo_electronico.value;
     let padre_contrasena = input_padre_contrasena.value;
 
-    let errorBlancos = validar_padre_error(padre_cedula, padre_contrasena);
+    let errorBlancos = validar_padre_error(padre_correo_electronico, padre_contrasena);
 
 
     if (!errorBlancos) {
 
-            validar_padre(padre_cedula, padre_contrasena,function(res){
+            validar_padre(padre_correo_electronico, padre_contrasena,function(res){
                 if (res.success) {
                   window.location.href = 'index.html';
         
@@ -27,7 +27,7 @@ function obtener_datos_padre(){
                     swal.fire({
                         type:'error',
                         title:'Error',
-                        text:`El usuario con la cedula "${padre_cedula}" no existe, o la contraseña es incorrecta`
+                        text:`El usuario con la cedula "${padre_correo_electronico}" no existe, o la contraseña es incorrecta`
                     });
                 }
             });
@@ -35,14 +35,14 @@ function obtener_datos_padre(){
     } 
 };
 
-function validar_padre_error(ppadre_cedula, ppadre_contrasena){
+function validar_padre_error(ppadre_correo_electronico, ppadre_contrasena){
     let error = false;
     
-    if (ppadre_cedula == '') {
+    if (ppadre_correo_electronico == '') {
         error = true;
-        input_padre_cedula.classList.add('error_input');
+        input_padre_correo_electronico.classList.add('error_input');
     } else {
-        input_padre_cedula.classList.remove('error_input');
+        input_padre_correo_electronico.classList.remove('error_input');
     }
 
     if (ppadre_contrasena == '') {

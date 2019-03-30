@@ -4,6 +4,7 @@ module.exports.registrar = (req, res) => {
     let nuevo_util = new modelo_util(
         {
             id_nivel: req.body.ObjectId,
+            id_institucion: req.body.id_institucion,
             nivel:req.body.nivel,
             util1: req.body.util1,
             util2: req.body.util2,
@@ -15,7 +16,6 @@ module.exports.registrar = (req, res) => {
             util8: req.body.util8,
             util9: req.body.util9,
             util10: req.body.util10,
-
             descripcion1: req.body.descripcion1,
             descripcion2: req.body.descripcion2,
             descripcion3: req.body.descripcion3,
@@ -26,7 +26,6 @@ module.exports.registrar = (req, res) => {
             descripcion8: req.body.descripcion8,
             descripcion9: req.body.descripcion9,
             descripcion10: req.body.descripcion10,
-
             cantidad1: req.body.cantidad1,
             cantidad2: req.body.cantidad2,
             cantidad3: req.body.cantidad3,

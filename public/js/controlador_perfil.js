@@ -122,7 +122,7 @@ let mostrar_datos = () => {
                     Direccion.classList.add('label')
                     
                     let Sitio_web = document.createElement('h3');
-                    Sitio_web.innerHTML = "Sitio_web"
+                    Sitio_web.innerHTML = "Sitio web"
                     Sitio_web.classList.add('label')
                     
                     let Fax = document.createElement('h3');

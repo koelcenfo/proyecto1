@@ -40,7 +40,7 @@ module.exports.registrar_padre = (req, res) => {
 };
 
 module.exports.validar_padre = function (req, res) {
-    model_padre.findOne({ padre_cedula: req.body.padre_cedula }).then(
+    model_padre.findOne({ padre_correo_electronico: req.body.padre_correo_electronico }).then(
         function (usuario_padre) {
             if (usuario_padre) {
                 if (usuario_padre.padre_contrasena == req.body.padre_contrasena) {
