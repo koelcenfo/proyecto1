@@ -1,16 +1,16 @@
 'use strict';
 
-const slt_puesto1 = document.querySelector('#slt_puesto1');
-const slt_puesto2 = document.querySelector('#slt_puesto2');
-const slt_puesto3 = document.querySelector('#slt_puesto3');
-const slt_puesto4 = document.querySelector('#slt_puesto4');
-const slt_puesto5 = document.querySelector('#slt_puesto5');
-const slt_puesto6 = document.querySelector('#slt_puesto6');
-const slt_puesto7 = document.querySelector('#slt_puesto7');
-const slt_puesto8 = document.querySelector('#slt_puesto8');
-const slt_puesto9 = document.querySelector('#slt_puesto9');
-const slt_puesto10 = document.querySelector('#slt_puesto10');
-const btn_registrar = document.querySelector('#btn_registrar');
+const slt_puesto1 = document.querySelector('#institucion_1').selectedOptions[0].text;
+const slt_puesto2 = document.querySelector('#institucion_2').selectedOptions[0].text;
+const slt_puesto3 = document.querySelector('#institucion_3').selectedOptions[0].text;
+const slt_puesto4 = document.querySelector('#institucion_4').selectedOptions[0].text;
+const slt_puesto5 = document.querySelector('#institucion_5').selectedOptions[0].text;
+const slt_puesto6 = document.querySelector('#institucion_6').selectedOptions[0].text;
+const slt_puesto7 = document.querySelector('#institucion_7').selectedOptions[0].text;
+const slt_puesto8 = document.querySelector('#institucion_8').selectedOptions[0].text;
+const slt_puesto9 = document.querySelector('#institucion_9').selectedOptions[0].text;
+const slt_puesto10 = document.querySelector('#institucion_10').selectedOptions[0].text;
+const boton_registrar = document.querySelector('#btn_registrar');
 
 let validacion = () => {
     let error = false;
@@ -88,27 +88,49 @@ let validacion = () => {
 };
 
 let obtener_datos = () => {
-    if (validacion() == false) {
-        let puesto1 = slt_puesto1.value;
-        let puesto2 = slt_puesto2.value;
-        let puesto3 = slt_puesto3.value;
-        let puesto4 = slt_puesto4.value;
-        let puesto5 = slt_puesto5.value;
-        let puesto6 = slt_puesto6.value;
-        let puesto7 = slt_puesto7.value;
-        let puesto8 = slt_puesto8.value;
-        let puesto9 = slt_puesto9.value;
-        let puesto10 = slt_puesto10.value;
+
+        let puesto1 = slt_puesto1;
+        let puesto2 = slt_puesto2;
+        let puesto3 = slt_puesto3;
+        let puesto4 = slt_puesto4;
+        let puesto5 = slt_puesto5;
+        let puesto6 = slt_puesto6;
+        let puesto7 = slt_puesto7;
+        let puesto8 = slt_puesto8;
+        let puesto9 = slt_puesto9;
+        let puesto10 = slt_puesto10;
 
         registrar_ranking_mep(puesto1, puesto2, puesto3, puesto4, puesto5, puesto6, puesto7, puesto8, puesto9, puesto10);
 
-    } else {
-        swal.fire({
-            type: 'warning',
-            title: 'El ranking no fue registrado',
-            text: 'Por favor verifique los campos que están resaltados'
-        });
-    }
+
 };
 
-btn_registrar.addEventListener('click', obtener_datos);
+
+
+function cargar_instituciones()
+{
+    let institucion = listar_institucion();
+    let array = []
+
+    for (let i = 0; i < institucion.length; i++) {
+
+        array[i] = institucion[i]['institucion_nombre'];
+    }
+    for(let i in array)
+    { 
+        document.getElementById("institucion_1").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>";
+        document.getElementById("institucion_2").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_3").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_4").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_5").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_6").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_7").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_8").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_9").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>"; 
+        document.getElementById("institucion_10").innerHTML += "<option value='"+array[i]+"'>"+array[i]+"</option>";  
+
+    }
+}
+
+
+
