@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
     <title>Titulo de la página</title>
 
 
@@ -12,9 +13,17 @@
 
 <body>
     <header>
-        <nav>
-
-        </nav>
+            <nav class="barra_navegacion">
+                    <div class="imagen_barra_navegacion" onclick="window.location.href"http://localhost:3000/public/index.html""> </div>
+                    <!--Visitante-->
+                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                    <!--Conectado-->
+                    <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                    <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                    <a href="" onclick="cerrar_sesion()">Cerrar Sesión</a>
+                </nav>
     </header>
     <main>
 
@@ -41,7 +50,7 @@
 
     <script src="js/controlador_seccion_preguntas.js"></script>
 
-
+    <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/servicio_seccion_preguntas.js"></script>
 
 </body>

@@ -2,7 +2,7 @@
 body{
     background-color: #fff;
 }
-div{
+main div{
     overflow-y: scroll;
     border: 2px solid #000;
     margin: auto;

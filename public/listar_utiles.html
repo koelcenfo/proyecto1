@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/listarutil.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
-
+    <link rel="stylesheet" href="css/barra_navegacion.css">
 </head>
 
 <body>
-
+<header>
+        <nav class="barra_navegacion">
+                <div class="imagen_barra_navegacion" onclick="window.location.href"http://localhost:3000/public/index.html""> </div>
+                <!--Visitante-->
+                <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                <!--Conectado-->
+                <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                <a href="" onclick="cerrar_sesion()">Cerrar Sesión</a>
+            </nav>
+</header>
     <main>
            <div>
             <form>
@@ -43,9 +55,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_inicio.js"></script>
     <script src="js/servicio_utiles.js"></script>
     <script src="js/controlador_listar_util.js"></script>
-    <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
 </body>
 
 </html>

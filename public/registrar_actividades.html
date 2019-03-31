@@ -9,14 +9,24 @@
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/registrar_actividades.css">
         <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
-
+        <link rel="stylesheet" href="css/barra_navegacion.css">
         <title>Nueva actividad</title>
     </head>
 
     <body>
-        <div id="contenedor_logo">
-        <img id="logo" src="img/Prometeo_logo.png" alt="Prometeo_logo">
-        </div>
+        <header>
+            <nav class="barra_navegacion">
+                    <div class="imagen_barra_navegacion" onclick="window.location.href"http://localhost:3000/public/index.html""> </div>
+                    <!--Visitante-->
+                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                    <!--Conectado-->
+                    <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                    <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                    <a href="" onclick="cerrar_sesion()">Cerrar Sesión</a>
+                </nav>
+        </header>
         <form id="frm_actividades">
             <h1>Añadir nueva actividad</h1>
               <!-- Para que el usuario añada una imagen a la actividad -->
@@ -55,5 +65,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script> 
     <script src="js/servicio_actividades.js"></script>
     <script src="js/controlador_registrar_actividades.js"></script>
-
+    <script src="js/controlador_barra_navegacion.js"></script>
 </html>
