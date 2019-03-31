@@ -2,11 +2,9 @@
     font-family: 'PT Sans',sans-serif;
 }
 body{
-<<<<<<< HEAD:public/css/registrarutil.css
-    background: #ccc;
-=======
+
     background: #3b3a36;
->>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084:public/css/registrar_utiles.css
+
 }
 
 #columna_izquierda{
@@ -19,11 +17,9 @@ body{
 }
 #columna_izquierda label{
     font-size: 30px;
-<<<<<<< HEAD:public/css/registrarutil.css
-    color:#000;
-=======
+
     color:#e9ece5;
->>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084:public/css/registrar_utiles.css
+
 }
 #columna_izquierda select{
     font-size: 20px;
@@ -74,10 +70,9 @@ float: right;
 margin-top: 20px;
 font-size: 20px;
 border-radius: 30px;
-<<<<<<< HEAD:public/css/registrarutil.css
-=======
+
 cursor: pointer;
->>>>>>> 17f6465965a330bb9542d79da2e320e89d6d3084:public/css/registrar_utiles.css
+
 }
 
 
