@@ -4,6 +4,17 @@ html{
     background-color: #c0dfd9;
 }
 
+label{
+    color: #3b3a36; 
+    margin-left: 20px;
+}
+
+#txt_filtro{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 20px;
+}
+
 h1{
     margin-top: 90px;
     margin-bottom: 50px;
@@ -13,7 +24,7 @@ h1{
     text-shadow: 2px 0 0 #e9ece5, -2px 0 0 #e9ece5, 0 2px 0 #e9ece5, 0 -2px 0 #e9ece5, 1px 1px #e9ece5, -1px -1px 0 #e9ece5, 1px -1px 0 #e9ece5, -1px 1px 0 #e9ece5;
 }
 
-#tbl_preguntas tr th{
+#tabla_pregunta tr th{
     height: 40px;
     margin-left: 10px;
     padding: 15px;
@@ -21,37 +32,30 @@ h1{
     color: #e9ece5;
 }
 
-#tbl_preguntas thead th{
+#tabla_pregunta thead th{
     background: #b3c2bf;
     color: #3b3a36;
     border: 2px #e9ece5;
 }
 
-#tbl_preguntas tr td:hover{
+#tabla_pregunta tr td:hover{
     background-color: #b3c2bf;
     color: #3b3a36;
 }
 
 
-#tbl_preguntas tbody td{
+#tabla_pregunta tbody td{
     border: 2px solid;
     text-align: center;
     padding: 10px;
     
 }
 
-/* #tbl_preguntas tr td{
+/* #tabla_pregunta tr td{
     margin-left: 15%;
 } */
 
-
-#contenedor_logo{
-    padding-top: 50px;
-    background-color: #b3c2bf;
-    padding-bottom: 50px;
-}
-
-#tbl_preguntas{
+#tabla_pregunta{
     background-color: #c0dfd9;
     margin: auto;
     margin-top: 20px;
@@ -61,11 +65,11 @@ h1{
     
     margin-left: 41%;
     width: 20%;
-    height: 10%;
+    height: 15%;
 }
 
 #contenedor_pregunta{
-    padding-top: 30px;
+    padding-top: 20px;
     background-color: #e9ece5;
     padding-bottom: 30px;
 }

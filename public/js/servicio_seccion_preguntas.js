@@ -29,13 +29,13 @@ let listar_pregunta = () => {
 
 };
 
-let registrar_pregunta = (ptitulo, ppregunta, pid_institucion) => {
+let registrar_pregunta = (ppregunta, prespuesta, pid_institucion) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_pregunta",
         method: "POST",
         data: {
-            titulo: ptitulo,
             pregunta: ppregunta,
+            respuesta: prespuesta,
             id_institucion: pid_institucion
 
 

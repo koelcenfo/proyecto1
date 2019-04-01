@@ -3,10 +3,13 @@
 }
 body{
 
-    background: #3b3a36;
+    background: #c0dfd9;
 
 }
-
+h1{
+    font-size: 30px;
+    text-align: center;
+}
 #columna_izquierda{
     float: left;
     padding: 50px;
@@ -18,7 +21,7 @@ body{
 #columna_izquierda label{
     font-size: 30px;
 
-    color:#e9ece5;
+    color:#000;
 
 }
 #columna_izquierda select{

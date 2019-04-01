@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/registrar_pregunta.css">
     <title>Titulo de la página</title>
 
 
@@ -13,37 +15,38 @@
 
 <body>
     <header>
-            <nav class="barra_navegacion">
-                    <div class="imagen_barra_navegacion" onclick="window.location.href"http://localhost:3000/public/index.html""> </div>
-                    <!--Visitante-->
-                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
-                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
-                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
-                    <!--Conectado-->
-                    <a href="http://localhost:3000/public/perfil.html">Perfil</a>
-                    <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
-                    <a href="" id ="btn_cerrar_sesion">Cerrar Sesión</a>
-                </nav>
+        <nav class="barra_navegacion">
+            <div class="imagen_barra_navegacion" onclick="window.location.href"
+                http://localhost:3000/public/index.html""> </div> <!--Visitante-->
+                <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                <!--Conectado-->
+                <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                <a href="" id="btn_cerrar_sesion">Cerrar Sesión</a>
+        </nav>
     </header>
     <main>
-
-        <div>
+        <h1>Registrar sección de preguntas frecuentes</h1>
+        <div id="preguntas">
             <form>
-                <div>
-                    <label for="txt_titulo">Titulo:</label>
-                    <input type="text" id="txt_titulo">
-                </div>
+
                 <div>
                     <label for="txt_pregunta">Pregunta:</label>
-                    <textarea id="txt_pregunta"></textarea>
+                    <input type="text" id="txt_pregunta">
+                </div>
+                <div>
+                    <label for="txt_respuesta">Respuesta:</label>
+                    <textarea id="txt_respuesta"></textarea>
                 </div>
                 <button type="button" id="btn_registrar">Registrar pregunta</button>
             </form>
         </div>
     </main>
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_inicio.js"></script>

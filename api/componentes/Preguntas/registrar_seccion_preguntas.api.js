@@ -5,8 +5,8 @@ module.exports.registrar = (req, res) => {
         {
             id_pregunta:req.body.ObjectId,
             id_institucion:req.body.id_institucion,
-            titulo: req.body.titulo,
-            pregunta: req.body.pregunta
+            pregunta: req.body.pregunta,
+            respuesta: req.body.respuesta
 
         }
 
