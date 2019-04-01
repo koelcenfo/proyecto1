@@ -28,15 +28,21 @@
 
     <div id="contenido">
             <nav class="barra_navegacion">
-                    <div class="imagen_barra_navegacion" onclick="window.location.href"http://localhost:3000/public/index.html""> </div>
+                <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
                     <!--Visitante-->
                     <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
                     <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
                     <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
                     <!--Conectado-->
                     <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                        <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
                     <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
-                    <a href="" onclick="cerrar_sesion()">Cerrar Sesión</a>
+                    <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+                        function cerrar_sesion(){
+                        sessionStorage.clear();
+                        window.location.href='index.html';
+                    }
+                </script>
                 </nav>
             </header>
             <section id="sct_usuario">
@@ -76,6 +82,7 @@
     
 <script src="js/servicio_inicio.js"></script>
 <script src="js/servicio_utiles.js"></script>
+<script src="js/controlador_url.js"></script>
 <script src="js/controlador_barra_navegacion.js"></script>
 <script src="js/controlador_perfil.js"></script>
 

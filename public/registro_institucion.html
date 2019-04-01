@@ -63,7 +63,24 @@
 </head>
 
 <body>
-
+    <header>
+        <nav class="barra_navegacion">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+                function cerrar_sesion(){
+                sessionStorage.clear();
+                window.location.href='index.html';
+            }
+        </script>
+        </nav>
+    </header>
     <div class="div_registro">
         <h1 id="top_h">Registro Institución</h1>
         <div class="div_registro_izquierda">
@@ -188,6 +205,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio.registro_institucion.js"></script>
     <script src="js/controlador.registro_institucion.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
     <!--Scripts Cloudinary-->
     <script src="https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js"
         type="text/javascript"></script>

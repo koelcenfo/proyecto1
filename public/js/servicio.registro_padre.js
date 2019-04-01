@@ -1,11 +1,10 @@
 'use strict'
 
-let registrar_padre = (ppadre_id,ppadre_nombre, ppadre_apellido, ppadre_correo_electronico, ppadre_hijos, ppadre_fecha, ppadre_direccion, ppadre_telefono, ppadre_nacionalidad, ppadre_cedula, ppadre_contrasena, ppadre_imagen) => {
+let registrar_padre = (ppadre_nombre, ppadre_apellido, ppadre_correo_electronico, ppadre_hijos, ppadre_fecha, ppadre_direccion, ppadre_telefono, ppadre_nacionalidad, ppadre_cedula, ppadre_contrasena, ppadre_imagen) => {
     let request = $.ajax({
         url:"http://localhost:4000/api/registrar_padre",
         method: "POST",
         data: {
-            padre_id : ppadre_id,
             padre_nombre : ppadre_nombre,
             padre_apellido : ppadre_apellido,
             padre_correo_electronico : ppadre_correo_electronico,
@@ -31,7 +30,7 @@ let registrar_padre = (ppadre_id,ppadre_nombre, ppadre_apellido, ppadre_correo_e
             showConfirmButton: false,
             timer: 4000
         });
-        setTimeout("window.location.href = 'index.html';",4500);
+       setTimeout("window.location.href = 'index.html';",4500);
         
     });
 

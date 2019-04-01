@@ -23,14 +23,6 @@ let validar_padre = (ppadre_correo_electronico, ppadre_contrasena, callback) => 
     });
 
     request.fail(function (response) {
-
-        Swal.fire({
-            type: 'error',
-            title: 'Error',
-            text: `El usuario no esta registrado o la contraseña de ${padre_cedula} es incorrecta`,
-        })
-    });
-    request.fail(function (response) {
         Swal.fire({
             type: 'error',
             title: 'Error',

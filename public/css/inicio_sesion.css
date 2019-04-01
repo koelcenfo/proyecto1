@@ -71,4 +71,5 @@ button{
     background-color:  #3b3a36;
     color: #c0dfd9;
     outline: none;
+    cursor: pointer;
 }

@@ -9,6 +9,10 @@ html{
 
 
 }
+#titulo_busqueda{
+    margin-left: 40%;
+    font-size: 50px;
+}
 h2{
     display: block;
     margin-left: 20%;

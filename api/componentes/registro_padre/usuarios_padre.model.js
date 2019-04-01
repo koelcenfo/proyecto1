@@ -4,22 +4,17 @@ let schema_padre = new mongoose.Schema(
     {
         padre_id : { type: mongoose.Schema.ObjectId, auto: true },
         padre_nombre : {type : String, required:true},
-        padre_apellido : {type : String, required:false},
-        padre_correo_electronico : {type : String, required:false},
-        padre_hijos : {type : Number, required:false},
-        padre_fecha: {type : Date, required:false},
-        padre_direccion: {type : String, required:false},
-        padre_telefono: {type : Number, required:false},
-        padre_nacionalidad: {type : String, required:false},
-        padre_cedula: {type : String, required:false},
-        padre_contrasena : {type : String, required:false},
-        padre_imagen : {type : String, required:false},
-
-        tipo_usuario : {type : String, required: false},
-        padre_id :{type : String, required: false},
-
-        tipo_usuario : {type : String, required: false},
-
+        padre_apellido : {type : String, required:true},
+        padre_correo_electronico : {type : String, required:true},
+        padre_hijos : {type : Number, required:true},
+        padre_fecha: {type : Date, required:true},
+        padre_direccion: {type : String, required:true},
+        padre_telefono: {type : Number, required:true},
+        padre_nacionalidad: {type : String, required:true},
+        padre_cedula: {type : String, required:true},
+        padre_contrasena : {type : String, required:true},
+        padre_imagen : {type : String, required:true},
+        tipo_usuario : {type : String, required: true},
     }
 );
 

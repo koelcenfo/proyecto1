@@ -3,28 +3,29 @@
 const section_usuario = document.querySelector('#sct_usuario');
 
 function getUrl(){
-     //Se obtiene el valor de la URL desde el navegador
-     var actual = window.location+'';
-     //Se realiza la división de la URL
-     var split = actual.split("/");
-     //Se obtiene el ultimo valor de la URL
-     var id = split[split.length-1];
-     sessionStorage.setItem('id_perfil',id);
-     
-}
+    //Se obtiene el valor de la URL desde el navegador
+    let actual = window.location+'';
+    //Se realiza la división de la URL
+    let split = actual.split("/");
+    //Se obtiene el ultimo valor de la URL
+    let id = split[split.length-1];
+   return id;
+    
+};
+
 /*$(function(){ // jQuery dom ready event
     if (window.location.href.toLowerCase().indexOf("loaded") < 0) {
         window.location = window.location.href + '?loaded=1'
     }
-});*/
-
+});
+*/
 let mostrar_datos = () => {
     
-   /* let padres = listar_padre();*/
+   /*   let padres = listar_padre();*/
     let instituciones = listar_institucion();
     let tipo_usuario = sessionStorage.getItem('tipo_usuario');
     let id = sessionStorage.getItem('id_usuario');
-    let id_perfil_institucion = sessionStorage.getItem('id_perfil');
+    let id_perfil_institucion = getUrl();
     
     switch (tipo_usuario) {
         case "Padre":
