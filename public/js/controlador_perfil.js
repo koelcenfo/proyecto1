@@ -13,12 +13,9 @@ function getUrl(){
     
 };
 
-/*$(function(){ // jQuery dom ready event
-    if (window.location.href.toLowerCase().indexOf("loaded") < 0) {
-        window.location = window.location.href + '?loaded=1'
-    }
-});
-*/
+
+
+
 let mostrar_datos = () => {
     
    /*   let padres = listar_padre();*/
@@ -26,6 +23,7 @@ let mostrar_datos = () => {
     let tipo_usuario = sessionStorage.getItem('tipo_usuario');
     let id = sessionStorage.getItem('id_usuario');
     let id_perfil_institucion = getUrl();
+    const botones = document.querySelectorAll('#listas_de_institucion button');
     
     switch (tipo_usuario) {
         case "Padre":
@@ -422,6 +420,25 @@ let mostrar_datos = () => {
 
     }
 
+    switch(tipo_usuario){
+        case 'Padre':
+        botones[0].classList.add('ocultar');/**Registrar Lista Utiles */
+        botones[1].classList.add('mostrar');/**Visualizar Lista Utiles */
+        botones[2].classList.add('ocultar');/**Registrar Preguntas*/
+        botones[3].classList.add('mostrar');/**Listar Preguntas*/
+        botones[4].classList.add('ocultar');/**Registrar Actividades*/
+        botones[5].classList.add('mostrar');/**Listar Actividades*/
+        break;
+
+        case 'Institucion':
+        botones[0].classList.add('mostrar');/**Registrar Lista Utiles */
+        botones[1].classList.add('mostrar');/**Visualizar Lista Utiles */
+        botones[2].classList.add('mostrar');/**Registrar Preguntas*/
+        botones[3].classList.add('mostrar');/**Listar Preguntas*/
+        botones[4].classList.add('mostrar');/**Registrar Actividades*/
+        botones[5].classList.add('mostrar');/**Listar Actividades*/
+        break;
+    }
    
 };
 

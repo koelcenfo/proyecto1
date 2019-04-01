@@ -7,7 +7,6 @@ let mostrar_datos = () => {
     let institucion = listar_institucion();
     sessionStorage.removeItem('id_perfil');
     for (let i = 0; i < institucion.length; i++) {
-        
         var nombre = document.createElement('h2');
         nombre.innerHTML = institucion[i]['institucion_nombre'];
         lista.appendChild(nombre);
@@ -25,32 +24,36 @@ let mostrar_datos = () => {
 
 function Buscar() {
 
-    var tabla = document.getElementById('#lista_instituciones');
+    var section = document.getElementById('#lista_instituciones');
+
+    let section = listar_institucion();
 
     var busqueda = document.getElementById('txtBusqueda').value.toLowerCase();
 
-    var cellsOfRow="";
+    var celdas="";
 
-    var found=false;
+    var encontrado=false;
 
-    var compareWith="";
+    var comparar="";
 
-    for (var i = 1; i < tabla.rows.length; i++) {
+    /**obtiene la cantidad de celdas que hay */
+    for (var i = 1; i < section.length; i++) {
 
-        cellsOfRow = tabla.rows[i].getElementsByTagName('td');
-
-        found = false;
-
-        for (var j = 0; j < cellsOfRow.length && !found; j++) { compareWith = cellsOfRow[j].innerHTML.toLowerCase(); if (busqueda.length == 0 || (compareWith.indexOf(busqueda) > -1))
+        /**Se le asigna el elemento que haya en el td al arreglo celdas*/
+        celdas = section[i].getElementsByTagName('td');
+        /**Variable que no encontró coincidencias */
+        encontrado = false;
+        
+        for (var j = 0; j < celdas.length && !encontrado; j++) { comparar = celdas[j].innerHTML.toLowerCase(); if (busqueda.length == 0 || (comparar.indexOf(busqueda) > -1))
             {
-                found = true;
+                encontrado = true;
             }
         }
-        if(found)
+        if(encontrado)
         {
-            tabla.rows[i].style.display = '';
+            section[i].style.display = '';
         } else {
-            tabla.rows[i].style.display = 'none';
+            section[i].style.display = 'none';
         }
     }
 }
