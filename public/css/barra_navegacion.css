@@ -9,9 +9,10 @@
     display: block;
 }
 .barra_navegacion{
+    display: block;
     width: 100%;
     height: 70px;
-    background-color: #3b3a36;
+    background-color:#b71540;
 }
 .imagen_barra_navegacion{
     display: inline;
@@ -56,7 +57,7 @@
     font-size: 18px;
     font-family: 'PT Sans', sans-serif;
     text-decoration: none;
-    color: #e9ece5;
+    color: #ffffff;
 }
 #div_registro{
     display: block;
@@ -69,7 +70,7 @@
     font-size: 20px;    
     font-family: 'PT Sans', sans-serif;
     text-decoration: none;
-    background-color: #e9ece5;  
+    background-color: #ffffff;  
 }
 #div_registro:hover{
     display: none;
@@ -80,7 +81,7 @@
     height: 45px;
 }
 .barra_navegacion a:hover{
-    background-color: #b3c2bf;  
-    color: #3b3a36;
+    background-color: #0a3d62;  
+    color: #ffffff;
 }
 

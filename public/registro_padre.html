@@ -17,12 +17,12 @@
         <nav class="barra_navegacion">
             <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
             <!--Visitante-->
-            <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
-            <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
-            <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+            <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
             <!--Conectado-->
             <a href="http://localhost:3000/public/perfil.html">Perfil</a>
-            <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+            <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar sesión</a><script type="text/javascript">
                 function cerrar_sesion(){
                 sessionStorage.clear();
                 window.location.href='index.html';
@@ -33,18 +33,22 @@
 
 
 
-
     
     <div class="div_registro">
-        <h1 id="top_h">Registro Padre de Familia</h1>
-        <div class="div_registro_izquierda">
+        <h1 id="top_h">Registro padre de familia</h1>
             <form>
-                <label for="txt_padre_nombre">Primer Nombre</label>
-                <input type="text" id="txt_padre_nombre" placeholder="Alberto">
-                <label for="txt_padre_apellido" >Primer Apellido</label>
-                <input type="text" id="txt_padre_apellido" placeholder="Segura">
-                <label for="txt_padre_correo_electronico">Correo Electrónico</label>
-                <input type="email" id="txt_padre_correo_electronico" placeholder="alsegura@gmail.com">
+                    <div id="fotografia_padre">
+                            <figure class="image_holder">
+                                <img src="img/inicio_sesion/padre.png" alt="seleccionar_imagen" id="image_preview">
+                            </figure>
+                            <button type="button" id="btn_seleccionar_imagen" class="boton_imagen">Subir</button>
+                        </div>
+                 <label for="txt_padre_nombre">Primer nombre</label>
+                <input type="text" id="txt_padre_nombre">
+                <label for="txt_padre_apellido" >Primer apellido</label>
+                <input type="text" id="txt_padre_apellido">
+                <label for="txt_padre_correo_electronico">Correo electrónico</label>
+                <input type="email" id="txt_padre_correo_electronico">
                 <label for="slt_padre_hijos">Cantidad de hijos</label>
                 <select id="slt_padre_hijos">
                     <option value="">Seleccione la cantidad</option>
@@ -62,33 +66,24 @@
                 <label for="txt_padre_fecha">Fecha de nacimiento</label>
                 <input type="date" id="txt_padre_fecha">
                 <label for="txt_padre_direccion'">Lugar de residencia</label>
-                <input type="text" id="txt_padre_direccion" placeholder="Barrio Mexico">
+                <input type="text" id="txt_padre_direccion">
                 <label for="txt_padre_telefono">Teléfono</label>
-                <input type="text" id="txt_padre_telefono" placeholder="86223614">
-            </form>
-        </div>
-        <div class="div_registro_derecha">
-            <form>
-                <div id="fotografia_padre">
-                    <figure class="image_holder">
-                        <img src="img/registro_padre/image_placeholder/image_placeholder.jpeg" alt="seleccionar_imagen" id="image_preview">
-                    </figure>
-                    <button type="button" id="btn_seleccionar_imagen" class="boton_imagen">Subir Imagen</button>
-                </div>
+                <input type="text" id="txt_padre_telefono">
+
+
                 <label for="txt_padre_nacionalidad">Nacionalidad</label>
-                <input type="text" id="txt_padre_nacionalidad" placeholder="Costarricense">
-                <label for="txt_padre_cedula">Cedula</label>
-                <input type="text" id="txt_padre_cedula" placeholder="109523220">
+                <input type="text" id="txt_padre_nacionalidad">
+                <label for="txt_padre_cedula">Cédula</label>
+                <input type="text" id="txt_padre_cedula">
                 <label for="txt_padre_contrasena">Contraseña</label>
                 <input type="password" id="txt_padre_contrasena">
-                <button type="button" id="btn_atras">Atrás
-                    <a href="index.html"></a>
-                </button>
-                <button type="button" id="btn_registrar">Registrar</button>
-                
+                <div id="contenedor_botones">
+                        <button  type="button" id="btn_atras">Atrás</button>
+                        <button type="button" id="btn_registrar">Registrar</button>
+                    </div>
             </form>
         </div>
-    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>

@@ -4,11 +4,25 @@ const input_padre_correo_electronico = document.querySelector('#txt_padre_correo
 const input_padre_contrasena = document.querySelector('#txt_padre_contrasena');
 const boton_ingresar_padre = document.querySelector('#btn_ingresar_padre');
 
-$('#tipo_usuario').on('change', function() {
-    var val = $(this).val();
-    $('#padre_familia').hide();
+
+$(document).ready((function(){
+
+    $('#padre_familia').show();
     $('#institucion').hide();
-    $('#' + val).show();
+
+}));
+
+$('#checkbox1').change(function(){
+    if (this.checked) {
+        $('#padre_familia').hide();
+        $('#institucion').show();
+    }
+    else {
+ 
+        $('#padre_familia').show();
+        $('#institucion').hide();
+    
+    }
 });
 function obtener_datos_padre(){
     let padre_correo_electronico = input_padre_correo_electronico.value;
@@ -75,9 +89,10 @@ function obtener_datos_institucion(){
                 } else {
                     swal.fire({
                         type:'error',
-                        title:'Error',
-                        text:`El correo "${institucion_correo_electronico}" no existe, o la contraseña es incorrecta`
+                        title:'¡Error!',
+                        text:`El correo "${institucion_correo_electronico}" no existe, o la contraseña es incorrecta.`
                     });
+
                 }
             });
 

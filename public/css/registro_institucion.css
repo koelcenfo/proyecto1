@@ -1,13 +1,253 @@
 html{
-    font-family: 'PT Sans', sans-serif;  
+    font-family: 'PT Sans', sans-serif;
+    background-color: #2c2c54; 
 }
 .hidden {
     display: none;
 }
 .error_input{
     border: solid 1px #ED4C67;
+}
+
+
+
+
+body{
+
+    line-height: 1.6
+}   
+.container{
+    width: 759px;
+    margin: auto;
+}
+
+
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px ;
+    padding-left: 27px;
+    padding-right: 27px;
+    cursor: pointer;
+}
+
+ul.tabs li.current{
+    background: #b71540;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+.div_registro{
+width: 40%;
+height: 100%;
+margin: auto;
+margin-bottom: 40px;
+background-color: #ffff;
+}
+#top_h{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: #fff;
+    background-color: #2c2c54;
+}
+
+label, legend{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+input[type=text],[type=number],[type=password], select{
+    display: block; 
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    width: 60%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    border: none;
+    outline-color: #2f3542;
+}
+textarea{
+    display: block;
+    margin: auto;
+    font-size: 25px;
+    width: 60%;
+    height: 158px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    border: none;
+    outline-color: #2f3542;
+    resize: none;
+}
+#fieldset_checkbox{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    height: 285px;
+    overflow-y: scroll;
+    border: solid 2px #dfe4ea;
+    border-radius: 5px;
     }
-    
+.idiomas{
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: 285px;
+    overflow-y: scroll;
+    border: solid 2px #dfe4ea;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+#idioma_input{
+    width: 73%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+.btn_add_row{
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #fff;
+    background-color: #1dd1a1;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.btn_remove_row{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 15px;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+#rbt_institucion_bachillerato_internacional label{
+display: block;
+}
+
+
+.Niveles_colegio ul{
+padding-bottom: 2px;
+}
+/*#slt{
+    font-size: 20px;
+    width: 90%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    border: none;
+    outline-color: #2f3542;
+}*/
+.Niveles_colegio label, .Niveles_escuela label, fieldset ul{
+    font-size: 20px;
+}
+.checkbox_titulos{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 25px;
+}
+
+#image_preview{
+    width: 60%;
+    height: 150px;
+    display: block;
+    margin: auto;
+    border: solid 3px #2f3542;
+    border-radius: 20px;
+}
+#btn_seleccionar_imagen{
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #fff;
+    background-color: #1dd1a1;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.negacion{
+display: block;
+margin-top: -25px;
+color: #ED4C67;
+}
+.confirmacion{
+    display: block; 
+    margin-top: -15px;
+    color: #1dd1a1;  
+}
+button{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#btn_atras{
+    float: left;
+    background-color: #e74c3c;
+}
+#btn_registrar{
+    float: right;
+    background-color: #3498db;
+}
+#contenedor_botones{
+    display: block;
+    margin: auto;
+    width: 78%;
+    height: 51px;
+    margin-bottom: 40px;
+}
+/*  
 body{
 width: 100%;
 height: 100%;
@@ -15,14 +255,7 @@ background: url('../img/registro_institucion/fondo_pantalla.jpg');
 background-repeat: none;
 background-size: cover;
 }
-#top_h{
-    width: 60%;
-    font-size: 50px;
-    text-align: center;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+
 .div_registro{
     margin: auto; 
     height: 95%;    

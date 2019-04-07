@@ -14,27 +14,32 @@ module.exports.registrar_institucion = (req, res) =>{
     let nuevo_institucion = new model_institucion(
         {
             institucion_id: req.body.ObjectId,
-            institucion_nombre_encargado : req.body.institucion_nombre_encargado,
-            institucion_departamento_encargado : req.body.institucion_departamento_encargado,
-            institucion_telefono : req.body.institucion_telefono,
-            institucion_correo_electronico : req.body.institucion_correo_electronico,
-            institucion_contrasena : req.body.institucion_contrasena,
-            institucion_nombre_inscrito : req.body.institucion_nombre_inscrito,
             institucion_nombre : req.body.institucion_nombre,
+            institucion_nombre_inscrito : req.body.institucion_nombre_inscrito,
+            institucion_cedula : req.body.institucion_cedula,
+            institucion_telefono : req.body.institucion_telefono,
             institucion_niveles : req.body.institucion_niveles,
-            institucion_bachillerato_internacional : req.body.institucion_bachillerato_internacional,
             institucion_tipo : req.body.institucion_tipo,
             institucion_idiomas : req.body.institucion_idiomas,
             institucion_generos : req.body.institucion_generos,
-            institucion_ideologia : req.body.institucion_ideologia,
-            institucion_fundacion : req.body.institucion_fundacion,
-            institucion_referencia : req.body.institucion_referencia,
-            institucion_cedula : req.body.institucion_cedula,
             institucion_provincia : req.body.institucion_provincia,
             institucion_canton : req.body.institucion_canton,
             institucion_distrito : req.body.institucion_distrito,
             institucion_direccion : req.body.institucion_direccion,
+            institucion_fundacion : req.body.institucion_fundacion,
+            institucion_referencia : req.body.institucion_referencia,
+            institucion_ideologia : req.body.institucion_ideologia,
+            institucion_bachillerato_internacional : req.body.institucion_bachillerato_internacional,
+            institucion_correo_electronico : req.body.institucion_correo_electronico,
             institucion_sitio_web : req.body.institucion_sitio_web,
+            institucion_facebook : req.body.institucion_facebook,
+            institucion_twitter : req.body.institucion_twitter,
+            institucion_nombre_encargado : req.body.institucion_nombre_encargado,
+            institucion_apellido_encargado : req.body.institucion_apellido_encargado,
+            institucion_cedula_encargado : req.body.institucion_cedula_encargado,
+            institucion_departamento_encargado : req.body.institucion_departamento_encargado,
+            institucion_correo_electronico_encargado : req.body.institucion_correo_electronico_encargado,
+            institucion_contrasena : req.body.institucion_contrasena,
             institucion_fax : req.body.institucion_fax,
             institucion_imagen : req.body.institucion_imagen,
             tipo_usuario : "Institucion",
@@ -50,9 +55,9 @@ module.exports.registrar_institucion = (req, res) =>{
             );
         }else{
             res.json({
-                    success : true,
-                    msg : `Se registro satisfactoriamente el usuario`
-                    });
+                success : true,
+                msg : `Se registro satisfactoriamente el usuario.`
+                });
             /*let mailOptions = {
                 from : 'koelcenfo@gmail.com',
                 to : 'lurizarm@ucenfotec.ac.cr',
@@ -83,13 +88,13 @@ module.exports.validar_institucion = function (req, res){
                 } else{
                     res.json({
                         success: false,
-                        msg: 'La contraseña no es correcta'
+                        msg: 'La contraseña no es correcta.'
                     });
                 }
             }else{
                 res.json({
                     success: false,
-                    msg: 'El usuario no existe'
+                    msg: 'El usuario no existe.'
                 });
             }
         }
@@ -110,7 +115,7 @@ module.exports.listar_institucion = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        instituciones: 'No se encontraron instituciones'
+                        instituciones: 'No se encontraron instituciones.'
                     }
                 )
             }
