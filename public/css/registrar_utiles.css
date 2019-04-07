@@ -1,85 +1,83 @@
-*{
-    font-family: 'PT Sans',sans-serif;
+html{
+    font-family: 'PT Sans', sans-serif;
+}
+.error_input{
+    border: 2px solid red;
 }
 body{
-
-    background: #c0dfd9;
-
+    
+    background: #574b90;
 }
 h1{
-    font-size: 30px;
     text-align: center;
-}
-#columna_izquierda{
-    float: left;
-    padding: 50px;
-}
-#columna_izquierda form{
-    margin-top: 100px;
-    margin-left: 50px;
-}
-#columna_izquierda label{
-    font-size: 30px;
-
-    color:#000;
-
-}
-#columna_izquierda select{
-    font-size: 20px;
-}
-
-#columna_derecha {
-    float: right;
-    background-color: #b3c2bf;
-    padding: 50px;
-    border-radius: 20px;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     color: #fff;
-    
-    margin-top:150px; 
-    margin-right: 200px;
+    background-color: #574b90;
 }
-#tabla_util{
-    border:2px solid #000;
-    font-size: 20px;
+#contenido{
+    display: block;
+    background-color: #fff;
+    width: 65%;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 100px;
+    border-radius: 5px;
 }
-#tabla_util thead{
-    background: #474B4F;
-    
+#info_p{
+    text-align: center;
+    font-size:22px;  
+    padding: 30px;
+    color: rgb(151, 151, 151);
+}
 
+label{
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    font-size: 30px;
 }
-#tabla_util tbody td{
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000; 
-}
-#tabla_util tbody input{
-    width: 200px;
-    height: 25px;
-    font-size: 20px;
-}
-#tabla_util tbody select{
-    width: 200px;
-    height: 30px;
-    font-size: 20px;
-}
-h1{
+input{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
     font-size: 30px;
     text-align: center;
-    margin: 10px;
-    color: #3b3a36;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #dfe4ea;
+    outline-color: #1abc9c;
+    
 }
-#btn_registrar{
-float: right;
-margin-top: 20px;
-font-size: 20px;
-border-radius: 30px;
-
-cursor: pointer;
-
+#btn_atras{
+    float: left;
+    background-color: #e74c3c;
 }
-
-
-
-.error_input{
-    border-color: red;
+#btn_enviar{
+    float: right;
+    background-color:#3498db;;
+}
+#btn_enviar,#btn_atras{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    
+    margin-right: 10%;
+    margin-left: 10%;
+  
+}
+.contenedor_botones{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 100px;
 }

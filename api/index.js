@@ -15,7 +15,7 @@ const express = require('express'),
  */
 let db = mongoose.connection,
     dburl = 
-    'mongodb://koeladmins:Grupokoel2019@proyecto-shard-00-00-xwswr.mongodb.net:27017,proyecto-shard-00-01-xwswr.mongodb.net:27017,proyecto-shard-00-02-xwswr.mongodb.net:27017/test?ssl=true&replicaSet=proyecto-shard-0&authSource=admin&retryWrites=true',
+    'mongodb+srv://koeladmins:Grupokoel2019@proyecto-xwswr.mongodb.net/test?retryWrites=true',
     port = 4000;
 
 /**
@@ -67,39 +67,10 @@ const utiles=require('./componentes/Utiles/registrar_util.route');
 app.use('/api',utiles);
 
 const preguntas=require('./componentes/Preguntas/registrar_seccion_preguntas.route');
-
 app.use('/api',preguntas);
 
-const actividades=require('./componentes/actividades/actividades.route');
-
-app.use('/api',actividades);
-
-const citas=require('./componentes/citas/citas.route');
-app.use('/api',citas);
-
-const registro_padre=require('./componentes/registro_padre/usuarios_padre.route');
-app.use('/api',registro_padre);
-
-const registro_institucion=require('./componentes/registro_institucion/usuarios_institucion.route');
-app.use('/api',registro_institucion);
-
-
-const ranking = require('./componentes/ranking_mep/ranking_mep.route')
-app.use('./api', ranking);
-
-
-const registrar_ranking=require('./componentes/ranking_mep/ranking_mep.route');
-app.use('/api',registrar_ranking);
-
-
-
-
-
-
-
-
-const lista_oficial = require('./componentes/lista_oficial/lista_oficial.route')
-app.use('./api', lista_oficial);
+const costos=require('./componentes/costos/registrar_costo.route');
+app.use('/api',costos);
 
 
 

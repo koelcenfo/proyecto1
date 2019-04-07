@@ -3,8 +3,6 @@ const modelo_pregunta = require('./registrar_seccion_preguntas.model');
 module.exports.registrar = (req, res) => {
     let nueva_pregunta = new modelo_pregunta(
         {
-            id_pregunta:req.body.ObjectId,
-            id_institucion:req.body.id_institucion,
             pregunta: req.body.pregunta,
             respuesta: req.body.respuesta
 
@@ -40,8 +38,8 @@ module.exports.listar_pregunta = (req, res) => {
             } else {
                 res.json(
                     {
-                        success:false,
-                        msg:`no se encontró pregunta alguna`
+                        success: false,
+                        msg: `no se encontró pregunta alguna`
 
                     }
                 )

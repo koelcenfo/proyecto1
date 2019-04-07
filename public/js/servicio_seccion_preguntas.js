@@ -36,7 +36,7 @@ let registrar_pregunta = (ppregunta, prespuesta, pid_institucion) => {
         data: {
             pregunta: ppregunta,
             respuesta: prespuesta,
-            id_institucion: pid_institucion
+            
 
 
         },
