@@ -25,8 +25,8 @@ let registrar_padre = (ppadre_nombre, ppadre_apellido, ppadre_correo_electronico
 
         swal.fire({
             type: 'success',
-            tittle: 'Usuario Registrado Correctamente',
-            text: `Saludos ${ppadre_nombre} se ha registrado exitosamente en el sistema, puede iniciar sesion con el correo que ingresó`,
+            tittle: 'Usuario Registrado Correctamente.',
+            text: `Saludos ${ppadre_nombre} se ha registrado exitosamente en el sistema, puede iniciar sesion con el correo que ingresó.`,
             showConfirmButton: false,
             timer: 4000
         });

@@ -218,8 +218,8 @@ let obtener_datos = () => {
     } else {
         swal.fire({
             type: 'warning',
-            title: 'La lista no fue registrada',
-            text: 'Por favor verifique los campos que están resaltados'
+            title: 'La lista no fue registrada.',
+            text: 'Por favor verifique los campos que están resaltados.'
         });
     }
 };

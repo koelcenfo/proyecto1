@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,14 +30,14 @@
             <nav class="barra_navegacion">
                 <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
                     <!--Visitante-->
-                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
-                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
-                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                    <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+                    <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
                     <!--Conectado-->
                     <a href="http://localhost:3000/public/perfil.html">Perfil</a>
                         <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
                     <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
-                    <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+                    <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar sesión</a><script type="text/javascript">
                         function cerrar_sesion(){
                         sessionStorage.clear();
                         window.location.href='index.html';
@@ -72,10 +72,15 @@
                         <div id="img_actividades"></div>
                         <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_actividades.html'">Registrar actividades</button>
             
-                        <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar actividades</button>
+                        <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar actividades</button>        
+                </div>
 
-    </div>
-
+                <div id="seccion">
+                    <div id="img_citas"></div>
+                    <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_citas.html'">Registrar citas</button>
+                    
+                    <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_citas.html'">Visualizar citas</button>
+                </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

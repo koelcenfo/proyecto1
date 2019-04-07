@@ -6,27 +6,32 @@
         <link rel="stylesheet" href="css/reset.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/registrar_citas.css">
-        <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
+        <link rel="stylesheet" href="css/barra_navegacion.css">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
         
-            <div id="contenedor_logo">
-                    <img id="logo" src="imgs/Prometeo_logo.png" alt="Prometeo_logo">
-            </div>
-    
+            <header>
+                <nav class="barra_navegacion">
+                    <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+                    <!--Visitante-->
+                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                    <!--Conectado-->
+                    <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                    <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                    <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+                        function cerrar_sesion(){
+                        sessionStorage.clear();
+                        window.location.href='index.html';
+                    }
+                </script>
+                </nav>
+            </header>
 
-        <!-- <div class="contenedor2">
-            <h1>Buscador de centros educativos</h1>
-            <input type="text" id="formulario">
-            <button id="btn_buscar">Buscar</button>
-        </div>
-            <ul id="resultado">
-                <li>¡Busque el nombre del centro educativo!</li>
-            </ul> -->
-        
-
-        <form id="frm_citas">
+        <form name="formulario" id="frm_citas">
             <h1>Solicitar cita</h1>
 
             <div id="titulo_contenedor">
@@ -58,13 +63,15 @@
                     </div>
                 </div>
 
-
         </form>
+
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script> 
+    <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <!-- <script src="js/controlador_inicio.js"></script> -->
     <script src="js/servicio_citas.js"></script>
     <script src="js/controlador_registrar_citas.js"></script>
-    <script src="js/buscar_informacion.js"></script>
 </html>

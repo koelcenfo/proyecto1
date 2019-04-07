@@ -63,13 +63,55 @@ div{
     padding-bottom: 30px;
 }
 
-#logo{
-    
-    margin-left: 41%;/*Corrección-> estaba en 550px*/
-    width: 20%;
-    height: 15%;
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.barra_navegacion{
+    width: 100%;
+    height: 70px;
+    background-color: #3b3a36;
 }
 
-#contenedor_logo{
-    background-color: #b3c2bf;
+.barra_navegacion{
+    width: 100%;
+    height: 70px;
+    background-color: #3b3a36;
 }
+.imagen_barra_navegacion{
+    display: inline;
+    float: left;
+    background: url("../img/Prometeo_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-left: 15px;  
+    width: 208px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.barra_navegacion a:hover{
+    background-color: #b3c2bf;  
+    color: #3b3a36;
+}
+
+.barra_navegacion a{    
+    width: 170px;
+    height: 45px;
+    float: right;   
+    padding-top: 25px;  
+    vertical-align: middle; 
+    text-align: center;
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    color: #e9ece5;
+}
+
+/* #contenedor_logo{
+    background-color: #b3c2bf;
+} */

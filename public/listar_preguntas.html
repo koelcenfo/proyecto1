@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/listar_preguntas.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/barra_navegacion.css">
-  <title>Preguntas Frecuentes</title>
 </head>
 
 <body>
@@ -17,13 +16,13 @@
     <nav class="barra_navegacion">
         <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
         <!--Visitante-->
-        <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
-        <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
-        <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+        <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+        <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+        <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
         <!--Conectado-->
         <a href="http://localhost:3000/public/perfil.html">Perfil</a>
         <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
-        <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+        <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar sesión</a><script type="text/javascript">
             function cerrar_sesion(){
             sessionStorage.clear();
             window.location.href='index.html';
@@ -31,12 +30,11 @@
     </script>
     </nav>
 </header>
-
-  <h1>Sección de preguntas frecuentes</h1>
   <main>
-
-    <div>
-
+      <div id="form_contenedor">
+          <h1 id="titulo_registro">Sección de preguntas frecuentes.</h1>
+          <p id="info_p">En la siguiente lista podrá ver las preguntas más frecuentes que se hacen en el centro educativo y su respectiva respuesta.</p>
+          <hr>
         <label for="txt_filtro">Filtrar</label>
         <input type="text" id="txt_filtro"onkeyup="filtrar();">
       <div id="contenedor_pregunta">
@@ -50,7 +48,10 @@
           </tbody>
         </table>
       </div>
+      <form id="contenedor_botones" action="http://localhost:3000/public/perfil.html">
+        <button  type="submit" id="btn_atras">Atrás</button>
 
+      </form>
 
   </main>
 </body>

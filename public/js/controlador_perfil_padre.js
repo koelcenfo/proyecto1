@@ -67,7 +67,7 @@ if (tipo_usuario == 'Padre') {
             direccion.innerHTML = padre[i]['padre_direccion'];
             /**Label */
             let label_direccion = document.createElement('h1');
-            label_direccion.innerHTML = "Direccion de su residencia";
+            label_direccion.innerHTML = "Dirección de su residencia";
             label_direccion.classList.add('label');
 
             let telefono = document.createElement('h2');
@@ -75,7 +75,7 @@ if (tipo_usuario == 'Padre') {
             telefono.innerHTML = padre[i]['padre_telefono'];
             /**Label */
             let label_telefono = document.createElement('h1');
-            label_telefono.innerHTML = "Numero Telefónico";
+            label_telefono.innerHTML = "Número Telefónico";
             label_telefono.classList.add('label');
 
             let nacionalidad = document.createElement('h2');
@@ -91,7 +91,7 @@ if (tipo_usuario == 'Padre') {
             cedula.innerHTML = padre[i]['padre_cedula'];
             /**Label */
             let label_cedula = document.createElement('h1');
-            label_cedula.innerHTML = "Cedula";
+            label_cedula.innerHTML = "Cédula";
             label_cedula.classList.add('label');
             contenedor_perfil.appendChild(imagen);
             contenedor_perfil.appendChild(label_nombre);

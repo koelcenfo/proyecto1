@@ -102,11 +102,11 @@ let mostrar_datos = () => {
                     Bachillerato.classList.add('label')
                     
                     let Ideologia = document.createElement('h3');
-                    Ideologia.innerHTML = "Ideologia"
+                    Ideologia.innerHTML = "Ideología"
                     Ideologia.classList.add('label')
                     
                     let fundacion = document.createElement('h3');
-                    fundacion.innerHTML = "Fundacion"
+                    fundacion.innerHTML = "Fundación"
                     fundacion.classList.add('label')
                     
                     let referencia = document.createElement('h3');
@@ -116,7 +116,7 @@ let mostrar_datos = () => {
                     /***** */
             
                     let Canton = document.createElement('h3');
-                    Canton.innerHTML = "Canton"
+                    Canton.innerHTML = "Cantón"
                     Canton.classList.add('label')
                     
                     let Distrito = document.createElement('h3');
@@ -124,7 +124,7 @@ let mostrar_datos = () => {
                     Distrito.classList.add('label')
                     
                     let Direccion = document.createElement('h3');
-                    Direccion.innerHTML = "Direccion"
+                    Direccion.innerHTML = "Dirección"
                     Direccion.classList.add('label')
                     
                     let Sitio_web = document.createElement('h3');
@@ -296,11 +296,11 @@ let mostrar_datos = () => {
                     Bachillerato.classList.add('label')
                     
                     let Ideologia = document.createElement('h3');
-                    Ideologia.innerHTML = "Ideologia"
+                    Ideologia.innerHTML = "Ideología"
                     Ideologia.classList.add('label')
                     
                     let fundacion = document.createElement('h3');
-                    fundacion.innerHTML = "Fundacion"
+                    fundacion.innerHTML = "Fundación"
                     fundacion.classList.add('label')
                     
                     let referencia = document.createElement('h3');
@@ -310,7 +310,7 @@ let mostrar_datos = () => {
                     /***** */
             
                     let Canton = document.createElement('h3');
-                    Canton.innerHTML = "Canton"
+                    Canton.innerHTML = "Cantón"
                     Canton.classList.add('label')
                     
                     let Distrito = document.createElement('h3');
@@ -318,7 +318,7 @@ let mostrar_datos = () => {
                     Distrito.classList.add('label')
                     
                     let Direccion = document.createElement('h3');
-                    Direccion.innerHTML = "Direccion"
+                    Direccion.innerHTML = "Dirección"
                     Direccion.classList.add('label')
                     
                     let Sitio_web = document.createElement('h3');

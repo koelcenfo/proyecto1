@@ -25,7 +25,7 @@ let listar_citas=()=>{
     return listar_citas;
 };
 
-let registrar_citas=(pnombre_cita,pnombre_familiar,pfecha,phora,pdescripcion)=>{
+let registrar_citas=(pnombre_cita,pnombre_familiar,pfecha,phora,pdescripcion,pid_institucion)=>{
     let request=$.ajax({
         url: "http://localhost:4000/api/registrar_citas",
         method: "POST",
@@ -34,7 +34,8 @@ let registrar_citas=(pnombre_cita,pnombre_familiar,pfecha,phora,pdescripcion)=>{
             nombre_familiar: pnombre_familiar,
             fecha: pfecha,
             hora: phora,
-            descripcion: pdescripcion
+            descripcion: pdescripcion,
+            id_institucion: pid_institucion
         },
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         dataType: "json"

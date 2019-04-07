@@ -11,7 +11,8 @@ module.exports.registrar=(req,res)=>{
             fecha : req.body.fecha,
             hora : req.body.hora,
             lugar : req.body.lugar,
-            descripcion : req.body.descripcion
+            descripcion : req.body.descripcion,
+            imagen : req.body.imagen
         }
     );
 
@@ -27,7 +28,7 @@ module.exports.registrar=(req,res)=>{
             res.json(
                 {
                     success: true,
-                    msg:`Se envió correctamente la nueva actividad`
+                    msg:`Se envió correctamente la nueva actividad.`
                 }
             );
         }
@@ -48,7 +49,7 @@ module.exports.listar_actividad=(req,res) =>{
                 res.json(
                     {
                         success: false,
-                        actividades: 'No se encontró la actividad'
+                        actividades: 'No se encontró la actividad.'
                     }
                 )
             }

@@ -206,6 +206,14 @@
     background: url(../img/perfil_institucion/actividad.png);
     background-size: cover;
 }
+#img_citas{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: url(../img/perfil_institucion/citas.png);
+    background-size: cover;
+}
 button{
     display: block;
     width: 200px;

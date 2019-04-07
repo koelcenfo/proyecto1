@@ -23,7 +23,7 @@ html{
     background-color: #3d3d3d; /*Color del cuerpo restante de la pagina*/
 }
 p{
-    padding-left: 15px;
+    text-align: center;
 }
 #p_1{/*Párrafos del Cuerpo Restante de la pagina*/
     padding-top: 50px; /*Distancia en pixels desde la parte superior hasta donde empieza el texto*/
@@ -32,7 +32,7 @@ p{
     padding-bottom: 50px;
 }
 #p_2{/*Párrafos del Cuerpo Restante de la pagina*/
-    padding-top: 10px; /*Distancia en pixels desde la parte superior hasta donde empieza el texto*/
+    padding-top: 35px; /*Distancia en pixels desde la parte superior hasta donde empieza el texto*/
     font-size: 35px;/*Tamaño de fuente*/
     color: white;/*Color del párrafo*/
     }
@@ -62,7 +62,23 @@ p{
     color: #3b3a36;
 }
 #prometeo_button:hover{
-    background-color: #b3c2bf;
+    background-color: #3b3a36;
     color: #c0dfd9;
     
+}
+
+.h_vision_mision{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+
+.vision_mision{
+    margin-left: 24%;
+    width: 55%;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 28px;
 }

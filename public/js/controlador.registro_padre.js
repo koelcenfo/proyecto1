@@ -110,8 +110,8 @@ let obtener_datos = () => {
     } else {
         swal.fire({
             type: 'error',
-            tittle: 'El registro no se pudo completar',
-            text: 'Hay campos que no se han llenado'
+            tittle: 'El registro no se pudo completar.',
+            text: 'Hay campos que no se han llenado.'
         });
 
     }

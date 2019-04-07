@@ -5,6 +5,7 @@ module.exports.registrar=(req,res)=>{
     let nueva_cita=new modelo_citas(
         {
             id_citas: req.body.ObjectId,
+            id_institucion: req.body.id_institucion,
             nombre_cita: req.body.nombre_cita,
             nombre_familiar: req.body.nombre_familiar,
             fecha : req.body.fecha,
