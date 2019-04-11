@@ -20,7 +20,7 @@ module.exports.registrar_institucion = (req, res) =>{
             institucion_telefono : req.body.institucion_telefono,
             institucion_niveles : req.body.institucion_niveles,
             institucion_tipo : req.body.institucion_tipo,
-            institucion_idiomas : req.body.institucion_idiomas,
+            // institucion_idiomas : req.body.institucion_idiomas,
             institucion_generos : req.body.institucion_generos,
             institucion_provincia : req.body.institucion_provincia,
             institucion_canton : req.body.institucion_canton,

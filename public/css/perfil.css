@@ -1,13 +1,162 @@
 #html , body{
     font-family: 'PT Sans', sans-serif;
-    background-color: #c0dfd9;
+    background-color: #2c2c54;;
 }
-#contenido{
+#perfil{
+    display: block;
+    margin: auto;
+    margin-top: 5%  ;
+    margin-bottom: 5%;
+    width: 95%;
+    height: 850px;
+    background-color: #fff;
+    
+}
+#side_info{
     display: block;
     float: left;
-    width: 88%;
-    height: 90%;
+    width: 30%;
+    height: 100%;
+
+
 }
+        #img_info{
+            display: block;
+            margin: auto;
+            margin-top:8%;
+            margin-bottom:8%;
+            width: 75%;
+            height: 40%;
+            
+        
+        }
+        #img_centro{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+        #side_info_top{
+            display: block;
+            margin-top: 5%;
+            width: 100%;
+            height:22%;
+             
+        }
+
+        #side_info_bottom{
+            display: block;
+            margin-top: 5%;
+            width: 100%;
+            height:22%;
+         
+        }
+
+
+#top_info{
+    display: block;
+    float: left;
+    width: 70%;
+    height: 50%;
+  
+}
+    #top_top_info{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 50%;
+   
+    }
+    #nombre_institucion{
+        color: #3498db;
+        display: block;
+        font-size: 55px;
+        padding-top: 35px;
+        padding-left: 35px;
+       
+    }
+    #titulo_ubicacion, #titulo_contacto{
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 11%;
+        color: #3498db;
+        border-top: solid 1px;
+    }
+    #provincia_institucion, #canton_institucion, #distrito_institucion, #telefono_institucion, #web_institucion, #fax_institucion{
+        font-size: 25px;
+        padding-top: 10px;
+        padding-left: 11%;
+       
+    }
+    #top_bottom_info{
+        display: block;
+        float: left;
+        width: 100%;
+        height: 50%;
+
+    }
+     #direccion_institucion, #fundacion{
+        font-size: 25px;
+        padding-top: 10px;
+        padding-left: 11%;
+       
+    }
+
+#bottom_info{
+    display: block;
+    float: left;
+    width: 70%;
+    height: 50%;
+
+}
+#nombre_inscrito, #generos, #idiomas, #tipo, #cedula_juridica, #ideologia, #referencia{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 11%;
+ 
+}
+
+
+
+/*-----------------------------TABS-------------------------------*/
+.container{
+    width: 100%;
+    height: 20%;
+    margin: 0 auto;
+}
+
+
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 25px;
+}
+ul.tabs li{
+    background: none;
+    color:#3498db;
+    display: inline-block;
+    padding: 30px 10px;
+    cursor: pointer;
+}
+ul.tabs li:hover{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    scale: 1.1px;
+}
+
+.tab-content{
+    display: none;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}   
+/**
+
+
 #listas_de_institucion{
     display: inline-block;
     width: 100%;

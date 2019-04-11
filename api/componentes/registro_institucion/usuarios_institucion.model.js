@@ -11,7 +11,7 @@ let schema_usuarios = new mongoose.Schema( //Definicion del esquema de la base d
         institucion_telefono : {type : Number, required:true, unique:true},//Numero de telefono de la institucion
         institucion_niveles : {type : String, required:true},//Niveles con los que cuenta
         institucion_tipo : {type : String, required:true},//Tipo de institucion(Privado, Publico, academico, cientifico..)
-        institucion_idiomas : {type : String, required:true},//Idiomas que imparte
+        // institucion_idiomas : {type : String, required:true},//Idiomas que imparte
         institucion_generos : {type : String, required:true},//Generos distribuidos en el centro educativo
         institucion_provincia : {type : String, required:true},//Provincia a la cual pertenece
         institucion_canton : {type : String, required:true},//Canton al que pertenece

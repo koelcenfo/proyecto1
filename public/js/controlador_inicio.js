@@ -41,7 +41,7 @@ function obtener_datos_padre(){
                     swal.fire({
                         type:'error',
                         title:'Error',
-                        text:`El usuario con la cedula "${padre_correo_electronico}" no existe, o la contraseña es incorrecta`
+                        text:`El usuario con la cédula "${padre_correo_electronico}" no existe, o la contraseña es incorrecta.`
                     });
                 }
             });

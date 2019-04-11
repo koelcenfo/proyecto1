@@ -6,43 +6,126 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> 
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <link rel="stylesheet" href="css/barra_lateral.css">
     <link rel="stylesheet" href="css/pie_de_pagina.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Prometeo</title>
 </head>
-<body>
-    <!--Barra Lateral-->
-    <div id="barra_lateral">
-        <div id="Ranking_tittle">
-            <h1>Ranking's</h1>
-        </div>
-        <div id="Rankings">
-            <h2>Ranking del MEP</h1>
-        </div>
-    </div>
+<body onload="herramientas()">
     <!--Contenido de la Pagina-->
     <div id="contenido">
             <header>
-                    <nav class="barra_navegacion">
-                        <div class="imagen_barra_navegacion" onclick="window.location.href"http://localhost:3000/public/index.html""> </div>
+                <nav class="barra_navegacion">
+                    <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
                         <!--Visitante-->
                         <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
                         <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
                         <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
                         <!--Conectado-->
                         <a href="http://localhost:3000/public/perfil.html">Perfil</a>
-                        <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+                            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
                         <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
-                        <a href="" id ="btn_cerrar_sesion">Cerrar sesión</a>
+                        <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar sesión</a><script type="text/javascript">
+                            function cerrar_sesion(){
+                            sessionStorage.clear();
+                            window.location.href='index.html';
+                        }
+                    </script>
+                        <a onclick="window.location.href='index.html';">Inicio</a>
                     </nav>
                 </header>
                 
                 <div id="contenedor_imagen">
                     <div id="prometeo_imagen"></div>
                 </div>
+                
+                <div id="contenido">
+
+                    <div id="listas_de_institucion">
+                            <ul class="tabs">
+                                    <li class="tab-link current" data-tab="tab-1" onclick="window.location.href='index.html'"><i class="fas fa-pencil-ruler"></i> Útiles</li>
+                                    <li class="tab-link" data-tab="tab-2"><i class="far fa-futbol"></i> Actividades</li>
+                                    <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i> Preguntas frecuentes</li>
+                                    <li class="tab-link" data-tab="tab-4"><i class="fas fa-hands-helping"></i> Becas</li>
+                                    <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i> Costos</li>
+                                    <li class="tab-link" data-tab="tab-6"><i class="far fa-newspaper"></i> Noticias</li>
+                                </ul>
+                        <!-- <div id="seccion">
+                
+                                <div class="button" >
+                                    <div class="button_registro"><i id="icon" class="far fa-eye"></i></div>
+                                    <div class="button_listar"></div>
+                                    <div class="button_descripcion"></div>
+                                </div>
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_utiles.html'">Registro de Utiles</button>
+                                <div class="button" >
+                                        <h1 id="icon_text">Registro de Útiles</h1>
+                                </div>
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_utiles.html'">Ver Lista de útiles</button>
+                        </div> 
+
+        
+                        <div id="seccion">
+
+                            
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_seccion_preguntas.html'">Registrar preguntas</button>
+                    
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Sección de preguntas Frecuentes</button>
+                                
+                        </div>
+        
+                        <div id="seccion">
+
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_actividades.html'">Registrar actividades</button>
+                    
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar actividades</button>        
+                        </div>
+        
+                        <div id="seccion">
+
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_citas.html'">Registrar citas</button>
+                            
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_citas.html'">Visualizar citas</button>
+                        </div>
+                        <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_noticias.html'">Registrar noticias</button>
+                    
+                        <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_noticias.html'">Visualizar noticias</button> -->
+
+                        </div>
+                        <!-- <div id="herramientas_mep" >
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_lista_utiles_mep.html'">Registrar lista útiles MEP</button>
+                    
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_utiles_mep.html'">Visualizar lista útiles MEP</button>
+
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/registro_ranking_mep.html'">Ranking de las mejores instituciones</button>
+
+                        </div> -->
+                    <div class="ranking_mep" >
+                            <h1 id="titulo_registro">Ranking de las mejores instituciones por el MEP</h1>
+                            <table class="tabla_actividad">
+                                    <thead>
+                                      <tr>
+                                        <th>Nombre</th>
+                                        <th>Posición</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                  </table>
+                    </div>          
+                        <!-- <table id="tbl_ranking_mep">
+                            <thead>
+                                <tr>
+                                    <th>Nombre del Centro Educativo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>     -->
                 <div id="info">
                     <div id="info_carta"><div class="info_imagen" id="imagen_1"></div>
                     <h1 id="info_texto">Encuentra el mejor centro educativo para tus hijos.</h1>
@@ -57,6 +140,7 @@
                     <h1 id="info_texto">Descubre instituciones a lo largo del país.</h1> 
                     </div>
                 </div>
+                
                 <!--Pie de Pagina-->
                 <div id="pie_de_pagina">
                     <div id="pie_de_pagina_carta">
@@ -95,8 +179,10 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>   
     <script src="js/servicio_inicio.js"></script>
     <script src="js/servicio_utiles.js"></script>
+    <script src="js/servicio_ranking_mep.js"></script>
+    <script src="js/controlador_listar_ranking_mep.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
-
+    <script src="js/controlador_index.js"></script>
     
     
 </body>
