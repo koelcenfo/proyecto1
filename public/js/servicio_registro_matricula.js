@@ -1,12 +1,13 @@
 'use strict';
-let registrar_costos = (pnivel, pmatricula, pmensualidad) => {
+let registrar_costos = (pnivel, pmatricula, pmensualidad, pid_institucion) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_costo",
         method: "POST",
         data: {
             nivel: pnivel,
             matricula: pmatricula,
-            mensualidad: pmensualidad
+            mensualidad: pmensualidad,
+            institucion: pid_institucion
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=utf-8'
@@ -31,7 +32,7 @@ let registrar_costos = (pnivel, pmatricula, pmensualidad) => {
 
 }
 let listar_costo = () => {
-    listar_costo = [];
+    let listar_costo = [];
     let request = $.ajax({
         url: "http://localhost:4000/api/listar_costo",
         method: "GET",
@@ -44,10 +45,11 @@ let listar_costo = () => {
     });
 
     request.done(function (res) {
-        listar_costo = res.listar_costo;
+        listar_costo = res.costos;
     });
 
     request.fail(function (jqXHR, textStatus) {
 
     });
+    return listar_costo;
 }

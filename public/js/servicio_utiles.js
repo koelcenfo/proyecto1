@@ -1,15 +1,18 @@
 'use strict';
-let registrar_util = (putil, pdescripcion, pcantidad) => {
+
+let registrar_util = (putil, pdescripcion, pid_intitucion) => {
+
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_util",
     method: "POST",
     data: {
       util: putil,
       descripcion: pdescripcion,
-      cantidad: pcantidad
+      id_institucion: pid_intitucion
+
     },
     dataType: "json",
-    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8'
 
   });
 
@@ -31,8 +34,8 @@ let registrar_util = (putil, pdescripcion, pcantidad) => {
 
 
 };
-let listar_util = (req, res) => {
-  listar_util = [];
+let listar_util = () => {
+  let listar_util = [];
   let request = $.ajax({
     url: "http://localhost:4000/api/listar_utiles",
     method: "GET",
@@ -45,11 +48,16 @@ let listar_util = (req, res) => {
   });
 
   request.done(function (res) {
-    listar_util = res.listar_util;
+    listar_util=res.util;
   });
 
   request.fail(function (jqXHR, textStatus) {
 
   });
+
+  return listar_util;
+
+
+
 
 };

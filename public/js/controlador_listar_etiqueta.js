@@ -1,26 +1,22 @@
 'use strict';
-const tabla_util = document.querySelector('#tbl_utiles tbody');
-const boton_agregar = document.querySelector('#btn_agregar');
+const tabla = document.querySelector('#tbl_etiquetas');
 
 let mostrar_datos = () => {
-    let util = listar_util();
-    for (let i = 0; i < util.length; i++) {
-        let fila = tabla_util.insertRow();
-        fila.insertCell().innerHTML = util[i]['util'];
-        fila.insertCell().innerHTML = util[i]['descripcion'];
+    let etiquetas = listar_etiqueta();
+    for (let i = 0; i < etiquetas.length; i++) {
 
+        let fila = tabla.insertRow();
+        fila.insertCell().innerHTML = etiquetas[i]['etiqueta'];
+        fila.insertCell().innerHTML = etiquetas[i]['descripcion'];
+        
 
-
-    }
-
-
-
+    };
 
 
 
 };
 function filtrar() {
-    var tabla = document.getElementById('tbl_utiles');
+    var tabla = document.getElementById('tbl_etiquetas');
     var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
@@ -40,6 +36,4 @@ function filtrar() {
         }
     }
 }
-
-
 mostrar_datos();

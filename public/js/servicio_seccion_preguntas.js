@@ -36,7 +36,8 @@ let registrar_pregunta = (ppregunta, prespuesta, pid_institucion) => {
         data: {
             pregunta: ppregunta,
             respuesta: prespuesta,
-            
+            id_institucion: pid_institucion
+
 
 
         },
@@ -45,7 +46,7 @@ let registrar_pregunta = (ppregunta, prespuesta, pid_institucion) => {
 
     });
 
-    request.done(function (res) {
+    request.done(function (msg) {
         swal.fire(
             {
                 type: 'success',

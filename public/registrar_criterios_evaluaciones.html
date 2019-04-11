@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/registrar_criterio.css">
+    <title>Registrar criterios de evaluaciones</title>
+
+
+</head>
+
+<body>
+    <main id="contenido">
+        <div id="form_contenedor">
+            <p id="info_p">se podrá registrar un criterio de evalucacion con un porcentaje respectivo</p>
+            <hr>
+            <form>
+                <div id="criterio">
+                    <label for="txt_criterio">Criterio:</label>
+                    <input type="text" id="txt_criterio">
+                    <div>
+                        <label for="txt_criterio_2">Criterio:</label>
+                        <input type="text" id="txt_criterio_2">
+                    </div>
+                    <div>
+                        <label for="txt_criterio_3">Criterio:</label>
+                        <input type="text" id="txt_criterio_3">
+
+                    </div>
+                    <div>
+                        <label for="txt_criterio_4">Criterio:</label>
+                        <input type="text" id="txt_criterio_4">
+
+                    </div>
+                    <div>
+                        <label for="txt_criterio_5">Criterio:</label>
+                        <input type="text" id="txt_criterio_5">
+                    </div>
+
+                </div>
+
+
+
+                <div id="porcentaje">
+                    <div>
+
+                        <label for="txt_porcentaje">Porcentaje:</label>
+                        <input type="text" id="txt_porcentaje">
+                    </div>
+                    <div>
+                        <label for="txt_porcentaje_2">Porcentaje:</label>
+                        <input type="text" id="txt_porcentaje_2">
+
+                    </div>
+                    <div>
+                        <label for="txt_porcentaje_3">Porcentaje:</label>
+                        <input type="text" id="txt_porcentaje_3">
+
+                    </div>
+                    <div>
+                        <label for="txt_porcentaje_4">Porcentaje:</label>
+                        <input type="text" id="txt_porcentaje_4">
+
+                    </div>
+                    <div>
+                        <label for="txt_porcentaje_5">Porcentaje:</label>
+                        <input type="text" id="txt_porcentaje_5">
+
+                    </div>
+                </div>
+                <div id="contenedor_botones">
+                    <button type="button" id="btn_atras">Atras</button>
+                    <button type="button" id="btn_registrar">Enviar</button>
+
+                </div>
+        </div>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/controlador_registro_criterios.js"></script>
+    <script src="js/servicio_criterio.js"></script>
+
+
+</body>
+
+</html>

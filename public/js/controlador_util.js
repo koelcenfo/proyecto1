@@ -1,7 +1,7 @@
 'use strict';
 const input_util = document.querySelector('#txt_util');
 const input_descripcion = document.querySelector('#txt_descripcion');
-const nmb_cantidad = document.querySelector('#nmb_cantidad');
+const id_usuario = sessionStorage.getItem('id_usuario');
 const boton_atras = document.querySelector('#btn_atras');
 const boton_enviar = document.querySelector('#btn_enviar');
 
@@ -20,12 +20,7 @@ let validar = () => {
   } else {
     input_descripcion.classList.remove('error_input');
   }
-  if (nmb_cantidad.value == '') {
-    error = true;
-    nmb_cantidad.classList.add('error_input');
-  } else {
-    nmb_cantidad.classList.remove('error_input');
-  }
+
   return error;
 
 
@@ -34,9 +29,10 @@ let obtener_datos = () => {
   if (validar() == false) {
     let util = input_util.value;
     let descripcion = input_descripcion.value;
-    let cantidad = nmb_cantidad.value;
+    let id_institucion = id_usuario;
 
-    registrar_util(util, descripcion, cantidad);
+
+    registrar_util(util, descripcion,id_institucion);
 
   } else {
     swal.fire(
@@ -50,9 +46,9 @@ let obtener_datos = () => {
 
 };
 boton_enviar.addEventListener('click', obtener_datos);
-$(boton_enviar).on('click',function () {
+$(boton_enviar).on('click', function () {
   $(input_util).val('');
   $(input_descripcion).val('');
-  $(nmb_cantidad).val('');
+
 })
 

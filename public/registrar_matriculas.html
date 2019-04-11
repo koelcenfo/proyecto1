@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/registrar_matriculas.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <title>Costos del centro educativo</title>
 </head>
@@ -13,7 +14,7 @@
     <nav class="barra_navegacion">
         <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
         <!--Visitante-->
-        <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+        <a href="http://localhost:3000/public/registro_padre.html">Registro padre.</a>
         <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
         <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
         <!--Conectado-->
@@ -44,12 +45,12 @@
                         <option value="Cuarto">Cuarto</option>
                         <option value="Quinto">Quinto</option>
                         <option value="Sexto">Sexto</option>
-                        <option value="Septimo">Septimo</option>
+                        <option value="Septimo">Séptimo</option>
                         <option value="Octavo">Octavo</option>
                         <option value="Noveno">Noveno</option>
                         <option value="Décimo">Décimo</option>
-                        <option value="Undécimo">Undecimo</option>
-                        <option value="Duodecimo">Duodecimo</option>
+                        <option value="Undécimo">Undécimo</option>
+                        <option value="Duodécimo">Duodécimo</option>
                     </select>
 
                 </div>
@@ -62,7 +63,7 @@
                     <input type="number" id="nmb_mensualidad">
                 </div>
                 <div id="contenedor_botones">
-                    <button id="btn_atras" type="button">Atras</button>
+                    <button id="btn_atras" type="button">Atrás</button>
                     <button id="btn_registrar" type="button">Registrar</button>
                 </div>
             </form>
@@ -74,6 +75,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_registro_matricula.js"></script>
     <script src="js/controlador_registrar_matricula.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/servicio_inicio.js"></script>
     
     
     

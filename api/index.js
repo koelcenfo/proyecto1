@@ -4,24 +4,24 @@
  * Exportamos todas las dependencias necesarias para establecer la conexión
  */
 const express = require('express'),
-      app = express(),
-      path = require('path'),
-      bodyParser = require('body-parser'),
-      morgan =  require('morgan'),
-      mongoose = require('mongoose');
+  app = express(),
+  path = require('path'),
+  bodyParser = require('body-parser'),
+  morgan = require('morgan'),
+  mongoose = require('mongoose');
 
 /**
  * Se definen las variables necesarias para la conexión con MongoDB
  */
 let db = mongoose.connection,
-    dburl = 
+  dburl =
     'mongodb://koeladmins:Grupokoel2019@proyecto-shard-00-00-xwswr.mongodb.net:27017,proyecto-shard-00-01-xwswr.mongodb.net:27017,proyecto-shard-00-02-xwswr.mongodb.net:27017/test?ssl=true&replicaSet=proyecto-shard-0&authSource=admin&retryWrites=true',
-    port = 4000;
+  port = 4000;
 
 /**
  * Se le indica que cree un servidor extra dentro del puerto 4000 y escuche los cambios que se le hagan a esos archivos
  */
-let server = app.listen(port,_server());
+let server = app.listen(port, _server());
 
 /**
  * Se define la conexión con Mongoose, enviándole como parámetro la url de la base de datos
@@ -50,11 +50,11 @@ app.use(express.static(path.join(__dirname, 'public')));
  */
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(morgan('dev'));
 // sin esto no nos va a funcionar el servidor y no nos va atender lo que ocupamos 
-app.use( function(req, res, next) {
+app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, X-Response-Time, X-PINGOTHER, X-CSRF-Token,Authorization');
@@ -63,37 +63,61 @@ app.use( function(req, res, next) {
 });
 
 
-const costos=require('./componentes/costos/registrar_costo.route');
-app.use('/api',costos);
+const costos = require('./componentes/costos/registrar_costo.route');
+app.use('/api', costos);
 
-const utiles=require('./componentes/Utiles/registrar_util.route');
+const utiles = require('./componentes/Utiles/registrar_util.route');
 
-app.use('/api',utiles);
+app.use('/api', utiles);
 
-const preguntas=require('./componentes/Preguntas/registrar_seccion_preguntas.route');
+const preguntas = require('./componentes/Preguntas/registrar_seccion_preguntas.route');
 
-app.use('/api',preguntas);
+app.use('/api', preguntas);
 
-const actividades=require('./componentes/actividades/actividades.route');
+const actividades = require('./componentes/actividades/actividades.route');
 
-app.use('/api',actividades);
+app.use('/api', actividades);
 
-const citas=require('./componentes/citas/citas.route');
-app.use('/api',citas);
+const citas = require('./componentes/citas/citas.route');
+app.use('/api', citas);
 
-const registro_padre=require('./componentes/registro_padre/usuarios_padre.route');
-app.use('/api',registro_padre);
+const registro_padre = require('./componentes/registro_padre/usuarios_padre.route');
+app.use('/api', registro_padre);
 
-const registro_institucion=require('./componentes/registro_institucion/usuarios_institucion.route');
-app.use('/api',registro_institucion);
+const registro_institucion = require('./componentes/registro_institucion/usuarios_institucion.route');
+app.use('/api', registro_institucion);
 
 
 const ranking = require('./componentes/ranking_mep/ranking_mep.route')
 app.use('./api', ranking);
 
 
-const registrar_ranking=require('./componentes/ranking_mep/ranking_mep.route');
-app.use('/api',registrar_ranking);
+const registrar_ranking = require('./componentes/ranking_mep/ranking_mep.route');
+app.use('/api', registrar_ranking);
+
+const registrar_etiqueta = require('./componentes/etiquetas/registrar_etiquetas.route');
+app.use('/api', registrar_etiqueta);
+
+const registrar_criterio = require('./componentes/criterios/registrar_criterios.route');
+app.use('/api', registrar_criterio);
+
+const registrar_noticias = require('./componentes/noticias/noticias.route');
+app.use('/api', registrar_noticias);
+
+const registrar_lista_utiles_mep = require('./componentes/lista_utiles_mep/lista_utiles_mep.route');
+app.use('/api', registrar_lista_utiles_mep);
+
+const registrar_informacion = require('./componentes/material_informativo/informacion.route')
+app.use('/api', registrar_informacion);
+
+
+const registrar_idioma = require('./componentes/Idiomas/idiomas.route');
+app.use('/api', registrar_idioma);
+
+const becas = require('./componentes/becas/becas.route');
+app.use('/api', becas);
+
+
 
 
 
@@ -101,6 +125,6 @@ app.use('/api',registrar_ranking);
 // Se guarda todo lo que se ha realizado
 module.exports = app; /*lo que hace es exportarme el módulo*/
 
-function _server(){
+function _server() {
   console.log('Back-end corriendo en el puerto ' + port);
 };

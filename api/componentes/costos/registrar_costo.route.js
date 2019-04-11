@@ -12,7 +12,7 @@ router.route('/registrar_costo')
 router.route('/listar_costo')
 .get(
     function (req,res) {
-        api_costo.listar_costos(req,res);
+        api_costo.listar_costo(req,res);
     }
 );
 module.exports=router;

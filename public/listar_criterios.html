@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/listar_criterios.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    
+    <title>Visualizar criterios de evaluación</title>
+
+
+</head>
+<header>
+        <nav class="barra_navegacion">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion">Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+        </nav>
+    </header>
+
+<body>
+    <main>
+        <h1 id="titulo_registro">Criterio de evaluacion del mep</h1>
+        <div id="form_contenedor">
+            <table id="tbl_criterio">
+                <thead>
+                    <th>Criterio</th>
+                    <th>Porcentaje</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+        </table>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio_criterio.js"></script>
+    <script src="js/controlador_listar_criterios.js"></script>
+</body>
+
+</html>

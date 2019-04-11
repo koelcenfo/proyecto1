@@ -3,9 +3,11 @@ const modelo_util = require('./regitstrar_util.model');
 module.exports.registrar_util = (req, res) => {
     let nuevo_util = new modelo_util(
         {
+            id_util: req.body.ObjectId,
+            id_institucion: req.body.id_institucion,
             util: req.body.util,
             descripcion: req.body.descripcion,
-            cantidad: req.body.cantidad
+
 
 
 
@@ -36,12 +38,12 @@ module.exports.registrar_util = (req, res) => {
 };
 module.exports.listar_util = (req, res) => {
     modelo_util.find().then(
-        function (utiles) {
-            if (utiles.length > 0) {
+        function (util) {
+            if (util.length > 0) {
                 res.json(
                     {
                         success: true,
-                        utiles: utiles
+                        util: util
                     }
                 );
             } else {

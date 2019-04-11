@@ -1,8 +1,10 @@
 'use strict';
 const modelo_costo = require('./registrar_costo.model');
-module.exports.registrar_costos = (req,res) => {
+module.exports.registrar_costos = (req, res) => {
     let nuevo_costo = new modelo_costo(
         {
+            id_costo: req.body.ObjectId,
+            id_institucion: req.body.id_institucion,
             nivel: req.body.nivel,
             matricula: req.body.matricula,
             mensualidad: req.body.mensualidad
@@ -32,7 +34,7 @@ module.exports.registrar_costos = (req,res) => {
     }
     );
 };
-module.exports.listar_costo = (req,res) => {
+module.exports.listar_costo = (req, res) => {
     modelo_costo.find().then(
         function (costos) {
             if (costos.length > 0) {
@@ -46,7 +48,7 @@ module.exports.listar_costo = (req,res) => {
                 res.json(
                     {
                         success: false,
-                    msg: `Revise los campos nuevamente.`
+                        msg: `Revise los campos nuevamente.`
                     }
                 )
             }

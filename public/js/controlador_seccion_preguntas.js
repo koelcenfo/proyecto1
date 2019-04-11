@@ -2,6 +2,7 @@
 const input_pregunta = document.querySelector('#txt_pregunta');
 const input_respuesta = document.querySelector('#txt_respuesta');
 const boton_registrar = document.querySelector('#btn_registrar');
+const id_usuario = sessionStorage.getItem('id_usuario');
 
 let validar = () => {
     let error = false;
@@ -27,11 +28,13 @@ let obtener_informacion = () => {
 
         let pregunta = input_pregunta.value;
         let respuesta = input_respuesta.value;
-        registrar_pregunta(pregunta, respuesta)
+        let id_institucion = id_usuario;
+        registrar_pregunta(pregunta, respuesta, id_institucion);
     } else {
         swal.fire({
             type: 'error',
-            title: 'no se ha registrado pregunta'
+            title: 'La pregunta no se ha registrado correctamente.',
+            title:'Revise los campos que estan resaltados'
         });
     };
 
