@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/listar_actividades.css">
+    <link rel="stylesheet" href="css/listar_util_mep.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <title>Actividades</title>
+    <title>Lista de útiles MEP</title>
 </head>
 
 <body>
@@ -34,22 +34,17 @@
 
     <main>
         <div id="form_contenedor">
-            <h1 id="titulo_registro">Lista de Actividades.</h1>
-            <!-- <p id="info_p">En la siguiente lista podrá ver las diferentes actividades del centro educativo, cada una
-                posee un nombre, la fecha y la hora en que se realizan, el lugar donde se realizaran, una descripción en
-                la cual se detalla en que consiste dicha actividad.</p> -->
+            <h1 id="titulo_registro">Lista de útiles MEP</h1>
+            <!-- <p id="info_p"></p> -->
             <!-- <hr> -->
             <label for="txt_filtro">Filtrar</label>
             <input type="text" id="txt_filtro" onkeyup="filtrar();">
-            <table id="tbl_actividades">
+            <table id="tbl_utiles">
                 <thead>
                     <tr>
-                        <th>Nombre de la actividad</th>
-                        <th>Fecha de la actividad</th>
-                        <th>Hora de la actividad</th>
-                        <th>Lugar de la actividad</th>
-                        <th>Descripción de la actividad</th>
-                        <th id="image_preview">Imagen</th>
+                        <th>Nombre del útil</th>
+                        <th>Cantidad</th>
+                        <th>Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,13 +57,14 @@
 
             </form>
     </main>
+    
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="js/servicio_inicio.js"></script>
-<script src="js/servicio_actividades.js"></script>
-<script src="js/controlador_listar_actividades.js"></script>
+<script src="js/servicios_lista_utiles_mep.js"></script>
+<script src="js/controlador_listar_utiles_mep.js"></script>
 <script src="js/controlador_barra_navegacion.js"></script>
 
 

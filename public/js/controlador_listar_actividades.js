@@ -9,14 +9,13 @@ let mostrar_actividades = () => {
     let actividades = listar_actividades();
     let id_institucion = sessionStorage.getItem('id_usuario');
 
-
     for (let i = 0; i < actividades.length; i++) {
 
-        tabla_actividades.innerHTML='';
-
-        if (actividades[i]['id_institucion'] == id_institucion) {
+        //Para que sepa a cual institución debe de redireccionar la informacion de la actividad
+        if (actividades[i]['id_institucion'] == id_institucion) {  
 
             let fila = tabla_actividades.insertRow();
+            /* crear el elemento imagen */
             let imagen = document.createElement('img');
             //fila es como el tr del html
             //innerHTML es el contenido que está adentro del elemento
@@ -26,26 +25,27 @@ let mostrar_actividades = () => {
             fila.insertCell().innerHTML = actividades[i]['lugar'];
             fila.insertCell().innerHTML = actividades[i]['descripcion'];
             let celda_imagen=fila.insertCell();
-            fila.insertCell().innerHTML = actividades[i]['imagen'];
-           
-          
-            if (listar_actividades[i]['imagen']) {
-                imagen.src = listar_actividades[i]['imagen'];
-            } else {
-                imagen.src = 'img/registro_padre/image_placeholder/image_placeholder.jpeg'
-            }
             celda_imagen.appendChild(imagen);
+            // fila.insertCell().innerHTML = actividades[i]['imagen'];
+            
+            //En caso de que el usuario no registre una imagen, para que se le ponga una  
+            if (actividades[i]['imagen']) {
+                imagen.src = actividades[i]['imagen'];
+            } else {
+                imagen.src = 'img/actividades/image-placeholder.png'
+            }
+           
 
 
 
-            let celda_configuración = fila.insertCell();
+            // let celda_configuración = fila.insertCell();
 
-            //Creación del botón de editar
-            let boton_editar = document.createElement('a');
-            boton_editar.textContent = 'Editar';
-            boton_editar.href = `registrar_actividades.html?id_institucion=${actividades[i]['_id']}`;
-            //para agregarle al parámetro el url
-            celda_configuración.appendChild(boton_editar);
+            // //Creación del botón de editar
+            // let boton_editar = document.createElement('a');
+            // boton_editar.textContent = 'Editar';
+            // boton_editar.href = `registrar_actividades.html?id_institucion=${actividades[i]['_id']}`;
+            // //para agregarle al parámetro el url
+            // celda_configuración.appendChild(boton_editar);
 
         }
     };

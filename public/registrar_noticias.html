@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/registrar_actividades.css">
+    <link rel="stylesheet" href="css/registrar_noticias.css">
     <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <title>Registrar actividades</title>
+    <title>Registrar noticias</title>
 </head>
 
 <body>
@@ -35,13 +35,13 @@
         </nav>
     </header>
     <div id="form_contenedor">
-        <form id="frm_actividades">
-             <h1 id="titulo_registro">Registro de Actividades.</h1>
+        <form id="frm_utiles">
+             <h1 id="titulo_registro">Registro de noticias.</h1>
        
-            <p id="info_p">Puede registrar las actividades que el centro educativo tendrá, puede asignarle un nombre, fecha,
-            lugar, una descripción y una fotografía de lo que va a consistir dicha actividad.</p>
+            <p id="info_p">Puede registrar las noticias que el centro educativo desee, también puede asignarle un título, fecha, hora
+            lugar, descripción y una fotografía de lo que va a consistir dicha noticia.</p>
             <hr>
-            <label for="image_preview">Fotografía de la actividad</label>
+            <label for="image_preview">Fotografía de la noticia</label>
 
             <div>
                 <figure class="image_holder">
@@ -53,21 +53,21 @@
                     <button type="button" id="btn_seleccionar_imagen" class="btn_registrar_imagen" >Agregar</button>
                 </div>    
             </div>
-            <label for="txt_nombre">Nombre de la actividad</label>
-            <input class="class_input" type="text" id="txt_nombre" maxlength="60">
+            <label for="txt_nombre">Título</label>
+            <input class="class_input" type="text" id="txt_titulo" maxlength="60">
        
         
-            <label for="dt_fecha" class="label_fecha">Fecha de la actividad</label>
+            <label for="dt_fecha" class="label_fecha">Fecha</label>
             <input class="class_input" type="date" id="dt_fecha">
        
         
-            <label for="txt_hora">Hora de la actividad</label>
+            <label for="txt_hora">Hora</label>
             <input class="class_input" type="time" id="txt_hora">
         
-            <label for="txt_lugar">Lugar de la actividad</label>
+            <label for="txt_lugar">Lugar</label>
             <input class="class_input" type="text" id="txt_lugar" maxlength="60">
        
-            <label for="txt_descripcion">Descripción de la actividad</label>
+            <label for="txt_descripcion">Descripción</label>
             <textarea class="class_textarea" id="txt_descripcion"></textarea>
        
                 <div class="contenedor_botones">
@@ -82,8 +82,8 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="js/servicio_actividades.js"></script>
-<script src="js/controlador_registrar_actividades.js"></script>
+<script src="js/servicio_noticias.js"></script>
+<script src="js/controlador_registrar_noticias.js"></script>
 <script src="js/controlador_barra_navegacion.js"></script>
 
 <!-- Scripts cloudinary -->

@@ -70,6 +70,26 @@ let obtener_datos=()=>{
     }
 };
 
+boton_aceptar.addEventListener('click',obtener_datos);
+$(boton_aceptar).on('click',function () {
+    if (validacion()==true) {
+        input_nombre.value;
+        input_fecha.value;
+        input_hora.value;
+        input_lugar.value;
+        textarea_descripcion.value;
+        // img_actividades.value;
+    }else{
+        $(input_nombre).val('');
+        $(input_fecha).val('');
+        $(input_hora).val('');
+        $(input_lugar).val('');
+        $(textarea_descripcion).val('');
+        // $(img_actividades).val('');
+    }
+  });
+
+
 // function mostrar_actividades2(){
 
 //     let filtro=input_filtro.value;
@@ -114,11 +134,4 @@ let obtener_datos=()=>{
 
 
 
-boton_aceptar.addEventListener('click',obtener_datos);
-// $(boton_aceptar).on('click',obtener_datos,function(){
-//     $(input_nombre).val('');
-//     $(input_fecha).val('');
-//     $(input_hora).val('');
-//     $(input_lugar).val('');
-//     $(textarea_descripcion).val('');
-// });
+
