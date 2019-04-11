@@ -33,12 +33,12 @@ for (let i = 0; i < info.length; i++) {
         Generos.innerHTML = 'Distribución de géneros: '+info[i]['institucion_generos'];
         Idiomas.innerHTML = 'Idiomas que se imparten: '+info[i]['institucion_idiomas'];
         Tipo.innerHTML = 'Tipo de centro educativo: '+info[i]['institucion_tipo'];
-        Cedula.innerHTML = 'Cedula jurídica del centro educativo: '+info[i]['institucion_cedula'];
+        Cedula.innerHTML = 'Cédula jurídica del centro educativo: '+info[i]['institucion_cedula'];
         Ideologia.innerHTML = 'Ideologia del centro educativo: '+info[i]['institucion_ideologia'];
         Referencia.innerHTML = 'Referencia historica del centro educativo: '+info[i]['institucion_referencia'];
-        Numero.innerHTML = 'Numero: '+info[i]['institucion_telefono'];
+        Numero.innerHTML = 'Número: '+info[i]['institucion_telefono'];
         Fax.innerHTML = 'Fax: '+info[i]['institucion_fax'];
-        Web.innerHTML = 'Pagina web: '+info[i]['institucion_sitio_web'];
+        Web.innerHTML = 'Página web: '+info[i]['institucion_sitio_web'];
         
     }
     
