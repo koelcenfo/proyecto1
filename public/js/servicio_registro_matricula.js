@@ -7,7 +7,7 @@ let registrar_costos = (pnivel, pmatricula, pmensualidad, pid_institucion) => {
             nivel: pnivel,
             matricula: pmatricula,
             mensualidad: pmensualidad,
-            institucion: pid_institucion
+            id_institucion: pid_institucion
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=utf-8'
