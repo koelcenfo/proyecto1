@@ -113,13 +113,13 @@ margin-top: 20px;
     padding-bottom: 50px;
 }
 /*Div contenedor de los botones*/
-#contenedor_botones{
+/* #contenedor_botones{
     display: block;
     margin: auto;
     width: 70%;
     height: 51px;
     margin-bottom: 40px;
-}
+} */
 /*Boton Atras*/
 #btn_atras{
     display: block;
@@ -176,7 +176,7 @@ table img{
 }
 #listas_de_institucion{
     width: 90%;
-    height: 400px;
+    height: 550px;
     display: block;
     margin: auto;
     background-color: #ffff;
@@ -184,7 +184,7 @@ table img{
     margin-top: 50px;
 }
 
-#listas_de_institucion button, .button{
+/* #listas_de_institucion button, .button{
     float: left;
     display: block;
     width: 210px;
@@ -194,7 +194,7 @@ table img{
     font-size: 30px;
     border-radius: 20px;
     margin: 2px;
-}
+} */
 
 .button #icon_text{
     padding-top: 5px;
@@ -261,9 +261,10 @@ ul.tabs li.current{
 
 .tab-content{
     display: none;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-font-size: 27px;
+    font-size: 27px;
+    color: #6e6e6c
 }
 
 .tab-content.current{
@@ -286,6 +287,22 @@ font-size: 27px;
 .btn_visualizar{
     float: right;
     background-color: #3498db;
+    
+}
+
+.contenedor_botones button{
+    margin-top: 50px;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 
 .contenedor_botones{
