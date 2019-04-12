@@ -2,6 +2,9 @@
 const mongoose = require('mongoose');
 let schema_criterio = new mongoose.Schema(
     {
+        id_criterio:{type:mongoose.Schema.ObjectId,auto:true},
+        id_institucion:{ type: String, required: false },
+        /*  */
         criterio: { type: String, required: true },
         criterio2: { type: String, required: true },
         criterio3: { type: String, required: true },

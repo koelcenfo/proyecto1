@@ -4,15 +4,18 @@ const boton_agregar = document.querySelector('#btn_agregar');
 
 let mostrar_datos = () => {
     let util = listar_util();
+    let id_institucion = sessionStorage.getItem('id_usuario');
     for (let i = 0; i < util.length; i++) {
-        let fila = tabla_util.insertRow();
-        fila.insertCell().innerHTML = util[i]['util'];
-        fila.insertCell().innerHTML = util[i]['descripcion'];
+        if (util[i]['id_institucion'] == id_institucion) {
+            let fila = tabla_util.insertRow();
+            fila.insertCell().innerHTML = util[i]['util'];
+            fila.insertCell().innerHTML = util[i]['descripcion'];
 
 
+
+        }
 
     }
-
 
 
 

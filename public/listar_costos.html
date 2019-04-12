@@ -36,8 +36,10 @@
     <main>
         <h1 id="titulo_registro">Visualizar costos de matricula </h1>
         <div id="contenedor_formulario">
-            <p id="info_p">Se podrá visualizar los costos de la matricula y mensualidad de cada nivel del centro educativo</p>
-            <hr>
+            <label for="txt_filtro">Filtrar</label>
+            <input type="text" id="txt_filtro" onkeyup="filtrar();">
+            
+            
         <table id="tbl_costos">
             <thead>
                 <th>Nivel</th>
@@ -57,6 +59,8 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_registro_matricula.js"></script>
     <script src="js/controlador_listar_costos.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/controlador_inicio.js"></script>
 
 
 </body>

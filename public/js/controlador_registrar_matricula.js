@@ -41,7 +41,7 @@ let obtener_datos = () => {
             {
                 type: 'error',
                 title: 'La matricula no pudo ser registrada',
-                text:'Por favor verifique los campos que estan resaltados'
+                text: 'Por favor verifique los campos que estan resaltados'
             }
         )
     };
@@ -49,7 +49,16 @@ let obtener_datos = () => {
 };
 boton_registrar.addEventListener('click', obtener_datos);
 $(boton_registrar).on('click', function () {
-    $(input_matricula).val('');
-    $(input_mensualidad).val('');
-    $(select_nivel).val('Seleccione el nivel');
+    if (validar() == true) {
+        select_nivel.value;
+        input_matricula.value;
+        input_mensualidad.value;
+
+    } else {
+        $(select_nivel).val('Seleccione el nivel');
+        $(input_matricula).val('');
+        $(input_mensualidad).val('');
+
+    }
+
 })

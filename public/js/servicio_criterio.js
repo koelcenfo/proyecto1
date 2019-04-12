@@ -1,5 +1,5 @@
 'use strict';
-let registrar_criterio = (pcriterio, pcriterio2, pcriterio3, pcriterio4, pcriterio5, pporcentaje, pporcentaje2, pporcentaje3, pporcentaje4, pporcentaje5) => {
+let registrar_criterio = (pcriterio, pcriterio2, pcriterio3, pcriterio4, pcriterio5, pporcentaje, pporcentaje2, pporcentaje3, pporcentaje4, pporcentaje5, pid_institucion) => {
     var request = $.ajax({
         url: "http:localhost:4000/api/registrar_criterio",
         method: "POST",
@@ -13,7 +13,8 @@ let registrar_criterio = (pcriterio, pcriterio2, pcriterio3, pcriterio4, pcriter
             porcentaje2: pporcentaje2,
             porcentaje3: pporcentaje3,
             porcentaje4: pporcentaje4,
-            porcentaje5: pporcentaje5
+            porcentaje5: pporcentaje5,
+            intitucion: pid_institucion
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=utf-8'

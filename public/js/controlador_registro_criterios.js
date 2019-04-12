@@ -1,4 +1,6 @@
 'use strict';
+const id_usuario = sessionStorage.getItem('id_usuario');
+/*  */
 const input_criterio = document.querySelector('#txt_criterio');
 const input_criterio_2 = document.querySelector('#txt_criterio_2');
 const input_criterio_3 = document.querySelector('#txt_criterio_3');
@@ -98,7 +100,9 @@ let obtener_datos = () => {
         let porcentaje3 = input_porcentaje_3.value;
         let porcentaje4 = input_porcentaje_4.value;
         let porcentaje5 = input_porcentaje_5.value;
-        registrar_criterio(criterio, criterio2, criterio3, criterio4, criterio5, porcentaje, porcentaje2, porcentaje3, porcentaje4, porcentaje5);
+        /*  */
+        let id_institucion = id_usuario;
+        registrar_criterio(criterio, criterio2, criterio3, criterio4, criterio5, porcentaje, porcentaje2, porcentaje3, porcentaje4, porcentaje5, id_institucion);
     } else {
         swal.fire(
             {

@@ -32,7 +32,7 @@ let obtener_datos = () => {
     let id_institucion = id_usuario;
 
 
-    registrar_util(util, descripcion,id_institucion);
+    registrar_util(util, descripcion, id_institucion);
 
   } else {
     swal.fire(
@@ -47,8 +47,14 @@ let obtener_datos = () => {
 };
 boton_enviar.addEventListener('click', obtener_datos);
 $(boton_enviar).on('click', function () {
-  $(input_util).val('');
-  $(input_descripcion).val('');
+  if (validar() == true) {
+    input_util.value;
+    input_descripcion.value;
+
+  } else {
+    $(input_util).val('');
+    $(input_descripcion).val('');
+  }
 
 })
 

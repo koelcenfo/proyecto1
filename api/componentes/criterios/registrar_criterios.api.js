@@ -3,6 +3,8 @@ const modelo_criterio = require('./registrar_criterios.model');
 module.exports.registrar_criterio = (req, res) => {
     let nuevo_criterio = new modelo_criterio(
         {
+            id_criterio: req.body.ObjectId,
+            id_institucion: req.body.id_institucion,
             criterio: req.body.criterio,
             criterio2: req.body.criterio2,
             criterio3: req.body.criterio3,

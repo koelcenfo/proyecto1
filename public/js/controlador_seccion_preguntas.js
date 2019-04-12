@@ -34,7 +34,7 @@ let obtener_informacion = () => {
         swal.fire({
             type: 'error',
             title: 'La pregunta no se ha registrado correctamente.',
-            title:'Revise los campos que estan resaltados'
+            title: 'Revise los campos que estan resaltados'
         });
     };
 
@@ -44,6 +44,13 @@ let obtener_informacion = () => {
 }
 boton_registrar.addEventListener('click', obtener_informacion);
 $(boton_registrar).on('click', function () {
-    $(input_pregunta).val('');
-    $(input_respuesta).val('');
+    if (validar() == true) {
+        input_pregunta.value;
+        input_respuesta.value;
+    } else {
+        $(input_pregunta).val('');
+        $(input_respuesta).val('');
+
+
+    }
 })

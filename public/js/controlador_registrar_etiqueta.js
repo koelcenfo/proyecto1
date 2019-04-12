@@ -36,7 +36,13 @@ let obtener_datos = () => {
     }
 };
 boton_enviar.addEventListener('click', obtener_datos);
-$(boton_enviar).on('click', function () {
-    $(input_etiqueta).val('');
-    $(input_descripcion).val('');
-})
+$(boton_aceptar).on('click', function () {
+    if (validacion() == true) {
+        input_etiqueta.value;
+        input_descripcion.value;
+    } else {
+        $(input_etiqueta).val('');
+        $(input_descripcion).val('');
+
+    }
+});

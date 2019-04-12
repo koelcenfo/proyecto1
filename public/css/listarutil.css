@@ -68,3 +68,26 @@ font-size: 30px;
     border-style: solid;
     border-right: 2px solid #000;
 }
+#contenedor_botones{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 40px;
+}
+/*Boton Atras*/
+#btn_atras{
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+#btn_atras{
+    background-color: #e74c3c;
+}

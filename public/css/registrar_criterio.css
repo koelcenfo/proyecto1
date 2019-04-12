@@ -21,3 +21,11 @@ html{
     background-color: #fff; 
     border-radius: 5px; 
 }
+#titulo_registro{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    background-color: #2c2c54;
+}

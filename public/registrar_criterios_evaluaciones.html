@@ -4,14 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
     <link rel="stylesheet" href="css/registrar_criterio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
     <title>Registrar criterios de evaluaciones</title>
 
 
 </head>
+<header>
+    <nav class="barra_navegacion">
+        <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+        <!--Visitante-->
+        <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+        <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+        <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
+        <!--Conectado-->
+        <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+        <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+        <a onclick="cerrar_sesion()" id="btn_cerrar_sesion">Cerrar sesión</a>
+        <script type="text/javascript">
+            function cerrar_sesion() {
+                sessionStorage.clear();
+                window.location.href = 'index.html';
+            }
+        </script>
+    </nav>
+</header>
 
 <body>
     <main id="contenido">
+        <h1 id="titulo_registro">Registrar criterio de evaluación</h1>
         <div id="form_contenedor">
             <p id="info_p">se podrá registrar un criterio de evalucacion con un porcentaje respectivo</p>
             <hr>
@@ -82,6 +104,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/controlador_registro_criterios.js"></script>
     <script src="js/servicio_criterio.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/servicio_inicio.js"></script>
 
 
 </body>
