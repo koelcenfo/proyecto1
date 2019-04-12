@@ -48,8 +48,7 @@
     font-size: 30px;
 }*/
 .barra_navegacion a{    
-    width: 200px;
-    height: 45px;
+    padding: 28px;
     float: right;   
     padding-top: 25px;  
     vertical-align: middle; 

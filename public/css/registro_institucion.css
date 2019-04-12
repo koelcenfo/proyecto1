@@ -12,10 +12,6 @@ html{
 
 
 
-body{
-
-    line-height: 1.6
-}   
 .container{
     width: 759px;
     margin: auto;
@@ -30,19 +26,29 @@ ul.tabs{
 }
 ul.tabs li{
     background: none;
-    color: #222;
+    color:#3498db;
     display: inline-block;
-    padding: 10px ;
-    padding-left: 27px;
-    padding-right: 27px;
+    padding: 30px 25px;
     cursor: pointer;
+    font-size: 15px;
+    margin-left: 3px;
+    margin-top: 5px;
 }
 
 ul.tabs li.current{
-    background: #b71540;
-    color: #222;
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    transform: scale(1.050);
 }
+ul.tabs li:hover{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    transform: scale(1.050); 
 
+}
 .tab-content{
     display: none;
     padding: 15px;
@@ -185,14 +191,19 @@ padding-bottom: 2px;
     padding-bottom: 15px;
     font-size: 25px;
 }
-
+#div_checkbox{
+    height: 400px;
+    overflow-y: scroll;
+}
 #image_preview{
-    width: 60%;
-    height: 150px;
+    width: 128px;
+    height: 128px;
     display: block;
     margin: auto;
-    border: solid 3px #2f3542;
-    border-radius: 20px;
+    border: solid 1px rgb(209, 209, 209);
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 #btn_seleccionar_imagen{
     display: block;
@@ -247,6 +258,11 @@ button{
     height: 51px;
     margin-bottom: 40px;
 }
+
+#checkbox_container{
+    margin: auto;
+}
+
 /*  
 body{
 width: 100%;
