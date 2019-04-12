@@ -48,7 +48,7 @@
         <div id="contenido">
 
             <div id="listas_de_institucion">
-                <h1 id="titulo_herrramientas">Herramientas del Centro Educativo</h1>
+                <h1 id="titulo_herrramientas">Herramientas del centro educativo.</h1>
                 <div class="container">
 
                     <ul class="tabs">
@@ -56,47 +56,125 @@
                             Útiles</li>
                         <li class="tab-link" data-tab="tab-2">
                             <i class="far fa-futbol"></i> Actividades</li>
-                        <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i> Preguntas frecuentes
+                        <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i>Preguntas frecuentes
                         </li>
-                        <li class="tab-link" data-tab="tab-4"><i class="fas fa-hands-helping"></i> Becas</li>
+                        <li class="tab-link" data-tab="tab-4"><i class="fas fa-hands-helping"></i>Idiomas</li>
                         <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i> Costos</li>
                         <li class="tab-link" data-tab="tab-6"><i class="far fa-newspaper"></i> Noticias</li>
                         <li class="tab-link" data-tab="tab-7"><i class="fas fa-info"></i> Material Informativo</li>
                         <li class="tab-link" data-tab="tab-8"><i class="fas fa-tags"></i> Etiquetas</li>
+                        <li class="tab-link" data-tab="tab-9"><i class="fas fa-tags"></i> Becas</li>
                     </ul>
 
 
                     <div id="tab-1" class="tab-content current">
-                        1
+                        En esta sección, se puede registrar y visualizar las listas de útiles que son requeridas 
+                        en el respectivo centro educativo, las cuales podrán ser visualizadas por los padres de familia y con ello pueden estar al pendiente de los materiales que necesesitan los estudiantes.
+
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_utiles.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_utiles.html'">Visualizar</button>
+                        </div>
+
                     </div>
                     
                     <div id="tab-2" class="tab-content">
-                        2
+                        En esta sección, el centro educativo puede indicar las actividades que la institución asigna así como visualizar dichas actividades, con la finalidad de que los padres de familia
+                        estén enterados de dichos eventos de la institución, y puedan disfrutar de las actividades.
+                        
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_actividades.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar</button>
+                        </div>
+
+
                     </div>
 
                     <div id="tab-3" class="tab-content">
-                        3
+                        En esta sección, el centro educativo puede escoger las preguntas que hacen los padres de familia y que son más habituales en el centro educativo y de esta manera poder visualizarlas, para que los encargados de los estudiantes 
+                        puedan resolver sus interrogantes, de manera más fácil y rápida.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_seccion_preguntas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Visualizar</button>
+                        </div>
+
+
                     </div>
 
                     <div id="tab-4" class="tab-content">
-                        4
+                        En esta sección, los centros educativos pueden registrar todos los idiomas que imparten en la institución.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_idiomas.html'">Registrar</button>
+                            <!-- <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_.html'">Visualizar</button> -->
+                        </div>
+
+
                     </div>
 
                     <div id="tab-5" class="tab-content">
-                        5
+                        En esta seción, el centro educativo puede registrar y visualizar los costos de la matrícula, así como la mensualidad que le corresponde al respectivo nivel de educación del estudiante.
+
+                        
+                        <div class="contenedor_botones">
+                            <!-- <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_costos.html'">Registrar</button> -->
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_costos.html'">Visualizar</button>
+                        </div>
+
+
                     </div>
 
                     <div id="tab-6" class="tab-content">
-                        6
+                        En esta sección, el centro educativo puede registrar hechos recientes que han sucedido en la respectiva institución, para que los estudiantes y padres de familia puedan visualizar las noticias y estar al pendiente de dichos eventos.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_noticias.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_noticias.html'">Visualizar</button>
+                        </div>
+
+
                     </div>
 
                     <div id="tab-7" class="tab-content">
-                        7
+                        En esta sección, el centro educativo puede registrar la información que sea de gran aporte para los padres de familia y estudiantes.Por ejemplo: el reglamento de la institución, áreas informativas, talleres adicionales, entre otra información a destacar.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_material_informativo.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_material_informativo.html'">Visualizar</button>
+                        </div>
+
                     </div>
 
                     <div id="tab-8" class="tab-content">
-                        8
+                        En esta sección, los centros educativos pueden registrar y visualizar las etiquetas que destacan a la respectiva institución. 
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_etiquetas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_etiquetas.html'">Visualizar</button>
+                        </div>
+
+
                     </div>
+
+                    <div id="tab-9" class="tab-content">
+                        En esta sección, los centros educativos pueden registrar y visualizar las becas que están asociadas a la propia institución. 
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_becas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_becas.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
 
                 </div>
                 <!-- <div id="seccion">

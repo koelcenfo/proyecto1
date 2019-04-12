@@ -52,7 +52,7 @@
 #info{
     width: 100%;
     height: 450px;
-    background-color: #e9ece5
+    background-color: #e9ece5;
 }
 #info_carta{
     display: inline-block;
@@ -262,9 +262,39 @@ ul.tabs li.current{
 .tab-content{
     display: none;
     padding: 15px;
+    text-align: center;
+font-size: 27px;
 }
 
 .tab-content.current{
     display: inherit;
-}   
+}
+
+/* #tab-1{
+text-align: center;
+font-size: 27px;
+
+} */
+
+.btn_registrar{
+    float: left;
+    background-color: #e74c3c;
+   
+    
+}
+
+.btn_visualizar{
+    float: right;
+    background-color: #3498db;
+}
+
+.contenedor_botones{
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 100px;
+}
+
 /**
