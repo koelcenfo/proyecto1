@@ -36,8 +36,8 @@ let obtener_datos = () => {
     }
 };
 boton_enviar.addEventListener('click', obtener_datos);
-$(boton_aceptar).on('click', function () {
-    if (validacion() == true) {
+$(boton_enviar).on('click', function () {
+    if (validar() == true) {
         input_etiqueta.value;
         input_descripcion.value;
     } else {

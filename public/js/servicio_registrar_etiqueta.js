@@ -7,7 +7,7 @@ let registrar_datos = (petiqueta, pdescripcion,pid_institucion) => {
         data: {
             etiqueta: petiqueta,
             descripcion: pdescripcion,
-            intitucion:pid_institucion
+            id_institucion: pid_institucion
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded;charset=utf-8'

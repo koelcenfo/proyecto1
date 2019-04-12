@@ -1,22 +1,25 @@
 'use strict';
-const tabla = document.querySelector('#tbl_etiquetas');
+const tabla = document.querySelector('#tbl_etiquetas tbody');
 
 let mostrar_datos = () => {
     let etiquetas = listar_etiqueta();
     let id_institucion = sessionStorage.getItem('id_usuario');
 
     for (let i = 0; i < etiquetas.length; i++) {
+
         if (etiquetas[i]['id_institucion'] == id_institucion) {
             let fila = tabla.insertRow();
             fila.insertCell().innerHTML = etiquetas[i]['etiqueta'];
             fila.insertCell().innerHTML = etiquetas[i]['descripcion'];
 
 
-        };
-
-
+        }
 
     };
+
+
+
+
 }
 function filtrar() {
     var tabla = document.getElementById('tbl_etiquetas');
