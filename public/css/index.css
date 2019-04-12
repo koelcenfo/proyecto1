@@ -232,7 +232,7 @@ table img{
 ul.tabs{
     margin: 0px;
     margin-top: 10px;
-    margin-left: 35px;
+    margin-left: 20px;
     padding: 0px;
     list-style: none;
     font-size: 25px;
@@ -301,8 +301,8 @@ font-size: 27px;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 200px;
+    margin-left: 200px;
 }
 
 .contenedor_botones{
@@ -312,6 +312,7 @@ font-size: 27px;
     width: 70%;
     height: 51px;
     margin-bottom: 100px;
+
 }
 
 /**
