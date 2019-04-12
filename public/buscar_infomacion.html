@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="img/Prometeo_logo.png">
         <title>Buscar institución</title>
+      
 </head>
 <body>
         <header>
@@ -30,12 +31,24 @@
                     </script>
                 </nav>
             </header>
-            <h1 id="titulo_busqueda">Centros educativos</h1>
+            <h1 id="titulo_busqueda">Búsqueda de centros educativos</h1>
             
             
-            <section id="lista_instituciones" onload="id_perfil()">
+        
+            <input id="txtBusqueda" type="text" onkeyup="Buscar();">
+                    <table id="tbl_instituciones">
 
-            </section>
+                            <thead>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+        
+
 
 </body>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
