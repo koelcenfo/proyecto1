@@ -13,31 +13,39 @@
 
 <body>
   <header>
-    <nav class="barra_navegacion">
-      <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
-      <!--Visitante-->
-      <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
-      <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
-      <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
-      <!--Conectado-->
-      <a href="http://localhost:3000/public/perfil.html">Perfil</a>
-      <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
-      <a onclick="cerrar_sesion()" id="btn_cerrar_sesion">Cerrar sesión</a>
-      <script type="text/javascript">
-        function cerrar_sesion() {
-          sessionStorage.clear();
-          window.location.href = 'index.html';
+    <nav class="barra_navegacion" style="position:fixed">
+        <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+        <!--Visitante-->
+        <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+        <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
+        <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+        <!--Conectado-->
+        <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png" style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
+        <style type="text/css">
+        .estilo_imagen{
+            border-radius: 100px;
         }
-      </script>
+        </style>
+        <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+        <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+        <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+        <script type="text/javascript">
+            function cerrar_sesion() {
+                sessionStorage.clear();
+                window.location.href = 'index.html';
+            }
+        </script>
+        <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
     </nav>
-  </header>
+</header>
   <main>
     <div id="form_contenedor">
       <h1 id="titulo_registro">Sección de preguntas frecuentes.</h1>
       <!-- <p id="info_p">En la siguiente lista podrá ver las preguntas más frecuentes que se hacen en el centro educativo y su respectiva respuesta.</p> -->
       <!-- <hr> -->
       <label for="txt_filtro">Filtrar</label>
-      <input type="text" id="txt_filtro" onkeyup="filtrar();">
+      <input type="text" id="txt_filtro" onkeyup="filtrar_pregunta();">
       <div id="contenedor_pregunta">
         <table id="tabla_pregunta">
           <thead>
@@ -61,6 +69,6 @@
 <script src="js/servicio_seccion_preguntas.js"></script>
 <script src="js/controlador_listar_preguntas.js"></script>
 <script src="js/servicio_inicio.js"></script>
-
+<script src="js/controlador_imagen_sesion.js"></script>
 
 </html>

@@ -24,7 +24,7 @@ let mostrar_informacion=()=>{
     };
 };
 
-function filtrar() {
+function filtrar_material() {
     var tabla = document.getElementById('tbl_material_informativo');
     var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
     var cellsOfRow = "";

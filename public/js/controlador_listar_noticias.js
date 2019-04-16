@@ -33,7 +33,7 @@ let mostrar_noticias=()=>{
 
 };
 
-function filtrar() {
+function filtrar_noticia() {
     var tabla = document.getElementById('tbl_noticias');
     var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
     var cellsOfRow = "";

@@ -18,6 +18,7 @@ html{
 }
 
 #titulo_registro{
+    display: block;
     text-align: center;
     font-size: 50px;
     padding-top: 30px;
@@ -129,6 +130,7 @@ label{
     display: block;
     margin: auto;
     margin-bottom: 100px;
+    padding-top: 70px;
     width: 65%;
     height: 100%;
     background-color: #fff; 

@@ -18,6 +18,7 @@ html{
 }
 
 #titulo_registro{
+    display: block;
     text-align: center;
     font-size: 50px;
     padding-top: 30px;
@@ -127,6 +128,7 @@ label{
 
 #form_contenedor{
     display: block;
+    padding-top: 70px;
     margin: auto;
     margin-bottom: 100px;
     width: 65%;

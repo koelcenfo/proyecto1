@@ -55,8 +55,12 @@ let mostrar_actividades = () => {
 
 };
 
+// function eliminarFila(index) {
+//     $("" + index).remove();
+// }
 
-function filtrar() {
+
+function filtrar_actividad() {
     var tabla = document.getElementById('tbl_actividades');
     var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
     var cellsOfRow = "";
