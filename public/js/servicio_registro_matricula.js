@@ -17,8 +17,8 @@ let registrar_costos = (pnivel, pmatricula, pmensualidad, pid_institucion) => {
         swal.fire(
             {
                 type: 'success',
-                title: 'Registrado correctamente',
-                text: 'Informacion de los costos de la matricula y mensualidad registrados correctamente'
+                title: 'Se ha registrado correctamente los costos de la matricula y mensualidad.',
+                text: 'Informacion de los costos de la matricula y mensualidad registrados correctamente.'
             }
         );
     }

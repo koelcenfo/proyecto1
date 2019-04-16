@@ -24,8 +24,8 @@ let registrar_criterio = (pcriterio, pcriterio2, pcriterio3, pcriterio4, pcriter
         swal.fire(
             {
                 type: 'success',
-                title: 'Criterio registrado correctamente',
-                text: 'la información del criterio de evaluación fue registrada correctamente'
+                title: 'Informacion del criterio registrada correctamente.',
+                text: 'La información del criterio de evaluación fue registrada correctamente.'
             }
         );
     });

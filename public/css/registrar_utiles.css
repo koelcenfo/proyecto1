@@ -38,7 +38,7 @@ label{
     text-align: center;
     font-size: 30px;
 }
-input{
+#txt_util{
     display: block;
     margin: auto;
     width: 70%;
@@ -51,6 +51,21 @@ input{
     background-color: #dfe4ea;
     outline-color: #1abc9c;
     
+}
+#txt_descripcion{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    margin-top: 30px;
+    height: 250px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    
+    outline-color: #1abc9c;
+    resize: none;
 }
 #btn_atras{
     float: left;

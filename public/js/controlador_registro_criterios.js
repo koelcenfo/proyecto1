@@ -107,8 +107,8 @@ let obtener_datos = () => {
         swal.fire(
             {
                 type: 'error',
-                title: 'Revise cada campo del formulario',
-                text: 'El criterio de evaluación no ha sido registrado correctamente'
+                title: 'Revise cada campo del formulario.',
+                text: 'El criterio de evaluación no se registró correctamente.'
             }
         );
     }

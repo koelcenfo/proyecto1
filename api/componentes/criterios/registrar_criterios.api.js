@@ -22,14 +22,14 @@ module.exports.registrar_criterio = (req, res) => {
             res.json(
                 {
                     success: false,
-                    msg: `El criterio de evaluación no ha sido registrado correctamente`
+                    msg: `El criterio de evaluación no ha sido registrado correctamente.`
                 }
             );
         } else {
             res.json(
                 {
                     success: true,
-                    msg: `la información del criterio de evaluación fue registrada correctamente`
+                    msg: `La información del criterio de evaluación fue registrada correctamente.`
 
                 }
             )
@@ -51,7 +51,7 @@ module.exports.listar_criterio = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        msg: `El criterio de evaluación no ha sido registrado correctamente`
+                        msg: `El criterio de evaluación no se registró correctamente.`
                     }
                 );
             }

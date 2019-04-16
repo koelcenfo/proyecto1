@@ -20,7 +20,7 @@ let registrar_util = (putil, pdescripcion, pid_intitucion) => {
     swal.fire(
       {
         type: 'success',
-        title: 'Informacion de utiles enviada.',
+        title: 'Información de los útiles enviada correctamente.',
         text: 'Se envió la informacion de los útiles correctamente.'
       }
     );

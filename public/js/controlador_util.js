@@ -38,8 +38,8 @@ let obtener_datos = () => {
     swal.fire(
       {
         type: 'error',
-        title: 'Revise los campos',
-        text: 'la informacion del útil no se ha enviado correctamente'
+        title: 'Por favor revise los campos del formulario de manera correcta.',
+        text: 'La informacion del útil no se ha enviado correctamente.'
       }
     );
   }

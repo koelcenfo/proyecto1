@@ -21,7 +21,7 @@ module.exports.registrar_util = (req, res) => {
             res.json(
                 {
                     success: false,
-                    msg: `no se pudo registrar el util`
+                    msg: `No se pudo registrar el útil`
                 }
             );
         } else {
@@ -50,7 +50,7 @@ module.exports.listar_util = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        msg: `no se pudo registrar el útil`
+                        msg: `No se ha podido registrar la informacion del útil.`
                     }
                 );
             }
