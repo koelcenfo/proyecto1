@@ -35,18 +35,21 @@ let mostrar_actividades = () => {
                 imagen.src = 'img/actividades/image-placeholder.png'
             }
            
+            let celda_configuración=fila.insertCell();
+            //Creación del boton editar
+            let boton_editar=document.createElement('a');
+            //Para el estilo
+            boton_editar.classList.add('boton_editar');
+            boton_editar.textContent='Editar';//textContent lo que muestra en la tabla 'Editar'
+            boton_editar.href=`actualizar_actividades.html?id_institucion=${actividades[i]['_id']}`;
 
+            celda_configuración.appendChild(boton_editar);
 
-
-            // let celda_configuración = fila.insertCell();
-
-            // //Creación del botón de editar
-            // let boton_editar = document.createElement('a');
-            // boton_editar.textContent = 'Editar';
-            // boton_editar.href = `registrar_actividades.html?id_institucion=${actividades[i]['_id']}`;
-            // //para agregarle al parámetro el url
-            // celda_configuración.appendChild(boton_editar);
-
+        //    let celda_eliminar=fila.insertCell();
+           let boton_eliminar=document.createElement('a');
+            boton_eliminar.classList.add('boton_eliminar');
+           boton_eliminar.textContent='Eliminar';
+           celda_configuración.appendChild(boton_eliminar);
         }
     };
 
@@ -78,14 +81,6 @@ function filtrar() {
 
 
 mostrar_actividades();
-
-
-
-
-
-
-
-
 
 
 

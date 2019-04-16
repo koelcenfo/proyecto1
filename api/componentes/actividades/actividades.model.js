@@ -12,7 +12,8 @@ let schema_actividades=new mongoose.Schema(
         hora :{type: String,required:true}, 
         lugar :{type:String,required:true},
         descripcion : {type:String,required:true},
-        imagen : {type: String, required: true}
+        imagen : {type: String, required: true},
+        estado: {type: String, required: true}
         // imagen :{required: false} //no está definida por el momento 
 
     }//estructura (esquema)

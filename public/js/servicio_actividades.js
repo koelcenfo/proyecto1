@@ -24,9 +24,86 @@ let listar_actividades=()=>{
     return listar_actividades;
 };
 
+
+let buscar_actividades=(id_institucion)=>{  //buscamos por un criterio en específico
+    let actividades=[];
+
+    let request=$.ajax({
+        url: "http://localhost:4000/api/buscar_actividades/"+id_institucion,
+        method: "GET",
+        data:{
+        },
+        dataType: "json",
+        contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+
+    });
+
+    request.done(function(res){
+
+    actividades=res.actividades;
+
+    });
+
+    request.fail(function(jqXHR, textStatus){
+
+    });
+
+    return actividades;
+};
+
+
+let actualizar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion, pimagen, pid)=>{
+
+    let request=$.ajax({
+        url: 'http://localhost:4000/api/actualizar_actividades',
+        method: "POST",
+        data: {
+            nombre: pnombre,
+            fecha: pfecha,
+            hora: phora,
+            lugar: plugar,
+            descripcion : pdescripcion,
+            imagen : pimagen,
+            id: pid
+
+        },
+        dataType: "json",
+        contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+        
+        
+    });
+
+
+    request.done(function(res){
+        swal.fire({
+            type: 'success',
+            title: 'Actualización realizada con éxito.',
+            text: res.msg,
+            onClose: ()=>{
+                window.location.href='listar_actividades.html';
+            }
+        });
+    });
+
+
+    request.fail(function(res){
+        swal.fire({
+            type : 'error',
+            title : 'Proceso no realizado',
+            text : res.msg
+        });
+
+    });
+
+
+}
+
+
+
 let registrar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion, pid_institucion, pimagen)=>{
     let request= $.ajax({
-        url: "http://localhost:4000/api/registrar_actividades",
+        url: 'http://localhost:4000/api/registrar_actividades',
         method: "POST",
         data: {
             nombre: pnombre,
@@ -49,3 +126,4 @@ let registrar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion, pid_institu
         });
     });
 }
+
