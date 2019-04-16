@@ -93,7 +93,6 @@ input[type=text],[type=number],[type=password], select{
     border-radius: 5px;
     padding-left: 15px;
     margin-bottom: 40px;
-    border: none;
     outline-color: #2f3542;
 }
 textarea{

@@ -17,7 +17,6 @@ html{
     height: 750px;
     background-color: #fff; 
     border-radius: 5px; 
-    overflow-y: scroll;
 }
 #titulo_registro{
     text-align: center;
@@ -79,12 +78,10 @@ html{
 #contenedor_botones{
     display: block;
     margin: auto;
-    width: 65%;
-    height: 15%;
-    padding-top: 20px;
-    position: absolute;
-    bottom: 0;
-    background-color:#fff;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 40px;
+    margin-top: 300px;
 }
 label{
     display: block;
@@ -114,28 +111,4 @@ label{
     border: none;
     outline-color: #1abc9c;
     text-align: center; 
-}
-.btn-remove-idioma{
-    display: inline-block;
-    font-size: 25px;
-    width: 50px;
-    height: 50px;
-    background-color: #e74c3c;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-}
-.btn-add-idioma{
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    width: 120px;
-    height: 50px;
-    font-size: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    background-color: #3498db;
 }

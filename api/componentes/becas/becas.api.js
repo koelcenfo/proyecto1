@@ -5,6 +5,7 @@ module.exports.registrar=(req,res)=>{
     let nueva_beca=new modelo_becas(
         {
             id_becas:req.body.ObjectId,
+            id_institucion:req.body.id_institucion,
             nombre: req.body.nombre,
             tipo: req.body.tipo,
             descripcion:req.body.descripcion
@@ -25,7 +26,7 @@ module.exports.registrar=(req,res)=>{
         }
     });
 };
-module.exports.listar_beca=(req,res) =>{
+module.exports.listar_becas=(req,res) =>{
     modelo_becas.find().then(
         function(becas){
             if(becas.length > 0){

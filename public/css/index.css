@@ -137,7 +137,7 @@ margin-top: 20px;
     background-color: #e74c3c;
 }
 /*Css de la tabla*/
-.tabla_actividad {
+#tbl_ranking_mep {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -149,23 +149,23 @@ margin-top: 20px;
     color: black;
   }
   
-.tabla_actividad td, .tabla_actividad th {
+#tbl_ranking_mep td, #tbl_ranking_mep th {
     border-width: 1px;
     border-color: #2f3542;
 
     padding: 15px;
   }
-.tabla_actividad th{
+#tbl_ranking_mep th{
       font-size: 20px;
     color: #f1f2f6;
   }
-  .tabla_actividad td{
+  #tbl_ranking_mep td{
     word-break: normal;
   text-align: center;
   font-size: 15px;
   border-style: solid;
 }
-.tabla_actividad thead {
+#tbl_ranking_mep thead {
     background-color: #2f3542;
   }
 /*La definición que va a tener la imagen dentro de la tabla*/

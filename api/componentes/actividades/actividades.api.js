@@ -12,7 +12,9 @@ module.exports.registrar=(req,res)=>{
             hora : req.body.hora,
             lugar : req.body.lugar,
             descripcion : req.body.descripcion,
-            imagen : req.body.imagen
+            imagen : req.body.imagen,
+            estado: 'Activo'
+            
         }
     );
 
@@ -56,3 +58,28 @@ module.exports.listar_actividad=(req,res) =>{
               
         }
     )};
+
+    module.exports.buscar_por_id=function(req,res){
+        modelo_actividades.find({_id: req.body.id_institucion}).then(
+            function(actividades){
+                if (actividades) {
+                    res.json({success: true, actividades: actividades});
+                }else{
+                    res.json({success: false, actividades: actividades});
+                }
+            }
+        );
+    };
+
+    module.exports.actualizar=function(req,res){
+        modelo_actividades.findByIdAndUpdate(req.body.id,{$set: req.body},
+            function(error){
+                if (error) {
+                    res.json({success: false, msg: 'No se pudo actualizar la actividad.'});
+                } else {
+                    res.json({success: true, msg: 'La actividad se actualizó correctamente.'});
+                }
+            }
+            
+            );
+    }

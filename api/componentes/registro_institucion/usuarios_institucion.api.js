@@ -56,7 +56,7 @@ module.exports.registrar_institucion = (req, res) =>{
         }else{
             res.json({
                 success : true,
-                msg : `Se registro satisfactoriamente el usuario.`
+                msg : `Se registró satisfactoriamente el usuario.`
                 });
             /*let mailOptions = {
                 from : 'koelcenfo@gmail.com',

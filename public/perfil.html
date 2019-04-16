@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="css/barra_lateral.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- css de los estilos del listar de las tablas -->
+    <link rel="stylesheet" href="css/listarutil.css">
+    <link rel="stylesheet" href="css/listar_actividades.css">
+    <!-- <link rel="stylesheet" href="css/listar_actividades.css"> -->
+    <link rel="stylesheet" href="css/listar_preguntas.css">
+    <link rel="stylesheet" href="css/listar_becas.css">
+    <link rel="stylesheet" href="css/listar_matricula.css">
+    <link rel="stylesheet" href="css/listar_noticias.css">
+    <link rel="stylesheet" href="css/listar_material_informativo.css">
+    <link rel="stylesheet" href="css/listar_etiquetas.css">
+
     <title>Perfil</title>
 </head>
 <header>
@@ -35,76 +46,245 @@
             </nav>
 </header>
 <body>
-    
-<!-- <body onload="getUrl()"    > -->
-        <!--Barra Lateral-->
-            <!-- <div id="barra_lateral">
-                <div id="Ranking_tittle">
-                    <h1>Ranking's</h1>
-                </div>
-                <div id="Rankings">
-                    <h2>Ranking del MEP</h1>
-                </div>
-            </div> -->
-    
-            <div id="perfil">
 
-                <div id="side_info">
-                    <div id="img_info">
-                        <img src="img/inicio_sesion/centro_educativo.png" id="img_centro">
-                    </div>
-                    <div id="side_info_top">
+    <div id="perfil">
+
+            <      <div id="side_info">
+            <div id="img_info">
+                <img src="img/inicio_sesion/centro_educativo.png" id="img_centro">
+            </div>
+            <div id="side_info_top">
                         
-                            <h1 id="titulo_ubicacion"><i class="fas fa-map-marked-alt"></i> Ubicación</h1>
-                            <li id="provincia_institucion"></li>
-                            <li id="canton_institucion"></li>
-                            <li id="distrito_institucion"></li>
+                    <h1 id="titulo_ubicacion"><i class="fas fa-map-marked-alt"></i> Ubicación</h1>
+                    <li id="provincia_institucion"></li>
+                    <li id="canton_institucion"></li>
+                    <li id="distrito_institucion"></li>
 
-                    </div>
-                    <div id="side_info_bottom">
-                            <h1 id="titulo_contacto"><i class="fas fa-phone"></i> Contacto</h1>
-                            <li id="telefono_institucion"></li>
-                            <li id="fax_institucion"></li>
-                            <li id="web_institucion"></li>
-                    </div>
-                </div>
+            </div>
+            <div id="side_info_bottom">
+                    <h1 id="titulo_contacto"><i class="fas fa-phone"></i> Contacto</h1>
+                    <li id="telefono_institucion"></li>
+                    <li id="fax_institucion"></li>
+                    <li id="web_institucion"></li>
+            </div>
+        </div>
 
-                <div id="top_info">
+        <div id="top_info">
 
-                    <div id="top_top_info">
-                        <h1 id="nombre_institucion"><i class="fas fa-map-marked-alt"></i> Nombre del Centro Educativo</h1>
-                        <li id="direccion_institucion"></li>
-                        <li id="fundacion"></li>
+            <div id="top_top_info">
+                <h1 id="nombre_institucion"><i class="fas fa-map-marked-alt"></i> Nombre del centro educativo</h1>
+                <li id="direccion_institucion"></li>
+                <li id="fundacion"></li>
                    
-                    </div>
-                    <div id="top_bottom_info">
-                       <li id="nombre_inscrito"></li>
-                       <li id="generos"></li>
-                       <li id="idiomas"></li>
-                       <li id="tipo"></li>
-                       <li id="cedula_juridica"></li>
-                       <li id="ideologia"></li>
-                       <li id="referencia"></li>
+            </div>
+            <div id="top_bottom_info">
+                <li id="nombre_inscrito"></li>
+                <li id="generos"></li>
+                <li id="idiomas"></li>
+                <li id="tipo"></li>
+                <li id="cedula_juridica"></li>
+                <li id="ideologia"></li>
+                <li id="referencia"></li>
+            </div>
+        </div>
+        <div id="bottom_info">
+            <div class="container">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1"><i class="fas fa-pencil-ruler"></i> Útiles</li>
+                    <li class="tab-link" data-tab="tab-2"><i class="far fa-futbol"></i> Actividades</li>
+                    <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i> Preguntas frecuentes</li>
+                    <li class="tab-link" data-tab="tab-4" ><i class="fas fa-hands-helping"></i> Becas</li>
+                    <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i> Costos</li>
+                    <li class="tab-link" data-tab="tab-7"><i class="far fa-newspaper"></i> Noticias</li>
+                    <li class="tab-link" data-tab="tab-8"><i class="fas fa-info"></i> Material Informativo</li>
+                    <li class="tab-link" data-tab="tab-9"><i class="fas fa-tags"></i> Etiquetas</li>
+                    <li class="tab-link" data-tab="tab-10"><i class="fas fa-globe-americas"></i> Idiomas</li>
+                </ul>   
+            </div>
+
+            <div id="tab-1" class="tab-content current">
+                <div id="form_contenedor">
+
+                        <label for="txt_filtro">Filtrar</label>
+                               
+                        <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                                
+                        <table id="tbl_utiles">
+                                 
+                            <thead>
+                                <th>Útil</th>
+                                <th>Descripción</th>
+                                <th>Cantidad</th>
+                            </thead>
+                            <tbody>
+                    
+                    
+                            </tbody>
+                    
+                        </table>
+                        
+                </div>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    <table id="tbl_actividades">
+                        <thead>
+                            <tr>
+                                <th>Nombre de la actividad</th>
+                                <th>Fecha de la actividad</th>
+                                <th>Hora de la actividad</th>
+                                <th>Lugar de la actividad</th>
+                                <th>Descripción de la actividad</th>
+                                <th id="image_preview">Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    <div id="contenedor_pregunta">
+                      <table id="tabla_pregunta">
+                        <thead>
+                          <th>Pregunta</th>
+                          <th>Respuesta</th>
+                        </thead>
+                        <tbody>
+              
+                        </tbody>
+                      </table>
                     </div>
                 </div>
-                <div id="bottom_info">
-                    <div class="container">
-                        <ul class="tabs">
-                            <li class="tab-link current" data-tab="tab-1" onclick="window.location.href='listar_utiles.html'"><i class="fas fa-pencil-ruler"></i> Útiles</li>
-                            <li class="tab-link" data-tab="tab-2" onclick="window.location.href='listar_actividades.html'"><i class="far fa-futbol"></i> Actividades</li>
-                            <li class="tab-link" data-tab="tab-3" onclick="window.location.href='listar_preguntas.html'"><i class="far fa-comment-dots"></i> Preguntas frecuentes</li>
-                            <li class="tab-link" data-tab="tab-4" ><i class="fas fa-hands-helping"></i> Becas</li>
-                            <li class="tab-link" data-tab="tab-5" onclick="window.location.href='listar_costos.html'"><i class="fas fa-coins"></i> Costos</li>
-                            <li class="tab-link" data-tab="tab-6" onclick="window.location.href='listar_noticias.html'"><i class="far fa-newspaper"></i> Noticias</li>
-                            <li class="tab-link" data-tab="tab-6" onclick="window.location.href='listar_material_informativo.html'"><i class="fas fa-info"></i> Material Informativo</li>
-                            <li class="tab-link" data-tab="tab-6" onclick="window.location.href='listar_etiquetas.html'"><i class="fas fa-tags"></i> Etiquetas</li>
-                        </ul>   
-                    </div>
+            </div>
+            <div id="tab-4" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    <table id="tbl_becas">
+                        <thead>
+                            <tr>
+                                <th>Nombre de la beca</th>
+                                <th>Tipo de beca</th>
+                                <th>Descripción de la beca</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-5" class="tab-content">
+                <div id="contenedor_formulario">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    
+                    
+                <table id="tbl_costos">
+                    <thead>
+                        <th>Nivel</th>
+                        <th>Matricula</th>
+                        <th>Mensualidad</th>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <div id="tab-6" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    <table id="tbl_noticias">
+                        <thead>
+                            <tr>
+                                <th>Título de la noticia</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Lugar</th>
+                                <th>Descripción</th>
+                                <th id="image_preview">Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-7" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    <table id="tbl_noticias">
+                        <thead>
+                            <tr>
+                                <th>Título de la noticia</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Lugar</th>
+                                <th>Descripción</th>
+                                <th id="image_preview">Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-8" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                    <table id="tbl_material_informativo">
+                        <thead>
+                            <tr>
+                           
+                                        <th>Reglamento de la institución</th>
+                                        <th>Proceso de matrícula</th>
+                                        <th>Sistema de evaluación</th>
+                                        <th>Recomendaciones</th>
+                                        <th>Áreas informativas</th>
+                                        <th>Sección de ayuda</th>
+                                        <th>talleres adicionales</th>
+                                        <th>Deportes</th>
+                                        <th>información adicional</th>
+                                
+                                    </tr>
+                        </thead>
+                        <tbody>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-9" class="tab-content">
+                <div id="form_contenedor">
+                    <label for="txt_filtro">Filtrar</label>
+                    <input type="text" id="txt_filtro" onkeyup="filtrar();">
+                <table id="tbl_etiquetas">
+                    <thead>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+                </table>
 
                 </div>
-
-             </div>
-            </div>   
+            </div>
+    </div>
+    </div>   
     
  
 
@@ -112,9 +292,27 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     
 <script src="js/servicio_inicio.js"></script>
+<script src="js/servicio_utiles.js"></script>
+<script src="js/servicio_actividades.js"></script>
+<script src="js/servicio_seccion_preguntas.js"></script>
+<script src="js/servicio_becas.js"></script>
+<script src="js/servicio_registro_matricula.js"></script>
+<script src="js/servicio_noticias.js"></script>
+<script src="js/servicio_material_informativo.js"></script>
+<script src="js/servicio_registrar_etiqueta.js"></script>
 <!-- <script src="js/servicio_utiles.js"></script>
 <script src="js/controlador_url.js"></script> -->
 <script src="js/controlador_barra_navegacion.js"></script>
 <script src="js/controlador_perfil.js"></script>
-<!-- <script src="js/controlador_listar_util.js"></script> -->
+<script src="js/controlador_listar_util.js"></script>
+<script src="js/controlador_listar_actividades.js"></script>
+<script src="js/controlador_listar_preguntas.js"></script>
+<script src="js/controlador_listar_becas.js"></script>
+<script src="js/controlador_listar_costos.js"></script>
+<script src="js/controlador_listar_noticias.js"></script>
+<script src="js/controlador_listar_material_informativo.js"></script>
+<script src="js/controlador_listar_etiqueta.js"></script>
+<script src="js/controlador_listar_becas.js"></script>
+<script src="js/controlador_direccion.js"></script>
+<!-- <script src="js/controlador_util.js"></script> -->
 </html>

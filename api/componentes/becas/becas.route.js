@@ -12,7 +12,7 @@ router.route('/registrar_becas')
 router.route('/listar_becas')
     .get(
         function(req,res){
-            api_becas.listar_beca(req,res);
+            api_becas.listar_becas(req,res);
         }
     );
 module.exports = router;

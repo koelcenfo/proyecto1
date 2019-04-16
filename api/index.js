@@ -118,7 +118,8 @@ const becas = require('./componentes/becas/becas.route');
 app.use('/api', becas);
 
 
-
+const instituciones_cercanas=require('./componentes/instituciones_cercanas/instituciones_cercanas.route');
+app.use('/api', instituciones_cercanas);
 
 
 

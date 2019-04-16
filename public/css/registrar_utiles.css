@@ -5,8 +5,9 @@ html{
     border: 2px solid red;
 }
 body{
+
+    background: #2c2c54;
     
-    background-color: #2c2c54;
 }
 h1{
     text-align: center;
@@ -30,6 +31,8 @@ h1{
     font-size:22px;  
     padding: 30px;
     color: rgb(151, 151, 151);
+
+    
 }
 
 label{

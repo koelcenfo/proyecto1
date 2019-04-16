@@ -1,9 +1,10 @@
 'use strict'
 
-const input_nombre = document.querySelector('');
-const input_tipo = document.querySelector('');
-const input_descripcion = document.querySelector('');
-const boton_registrar = document.querySelector('');
+const id_usuario = sessionStorage.getItem('id_usuario');
+const input_nombre = document.querySelector('.input_nombre');
+const input_tipo = document.querySelector('.input_tipo');
+const input_descripcion = document.querySelector('.textarea_descripcion');
+const boton_registrar = document.querySelector('#btn_registrar');
 
 let validar = () => {
     let error = false;
@@ -34,11 +35,12 @@ let validar = () => {
 
 let obtener_datos = () => {
     if (validar()==false) {
+        let id_institucion = id_usuario;
         let nombre = input_nombre.value;
         let tipo = input_tipo.value;
         let descripcion = input_descripcion.value;
 
-        registrar_becas(nombre, tipo, descripcion);
+        registrar_becas(id_institucion, nombre, tipo, descripcion);
     } else {
         swal.fire({
             type: 'warning',
