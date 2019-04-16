@@ -1,6 +1,6 @@
 'use strict';
 //Vamos a acceder al cuerpo de la tabla por esta razón agregamos tbody
-const tabla_ranking_mep = document.querySelector('.tabla_actividad tbody');
+const tabla_ranking_mep = document.querySelector('#tbl_ranking_mep tbody');
 
 let mostrar_ranking_mep = () => {
     let ranking = listar_ranking_mep();

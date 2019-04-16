@@ -37,23 +37,20 @@
     <div id="form_contenedor">
 
         <div class="idiomas">
-                <button class="btn-add-idioma">
-                        Agregar Idioma
-                    </button>
-            <div class="row" style="display: none;">
-                <input type="text" id="input_txt" class="idioma"/>
-
-                <button class="btn-remove-idioma">
-                    x
-                </button>
+            <label for="input_idioma">
+                Registro de Idioma
+            </label>
+                <input type="text" id="input_txt">
+           
             </div>
 
-        </div>
 
         <div id="contenedor_botones">
             <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
             <button type="button" id="btn_registrar" onclick="obtener_idiomas()">Registrar</button>
         </div>
+        </div>
+
 
 
 </body>

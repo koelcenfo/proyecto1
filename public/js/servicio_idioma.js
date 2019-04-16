@@ -1,9 +1,10 @@
 'use strict'
-let registrar_idioma = (pidiomas) =>{
+let registrar_idioma = (pid_institucion,pidiomas) =>{
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_idioma",
         method: "POST",
         data: {
+            id_institucion: pid_institucion,
             idiomas : pidiomas
         },
         dataType: "json",

@@ -8,7 +8,7 @@
     margin-top: 5%  ;
     margin-bottom: 5%;
     width: 95%;
-    height: 850px;
+    min-height: 1100px;
     background-color: #fff;
     
 }
@@ -63,7 +63,7 @@
     display: block;
     float: left;
     width: 100%;
-    height: 50%;
+    height: 39%;
    
     }
     #nombre_institucion{
@@ -119,10 +119,10 @@
 
 /*-----------------------------TABS-------------------------------*/
 .container{
-    margin-top: 250px;
+    margin-top: 20px;
     width: 100%;
-    height: 250px;
-
+    height: 165px;
+    
 }
 
 
@@ -150,11 +150,15 @@ ul.tabs li:hover{
 .tab-content{
     display: none;
     padding: 15px;
+    overflow-y: scroll;
+    width: 1200px;
+    height: 450px;
 }
 
 .tab-content.current{
     display: inherit;
-}   
+}
+
 /**
 
 

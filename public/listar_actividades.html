@@ -50,6 +50,7 @@
                         <th>Lugar de la actividad</th>
                         <th>Descripción de la actividad</th>
                         <th id="image_preview">Imagen</th>
+                        <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,10 +59,56 @@
             </table>
 
             <form id="contenedor_botones">
-                <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-
+                <button class="btn_atras" type="button" id="btn_atras"
+                    onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+                <!-- Creamos un botón y llamamos a la función notificar() cuando le demos click al botón -->
+                <!-- <button type="button" id="btn_notificar" onclick="notificar()">Enviar notificación</button>         -->
+                
             </form>
     </main>
+
+    
+
+     <!-- <script type="text/javascript">
+     
+     //para pedirle permiso al usuario para enviarle notificaciones 
+     // DOMcontentLoaded -> se ejectuta cuando la página se haya cargado sactifactoriamente 
+         document.addEventListener("DOMcontentLoaded",function(){
+ 
+             if (!Notification) {
+                 alert("Posiblmente las notificaciones no puedan llegar a tu navegador, cambia a uno más actual.");
+                 return;
+                 //lo retornamos para que no siga con lo demás en caso de que el navegador no soporte las notificaciones
+             } 
+ 
+             if (Notification.permission !=="granted") {
+                 Notification.requestPermission();
+             } 
+         });
+ 
+         function notificar(){
+              //verificar que hayan permisos para poder enviar notificaciones
+             if (Notification.permission !== "granted") {//granted -> permitido
+                 Notification.requestPermission(); //pedimos permiso
+             }else{
+                  let notification= new Notification("¡Nueva notificación, da click aquí!",
+ 
+                     {
+                         icon: "../img/favicon.ico",
+                         body: "Busca en Prometeo, los mejores centros educativos en Costa Rica para tú hijo."
+                     }
+ 
+                  );
+ 
+                  notification.onclick=function(){  //Cuando se le dé click a la notificación se puede abrir el enlace.
+                      window.open("http://localhost:3000/public/index.html")
+                  }
+             }
+ 
+         }
+   
+         
+     </script> -->
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
