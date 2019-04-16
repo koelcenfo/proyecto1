@@ -12,6 +12,9 @@ html{
     padding-left: 150px;
     padding-right: 150px;
 }
+#contenido{
+    display: block;
+}
 #form_contenedor{
     display: block;
     margin: auto;
@@ -28,4 +31,69 @@ html{
     padding-bottom: 30px;
     color: #fff;
     background-color: #2c2c54;
+}
+#criterio{
+    float: left;
+    
+}
+#porcentaje{
+    float: right;
+}
+label{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.image_holder{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+input{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 0px;
+    margin-bottom: 40px;
+    border: none;
+    outline-color: #1abc9c;
+    text-align: center; 
+}
+#contenedor_botones{
+    display: inline-block;
+    margin-left: 15%;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 40px;
+
+}
+#btn_atras, #btn_registrar{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-left: 10%;
+    
+}
+#btn_atras{
+    float: left;
+    background-color: #e74c3c;
+}
+#btn_registrar{
+    float: right;
+    background-color: #3498db;
 }

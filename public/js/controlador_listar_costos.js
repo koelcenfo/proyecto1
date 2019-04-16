@@ -12,6 +12,8 @@ let mostrar_datos_costos = () => {
             fila.insertCell().innerHTML = costos[i]['matricula'];
             fila.insertCell().innerHTML = costos[i]['mensualidad'];
 
+            
+
 
 
 
@@ -22,7 +24,7 @@ let mostrar_datos_costos = () => {
 
 
 };
-function filtrar() {
+function filtrar_costo() {
     var tabla = document.getElementById('tbl_costos');
     var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
     var cellsOfRow = "";

@@ -21,7 +21,7 @@ let mostrar_datos_etiqueta = () => {
 
 
 }
-function filtrar() {
+function filtrar_etiqueta() {
     var tabla = document.getElementById('tbl_etiquetas');
     var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
     var cellsOfRow = "";
