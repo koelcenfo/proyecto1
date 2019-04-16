@@ -1,7 +1,7 @@
 'use strict';
 const tabla = document.querySelector('#tbl_etiquetas tbody');
 
-let mostrar_datos = () => {
+let mostrar_datos_etiqueta = () => {
     let etiquetas = listar_etiqueta();
     let id_institucion = sessionStorage.getItem('id_usuario');
 
@@ -42,4 +42,4 @@ function filtrar() {
         }
     }
 }
-mostrar_datos();
+mostrar_datos_etiqueta();

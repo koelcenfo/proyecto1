@@ -1,7 +1,7 @@
 'use strict';
 const tabla_costos = document.querySelector('#tbl_costos tbody');
 
-let mostrar_datos = () => {
+let mostrar_datos_costos = () => {
     let costos = listar_costo();
     let id_institucion = sessionStorage.getItem('id_usuario');
     for (let i = 0; i < costos.length; i++) {
@@ -43,4 +43,4 @@ function filtrar() {
         }
     }
 }
-mostrar_datos();
+mostrar_datos_costos();

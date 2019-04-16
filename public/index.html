@@ -16,9 +16,9 @@
     <title>Prometeo</title>
 </head>
 
-<body onload="herramientas(), user_img()">
+<body onload="herramientas()">
     <!--Contenido de la Pagina-->
-    <div id="contenido">
+
         <header>
             <nav class="barra_navegacion" style="position:fixed">
                 <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
@@ -27,31 +27,8 @@
                 <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
                 <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
                 <!--Conectado-->
-                <a onload="user_img()" href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png" style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
-                <script type="text/javascript">
-                    function user_img(){
-                        
-                        let user_img = document.querySelector('.user_img');
-                        let tipo_cliente = sessionStorage.getItem('tipo_usuario');
-                        let id_cliente = sessionStorage.getItem('id_usuario');
-                        switch(tipo_cliente){
-                        case 'Institucion':
-                    
-                        let img_src = listar_institucion();
-                    
-                            
-                        for (let x = 0; x < img_src.length; x++) {
-                    
-                            if (img_src[x]['institucion_id']==id_cliente) {
-                                user_img.src = img_src[x]['institucion_imagen'];
-                                user_img.classList.add('estilo_imagen');   
-                                break;
-                            }
-                            
-                        }
-                    }          
-                    };
-                    </script>
+                <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png" style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
                 <style type="text/css">
                 .estilo_imagen{
                     border-radius: 100px;
@@ -74,7 +51,7 @@
             <div id="prometeo_imagen"></div>
         </div>
 
-        <div id="contenido">
+
 
             <div id="listas_de_institucion">
                 <h1 id="titulo_herrramientas">Herramientas del centro educativo.</h1>
@@ -336,8 +313,7 @@
                         <li><a href="https://twitter.com/mep_cr?lang=es">Twitter del MEP</a></li>
                     </ul>
                 </div>
-            </div>
-        </div>
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="js/servicio_inicio.js"></script>
@@ -346,8 +322,7 @@
         <script src="js/controlador_listar_ranking_mep.js"></script>
         <script src="js/controlador_barra_navegacion.js"></script>
         <script src="js/controlador_index.js"></script>
-
-
-</body>
+        <!-- Controlador de la imagen de la barra de navegacion -->
+        <script src="js/controlador_imagen_sesion.js"></script>
 
 </html>
