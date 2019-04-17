@@ -24,7 +24,7 @@ let mostrar_datos = () => {
 };
 function filtrar_util() {
     var tabla = document.getElementById('tbl_utiles');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_util').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
     var compareWith = "";

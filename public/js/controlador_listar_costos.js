@@ -26,7 +26,7 @@ let mostrar_datos_costos = () => {
 };
 function filtrar_costo() {
     var tabla = document.getElementById('tbl_costos');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_costo').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
     var compareWith = "";

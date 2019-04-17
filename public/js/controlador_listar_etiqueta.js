@@ -23,7 +23,7 @@ let mostrar_datos_etiqueta = () => {
 }
 function filtrar_etiqueta() {
     var tabla = document.getElementById('tbl_etiquetas');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_etiqueta').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
     var compareWith = "";
