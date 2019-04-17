@@ -26,7 +26,7 @@ let mostrar_pregunta = () => {
 
 function filtrar_pregunta() {
     var tabla = document.getElementById('tabla_pregunta');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_pregunta').value.toLowerCase();
     var cellsOfRow="";
     var found=false;
     var compareWith="";

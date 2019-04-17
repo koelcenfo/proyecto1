@@ -62,7 +62,7 @@ let mostrar_actividades = () => {
 
 function filtrar_actividad() {
     var tabla = document.getElementById('tbl_actividades');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_actividad').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
     var compareWith = "";

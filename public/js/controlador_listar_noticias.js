@@ -35,7 +35,7 @@ let mostrar_noticias=()=>{
 
 function filtrar_noticia() {
     var tabla = document.getElementById('tbl_noticias');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_noticia').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
     var compareWith = "";

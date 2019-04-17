@@ -26,7 +26,7 @@ let mostrar_informacion=()=>{
 
 function filtrar_material() {
     var tabla = document.getElementById('tbl_material_informativo');
-    var busqueda = document.getElementById('txt_filtro').value.toLowerCase();
+    var busqueda = document.getElementById('txt_filtro_material').value.toLowerCase();
     var cellsOfRow = "";
     var found = false;
     var compareWith = "";
