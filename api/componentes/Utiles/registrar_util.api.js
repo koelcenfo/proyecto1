@@ -7,7 +7,7 @@ module.exports.registrar_util = (req, res) => {
             id_institucion: req.body.id_institucion,
             util: req.body.util,
             descripcion: req.body.descripcion,
-
+            estado: 'Activo'
 
 
 
@@ -62,3 +62,42 @@ module.exports.listar_util = (req, res) => {
 
 
 };
+module.exports.buscar_por_id = function (req, res) {
+    modelo_util.find({ _id: req.body.id_util }).then(
+        function (util) {
+            if (util) {
+                res.json(
+                    {
+                        success: true,
+                        util: util
+                    }
+                );
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        util: util
+                    }
+                )
+            }
+        }
+
+
+    );
+
+};
+module.exports.actualizar = function (req, res) {
+    console.log(req.body.id);
+    modelo_util.findByIdAndUpdate(req.body.id, { $set: req.body },
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: `No se pudo actualizar la informacion de los costos.` });
+            } else {
+                res.json({ success: true, msg: `Se ha actualizado el costo de la matrícula y mensualidad correctamente.` });
+
+            }
+        }
+    );
+}
+
+

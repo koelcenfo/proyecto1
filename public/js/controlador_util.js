@@ -4,6 +4,7 @@ const input_descripcion = document.querySelector('#txt_descripcion');
 const id_usuario = sessionStorage.getItem('id_usuario');
 const boton_atras = document.querySelector('#btn_atras');
 const boton_enviar = document.querySelector('#btn_enviar');
+const boton_agregar = document.querySelector('#btn_agregar');
 
 
 let validar = () => {
@@ -57,4 +58,3 @@ $(boton_enviar).on('click', function () {
   }
 
 })
-

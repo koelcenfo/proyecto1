@@ -13,13 +13,13 @@ let validar = () => {
     } else {
         select_nivel.classList.remove('error_input');
     }
-    if (input_matricula.value == '') {
+    if (input_matricula.value == '' || input_matricula.value < 0) {
         error = true;
         input_matricula.classList.add('error_input');
     } else {
         input_matricula.classList.remove('error_input');
     }
-    if (input_mensualidad.value == '') {
+    if (input_mensualidad.value == '' || input_mensualidad.value < 0) {
         error = true;
         input_mensualidad.classList.add('error_input');
     } else {

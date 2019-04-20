@@ -1,24 +1,30 @@
 'use strict';
-const tabla_informacion=document.querySelector('#tbl_material_informativo tbody');
+const tabla_informacion = document.querySelector('#tbl_material_informativo tbody');
 
-let mostrar_informacion=()=>{
-    let informacion=listar_material_informativo();
-    let id_institucion=sessionStorage.getItem('id_usuario');
+let mostrar_informacion = () => {
+    let informacion = listar_material_informativo();
+    let id_institucion = sessionStorage.getItem('id_usuario');
 
-    for(let i=0; i<informacion.length; i++){
-        if (informacion[i]['id_institucion']==id_institucion) {
-            
-            let fila=tabla_informacion.insertRow();
+    for (let i = 0; i < informacion.length; i++) {
+        if (informacion[i]['id_institucion'] == id_institucion) {
 
-            fila.insertCell().innerHTML=informacion[i]['reglamento'];
-            fila.insertCell().innerHTML=informacion[i]['proceso_matricula'];
-            fila.insertCell().innerHTML=informacion[i]['sistema_evaluacion'];
-            fila.insertCell().innerHTML=informacion[i]['recomendaciones'];
-            fila.insertCell().innerHTML=informacion[i]['areas_informativas'];
-            fila.insertCell().innerHTML=informacion[i]['seccion_ayuda'];
-            fila.insertCell().innerHTML=informacion[i]['talleres_adicionales'];
-            fila.insertCell().innerHTML=informacion[i]['deportes'];
-            fila.insertCell().innerHTML=informacion[i]['informacion_adicional'];
+            let fila = tabla_informacion.insertRow();
+
+            fila.insertCell().innerHTML = informacion[i]['reglamento'];
+            fila.insertCell().innerHTML = informacion[i]['proceso_matricula'];
+            fila.insertCell().innerHTML = informacion[i]['sistema_evaluacion'];
+            fila.insertCell().innerHTML = informacion[i]['recomendaciones'];
+            fila.insertCell().innerHTML = informacion[i]['areas_informativas'];
+            fila.insertCell().innerHTML = informacion[i]['seccion_ayuda'];
+            fila.insertCell().innerHTML = informacion[i]['talleres_adicionales'];
+            fila.insertCell().innerHTML = informacion[i]['deportes'];
+            fila.insertCell().innerHTML = informacion[i]['informacion_adicional'];
+
+            let celda_configuracion = fila.insertCell();
+            let boton_editar = document.createElement('a');
+            boton_editar.textContent = 'Editar';
+            boton_editar.href = `actualizar_material_informativo.html?id_material=${informacion[i]['_id']}`
+            celda_configuracion.appendChild(boton_editar);
 
         }
     };

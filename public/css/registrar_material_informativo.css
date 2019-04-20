@@ -64,7 +64,7 @@ label{
     font-family: 'PT Sans', sans-serif;   
 }
 
-.btn_atras, .btn_registrar{
+.btn_atras, .btn_registrar,.btn_actualizar{
     display: inline-block;
     width: 120px;
     height: 50px;
@@ -82,7 +82,7 @@ label{
     float: left;
     background-color: #e74c3c;
 }
-.btn_registrar{
+.btn_registrar ,.btn_actualizar{
     float: right;
     background-color: #3498db;
 }

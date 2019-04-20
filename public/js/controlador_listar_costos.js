@@ -12,7 +12,13 @@ let mostrar_datos_costos = () => {
             fila.insertCell().innerHTML = costos[i]['matricula'];
             fila.insertCell().innerHTML = costos[i]['mensualidad'];
 
-            
+            let celda_configuracion = fila.insertCell();
+
+            //Creacion del boton de editar
+            let boton_editar = document.createElement('a');
+            boton_editar.textContent = 'Editar';
+            boton_editar.href = `actualizar_costo.html?id_costo=${costos[i]['_id']}`
+            celda_configuracion.appendChild(boton_editar);
 
 
 

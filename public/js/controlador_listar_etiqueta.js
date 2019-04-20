@@ -12,6 +12,12 @@ let mostrar_datos_etiqueta = () => {
             fila.insertCell().innerHTML = etiquetas[i]['etiqueta'];
             fila.insertCell().innerHTML = etiquetas[i]['descripcion'];
 
+            let celda_configuracion = fila.insertCell();
+            let boton_editar = document.createElement('a');
+            boton_editar.textContent = 'Editar';
+            boton_editar.href = `actualizar_etiqueta.html?id_etiqueta=${etiquetas[i]['_id']}`
+            celda_configuracion.appendChild(boton_editar);
+
 
         }
 

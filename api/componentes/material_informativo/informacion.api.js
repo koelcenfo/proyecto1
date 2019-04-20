@@ -1,8 +1,8 @@
 'use strict';
-const modelo_informacion=require('./informacion.model');
+const modelo_informacion = require('./informacion.model');
 
-module.exports.registrar=(req,res)=>{
-    let nueva_informacion=new modelo_informacion(
+module.exports.registrar = (req, res) => {
+    let nueva_informacion = new modelo_informacion(
         {
             id_informacion: req.body.ObjectId,
             id_institucion: req.body.id_institucion,
@@ -18,12 +18,12 @@ module.exports.registrar=(req,res)=>{
         }
     );
 
-    nueva_informacion.save(function(error){
+    nueva_informacion.save(function (error) {
         if (error) {
             res.json(
                 {
-                    success:false,
-                    msg:`No se pudo regitrar el material informativo, ha ocurrido el siguiente error ${error}`
+                    success: false,
+                    msg: `No se pudo regitrar el material informativo, ha ocurrido el siguiente error ${error}`
                 }
             );
         } else {
@@ -38,10 +38,10 @@ module.exports.registrar=(req,res)=>{
     });
 };
 
-module.exports.listar_informacion=(req,res)=>{
+module.exports.listar_informacion = (req, res) => {
     modelo_informacion.find().then(
-        function(informacion){
-            if (informacion.length>0) {
+        function (informacion) {
+            if (informacion.length > 0) {
                 res.json(
                     {
                         success: true,
@@ -57,4 +57,37 @@ module.exports.listar_informacion=(req,res)=>{
                 )
             }
         }
-    )};
+    )
+};
+module.exports.buscar_por_id = function (req, res) {
+    modelo_informacion.find({ _id: req.body.id_material }).then(
+        function (informacion) {
+            if (informacion) {
+                res.json(
+                    {
+                        success: true,
+                        informacion: informacion
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        informacion: informacion
+                    }
+                )
+            }
+        }
+    )
+};
+module.exports.actualizar = function (req, res) {
+    modelo_informacion.findByIdAndUpdate(req.body.id, { $set: req.body },
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: `No se ha podido actualizar la informacion del material informativo` });
+            } else {
+                res.json({ success: true, msg: `Se actualizó la informacion del material informativo con exito` });
+            }
+        }
+    )
+}

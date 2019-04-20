@@ -1,6 +1,6 @@
 'use strict';
 
-let registrar_datos = (petiqueta, pdescripcion,pid_institucion) => {
+let registrar_datos = (petiqueta, pdescripcion, pid_institucion) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_etiqueta",
         method: "POST",
@@ -58,4 +58,61 @@ let listar_etiqueta = () => {
 
 
 }
+let buscar_etiqueta = (id_etiqueta) => {
+    let etiqueta = [];
+    let request = $.ajax({
+        url: "http://localhost:4000/api/buscar_etiqueta/" + id_etiqueta,
+        method: "GET",
+        data: {
 
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+        async: false
+
+    });
+
+    request.done(function (res) {
+        etiqueta = res.etiqueta
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+    return etiqueta;
+
+
+};
+let actualizar_etiqueta = (pid, petiqueta, pdescripcion) => {
+    let request = $.ajax({
+        url: "http://localhost:4000/api/actualizar_etiqueta",
+        method: "POST",
+        data: {
+            id: pid,
+            etiqueta: petiqueta,
+            descripcion: pdescripcion,
+            
+
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded;charset=utf-8'
+
+    });
+
+    request.done(function (msg) {
+        swal.fire(
+            {
+                type: 'success',
+                title: 'informacion de etiqueta actualizada correctamente',
+                text: 'las etiquetas fueron actualizadas con exito'
+            }
+        )
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+
+
+
+}
