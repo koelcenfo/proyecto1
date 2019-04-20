@@ -1,0 +1,20 @@
+#div_registro_comentarios{
+    display: block;
+    border: rgb(202, 202, 202) 2px solid;
+    border-radius: 5px;
+    margin: auto;
+    width: 700px;
+    height: 250px;
+    
+}
+#div_registro_comentarios label{
+    float: left;
+}
+#div_registro_comentarios #textarea_comentario{
+    display: block;
+    margin: auto;
+    width: 650px;
+    height: 120px;
+    resize: none;
+    border-radius: 5px;
+}

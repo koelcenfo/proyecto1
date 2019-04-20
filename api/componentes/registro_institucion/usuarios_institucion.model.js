@@ -9,7 +9,6 @@ let schema_usuarios = new mongoose.Schema( //Definicion del esquema de la base d
         institucion_nombre_inscrito : {type : String, required:true, unique:true},//Nombre con el que esta inscrito
         institucion_cedula : {type : Number, required:true, unique:true},//Numero de cedula juridica
         institucion_telefono : {type : Number, required:true, unique:true},//Numero de telefono de la institucion
-        institucion_niveles : {type : String, required:true},//Niveles con los que cuenta
         institucion_tipo : {type : String, required:true},//Tipo de institucion(Privado, Publico, academico, cientifico..)
         // institucion_idiomas : {type : String, required:true},//Idiomas que imparte
         institucion_generos : {type : String, required:true},//Generos distribuidos en el centro educativo
@@ -30,7 +29,7 @@ let schema_usuarios = new mongoose.Schema( //Definicion del esquema de la base d
         institucion_cedula_encargado : {type : Number, required:true, unique:true},//Numero de cedula juridica
         institucion_departamento_encargado : {type : String, required:true},//Nombre del departamento del encargado
         institucion_correo_electronico_encargado : {type : String, required:true, unique:true},//Correo de la institucion
-        institucion_contrasena : {type : String, required:true, unique:true},
+        institucion_contrasena : {type : String, required:true},
         institucion_fax : {type : String, required:true, unique:true},
         institucion_imagen : {type : String, required:true},
         tipo_usuario : {type : String, required: false}

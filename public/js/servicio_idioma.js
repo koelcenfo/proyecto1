@@ -1,11 +1,12 @@
 'use strict'
-let registrar_idioma = (pid_institucion,pidiomas) =>{
+let registrar_idioma = (pid_institucion, pidiomas, pdescripcion) =>{
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_idioma",
         method: "POST",
         data: {
             id_institucion: pid_institucion,
-            idiomas : pidiomas
+            idiomas : pidiomas,
+            descripcion : pdescripcion
         },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
@@ -29,3 +30,82 @@ let registrar_idioma = (pid_institucion,pidiomas) =>{
     
     
     };
+
+let listar_idioma=()=>{
+      let listar_idioma=[];
+        let request=$.ajax({
+            url: "http://localhost:4000/api/listar_idioma", //se usa el mismo nombre que se pone en el route
+            method: "GET",
+            data: {
+    
+            },
+            dataType: "json",
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            async: false
+        });
+    
+        request.done(function(res){
+            listar_idioma=res.idiomas;
+        });
+    
+        request.fail(function(jqXHR, textStatus){
+          console.log('error');
+        });
+    
+        return listar_idioma;
+  
+  };
+
+  let buscar_idioma=(id_institucion)=>{
+    let idioma=[];
+    let request=$.ajax({
+        url: "http://localhost:4000/api/buscar_idioma/" + id_institucion, //se usa el mismo nombre que se pone en el route
+        method: "GET",
+        data: {
+
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        async: false
+    });
+
+    request.done(function(res){
+      idioma=res.idioma;
+    });
+
+    request.fail(function(jqXHR, textStatus){
+
+    });
+
+    return idioma;
+
+};
+
+let actualizar_idioma = (pidiomas, pdescripcion,pid ) => {
+    let request = $.ajax({
+      url: "http://localhost:4000/api/actualizar_idioma",
+      method: "POST",
+      data: {
+          idiomas : pidiomas,
+          descripcion : pdescripcion,
+          id : pid
+      },
+      dataType: "json",
+      contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+  });
+
+  request.done(function (msg) {
+      swal.fire(
+        {
+          type: 'success',
+          title: 'Idioma actualizado correctamente',
+          text: 'Se envió la información del idioma correctamente.'
+        }
+      );
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+
+    });
+
+}

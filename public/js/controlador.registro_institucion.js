@@ -5,7 +5,6 @@ const input_institucion_apellido_encargado = document.querySelector('#txt_instit
 const input_institucion_departamento_encargado = document.querySelector('#txt_institucion_departamento_encargado');
 const input_institucion_telefono = document.querySelector('#txt_institucion_telefono');
 const input_institucion_correo_electronico = document.querySelector('#txt_institucion_correo_electronico');
-const input_institucion_contrasena = document.querySelector('#txt_institucion_contrasena');
 const input_institucion_nombre_inscrito = document.querySelector('#txt_institucion_nombre_inscrito');
 const input_institucion_nombre = document.querySelector('#txt_institucion_nombre');
 const fieldset_institucion_bachillerato_internacional = document.querySelector('#rbt_institucion_bachillerato_internacional');
@@ -27,55 +26,13 @@ const input_institucion_twitter = document.querySelector('#txt_institucion_twitt
 const input_institucion_cedula_encargado = document.querySelector('#txt_institucion_cedula_encargado');
 const input_institucion_correo_electronico_encargado = document.querySelector('#txt_institucion_correo_electronico_encargado');
 const boton_registrar = document.querySelector('#btn_registrar');
+const image_holder = document.querySelector('.image_holder')
 
-
-$("btn_registrar").click(function(){
-    $(':checkbox').change(function() {
-        var opts = $(":checkbox:checked").map(function() {
-            return $(this).val();
-        }).get(); 
-        console.log(opts);
-    });
-});
-
-
-
-
-/**Funcion de mostrar o esconder los niveles */
-$(document).on("click", ".btn_add_row", function() {
-
-    let row = $(".row").eq(0).clone().show();
-
-    $(".idiomas").append(row);
-
-});
-
-$(document).on("click", ".btn_remove_row", function() {
-
-    let index = $(".btn_remove_row").index(this);
-    $(".row").eq(index).remove();
-
-});
-/**----------------Funcion de Idiomas------------ */
-
-$(function () {
-    $(".Niveles_escuela").hide();
-    $(".Niveles_colegio").hide();
-    $("#chkbox_escuela").click(function () {
-        if ($(this).is(":checked")) {
-            $(".Niveles_escuela").show();
-        } else {
-            $(".Niveles_escuela").hide();
-        }
-    });
-    $("#chkbox_colegio").click(function () {
-        if ($(this).is(":checked")) {
-            $(".Niveles_colegio").show();
-        } else {
-            $(".Niveles_colegio").hide();
-        }
-    });
-});
+const tab_1 = document.querySelector('#li_tab-1');
+const tab_2 = document.querySelector('#li_tab-2');
+const tab_3 = document.querySelector('#li_tab-3');
+const tab_4 = document.querySelector('#li_tab-4');
+const tab_5 = document.querySelector('#li_tab-5');
 
 
 
@@ -150,8 +107,10 @@ let validar = () => {
     if (input_institucion_nombre_encargado.value == '') {
         error = true;
         input_institucion_nombre_encargado.classList.add('error_input');
+        tab_1.classList.add('error_tab');
     } else {
         input_institucion_nombre_encargado.classList.remove('error_input');
+        tab_1.classList.remove('error_tab');
     }
 
     if (input_institucion_apellido_encargado.value == '') {
@@ -180,13 +139,6 @@ let validar = () => {
         input_institucion_correo_electronico.classList.add('error_input');
     } else {
         input_institucion_correo_electronico.classList.remove('error_input');
-    }
-
-    if (input_institucion_contrasena.value == '') { 
-        error = true;
-        input_institucion_contrasena.classList.add('error_input'); 
-    } else {
-        input_institucion_contrasena.classList.remove('error_input');
     }
 
     if (input_institucion_nombre_inscrito.value == '') {
@@ -322,6 +274,14 @@ let validar = () => {
         input_institucion_fax.classList.remove('error_input');
     }
 
+    // if (imagen_institucion.src == 'img/registro_padre/image_placeholder/image_placeholder.png') {
+    //     error = true;
+    //     imagen_institucion.classList.add('error_input');
+    // } else {
+    //     imagen_institucion.classList.remove('error_input');
+    // }
+
+
 
     return error;
 };
@@ -334,13 +294,11 @@ let obtener_datos = () => {
         let institucion_departamento_encargado = input_institucion_departamento_encargado.value;
         let institucion_telefono = input_institucion_telefono.value;
         let institucion_correo_electronico = input_institucion_correo_electronico.value;
-        let institucion_contrasena = input_institucion_contrasena.value;
         let institucion_nombre_inscrito = input_institucion_nombre_inscrito.value;
         let institucion_nombre = input_institucion_nombre.value;
         let institucion_bachillerato_internacional = document.querySelector('#rbt_institucion_bachillerato_internacional input[type=radio]:checked').value;
         let institucion_tipo = select_institucion_tipo.value;
         // let institucion_idiomas = idiomas;
-        let institucion_niveles = getValue();
         let institucion_generos = select_institucion_generos.value;
         let institucion_ideologia = input_institucion_ideologia.value;
         let institucion_fundacion = input_institucion_fundacion.value;
@@ -358,7 +316,7 @@ let obtener_datos = () => {
         let institucion_fax = input_institucion_fax.value;
         let institucion_imagen = imagen_institucion.src;
 
-        registrar_usuario(institucion_nombre_encargado, institucion_apellido_encargado ,institucion_departamento_encargado, institucion_telefono, institucion_correo_electronico,institucion_contrasena, institucion_nombre_inscrito, institucion_nombre, institucion_niveles, institucion_bachillerato_internacional, institucion_tipo,/*institucion_idiomas,*/ institucion_generos, institucion_ideologia, institucion_fundacion, institucion_referencia, institucion_cedula, institucion_provincia, institucion_canton, institucion_distrito, institucion_direccion, institucion_sitio_web, institucion_fax,institucion_imagen, institucion_facebook, institucion_twitter, institucion_correo_electronico_encargado, institucion_cedula_encargado);
+        registrar_usuario(institucion_nombre_encargado, institucion_apellido_encargado ,institucion_departamento_encargado, institucion_telefono, institucion_correo_electronico, institucion_nombre_inscrito, institucion_nombre, institucion_bachillerato_internacional, institucion_tipo,/*institucion_idiomas,*/ institucion_generos, institucion_ideologia, institucion_fundacion, institucion_referencia, institucion_cedula, institucion_provincia, institucion_canton, institucion_distrito, institucion_direccion, institucion_sitio_web, institucion_fax,institucion_imagen, institucion_facebook, institucion_twitter, institucion_correo_electronico_encargado, institucion_cedula_encargado);
 
     } else {
         swal.fire({

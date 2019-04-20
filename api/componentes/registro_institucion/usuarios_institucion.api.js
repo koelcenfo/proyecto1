@@ -1,14 +1,31 @@
 'use strict'
-/*const nodeMailer = require('nodemailer');*/   
+const nodeMailer = require('nodemailer');  
 const model_institucion = require ('./usuarios_institucion.model');
 
-/*const transporter =  nodeMailer.createTransport({
+const transporter =  nodeMailer.createTransport({
     service : 'gmail',
     auth:{
-        user : 'koelcenfo@gmail.com',
-        pass : 'koel12345'
+        user : 'servicio.soporte.prometeo@gmail.com',
+        pass : 'Grupokoel2019'
     }
-});*/
+});
+function contrasena() {  
+    let contrasena = "";
+    let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let numeros = "0123456789"
+    let caracteres = "!@#$%^&*"
+    for(let i = 0; i < 5; i++) {
+        contrasena += letras.charAt(Math.floor(Math.random() * letras.length));
+            }
+        contrasena += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    for(let e = 0; e < 2; e++) {
+    contrasena += numeros.charAt(Math.floor(Math.random() * numeros.length));
+            }
+
+
+
+    return contrasena;
+}
 
 module.exports.registrar_institucion = (req, res) =>{
     let nuevo_institucion = new model_institucion(
@@ -18,7 +35,6 @@ module.exports.registrar_institucion = (req, res) =>{
             institucion_nombre_inscrito : req.body.institucion_nombre_inscrito,
             institucion_cedula : req.body.institucion_cedula,
             institucion_telefono : req.body.institucion_telefono,
-            institucion_niveles : req.body.institucion_niveles,
             institucion_tipo : req.body.institucion_tipo,
             // institucion_idiomas : req.body.institucion_idiomas,
             institucion_generos : req.body.institucion_generos,
@@ -39,12 +55,15 @@ module.exports.registrar_institucion = (req, res) =>{
             institucion_cedula_encargado : req.body.institucion_cedula_encargado,
             institucion_departamento_encargado : req.body.institucion_departamento_encargado,
             institucion_correo_electronico_encargado : req.body.institucion_correo_electronico_encargado,
-            institucion_contrasena : req.body.institucion_contrasena,
+            institucion_contrasena : contrasena(),
             institucion_fax : req.body.institucion_fax,
             institucion_imagen : req.body.institucion_imagen,
             tipo_usuario : "Institucion",
         }
     );
+    
+
+
     nuevo_institucion.save(function(error){
         if(error){
             res.json(
@@ -58,11 +77,11 @@ module.exports.registrar_institucion = (req, res) =>{
                 success : true,
                 msg : `Se registró satisfactoriamente el usuario.`
                 });
-            /*let mailOptions = {
-                from : 'koelcenfo@gmail.com',
-                to : 'lurizarm@ucenfotec.ac.cr',
+            let mailOptions = {
+                from : 'servicio.soporte.prometeo@gmail.com',
+                to : nuevo_institucion.institucion_correo_electronico,
                 subject :'Bienvenido a Prometeo ',
-                text : `hola`
+                text : `su contrasena es ${nuevo_institucion.institucion_contrasena}`
             };
             transporter.sendMail(mailOptions, function(error, info){
                 if(error){
@@ -70,7 +89,7 @@ module.exports.registrar_institucion = (req, res) =>{
                 }else{
                     console.log('Correo Enviado' + info.response);
                 }
-            });*/
+            });
         }
 
     });

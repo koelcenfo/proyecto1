@@ -21,7 +21,7 @@
 
         <header>
             <nav class="barra_navegacion" style="position:fixed">
-                <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+                <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';" style="display:none"></div>
                 <!--Visitante-->
                 <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
                 <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
@@ -48,7 +48,7 @@
         </header>
 
         <div id="contenedor_imagen">
-            <div id="prometeo_imagen"></div>
+            <div id="prometeo_imagen" ></div>
         </div>
 
 
@@ -62,7 +62,7 @@
                             Útiles</li>
                         <li class="tab-link" data-tab="tab-2">
                             <i class="far fa-futbol"></i> Actividades</li>
-                        <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i>Preguntas frecuentes
+                        <li class="tab-link" data-tab="tab-3"><i class="far fa-question-circle"></i>Preguntas frecuentes
                         </li>
                         <li class="tab-link" data-tab="tab-4"><i class="fas fa-globe-americas"></i> Idiomas</li>
                         <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i> Costos</li>
@@ -70,6 +70,7 @@
                         <li class="tab-link" data-tab="tab-7"><i class="fas fa-info"></i> Material Informativo</li>
                         <li class="tab-link" data-tab="tab-8"><i class="fas fa-tags"></i> Etiquetas</li>
                         <li class="tab-link" data-tab="tab-9"><i class="fas fa-hands-helping"></i> Becas</li>
+                        <li class="tab-link" data-tab="tab-10"><i class="fas fa-child"></i> Niveles</li>
                     </ul>
 
 
@@ -116,7 +117,7 @@
                         
                         <div class="contenedor_botones">
                             <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_idiomas.html'">Registrar</button>
-                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_.html'">Visualizar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_idioma.html'">Visualizar</button>
                         </div>
 
 
@@ -181,6 +182,17 @@
 
                     </div>
 
+                    <div id="tab-10" class="tab-content">
+                        En esta sección, los centros educativos pueden registrar y visualizar las becas que están asociadas a la propia institución. 
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_nivel.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_nivel.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
 
                 </div>
 

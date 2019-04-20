@@ -1,6 +1,6 @@
 'use strict'
 
-let registrar_usuario = (pinstitucion_nombre_encargado, pinstitucion_apellido_encargado, pinstitucion_departamento_encargado, pinstitucion_telefono, pinstitucion_correo_electronico, pinstitucion_contrasena, pinstitucion_nombre_inscrito, pinstitucion_nombre, pinstitucion_niveles, pinstitucion_bachillerato_internacional, pinstitucion_tipo, /*pinstitucion_idiomas, */pinstitucion_generos, pinstitucion_ideologia, pinstitucion_fundacion, pinstitucion_referencia, pinstitucion_cedula, pinstitucion_provincia, pinstitucion_canton, pinstitucion_distrito, pinstitucion_direccion, pinstitucion_sitio_web, pinstitucion_fax, pinstitucion_facebook, pinstitucion_twitter ,pinstitucion_imagen, pinstitucion_cedula_encargado,pinstitucion_correo_electronico_encargado,  ptipo_usuario) => {
+let registrar_usuario = (pinstitucion_nombre_encargado, pinstitucion_apellido_encargado, pinstitucion_departamento_encargado, pinstitucion_telefono, pinstitucion_correo_electronico, pinstitucion_nombre_inscrito, pinstitucion_nombre, pinstitucion_bachillerato_internacional, pinstitucion_tipo, /*pinstitucion_idiomas, */pinstitucion_generos, pinstitucion_ideologia, pinstitucion_fundacion, pinstitucion_referencia, pinstitucion_cedula, pinstitucion_provincia, pinstitucion_canton, pinstitucion_distrito, pinstitucion_direccion, pinstitucion_sitio_web, pinstitucion_fax, pinstitucion_facebook, pinstitucion_twitter ,pinstitucion_imagen, pinstitucion_cedula_encargado,pinstitucion_correo_electronico_encargado,  ptipo_usuario) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_institucion",
         method: "POST",
@@ -9,7 +9,6 @@ let registrar_usuario = (pinstitucion_nombre_encargado, pinstitucion_apellido_en
             institucion_nombre_inscrito: pinstitucion_nombre_inscrito,
             institucion_cedula: pinstitucion_cedula,
             institucion_telefono: pinstitucion_telefono,
-            institucion_niveles: pinstitucion_niveles,
             institucion_tipo: pinstitucion_tipo,
             /* institucion_idiomas: pinstitucion_idiomas,*/
             institucion_generos: pinstitucion_generos,
@@ -30,7 +29,6 @@ let registrar_usuario = (pinstitucion_nombre_encargado, pinstitucion_apellido_en
             institucion_cedula_encargado: pinstitucion_cedula_encargado,
             institucion_departamento_encargado: pinstitucion_departamento_encargado,
             institucion_correo_electronico_encargado: pinstitucion_correo_electronico_encargado,
-            institucion_contrasena : pinstitucion_contrasena,
             institucion_fax: pinstitucion_fax,
             institucion_imagen : pinstitucion_imagen
         },

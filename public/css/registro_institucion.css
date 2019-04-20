@@ -9,9 +9,6 @@ html{
     border: solid 1px #ED4C67;
 }
 
-
-
-
 .container{
     width: 759px;
     margin: auto;
@@ -199,7 +196,6 @@ padding-bottom: 2px;
     height: 128px;
     display: block;
     margin: auto;
-    border: solid 1px rgb(209, 209, 209);
     border-radius: 5px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -261,7 +257,22 @@ button{
 #checkbox_container{
     margin: auto;
 }
+#rbt_institucion_bachillerato_internacional{
+    display: block;
+    margin: auto;
+    width: 210px;
+    height: 135px;
+}
+/* .error_tab{
+    border: solid 1px;
+} */
 
+/* .image_holder{
+    display: block;
+    margin: auto;
+    width: 256px;
+    border: solid 3px;
+} */
 /*  
 body{
 width: 100%;

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Registrar ranking del MEP</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/registro_idiomas.css">
+    <link rel="stylesheet" href="css/registrar_nivel.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/barra_navegacion.css">
+    <title>Registrar Nivel</title>
 </head>
-
 <body>
     <header>
         <nav class="barra_navegacion">
@@ -33,34 +32,35 @@
             </script>
         </nav>
     </header>
-            <h1 id="titulo_registro">Registro de Idiomas</h1>
+    <h1 id="titulo_registro">Registro de Nivel</h1>
+<div id="form_contenedor">
+
     <div id="form_contenedor">
 
-    
-            <label for="input_idioma">
-                Nombre del idioma
-            </label>
-                <input type="text" id="input_txt">
-            
-            <label for="">Descripcion del idioma</label>
-            <textarea name="" id="textarea_txt" ></textarea>
+        <label for="">Nombre del nivel</label>
+        <input type="text" id="txt_nombre" class="class_input">
 
-        <div id="contenedor_botones">
-            <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-            <button type="button" id="btn_registrar" onclick="obtener_idiomas()">Registrar</button>
-        </div>
-        </div>
+        <label for="">Descripción del nivel</label>
+        <textarea name="" id="txt_descripcion" class="class_textarea"></textarea>
 
 
+
+
+    <div id="contenedor_botones">
+        <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+        <button type="button" id="btn_registrar" class="btn_registrar">Registrar</button>
+    </div>
+    </div>
+</div>
 
 </body>
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="js/servicio_inicio.js"></script>
-<script src="js/servicio_idioma.js"></script>
-<script src="js/controlador_barra_navegacion.js"></script>
-<script src="js/controlador_registrar_idioma.js"></script>
+<script src="js/servicio_nivel.js"></script>
 
+<script src="js/controlador_barra_navegacion.js"></script>
+<script src="js/controlador_imagen_sesion.js"></script>
+<script src="js/controlador_registrar_nivel.js"></script>
 </html>

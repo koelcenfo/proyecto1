@@ -43,11 +43,11 @@
             <div class="container">
                     
                     <ul class="tabs">
-                        <li class="tab-link current" data-tab="tab-1"><i class="fas fa-school"></i> Nombres</li>
-                        <li class="tab-link" data-tab="tab-2"><i class="fas fa-map-marked-alt"></i> Ubicación</li>
-                        <li class="tab-link" data-tab="tab-3"><i class="fas fa-info-circle"></i> Información adicional</li>
-                        <li class="tab-link" data-tab="tab-4"><i class="fas fa-portrait"></i> Imagen</li>
-                        <li class="tab-link" data-tab="tab-5"><i class="fas fa-users-cog"></i> Encargado</li>
+                        <li id="li_tab-1" class="tab-link current" data-tab="tab-1"><i class="fas fa-school"></i> Nombres</li>
+                        <li id="li_tab-2" class="tab-link" data-tab="tab-2"><i class="fas fa-map-marked-alt"></i> Ubicación</li>
+                        <li id="li_tab-3" class="tab-link" data-tab="tab-3"><i class="fas fa-info-circle"></i> Información adicional</li>
+                        <li id="li_tab-4" class="tab-link" data-tab="tab-4"><i class="fas fa-portrait"></i> Imagen</li>
+                        <li id="li_tab-5" class="tab-link" data-tab="tab-5"><i class="fas fa-users-cog"></i> Encargado</li>
                     </ul>
                     <div id="tab-1" class="tab-content current">
                             <label for="txt_institucion_nombre">Nombre del centro educativo</label>
@@ -99,7 +99,7 @@
                        
                     
                             <label for="txt_institucion_correo_electronico">Correo electrónico</label>
-                            <input maxlength="22" type="text" id="txt_institucion_correo_electronico">
+                            <input maxlength="35" type="text" id="txt_institucion_correo_electronico">
                         </div>
                     </div>
                     <div id="tab-3" class="tab-content">
@@ -131,7 +131,7 @@
                     
                     </div>
                     <div id="tab-4" class="tab-content">
-                            <label for="fotografia_institucion">Imagen de portada del colegio</label>
+                            <label for="fotografia_institucion">Imagen del centro educativo</label>
                             <div id="fotografia_institucion">
                                     <figure class="image_holder">
                                         <img src="img/registro_padre/image_placeholder/image_placeholder.png" alt="seleccionar_imagen"
@@ -158,52 +158,6 @@
                                     <ul><input name="niveles[]" type="checkbox" value="Colegio" id="chkbox_colegio">Colegio</ul>
                                 </fieldset>
                                 -->
-                                <fieldset>
-                                    <label for="slt_institucion_niveles">Niveles del Centro Educativo</label>
-                                    <div id="checkbox_container">
-                                        <ul><input name="niveles[]" type="checkbox" value="Escuela" id="chkbox_escuela">Escuela</ul>
-                                    <ul><input name="niveles[]" type="checkbox" value="Colegio" id="chkbox_colegio">Colegio</ul>
-                                    </div>
-                                    
-                                </fieldset>
-                                <div id="div_checkbox">
-                                    <div id="nivelescentro" class="Niveles_escuela">
-                                        
-                                        <h1 class="checkbox_titulos">Seleccione los niveles de la escuela:</h1>
-                                        
-                                        <label><input type="checkbox" class="grado" value="Primero">Primero</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Segundo">Segundo</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Tercero">Tercero</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Cuarto">Cuarto</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Quinto">Quinto</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Sexto">Sexto</label>
-                                        
-                                    </div>
-                
-                                    <div id="nivelescentro" class="Niveles_colegio">
-                                        
-                                        <h1 class="checkbox_titulos">Seleccione los niveles de colegio:</h1>
-                                        
-                                        <label><input type="checkbox" class="grado" value="Septimo">Séptimo</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Octavo">Octavo</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Noveno">Noveno</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Decimo">Décimo</label>
-                                        
-                                        <label><input type="checkbox" class="grado" value="Undecimo">Undécimo</label>
-                
-                                        <label><input type="checkbox" class="grado" value="Duodecimo">Duodécimo</label>
-                                        
-                                    </div>
-                                    
-                                </div> 
                            
                                 <fieldset id="rbt_institucion_bachillerato_internacional">
                                     <legend>Bachillerato internacional</legend> 
@@ -225,20 +179,22 @@
             
                             <label for="txt_institucion_apellido_encargado">Apellido del Encargado</label>
                             <input maxlength="22" type="text" id="txt_institucion_apellido_encargado">
-                            <label for="txt_institucion_cedula_encargado">Cédula del encargado</label>
 
+
+                            <label for="txt_institucion_cedula_encargado">Cédula del encargado</label>
                             <input maxlength="22" type="text" id="txt_institucion_cedula_encargado">
-                       
+
                             <label for="txt_institucion_departamento_encargado">Departamento en el cual labora</label>
                             <input maxlength="22" type="text" id="txt_institucion_departamento_encargado">
+
                             <label for="txt_institucion_correo_electronico_encargado">Correo electrónico del encargado</label>
                             <input maxlength="22" type="text" id="txt_institucion_correo_electronico_encargado">
             
-                            <form action="" method="post">
+                            <!-- <form action="" method="post">
                                     <label>Escribe la contraseña</label>
                                     <input type="password" id="txt_institucion_contrasena" min="8" max="6"/>
                                     <label>Vuelve a escribir la contraseña</label>
-                                    <input type="password" name="pass2" min="6" max="10"/>
+                                    <input type="password" name="pass2" min="6" max="10"/> -->
 
 
                     </div>
@@ -250,23 +206,6 @@
 
             
     </div>
-        -->
-            <script>
-                function getValue(){
-                let checks = document.getElementsByClassName('grado');
-                let str=[];
-
-                for (i=0; i < 12; i++){
-
-                    if(checks[i].checked===true){
-                        
-                        str[i]= checks[i].value;
-                        
-                    }
-                }
-                return str;
-             }                    
-            </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>

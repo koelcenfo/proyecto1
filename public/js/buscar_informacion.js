@@ -27,16 +27,18 @@
 
 var tabla = document.getElementById('tbl_instituciones');
 let mostrar_datos = () => {
-    
+    let etiquetas = listar_etiqueta();
     let institucion = listar_institucion();
 
     for(let i = 0; i < institucion.length; i++){
-
+        
         let fila = tabla.insertRow();
 
         let imagen = fila.insertCell();
 
         let imagen_perfil = document.createElement('img');
+
+        let etiqueta_row = tabla.insertRow();
 
         imagen_perfil.src = institucion[i]['institucion_imagen'];
         
@@ -50,6 +52,19 @@ let mostrar_datos = () => {
 
         fila.insertCell().innerHTML = institucion[i]['institucion_tipo'];
 
+        // for (let u = 0; u < etiquetas.length; u++) {
+            
+        //     if (etiquetas[u]['id_institucion'] == institucion[i]['institucion_id']) {
+
+        //         etiqueta_row.textContent =etiquetas[0]['etiqueta']+',';
+                
+        //     }else{
+        //         fila.insertCell().innerHTML = 'No hay etiquetas';
+        //     }
+            
+        // }
+
+        
 
 
         let link_perfil =fila.insertCell();
@@ -87,6 +102,7 @@ function Buscar() {
             tabla.rows[i].style.display = '';
         } else {
             tabla.rows[i].style.display = 'none';
+            // tabla.innerHTML = 'No se han encontrado'
         }
     }
 };

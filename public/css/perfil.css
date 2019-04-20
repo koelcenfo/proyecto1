@@ -95,7 +95,7 @@
 
     }
      #direccion_institucion, #fundacion{
-        font-size: 25px;
+        font-size: 20px;
         padding-top: 10px;
         padding-left: 11%;
        
@@ -146,6 +146,12 @@ ul.tabs li:hover{
     border-radius: 10px;
     scale: 1.1px;
 }
+ul.tabs li.current{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    transform: scale(1.050);
+}
 
 .tab-content{
     display: none;
@@ -153,6 +159,7 @@ ul.tabs li:hover{
     overflow-y: scroll;
     width: 1200px;
     height: 450px;
+    margin-top: 40px;
 }
 
 .tab-content.current{

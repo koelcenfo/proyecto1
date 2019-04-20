@@ -66,7 +66,6 @@
                 Nombre_inscrito.innerHTML = 'Nombre inscrito: ' + info[i]['institucion_nombre_inscrito'];
                 Fundacion.innerHTML = 'Año de fundación: ' + info[i]['institucion_fundacion'];
                 Generos.innerHTML = 'Distribución de géneros: ' + info[i]['institucion_generos'];
-                Idiomas.innerHTML = 'Idiomas que se imparten: ' + info[i]['institucion_idiomas'];
                 Tipo.innerHTML = 'Tipo de centro educativo: ' + info[i]['institucion_tipo'];
                 Cedula.innerHTML = 'Cédula jurídica del centro educativo: ' + info[i]['institucion_cedula'];
                 Ideologia.innerHTML = 'Ideología del centro educativo: ' + info[i]['institucion_ideologia'];
@@ -92,7 +91,6 @@
                 Nombre_inscrito.innerHTML = 'Nombre inscrito: ' + info[i]['institucion_nombre_inscrito'];
                 Fundacion.innerHTML = 'Año de fundación: ' + info[i]['institucion_fundacion'];
                 Generos.innerHTML = 'Distribución de géneros: ' + info[i]['institucion_generos'];
-                Idiomas.innerHTML = 'Idiomas que se imparten: ' + info[i]['institucion_idiomas'];
                 Tipo.innerHTML = 'Tipo de centro educativo: ' + info[i]['institucion_tipo'];
                 Cedula.innerHTML = 'Cédula jurídica del centro educativo: ' + info[i]['institucion_cedula'];
                 Ideologia.innerHTML = 'Ideología del centro educativo: ' + info[i]['institucion_ideologia'];

@@ -110,6 +110,8 @@ app.use('/api', registrar_lista_utiles_mep);
 const registrar_informacion = require('./componentes/material_informativo/informacion.route')
 app.use('/api', registrar_informacion);
 
+const registrar_comentario = require('./componentes/comentarios/comentarios.route')
+app.use('/api', registrar_comentario);
 
 const registrar_idioma = require('./componentes/Idiomas/idiomas.route');
 app.use('/api', registrar_idioma);
@@ -121,7 +123,8 @@ app.use('/api', becas);
 const instituciones_cercanas=require('./componentes/instituciones_cercanas/instituciones_cercanas.route');
 app.use('/api', instituciones_cercanas);
 
-
+const registrar_nivel=require('./componentes/niveles/niveles.route');
+app.use('/api', registrar_nivel);
 
 // Se guarda todo lo que se ha realizado
 module.exports = app; /*lo que hace es exportarme el módulo*/
