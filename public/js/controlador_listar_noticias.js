@@ -27,6 +27,23 @@ let mostrar_noticias=()=>{
             }
 
 
+            let celda_configuración=fila.insertCell();
+            //Creación del boton editar
+            let boton_editar=document.createElement('a');
+            //Para el estilo
+            boton_editar.classList.add('boton_editar');
+            boton_editar.textContent='Editar';//textContent lo que muestra en la tabla 'Editar'
+            boton_editar.href=`actualizar_noticias.html?id_noticias_id=${noticias[i]['_id']}`;
+
+            celda_configuración.appendChild(boton_editar);
+
+        //    let celda_eliminar=fila.insertCell();
+           let boton_eliminar=document.createElement('a');
+            boton_eliminar.classList.add('boton_eliminar');
+           boton_eliminar.textContent='Eliminar';
+           celda_configuración.appendChild(boton_eliminar);
+           boton_eliminar.href=`eliminar_noticias.html?id_noticias_id=${noticias[i]['_id']}`;
+
             
         }
     };

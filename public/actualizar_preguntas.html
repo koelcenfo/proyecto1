@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/registrar_pregunta.css">
-    <title>Registrar Preguntas</title>
+    <title>Actualizar preguntas</title>
 </head>
 
 <body>
@@ -45,9 +45,9 @@
     <main>
         
         <div id="form_contenedor">
-                <h1 id="titulo_registro">Registrar sección de preguntas frecuentes.</h1>
-            <p id="info_p">En el siguiente registro se podrá indicar las preguntas más frecuentes que se hacen los
-                usuarios sobre el centro educativo</p>
+                <h1 id="titulo_registro">Actualizar sección de preguntas frecuentes</h1>
+            <p id="info_p">En el siguiente registro se podrá actualizar las preguntas más frecuentes que hacen los
+                usuarios sobre el centro educativo.</p>
             <hr>
             <form>
 
@@ -61,22 +61,30 @@
                 </div>
                 <div id="contenedor_botones">
                     <button class="btn_atras" type="button" id="btn_atras"
-                        onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-                    <button type="button" id="btn_registrar">Enviar</button>
+                        onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Atrás</button>
+                    <button type="button" id="btn_registrar">Actualizar</button>
                 </div>
             </form>
         </div>
     </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_seccion_preguntas.js"></script>
+
+    <script src="js/controlador_actualizar_preguntas.js"></script>
+    
+    <script src="js/controlador_barra_navegacion.js"></script>
+
     <script src="js/servicio_inicio.js"></script>
 
-    <script src="js/controlador_seccion_preguntas.js"></script>
-
-    <script src="js/controlador_barra_navegacion.js"></script>
-    <script src="js/servicio_seccion_preguntas.js"></script>
+    
+   
+    
     
     <script src="js/controlador_imagen_sesion.js"></script>
 </body>

@@ -50,6 +50,7 @@ let mostrar_actividades = () => {
             boton_eliminar.classList.add('boton_eliminar');
            boton_eliminar.textContent='Eliminar';
            celda_configuración.appendChild(boton_eliminar);
+           boton_eliminar.href=`eliminar_actividades.html?id_institucion=${actividades[i]['_id']}`;
         }
     };
 

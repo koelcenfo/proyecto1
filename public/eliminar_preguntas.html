@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/registrar_pregunta.css">
-    <title>Registrar Preguntas</title>
+    <link rel="stylesheet" href="css/eliminar_registros.css">
+    <title>Eliminar pregunta</title>
 </head>
 
 <body>
@@ -45,38 +45,45 @@
     <main>
         
         <div id="form_contenedor">
-                <h1 id="titulo_registro">Registrar sección de preguntas frecuentes.</h1>
-            <p id="info_p">En el siguiente registro se podrá indicar las preguntas más frecuentes que se hacen los
-                usuarios sobre el centro educativo</p>
+                <h1 id="titulo_registro" >Eliminar sección de preguntas frecuentes</h1>
+            <p id="info_p">En el siguiente registro podrá eliminar la pregunta frecuente.</p>
             <hr>
             <form>
 
                 <div>
                     <label for="txt_pregunta">Pregunta:</label>
-                    <input type="text" id="txt_pregunta">
+                    <input class="class_input" type="text" id="txt_pregunta" disabled="disabled" >
                 </div>
                 <div>
                     <label for="txt_respuesta">Respuesta:</label>
-                    <textarea id="txt_respuesta"></textarea>
+                    <textarea class="class_textarea" id="txt_respuesta" disabled="disabled" ></textarea>
                 </div>
-                <div id="contenedor_botones">
-                    <button class="btn_atras" type="button" id="btn_atras"
-                        onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-                    <button type="button" id="btn_registrar">Enviar</button>
+                <div class="contenedor_botones">
+                    <button class="btn_atras" type="button" class="btn_atras"
+                        onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Atrás</button>
+                    <button type="button" id="btn_registrar">eliminar</button>
                 </div>
             </form>
         </div>
     </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_seccion_preguntas.js"></script>
+
+    <script src="js/controlador_eliminar_preguntas.js"></script>
+    
+    <script src="js/controlador_barra_navegacion.js"></script>
+
     <script src="js/servicio_inicio.js"></script>
 
-    <script src="js/controlador_seccion_preguntas.js"></script>
-
-    <script src="js/controlador_barra_navegacion.js"></script>
-    <script src="js/servicio_seccion_preguntas.js"></script>
+    
+   
+    
     
     <script src="js/controlador_imagen_sesion.js"></script>
 </body>

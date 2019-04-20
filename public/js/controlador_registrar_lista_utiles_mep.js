@@ -16,7 +16,7 @@ let validacion=()=>{
         input_nombre_util.classList.remove('error_input');
     }
 
-    if (input_cantidad.value=='') {
+    if (input_cantidad.value=='' || input_cantidad.value <0) {
         error=true;
         input_cantidad.classList.add('error_input');
     } else {

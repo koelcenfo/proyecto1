@@ -42,6 +42,13 @@ router.route('/buscar_actividades/:id_institucion')
         api_actividades.buscar_por_id(req,res);
     }
 );
+
+router.route('/eliminar_actividades')
+.post(
+    function(req,res){
+        api_actividades.eliminar(req,res);
+    }
+);
         
 
 module.exports=router;

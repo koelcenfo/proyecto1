@@ -80,11 +80,13 @@ $(boton_aceptar).on('click',function () {
         input_hora.value;
         input_lugar.value;
         textarea_descripcion.value;
+        img_noticias.src;
     }else{
         $(input_titulo).val('');
         $(input_fecha).val('');
         $(input_hora).val('');
         $(input_lugar).val('');
         $(textarea_descripcion).val('');
+        img_noticias.src = 'img/noticias/image-placeholder.png';
     }
   });

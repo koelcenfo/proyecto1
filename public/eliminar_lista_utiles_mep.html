@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/listar_util_mep.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/eliminar_registros.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <title>Lista de útiles MEP</title>
+    <title>Eliminar lista de útiles MEP</title>
 </head>
 
 <body>
@@ -40,40 +43,36 @@
         </nav>
     </header>
 
-    <main>
-        <div id="form_contenedor">
-            <h1 id="titulo_registro">Lista de útiles del MEP.</h1>
-            <!-- <p id="info_p"></p> -->
-            <!-- <hr> -->
-            <label for="txt_filtro">Filtrar</label>
-            <input type="text" id="txt_filtro" onkeyup="filtrar();">
-            <table id="tbl_utiles">
-                <thead>
-                    <tr>
-                        <th>Nombre del útil</th>
-                        <th>Cantidad</th>
-                        <th>Descripción</th>
-                        <th>Editar y eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
 
-                </tbody>
-            </table>
+    <div id="form_contenedor">
+        <form id="frm_utiles">
+             <h1 id="titulo_registro">Eliminar la lista de útiles del MEP.</h1>
+            
+            <p id="info_p">Puede eliminar la lista de útiles del MEP que ha registrado.</p>
+            <hr>
+           
+            <label for="txt_nombre">Nombre del útil</label>
+            <input class="class_input" type="text" id="txt_nombre_util" maxlength="60" disabled="disabled">
+        
+            <label for="txt_lugar">Cantidad</label>
+            <input class="class_input" type="number" id="nmb_util" maxlength="60" disabled="disabled">
+       
+            <label for="txt_descripcion">Descripción del útil</label>
+            <textarea class="class_textarea" id="txt_descripcion" disabled="disabled"></textarea>
+       
+                <div class="contenedor_botones">
+                     <button class="btn_registrar" type="button" id="btn_aceptar">Eliminar</button>
+                     <button class="btn_atras" type="button" id="btn_atras">Atrás</button>
+                </div>
 
-            <form id="contenedor_botones" action="http://localhost:3000/public/perfil.html">
-                    <button  type="submit" id="btn_atras">Atrás</button>
-
-            </form>
-    </main>
+    </div>   
     
-</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-<script src="js/servicio_inicio.js"></script>
 <script src="js/servicios_lista_utiles_mep.js"></script>
-<script src="js/controlador_listar_utiles_mep.js"></script>
+<script src="js/servicio_inicio.js"></script>
+<script src="js/controlador_eliminar_lista_utiles_mep.js"></script>
 <script src="js/controlador_barra_navegacion.js"></script>
 <script src="js/controlador_imagen_sesion.js"></script>
 

@@ -10,8 +10,8 @@ let schema_noticias=new mongoose.Schema(
         hora :{type: String,required:true}, 
         lugar :{type:String,required:true},
         descripcion : {type:String,required:true},
-        imagen : {type: String, required: false}
-        // estado: {type: String, required: true}
+        imagen : {type: String, required: false},
+        estado: {type: String, required: true}
     }
 );
 module.exports=mongoose.model('noticias', schema_noticias);

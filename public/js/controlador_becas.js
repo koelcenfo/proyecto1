@@ -50,4 +50,4 @@ let obtener_datos = () => {
     }
 };
 
-boton_registrar.addEventListener('click', obtener_datos)
+boton_registrar.addEventListener('click', obtener_datos);

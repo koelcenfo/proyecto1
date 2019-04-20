@@ -78,14 +78,14 @@ $(boton_aceptar).on('click',function () {
         input_hora.value;
         input_lugar.value;
         textarea_descripcion.value;
-        // img_actividades.value;
+        img_actividades.src;
     }else{
         $(input_nombre).val('');
         $(input_fecha).val('');
         $(input_hora).val('');
         $(input_lugar).val('');
         $(textarea_descripcion).val('');
-        // $(img_actividades).val('');
+        img_actividades.src = 'img/actividades/image-placeholder.png';
     }
   });
 

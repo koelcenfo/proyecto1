@@ -11,8 +11,8 @@ module.exports.registrar=(req,res)=>{
             hora: req.body.hora,
             lugar: req.body.lugar,
             descripcion: req.body.descripcion,
-            imagen: req.body.imagen
-            // estado: 'Activo'
+            imagen: req.body.imagen,
+            estado: 'Activo'
         }
     );
 
@@ -56,3 +56,42 @@ module.exports.listar_noticias=(req,res)=>{
             }
         }
     )};
+
+
+module.exports.buscar_por_id=function(req,res){
+    modelo_noticias.find({_id:req.body.id_noticias_id}).then(
+        function(noticias){
+            if (noticias) {
+                res.json({success: true, noticias: noticias});
+            } else {
+                res.json({success: false, noticias: noticias});
+            }
+        }
+    );
+};
+
+module.exports.actualizar=function(req,res){
+    modelo_noticias.findByIdAndUpdate(req.body.id,{$set: req.body},
+        function(error){
+            if (error) {
+                res.json({success: false, msg: 'No se pudo actualizar la noticia.'});
+            }else{
+                res.json({success: true, msg: 'La noticia se actualizó correctamente.'}); 
+            }
+        }
+        
+        );
+}
+
+module.exports.eliminar=function(req,res){
+    modelo_noticias.findByIdAndDelete(req.body.id,
+        function(error){
+            if (error) {
+                res.json({success: false, msg:'No se pudo eliminar la noticia.'});
+            } else {
+                res.json({success: true, msg:'La noticia se eliminó correctamente.'});   
+            }
+        }
+        
+        );
+}

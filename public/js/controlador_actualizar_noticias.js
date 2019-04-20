@@ -1,12 +1,13 @@
 'use strict';
 
-const input_nombre=document.querySelector('#txt_nombre');
+const input_titulo=document.querySelector('#txt_titulo');
 const input_fecha=document.querySelector('#dt_fecha');
 const input_hora=document.querySelector('#txt_hora');
 const input_lugar=document.querySelector('#txt_lugar');
 const textarea_descripcion=document.querySelector('#txt_descripcion');
-const img_actividades=document.querySelector('#image_preview');
 const boton_aceptar=document.querySelector('#btn_aceptar');
+const id_usuario=sessionStorage.getItem('id_usuario');
+const img_noticias=document.querySelector('#image_preview');
 
 let get_param=(param)=>{
     let url_string=window.location.href;
@@ -16,40 +17,38 @@ let get_param=(param)=>{
     return id;
 };
 
-//Así llamamos a esa función
 
-let _id=get_param('id_institucion');//
+let _id=get_param('id_noticias_id');
 
-let actividades=buscar_actividades(_id);
+let noticias=buscar_noticias(_id);
 
 let mostrar_datos=()=>{
-     input_nombre.value=actividades[0]['nombre'];
-     input_fecha.value=actividades[0]['fecha'];
-     input_hora.value=actividades[0]['hora'];
-     input_lugar.value=actividades[0]['lugar'];
-     textarea_descripcion.value=actividades[0]['descripcion']; 
-     img_actividades.src=actividades[0]['imagen'];
+    input_titulo.value=noticias[0]['titulo'];
+    input_fecha.value=noticias[0]['fecha'];
+    input_hora.value=noticias[0]['hora'];
+    input_lugar.value=noticias[0]['lugar'];
+    textarea_descripcion.value=noticias[0]['descripcion'];
+    img_noticias.src=noticias[0]['imagen'];
 
-    if (img_actividades.src=='undefined') {
-      img_actividades.src = 'img/actividades/image-placeholder.png';
-    } 
-    
+    if (img_noticias.src=='undefined') {
+        img_noticias.src = 'img/noticias/image-placeholder.png';
+      } 
 };
 
-if (actividades) {
+if (noticias) {
     mostrar_datos();
 }
 
 let obtener_datos=()=>{
-    let nombre=input_nombre.value;
+    let titulo=input_titulo.value;
     let fecha=input_fecha.value;
     let hora=input_hora.value;
     let lugar=input_lugar.value;
     let descripcion=textarea_descripcion.value;
-    let imagen=img_actividades.src;
+    let imagen=img_noticias.src;
 
     Swal.fire({
-        title: '¿Está seguro que desea actualizar la actividad?',
+        title: '¿Está seguro que desea actualizar la noticia?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -57,21 +56,23 @@ let obtener_datos=()=>{
         confirmButtonText: 'Sí'
       }).then((result) => {
         if (result.value) {
-            actualizar_actividades(nombre,fecha,hora,lugar,descripcion,imagen,_id);
+            actualizar_noticias(titulo,fecha,hora,lugar,descripcion,imagen,_id);
         }
-      }) 
+      })
+
 }
+
 
 /***Parte para validar que en la actualización no dejen campos vacios en el formulario***/
 
 let validacion=()=>{
   let error=false;
-  
-  if (input_nombre.value=='') {
+
+  if (input_titulo.value=='') {
       error=true;
-      input_nombre.classList.add('error_input');
+      input_titulo.classList.add('error_input');
   } else {
-      input_nombre.classList.remove('error_input');
+      input_titulo.classList.remove('error_input');
   }
 
   if (input_fecha.value=='') {
@@ -80,7 +81,6 @@ let validacion=()=>{
   } else {
       input_fecha.classList.remove('error_input');
   }
-
   if (input_hora.value=='') {
       error=true;
       input_hora.classList.add('error_input');
@@ -101,29 +101,36 @@ let validacion=()=>{
   } else {
       textarea_descripcion.classList.remove('error_input');
   }
+
   return error;
+
 };
 
-boton_aceptar.addEventListener('click', obtener_datos);
+
+
+
+
+boton_aceptar.addEventListener('click',obtener_datos);
 $(boton_aceptar).on('click',function () {
 
-    if (validacion()==false) {
-        let nombre=input_nombre.value;
-        let fecha=input_fecha.value;
-        let hora=input_hora.value;
-        let lugar=input_lugar.value;
-        let descripcion=textarea_descripcion.value;
-        let imagen=img_actividades.src;
+  if (validacion()==false) {
 
-        registrar_actividades(nombre,fecha,hora,lugar,descripcion,id_institucion,imagen);
+    let titulo=input_titulo.value;
+    let fecha=input_fecha.value;
+    let hora=input_hora.value;
+    let lugar=input_lugar.value;
+    let descripcion=textarea_descripcion.value;
+    let imagen=img_noticias.src;
 
-    } else {
-        swal.fire({
-            type:'warning',
-            title: 'La actividad no pudo ser actualizada.',
-            text: 'Por favor verifique que los campos que están resaltados estén llenos.'
-        });
-    }
+    registrar_noticias(titulo,fecha,hora,lugar,descripcion,id_institucion,imagen);
+
+} else {
+    swal.fire({
+        type:'warning',
+        title: 'La noticia no pudo ser actualizada.',
+        text: 'Por favor verifique que los campos que están resaltados estén llenos.'
+    });
+}
 
 
-})
+});

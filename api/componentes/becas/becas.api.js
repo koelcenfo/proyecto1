@@ -8,7 +8,8 @@ module.exports.registrar=(req,res)=>{
             id_institucion:req.body.id_institucion,
             nombre: req.body.nombre,
             tipo: req.body.tipo,
-            descripcion:req.body.descripcion
+            descripcion:req.body.descripcion,
+            estado: 'Activo'
         }
     );
 
@@ -46,3 +47,41 @@ module.exports.listar_becas=(req,res) =>{
             }
         }
     )};
+
+    module.exports.buscar_por_id=function(req,res){
+        modelo_becas.find({_id: req.body.id_institucion}).then(
+            function(becas){
+                if(becas){
+                    res.json({success: true, becas: becas});
+                }else{
+                    res.json({success: false, becas: becas});
+                }
+            }
+        );
+    };
+
+    module.exports.actualizar=function(req,res){
+        modelo_becas.findByIdAndUpdate(req.body.id,{$set: req.body},
+            function(error){
+                if (error) {
+                    res.json({success: false, msg: 'No se pudo actualizar la beca.'});
+                } else {
+                    res.json({success: true, msg: 'La beca ha sido actualizada correctamente.'})
+                }
+            }
+            
+            );
+    }
+
+   module.exports.eliminar=function(req,res){
+       modelo_becas.findByIdAndDelete(req.body.id,
+        function(error){
+            if (error) {
+                res.json({success: false, msg:'No se pudo eliminar la beca.'});
+            } else {
+                res.json({success: true, msg:'La beca se eliminó correctamente.'});  
+            }
+        }
+        
+        );
+   }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/listar_becas.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <title>Actividades</title>
+    <title>Visualizar Becas</title>
 </head>
 
 <body>
@@ -34,19 +34,20 @@
 
     <main>
         <div id="form_contenedor">
-            <h1 id="titulo_registro">Lista de Actividades.</h1>
+            <h1 id="titulo_registro">Lista de becas.</h1>
             <!-- <p id="info_p">En la siguiente lista podrá ver las diferentes actividades del centro educativo, cada una
                 posee un nombre, la fecha y la hora en que se realizan, el lugar donde se realizaran, una descripción en
                 la cual se detalla en que consiste dicha actividad.</p> -->
             <!-- <hr> -->
             <label for="txt_filtro">Filtrar</label>
-            <input type="text" id="txt_filtro" onkeyup="filtrar();">
+            <input type="text" id="txt_filtro_beca" onkeyup="filtrar_beca();">
             <table id="tbl_becas">
                 <thead>
                     <tr>
                         <th>Nombre de la beca</th>
                         <th>Tipo de beca</th>
                         <th>Descripción de la beca</th>
+                        <th>Editar y eliminar</th>
                     </tr>
                 </thead>
                 <tbody>

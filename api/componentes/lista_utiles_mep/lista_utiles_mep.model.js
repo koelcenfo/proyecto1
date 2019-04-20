@@ -8,7 +8,8 @@ let schema_lista_utiles_mep=new mongoose.Schema(
         id_institucion:{type: String, required: false},
         nombre_util: {type: String, required:true},
         cantidad: {type: Number, required:true},
-        descripcion: {type: String, required:true}
+        descripcion: {type: String, required:true},
+        estado: {type: String, required: true}
     }
 );
 

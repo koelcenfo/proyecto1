@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Registrar becas.</title>
+    <title>Actualizar becas</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/registrar_beca.css">
@@ -33,9 +33,11 @@
             </script>
         </nav>
     </header>
-            <h1 id="titulo_registro">Registro de Beca</h1>
+            <h1 id="titulo_registro">Actualizar las becas</h1>
+
+          
     <div id="form_contenedor">
-            <p id="info_p">Puede registrar las becas al centro educativo, puede seleccionar o escribir el nombre de la beca, el tipo de beca y la descripción.</p>
+          <p id="info_p">Puede actualizar las becas que ha registrado previamente, puede seleccionar o escribir el nombre de la beca, el tipo de beca y la descripción nuevamente.</p>
             <hr>
 
 
@@ -46,8 +48,8 @@
         <label for="txt_descripcion">Descripción</label>
         <textarea id="textarea_txt" class="textarea_descripcion"></textarea>
         <div id="contenedor_botones">
-            <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-            <button type="button" id="btn_registrar">Enviar</button>
+            <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/listar_becas.html'">Atrás</button>
+            <button type="button" id="btn_registrar">Actualizar</button>
         </div>  
         </div>
 
@@ -62,6 +64,6 @@
 <script src="js/servicio_inicio.js"></script>
 <script src="js/servicio_becas.js"></script>
 <script src="js/controlador_barra_navegacion.js"></script>
-<script src="js/controlador_becas.js"></script>
-
+<!-- <script src="js/controlador_becas.js"></script> -->
+<script src="js/controlador_actualizar_becas.js"></script>
 </html>

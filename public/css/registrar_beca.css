@@ -11,13 +11,15 @@ html{
     color: rgb(151, 151, 151);
     padding-left: 150px;
     padding-right: 150px;
+    padding-top: 20px;
 }
 #form_contenedor{
     display: block;
+    padding-top: 70px;
     margin: auto;
     margin-bottom: 100px;
     width: 65%;
-    height: 700px;
+    height: 100%;
     background-color: #fff; 
     border-radius: 5px; 
 }

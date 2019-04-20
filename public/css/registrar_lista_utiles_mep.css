@@ -39,7 +39,7 @@ label{
     font-size: 25px;
     display: block;
     margin: auto;
-    width: 60%;
+    width: 70%;
     height: 50px;
     background-color: #dfe4ea;
     border-radius: 5px;
@@ -53,15 +53,14 @@ label{
     font-size: 25px;
     display: block;
     margin: auto;
-    width: 60%;
-    height: 50px;
+    width: 70%;
+    height: 250px;
     background-color: #dfe4ea;
     border-radius: 5px;
     padding-left: 15px;
     margin-bottom: 40px;
     outline-color: #1abc9c;
-    resize: none; 
-    font-family: 'PT Sans', sans-serif;   
+    resize: none;
 }
 
 .btn_atras, .btn_registrar{

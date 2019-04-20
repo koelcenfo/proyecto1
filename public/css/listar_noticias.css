@@ -3,6 +3,36 @@ html{
     background-color: #2c2c54;
 }
 
+.boton_editar{
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #2c2c54;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    .boton_editar:hover{
+    background-color: #3498db;
+    }
+    
+    .boton_eliminar{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #2c2c54;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    .boton_eliminar:hover{
+        background-color: #e74c3c;
+        }
+
 #info_p{
     text-align: center;
     font-size: 22px;  
@@ -96,7 +126,7 @@ table img{
       border: solid 2px;
 }
 
-#txt_filtro{
+#txt_filtro_noticia{
     margin-bottom: 10px;
     margin-left: 20px;
     margin-top: 50px;

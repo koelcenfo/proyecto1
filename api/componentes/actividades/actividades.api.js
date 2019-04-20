@@ -83,3 +83,16 @@ module.exports.listar_actividad=(req,res) =>{
             
             );
     }
+
+    module.exports.eliminar=function(req,res){
+        modelo_actividades.findByIdAndDelete(req.body.id,
+            function(error){
+                if (error) {
+                    res.json({success: false, msg:'No se pudo eliminar la actividad.'});
+                } else {
+                    res.json({success: true, msg:'La actividad se eliminó correctamente.'});  
+                }
+            }
+            
+            );
+    }

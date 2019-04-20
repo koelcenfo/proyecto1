@@ -127,3 +127,48 @@ let registrar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion, pid_institu
     });
 }
 
+let eliminar_actividades=(pnombre,pfecha,phora,plugar,pdescripcion,pimagen, pid)=>{
+
+    let request=$.ajax({
+        url:'http://localhost:4000/api/eliminar_actividades',
+        method: "POST",
+        data: {
+            nombre: pnombre,
+            fecha: pfecha,
+            hora: phora,
+            lugar: plugar,
+            descripcion : pdescripcion,
+            imagen : pimagen,
+            id: pid
+           
+        },
+        dataType: "json",
+        contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+
+    }); 
+    
+    request.done(function(res){
+        swal.fire({
+            type: 'success',
+            title: 'Se ha eliminado la actividad con éxito.',
+            text: res.msg,
+            onClose: ()=>{
+                window.location.href='listar_actividades.html';
+            }
+        });
+    });
+
+
+    request.fail(function(res){
+        swal.fire({
+            type : 'error',
+            title : 'Proceso no realizado',
+            text : res.msg
+        });
+
+    });
+}
+
+
+
+
