@@ -184,6 +184,16 @@ table img{
     margin-top: 50px;
 }
 
+#herramientas_admin{
+    width: 90%;
+    height: 550px;
+    display: block;
+    margin: auto;
+    background-color: #ffff;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+
 /* #listas_de_institucion button, .button{
     float: left;
     display: block;
@@ -258,15 +268,47 @@ ul.tabs li.current{
     border-radius: 10px;
     transform: scale(1.050);
 }
+ul.tabs_admin{
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 0px;
+    list-style: none;
+    font-size: 25px;
+}
+ul.tabs_admin li{
+    background: none;
+    color:#3498db;
+    display: inline-block;
+    padding: 30px 25px;
+    cursor: pointer;
+}
+ul.tabs_admin li:hover{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    transform: scale(1.050); 
 
-.tab-content{
+}
+ul.tabs_admin li.actual{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    transform: scale(1.050);
+}
+
+
+.contenido_tab{
     display: none;
     padding: 20px;
     text-align: center;
     font-size: 27px;
     color: #6e6e6c
 }
-
+.contenido_tab.actual{
+    display: inherit;
+}
 .tab-content.current{
     display: inherit;
 }
