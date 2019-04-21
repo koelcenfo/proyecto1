@@ -237,7 +237,13 @@ table img{
 
 }
 
-
+.tab-content{
+    display: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 27px;
+    color: #6e6e6c
+}
 
 ul.tabs{
     margin: 0px;
@@ -268,6 +274,8 @@ ul.tabs li.current{
     border-radius: 10px;
     transform: scale(1.050);
 }
+
+
 ul.tabs_admin{
     margin: 0px;
     margin-top: 10px;
