@@ -1,6 +1,6 @@
 'use strict'
 
-let registrar_usuario = (pinstitucion_nombre_encargado, pinstitucion_apellido_encargado, pinstitucion_departamento_encargado, pinstitucion_telefono, pinstitucion_correo_electronico, pinstitucion_nombre_inscrito, pinstitucion_nombre, pinstitucion_bachillerato_internacional, pinstitucion_tipo, /*pinstitucion_idiomas, */pinstitucion_generos, pinstitucion_ideologia, pinstitucion_fundacion, pinstitucion_referencia, pinstitucion_cedula, pinstitucion_provincia, pinstitucion_canton, pinstitucion_distrito, pinstitucion_direccion, pinstitucion_sitio_web, pinstitucion_fax, pinstitucion_facebook, pinstitucion_twitter ,pinstitucion_imagen, pinstitucion_cedula_encargado,pinstitucion_correo_electronico_encargado,  ptipo_usuario) => {
+let registrar_usuario = (pinstitucion_nombre,pinstitucion_nombre_inscrito,pinstitucion_cedula,pinstitucion_telefono,pinstitucion_tipo,pinstitucion_generos,pinstitucion_provincia,pinstitucion_canton,pinstitucion_distrito,pinstitucion_direccion,pinstitucion_fundacion,pinstitucion_referencia,pinstitucion_ideologia,pinstitucion_bachillerato_internacional,pinstitucion_correo_electronico,pinstitucion_sitio_web,pinstitucion_facebook,pinstitucion_twitter,pinstitucion_nombre_encargado,pinstitucion_apellido_encargado,pinstitucion_cedula_encargado,pinstitucion_departamento_encargado,pinstitucion_correo_electronico_encargado,pinstitucion_fax,pinstitucion_imagen) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_institucion",
         method: "POST",

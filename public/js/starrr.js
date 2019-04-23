@@ -1,4 +1,3 @@
-  
 var slice = [].slice;
 
 (function($, window) {

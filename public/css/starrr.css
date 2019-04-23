@@ -1,11 +1,34 @@
 .starrr {
-  display: inline-block;
+  display: block;
+}
+#listar_comentarios .starrr {
+  display: block;
 }
 
 .starrr a {
-  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 31px;
   padding: 0 1px;
   cursor: pointer;
-  color: rgb(17, 159, 202);
+  color: #3498db;
   text-decoration: none;
 }
+#listar_comentarios .starrr a {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 0 1px;
+  cursor: pointer;
+  color: #3498db;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.error_star{
+  color: red;
+}
+.starrr_list {
+  display: block;
+}
+

@@ -50,6 +50,7 @@
     let Numero = document.querySelector('#telefono_institucion');
     let Fax = document.querySelector('#fax_institucion');
     let Web = document.querySelector('#web_institucion');
+    let modificar_perfil = document.querySelector('.modificar_perfil');
 
     switch(tipo_cliente){
         
@@ -73,7 +74,7 @@
                 Numero.innerHTML = 'Número: ' + info[i]['institucion_telefono'];
                 Fax.innerHTML = 'Fax: ' + info[i]['institucion_fax'];
                 Web.innerHTML = 'Página web: ' + info[i]['institucion_sitio_web'];
-
+                modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];;
             }
 
         };
@@ -101,7 +102,9 @@
 
             }
 
+            
         };
+        
     }
 
 

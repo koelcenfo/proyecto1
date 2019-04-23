@@ -59,6 +59,7 @@ module.exports.registrar_institucion = (req, res) =>{
             institucion_fax : req.body.institucion_fax,
             institucion_imagen : req.body.institucion_imagen,
             tipo_usuario : "Institucion",
+            estado : 'Activo'
         }
     );
     
@@ -141,3 +142,37 @@ module.exports.listar_institucion = (req, res) => {
         }
     )
 };
+module.exports.buscar_por_id=function(req,res){
+    model_institucion.find({_id: req.body.id_institucion}).then(
+        function(institucion){
+            if(institucion.length > 0){
+                res.json({success: true, institucion: institucion});
+            }else{
+                res.json({success: false, institucion: institucion});
+                msg: 'No se encontro el usuario'
+            }
+        }
+    );
+};
+
+module.exports.actualizar = function(req, res){
+    model_institucion.findByIdAndUpdate(req.body.id, { $set: req.body},
+        function(error){
+            if(error){
+                res.json(
+                    {
+                        success : false,
+                        msg : `No se pudo actualizar el usuario, ocurrio el siguiente error ${error}`
+                    }
+                );
+            }else{
+                res.json({
+                    success : true,
+                    msg : `Se actualizo satisfactoriamente el usuario.`
+                    });
+            }
+    
+        }
+    );
+
+}
