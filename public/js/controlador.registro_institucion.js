@@ -231,12 +231,12 @@ let validar = () => {
         input_institucion_fax.classList.remove('error_input');
     }
 
-    // if (imagen_institucion.src == 'img/registro_padre/image_placeholder/image_placeholder.png') {
-    //     error = true;
-    //     imagen_institucion.classList.add('error_input');
-    // } else {
-    //     imagen_institucion.classList.remove('error_input');
-    // }
+    if (imagen_institucion.src == 'img/registro_padre/image_placeholder/image_placeholder.png') {
+        error = true;
+        imagen_institucion.classList.add('error_input');
+    } else {
+        imagen_institucion.classList.remove('error_input');
+    }
 
 
 
@@ -252,8 +252,8 @@ let obtener_datos = () => {
         let institucion_telefono = input_institucion_telefono.value;
         let institucion_tipo = select_institucion_tipo.value;
         let institucion_generos = select_institucion_generos.value;
-        let institucion_provincia = select_institucion_provincia.value;
-        let institucion_canton = select_institucion_canton.value;
+        let institucion_provincia = select_institucion_provincia.selectedOptions[0].textContent;
+        let institucion_canton = select_institucion_canton.selectedOptions[0].textContent;
         let institucion_distrito = select_institucion_distrito.value;
         let institucion_direccion = input_institucion_direccion.value;
         let institucion_fundacion = input_institucion_fundacion.value;
