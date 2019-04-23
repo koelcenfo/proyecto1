@@ -7,7 +7,16 @@ const tabla_actividades = document.querySelector('#tbl_actividades tbody');
 let mostrar_actividades = () => {
 
     let actividades = listar_actividades();
-    let id_institucion = sessionStorage.getItem('id_usuario');
+      // let id_institucion = sessionStorage.getItem('id_usuario');
+
+      let id_institucion;
+      let tipo_usuario=sessionStorage.getItem('tipo_usuario');
+  
+      if (tipo_usuario=='Institucion') {
+          id_institucion=sessionStorage.getItem('id_usuario');
+      }else{
+          id_institucion=getUrl();
+      }
 
     for (let i = 0; i < actividades.length; i++) {
 

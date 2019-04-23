@@ -7,7 +7,15 @@ const tabla_becas = document.querySelector('#tbl_becas tbody');
 let mostrar_becas = () => {
 
     let becas = listar_becas();
-    let id_institucion = sessionStorage.getItem('id_usuario');
+    // let id_institucion = sessionStorage.getItem('id_usuario');
+    let id_institucion;
+    let tipo_usuario=sessionStorage.getItem('tipo_usuario');
+
+    if (tipo_usuario=='Institucion') {
+        id_institucion=sessionStorage.getItem('id_usuario');
+    }else{
+        id_institucion=getUrl();
+    }
 
     for (let i = 0; i < becas.length; i++) {
 

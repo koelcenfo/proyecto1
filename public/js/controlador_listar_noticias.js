@@ -3,7 +3,16 @@ const tabla_noticias=document.querySelector('#tbl_noticias tbody');
 
 let mostrar_noticias=()=>{
     let noticias=listar_noticias();
-    let id_institucion=sessionStorage.getItem('id_usuario');
+      // let id_institucion=sessionStorage.getItem('id_usuario');
+
+      let id_institucion;
+      let tipo_usuario=sessionStorage.getItem('tipo_usuario');
+  
+      if (tipo_usuario=='Institucion') {
+          id_institucion=sessionStorage.getItem('id_usuario');
+      }else{
+          id_institucion=getUrl();
+      }
 
     for(let i=0; i<noticias.length; i++){
         if (noticias[i]['id_institucion']==id_institucion) {
