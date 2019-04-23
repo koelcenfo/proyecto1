@@ -91,7 +91,7 @@ let actualizar_etiqueta = (pid, petiqueta, pdescripcion) => {
             id: pid,
             etiqueta: petiqueta,
             descripcion: pdescripcion,
-            
+
 
         },
         dataType: "json",
@@ -104,7 +104,10 @@ let actualizar_etiqueta = (pid, petiqueta, pdescripcion) => {
             {
                 type: 'success',
                 title: 'informacion de etiqueta actualizada correctamente',
-                text: 'las etiquetas fueron actualizadas con exito'
+                text: 'las etiquetas fueron actualizadas con exito',
+                onClose: () => {
+                    window.location.href = 'listar_etiquetas.html';
+                }
             }
         )
     });
@@ -115,4 +118,40 @@ let actualizar_etiqueta = (pid, petiqueta, pdescripcion) => {
 
 
 
+}
+let eliminar_etiqueta = (pid, petiqueta, pdescripcion) => {
+    let request = $.ajax({
+        url: 'http://localhost:4000/api/eliminar_etiqueta',
+        method: "POST",
+        data: {
+            id: pid,
+            etiqueta: petiqueta,
+            descripcion: pdescripcion
+
+        },
+        dataType: "json",
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+
+    });
+
+    request.done(function (res) {
+        swal.fire({
+            type: 'success',
+            title: 'Se ha eliminado la etiqueta con éxito.',
+            text: res.msg,
+            onClose: () => {
+                window.location.href = 'listar_etiquetas.html';
+            }
+        });
+    });
+
+
+    request.fail(function (res) {
+        swal.fire({
+            type: 'error',
+            title: 'Proceso no realizado',
+            text: res.msg
+        });
+
+    });
 }

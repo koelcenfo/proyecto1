@@ -34,11 +34,18 @@ html{
 }
 #criterio{
     float: left;
-    
+    margin-left: 200px;
+    width: 300px;
+}
+#criterio input,#porcentaje input{
+    width: 300px;
 }
 #porcentaje{
+    margin-right: 200px;
     float: right;
+    width: 300px;
 }
+
 label{
     display: block;
     text-align: center;
@@ -74,7 +81,7 @@ input{
     margin-bottom: 40px;
 
 }
-#btn_atras, #btn_registrar{
+#btn_atras, #btn_registrar,#btn_actualizar{
     display: inline-block;
     width: 120px;
     height: 50px;
@@ -92,8 +99,15 @@ input{
 #btn_atras{
     float: left;
     background-color: #e74c3c;
+    margin-left: 200px;
 }
-#btn_registrar{
+#btn_registrar,#btn_actualizar{
     float: right;
+    margin-right: 200px;
     background-color: #3498db;
+}
+#separador{
+    margin-top: 40px;
+    margin-left: 80px;
+    height: 500px;
 }

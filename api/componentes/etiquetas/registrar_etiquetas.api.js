@@ -84,3 +84,15 @@ module.exports.actualizar = function (req, res) {
         }
     );
 }
+module.exports.eliminar = function (req, res) {
+    modelo_etiqueta.findByIdAndDelete(req.body.id,
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: 'No se pudo eliminar la etiqueta.' });
+            } else {
+                res.json({ success: true, msg: 'La etiqueta se eliminó correctamente.' });
+            }
+        }
+    );
+}
+

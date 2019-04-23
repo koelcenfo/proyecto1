@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/registrar_criterio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
-    <title>Registrar criterios de evaluaciones</title>
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <title>Document</title>
 
 
 </head>
+
+
 
 <body>
     <header>
@@ -52,6 +55,7 @@
                 <div id="criterio">
                     <label for="txt_criterio">Criterio:</label>
                     <input type="text" id="txt_criterio">
+
                     <div>
                         <label for="txt_criterio_2">Criterio:</label>
                         <input type="text" id="txt_criterio_2">
@@ -73,31 +77,32 @@
 
                 </div>
 
-                <hr id="separador" style="width: 1px; display: inline-block;">
+                <hr id="separador" style="width: 1px;  display: inline-block;">
 
                 <div id="porcentaje">
                     <div>
 
-                        <label for="txt_porcentaje">Puntos</label>
+                        <label for="txt_porcentaje">Puntos:</label>
                         <input type="number" id="txt_porcentaje">
                     </div>
+                    
                     <div>
-                        <label for="txt_porcentaje_2">Puntos</label>
+                        <label for="txt_porcentaje_2">Puntos:</label>
                         <input type="number" id="txt_porcentaje_2">
 
                     </div>
                     <div>
-                        <label for="txt_porcentaje_3">Puntos</label>
+                        <label for="txt_porcentaje_3">Puntos:</label>
                         <input type="number" id="txt_porcentaje_3">
 
                     </div>
                     <div>
-                        <label for="txt_porcentaje_4">Puntos</label>
+                        <label for="txt_porcentaje_4">Puntos:</label>
                         <input type="number" id="txt_porcentaje_4">
 
                     </div>
                     <div>
-                        <label for="txt_porcentaje_5">Puntos</label>
+                        <label for="txt_porcentaje_5">Puntos:</label>
                         <input type="number" id="txt_porcentaje_5">
 
                     </div>
@@ -105,7 +110,7 @@
                 <div id="contenedor_botones">
                     <button type="button" id="btn_atras"
                         onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-                    <button type="button" id="btn_registrar">Enviar</button>
+                    <button type="button" id="btn_actualizar">Actualizar</button>
 
                 </div>
         </div>
@@ -115,13 +120,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="js/controlador_registro_criterios.js"></script>
     <script src="js/servicio_criterio.js"></script>
+    <script src="js/controlador_actualizar_criterio.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/servicio_inicio.js"></script>
     <script src="js/controlador_imagen_sesion.js"></script>
 
 
 </body>
+
 
 </html>

@@ -28,10 +28,16 @@ router.route('/buscar_costo/:id_costo')
             api_costo.buscar_por_id(req, res);
         }
     );
-    router.route('/actualizar_costo')
+router.route('/actualizar_costo')
     .post(
         function (req, res) {
             api_costo.actualizar(req, res);
+        }
+    )
+router.route('/eliminar_costo')
+    .post(
+        function (req, res) {
+            api_costo.eliminar(req, res);
         }
     )
 module.exports = router;

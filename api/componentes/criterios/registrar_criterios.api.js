@@ -58,3 +58,36 @@ module.exports.listar_criterio = (req, res) => {
         }
     )
 };
+module.exports.buscar_por_id = function (req, res) {
+    modelo_criterio.find({ _id: req.body.id_criterio }).then(
+        function (criterio) {
+            if (criterio) {
+                res.json(
+                    {
+                        success: true,
+                        criterio: criterio
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        criterio: criterio
+                    }
+                );
+            }
+        }
+    )
+};
+module.exports.actualizar = function (req, res) {
+    console.log(req.body.id);
+    modelo_criterio.findByIdAndUpdate(req.body.id, { $set: req.body },
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: `No se ha podido actualizar la etiqueta del cetro educativo.` });
+            } else {
+                res.json({ success: true, msg: `Se actualizó la etiqueta del centro educativo correctamente.` });
+            }
+        }
+    );
+}

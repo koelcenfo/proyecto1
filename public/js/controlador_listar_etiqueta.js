@@ -4,7 +4,12 @@ const tabla = document.querySelector('#tbl_etiquetas tbody');
 let mostrar_datos_etiqueta = () => {
     let etiquetas = listar_etiqueta();
     let id_institucion = sessionStorage.getItem('id_usuario');
-
+    let tipo_usuario = sessionStorage.getItem('tipo_usuario');
+    if (tipo_usuario == 'Institucion') {
+        id_institucion = sessionStorage.getItem('id_usuario')
+    } else {
+        id_institucion = getUrl();
+    }
     for (let i = 0; i < etiquetas.length; i++) {
 
         if (etiquetas[i]['id_institucion'] == id_institucion) {
@@ -14,11 +19,16 @@ let mostrar_datos_etiqueta = () => {
 
             let celda_configuracion = fila.insertCell();
             let boton_editar = document.createElement('a');
+            boton_editar.classList.add('boton_editar');
             boton_editar.textContent = 'Editar';
             boton_editar.href = `actualizar_etiqueta.html?id_etiqueta=${etiquetas[i]['_id']}`
             celda_configuracion.appendChild(boton_editar);
-
-
+            // 
+            let boton_eliminar = document.createElement('a');
+            boton_eliminar.classList.add('boton_eliminar')
+            boton_eliminar.textContent = 'Eliminar';
+            boton_eliminar.href = `eliminar_etiquetas.html?id_etiqueta=${etiquetas[i]['_id']}`;
+            celda_configuracion.appendChild(boton_eliminar);
         }
 
     };

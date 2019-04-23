@@ -4,6 +4,13 @@ const input_matricula = document.querySelector('#nmb_matricula');
 const input_mensualidad = document.querySelector('#nmb_mensualidad');
 const boton_registrar = document.querySelector('#btn_registrar');
 const id_usuario = sessionStorage.getItem('id_usuario');
+const nivel = sessionStorage.getItem('institucion_niveles');
+
+if (nivel == 'Secundaria') {
+    $("select_nivel option[value='Primero']").remove;
+} else {
+
+}
 
 let validar = () => {
     let error = false;

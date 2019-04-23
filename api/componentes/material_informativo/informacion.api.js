@@ -90,4 +90,17 @@ module.exports.actualizar = function (req, res) {
             }
         }
     )
+};
+
+module.exports.eliminar = function (req, res) {
+    modelo_informacion.findByIdAndDelete(req.body.id,
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: `No se ha podido eliminar la informacion del material informativo` });
+            } else {
+                res.json({ success: true, msg: `Se eliminó la informacion del material informativo con exito` });
+            }
+        }
+
+    )
 }

@@ -1,9 +1,19 @@
 'use strict';
+
 const tabla_costos = document.querySelector('#tbl_costos tbody');
+
+
 
 let mostrar_datos_costos = () => {
     let costos = listar_costo();
-    let id_institucion = sessionStorage.getItem('id_usuario');
+    let id_institucion;
+    let tipo_usuario = sessionStorage.getItem('tipo_usuario');
+    if (tipo_usuario == 'Institucion') {
+        id_institucion = sessionStorage.getItem('id_usuario')
+    } else {
+        id_institucion = getUrl();
+    }
+
     for (let i = 0; i < costos.length; i++) {
         if (costos[i]['id_institucion'] == id_institucion) {
             let fila = tabla_costos.insertRow();
@@ -16,9 +26,17 @@ let mostrar_datos_costos = () => {
 
             //Creacion del boton de editar
             let boton_editar = document.createElement('a');
+            boton_editar.classList.add('boton_editar');
             boton_editar.textContent = 'Editar';
             boton_editar.href = `actualizar_costo.html?id_costo=${costos[i]['_id']}`
+            boton_editar.classList.add('boton_editar');
             celda_configuracion.appendChild(boton_editar);
+            let boton_eliminar = document.createElement('a');
+            boton_eliminar.textContent = 'Eliminar';
+            boton_eliminar.classList.add('boton_eliminar');
+            boton_eliminar.href = `eliminar_costo.html?id_costo=${costos[i]['_id']}`
+            celda_configuracion.appendChild(boton_eliminar);
+
 
 
 

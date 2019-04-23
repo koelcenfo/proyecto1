@@ -6,8 +6,8 @@ module.exports.registrar_util = (req, res) => {
             id_util: req.body.ObjectId,
             id_institucion: req.body.id_institucion,
             util: req.body.util,
-            descripcion: req.body.descripcion,
             estado: 'Activo'
+            
 
 
 

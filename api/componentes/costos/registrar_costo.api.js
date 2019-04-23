@@ -91,6 +91,18 @@ module.exports.actualizar = function (req, res) {
         }
     );
 }
+module.exports.eliminar = function (req, res) {
+    modelo_costo.findByIdAndDelete(req.body.id,
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: 'No se pudieron eliminar los costos por nivel.' });
+            } else {
+                res.json({ success: true, msg: 'Se eliminaron correctamente los costos por nivel.' });
+            }
+        }
+
+    )
+}
 
 
 

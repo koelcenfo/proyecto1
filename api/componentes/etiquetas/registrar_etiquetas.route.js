@@ -32,6 +32,12 @@ router.route('/actualizar_etiqueta')
             api_etiquetas.actualizar(req, res);
         }
     )
+router.route('/eliminar_etiqueta')
+    .post(
+        function (req, res) {
+            api_etiquetas.eliminar(req, res);
+        }
+    )
 
 
 module.exports = router;

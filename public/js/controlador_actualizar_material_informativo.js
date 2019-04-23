@@ -18,7 +18,7 @@ let get_param = (param) => {
 }
 let id = get_param('id_material');
 let material = buscar_material(id);
-if (material) {
+let mostrar_datos = () => {
     textarea_reglamento.value = material[0]['reglamento'];
     textarea_proceso_matricula.value = material[0]['proceso_matricula'];
     textarea_sistema_evaluacion.value = material[0]['sistema_evaluacion'];
@@ -28,7 +28,43 @@ if (material) {
     textarea_talleres_adicionales.value = material[0]['talleres_adicionales'];
     textarea_deportes.value = material[0]['deportes'];
     textarea_informacion_adicional.value = material[0]['informacion_adicional'];
+
 }
+if (material) {
+    mostrar_datos();
+}
+
+let obtener_informacion = () => {
+
+    let reglamento = textarea_reglamento.value;
+    let proceso_matricula = textarea_proceso_matricula.value;
+    let sistema_evaluacion = textarea_sistema_evaluacion.value;
+    let recomendaciones = textarea_recomendaciones.value;
+    let areas_informativas = textarea_areas_informativas.value;
+    let seccion_ayuda = textarea_seccion_ayuda.value;
+    let talleres_adicionales = textarea_talleres_adicionales.value;
+    let deportes = textarea_deportes.value;
+    let informacion_adicional = textarea_informacion_adicional.value;
+    Swal.fire({
+        title: '¿Está seguro que desea actualizar la informacion del material informativo?',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí'
+    }).then((result) => {
+        if (result.value) {
+
+            actualizar_material(id, reglamento, proceso_matricula, sistema_evaluacion
+                , recomendaciones, areas_informativas, seccion_ayuda, talleres_adicionales, deportes, informacion_adicional
+            )
+        }
+    })
+
+
+
+};
+
 let validar = () => {
     let error = false;
     if (textarea_reglamento.value == '') {
@@ -89,8 +125,8 @@ let validar = () => {
 
     return error;
 }
-
-let obtener_informacion = () => {
+boton_actualizar.addEventListener('click', obtener_informacion);
+$(boton_actualizar).on('click', function () {
     if (validar() == false) {
         let reglamento = textarea_reglamento.value;
         let proceso_matricula = textarea_proceso_matricula.value;
@@ -101,22 +137,15 @@ let obtener_informacion = () => {
         let talleres_adicionales = textarea_talleres_adicionales.value;
         let deportes = textarea_deportes.value;
         let informacion_adicional = textarea_informacion_adicional.value;
-        actualizar_material(id, reglamento, proceso_matricula, sistema_evaluacion
-            , recomendaciones, areas_informativas, seccion_ayuda, talleres_adicionales, deportes, informacion_adicional
-        )
+        registrar_material_informativo(reglamento, proceso_matricula, sistema_evaluacion, recomendaciones,
+            areas_informativas, seccion_ayuda, talleres_adicionales, deportes, informacion_adicional, id_institucion);
     } else {
-        swal.fire(
-            {
-                type: 'error',
-                title: '¡Revise los campos nuevamente!',
-                text: 'No se ha podido actualizar la informacion del material informativo del centro educativo'
-            }
-        );
-
+        swal.fire({
+            type: 'warning',
+            title: 'La informacion del material informativo no pudo ser actualizada.',
+            text: 'Por favor verifique que los campos que están resaltados estén llenos.'
+        });
     }
-
-
-};
-boton_actualizar.addEventListener('click', obtener_informacion);
+})
 
 

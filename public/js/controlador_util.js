@@ -4,7 +4,7 @@ const input_descripcion = document.querySelector('#txt_descripcion');
 const id_usuario = sessionStorage.getItem('id_usuario');
 const boton_atras = document.querySelector('#btn_atras');
 const boton_enviar = document.querySelector('#btn_enviar');
-const boton_agregar = document.querySelector('#btn_agregar');
+
 
 
 let validar = () => {
@@ -15,12 +15,6 @@ let validar = () => {
   } else {
     input_util.classList.remove('error_input');
   }
-  if (input_descripcion.value == '') {
-    error = true;
-    input_descripcion.classList.add('error_input');
-  } else {
-    input_descripcion.classList.remove('error_input');
-  }
 
   return error;
 
@@ -29,11 +23,11 @@ let validar = () => {
 let obtener_datos = () => {
   if (validar() == false) {
     let util = input_util.value;
-    let descripcion = input_descripcion.value;
     let id_institucion = id_usuario;
+    
 
 
-    registrar_util(util, descripcion, id_institucion);
+    registrar_util(util, id_institucion);
 
   } else {
     swal.fire(

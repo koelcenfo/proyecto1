@@ -4,6 +4,11 @@ const tabla_informacion = document.querySelector('#tbl_material_informativo tbod
 let mostrar_informacion = () => {
     let informacion = listar_material_informativo();
     let id_institucion = sessionStorage.getItem('id_usuario');
+    if (tipo_usuario == 'Institucion') {
+        id_institucion = sessionStorage.getItem('id_usuario')
+    } else {
+        id_institucion = getUrl();
+    }
 
     for (let i = 0; i < informacion.length; i++) {
         if (informacion[i]['id_institucion'] == id_institucion) {
@@ -24,8 +29,13 @@ let mostrar_informacion = () => {
             let boton_editar = document.createElement('a');
             boton_editar.textContent = 'Editar';
             boton_editar.href = `actualizar_material_informativo.html?id_material=${informacion[i]['_id']}`
+            boton_editar.classList.add('boton_editar');
             celda_configuracion.appendChild(boton_editar);
-
+            let boton_eliminar = document.createElement('a');
+            boton_eliminar.textContent = 'Eliminar';
+            boton_eliminar.classList.add('boton_eliminar');
+            boton_eliminar.href = `eliminar_material_informativo.html?id_material=${informacion[i]['_id']}`
+            celda_configuracion.appendChild(boton_eliminar);
         }
     };
 };

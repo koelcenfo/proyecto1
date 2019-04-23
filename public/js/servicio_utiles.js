@@ -1,14 +1,14 @@
 'use strict';
 
-let registrar_util = (putil, pdescripcion, pid_intitucion) => {
+let registrar_util = (putil, pid_intitucion) => {
 
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_util",
     method: "POST",
     data: {
       util: putil,
-      descripcion: pdescripcion,
       id_institucion: pid_intitucion
+      
 
     },
     dataType: "json",

@@ -41,6 +41,7 @@ html{
     
     outline-color: #1abc9c;
     text-align: center; 
+    cursor: not-allowed;
 }
 #txt_descripcion{
     font-size: 25px;
@@ -55,6 +56,7 @@ html{
     
     outline-color: #1abc9c;
     resize: none;
+    cursor: not-allowed; 
 }
 #btn_atras, #btn_registrar,#btn_actualizar{
     display: inline-block;

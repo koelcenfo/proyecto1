@@ -34,5 +34,12 @@ router.route('/actualizar_material')
             api_informacion.actualizar(req, res);
         }
     );
+router.route('/eliminar_material')
+    .post(
+        function (req, res) {
+            api_informacion.eliminar(req, res);
+        }
+    );
+    
 
 module.exports = router;

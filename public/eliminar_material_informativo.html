@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/eliminar_material_informativo.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/barra_navegacion.css">
-    <link rel="stylesheet" href="css/registrar_material_informativo.css">
-    <title>Actualizar material informativo</title>
- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>Eliminar material informativo</title>
+
 
 </head>
 
 <body>
-
     <header>
         <nav class="barra_navegacion" style="position:fixed">
             <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
@@ -56,38 +54,38 @@
             <hr>
 
             <label for="txt_reglamento">Reglamento de la institución</label>
-            <textarea class="class_textarea" id="txt_reglamento"></textarea>
+            <textarea class="class_textarea" id="txt_reglamento" disabled="disabled"></textarea>
 
 
             <label for="txt_proceso_matricula">Proceso de matrícula</label>
-            <textarea class="class_textarea" id="txt_proceso_matricula"></textarea>
+            <textarea class="class_textarea" id="txt_proceso_matricula" disabled="disabled"></textarea>
 
 
             <label for="txt_sistema_evaluacion">Sistema de evaluación</label>
-            <textarea class="class_textarea" id="txt_sistema_evaluacion"></textarea>
+            <textarea class="class_textarea" id="txt_sistema_evaluacion" disabled="disabled"></textarea>
 
             <label for="txt_recomendaciones">Recomendaciones</label>
-            <textarea class="class_textarea" id="txt_recomendaciones"></textarea>
+            <textarea class="class_textarea" id="txt_recomendaciones" disabled="disabled"></textarea>
 
             <label for="txt_areas_informativas">Áreas informativas</label>
-            <textarea class="class_textarea" id="txt_areas_informativas"></textarea>
+            <textarea class="class_textarea" id="txt_areas_informativas" disabled="disabled"></textarea>
 
             <label for="txt_seccion_ayuda">Sección de ayuda</label>
-            <textarea class="class_textarea" id="txt_seccion_ayuda"></textarea>
+            <textarea class="class_textarea" id="txt_seccion_ayuda" disabled="disabled"></textarea>
 
             <label for="txt_talleres_adicionales">talleres adicionales</label>
-            <textarea class="class_textarea" id="txt_talleres_adicionales"></textarea>
+            <textarea class="class_textarea" id="txt_talleres_adicionales" disabled="disabled"></textarea>
 
             <label for="txt_deportes">Deportes</label>
-            <textarea class="class_textarea" id="txt_deportes"></textarea>
+            <textarea class="class_textarea" id="txt_deportes" disabled="disabled"></textarea>
 
             <hr>
 
             <label for="txt_informacion_adicional">¿Desea agregar más información?</label>
-            <textarea class="class_textarea" id="txt_informacion_adicional"></textarea>
+            <textarea class="class_textarea" id="txt_informacion_adicional" disabled="disabled"></textarea>
 
             <div class="contenedor_botones">
-                <button class="btn_actualizar" type="button" id=btn_actualizar>Actualizar</button>
+                <button class="btn_registrar" type="button" id="btn_registrar">Eliminar</button>
                 <button class="btn_atras" type="button" id="btn_atras"
                     onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
             </div>
@@ -95,16 +93,15 @@
     </div>
     </form>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/servicio_material_informativo.js"></script>
-    <script src="js/servicio_inicio.js"></script>
-    <script src="js/controlador_actualizar_material_informativo.js"></script>
-    <script src="js/controlador_barra_navegacion.js"></script>
-    <script src="js/controlador_imagen_sesion.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_material_informativo.js"></script>
+<script src="js/servicio_inicio.js"></script>
+<script src="js/controlador_eliminar_material_informativo.js"></script>
+<script src="js/controlador_barra_navegacion.js"></script>
+<script src="js/controlador_imagen_sesion.js"></script>
 </body>
 
 </html>
