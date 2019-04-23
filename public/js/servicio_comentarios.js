@@ -19,11 +19,13 @@ let registrar_comentarios = (pid_institucion, pnombre, pimagen, pcomentario, pst
           {
             type: 'success',
             title: 'Nuevo comentario registrado',
-            text: 'Se envió el comentario correctamente.'
+            text: 'Se envió el comentario correctamente.',
+            showConfirmButton: false,
+            timer: 3000
           }
         );
       });
-    
+      setTimeout(document.location.reload(),3500);
       request.fail(function (jqXHR, textStatus) {
     
       });
@@ -46,7 +48,7 @@ let listar_comentarios=()=>{
         });
     
         request.done(function(res){
-            listar_comentarios=res.idiomas;
+            listar_comentarios=res.comentarios;
         });
     
         request.fail(function(jqXHR, textStatus){

@@ -1,4 +1,5 @@
 'use strict'
+
 const id_padre = sessionStorage.getItem('id_usuario');
 /*const tipo_usuario = sessionStorage.getItem('tipo_usuario');*/
 const perfil_padre = document.querySelector('#perfil_padre');
@@ -23,7 +24,7 @@ if (tipo_usuario == 'Padre') {
 
 
             let nombre = document.createElement('h1');
-            nombre.classList.add('info')
+            nombre.classList.add('info_nombre')
             nombre.innerHTML = padre[i]['padre_nombre'];
             /**Label */
             let label_nombre = document.createElement('h1');
@@ -31,12 +32,26 @@ if (tipo_usuario == 'Padre') {
             label_nombre.classList.add('label')
 
             let apellido = document.createElement('h1');
-            apellido.classList.add('info');
+            apellido.classList.add('info_apellido');
             apellido.innerHTML = padre[i]['padre_apellido'];
             /**Label */
-            let label_apellido = document.createElement('h1');
-            label_apellido.innerHTML = "Apellido";
-            label_apellido.classList.add('label');
+            // let label_apellido = document.createElement('h1');
+            // label_apellido.innerHTML = "Apellido";
+            // label_apellido.classList.add('label');
+
+          
+            let label_contacto = document.createElement('h1');
+            label_contacto.innerHTML = "Mis contactos:";
+            label_contacto.classList.add('label_contacto_ubicacion');
+
+            let label_informacion = document.createElement('h1');
+            label_informacion.innerHTML = "Sobre mí:";
+            label_informacion.classList.add('label_informacion');
+
+            let label_ubicacion = document.createElement('h1');
+            label_ubicacion.innerHTML = "Mí ubicación:";
+            label_ubicacion.classList.add('label_contacto_ubicacion');
+
 
             let correo = document.createElement('h2');
             correo.classList.add('info');
@@ -67,7 +82,7 @@ if (tipo_usuario == 'Padre') {
             direccion.innerHTML = padre[i]['padre_direccion'];
             /**Label */
             let label_direccion = document.createElement('h1');
-            label_direccion.innerHTML = "Dirección de su residencia";
+            label_direccion.innerHTML = "Dirección de residencia";
             label_direccion.classList.add('label');
 
             let telefono = document.createElement('h2');
@@ -94,24 +109,30 @@ if (tipo_usuario == 'Padre') {
             label_cedula.innerHTML = "Cédula";
             label_cedula.classList.add('label');
             contenedor_perfil.appendChild(imagen);
-            contenedor_perfil.appendChild(label_nombre);
+            // contenedor_perfil.appendChild(label_nombre);
             contenedor_perfil.appendChild(nombre);
-            contenedor_perfil.appendChild(label_apellido);
+            // contenedor_perfil.appendChild(label_apellido);
             contenedor_perfil.appendChild(apellido);
+
+            contenedor_perfil.appendChild(label_contacto);
             contenedor_perfil.appendChild(label_correo);
             contenedor_perfil.appendChild(correo);
-            contenedor_perfil.appendChild(label_cedula);
-            contenedor_perfil.appendChild(cedula);
+            contenedor_perfil.appendChild(label_telefono);
+            contenedor_perfil.appendChild(telefono); 
+
+            contenedor_perfil.appendChild(label_ubicacion);
+            contenedor_perfil.appendChild(label_direccion);
+            contenedor_perfil.appendChild(direccion);
+            
+            contenedor_perfil.appendChild(label_informacion);
             contenedor_perfil.appendChild(label_hijos);
             contenedor_perfil.appendChild(hijos);
             contenedor_perfil.appendChild(label_fecha);
             contenedor_perfil.appendChild(fecha);
-            contenedor_perfil.appendChild(label_direccion);
-            contenedor_perfil.appendChild(direccion);
             contenedor_perfil.appendChild(label_nacionalidad);
             contenedor_perfil.appendChild(nacionalidad);
-            contenedor_perfil.appendChild(label_telefono);
-            contenedor_perfil.appendChild(telefono);    
+            contenedor_perfil.appendChild(label_cedula);
+            contenedor_perfil.appendChild(cedula);
             perfil_padre.appendChild(contenedor_perfil);
 
         }else{

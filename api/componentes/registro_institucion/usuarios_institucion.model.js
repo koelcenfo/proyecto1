@@ -32,7 +32,8 @@ let schema_usuarios = new mongoose.Schema( //Definicion del esquema de la base d
         institucion_contrasena : {type : String, required:true},
         institucion_fax : {type : String, required:true, unique:true},
         institucion_imagen : {type : String, required:true},
-        tipo_usuario : {type : String, required: false}
+        tipo_usuario : {type : String, required: false},
+        estado: {type: String, required: true}
     }
 );
 

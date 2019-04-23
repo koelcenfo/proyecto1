@@ -23,7 +23,7 @@ let listar_utiles_mep=()=>{
     return listar_utiles_mep;
 };
 
-let registrar_lista_utiles_mep=(pnombre_util,pcantidad,pdescripcion,pid_institucion)=>{
+let registrar_lista_utiles_mep=(pnombre_util,pcantidad,pdescripcion)=>{
     let request=$.ajax({
         url: "http://localhost:4000/api/registrar_lista_utiles_mep",
         method: "POST",
@@ -31,7 +31,7 @@ let registrar_lista_utiles_mep=(pnombre_util,pcantidad,pdescripcion,pid_instituc
             nombre_util: pnombre_util,
             cantidad: pcantidad,
             descripcion: pdescripcion,
-            id_institucion: pid_institucion
+            // id_institucion: pid_institucion
         },
         contentType:'application/x-www-form-urlencoded; charset=UTF-8',
         dataType: "json"

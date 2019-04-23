@@ -4,8 +4,8 @@ const modelo_lista_utiles_mep=require('./lista_utiles_mep.model');
 module.exports.registrar=(req,res)=>{
     let nueva_lista_utiles_mep=new modelo_lista_utiles_mep(
         {
-            id_utiles: req.body.ObjectId,
-            id_institucion: req.body.id_institucion,
+            // id_utiles: req.body.ObjectId,
+            // id_institucion: req.body.id_institucion,
             nombre_util: req.body.nombre_util,
             cantidad: req.body.cantidad,
             descripcion: req.body.descripcion,

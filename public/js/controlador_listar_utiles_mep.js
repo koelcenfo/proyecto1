@@ -3,10 +3,18 @@ const tabla_utiles=document.querySelector('#tbl_utiles tbody');
 
 let mostrar_utiles=()=>{
     let utiles=listar_utiles_mep();
-    let id_institucion=sessionStorage.getItem('id_usuario');
+    // let id_institucion=sessionStorage.getItem('id_usuario');
+    // let id_institucion;
+    // let tipo_usuario=sessionStorage.getItem('tipo_usuario');
+
+    // if (tipo_usuario=='Institucion') {
+    //     id_institucion=sessionStorage.getItem('id_usuario');
+    // }else{
+    //     id_institucion=getUrl();
+    // }
     
     for(let i=0; i<utiles.length; i++){
-        if (utiles[i]['id_institucion']==id_institucion) {
+        // if (utiles[i]['id_institucion']==id_institucion) {
             
             let fila=tabla_utiles.insertRow();
             // let nuevo_input=document.createElement('input');
@@ -38,7 +46,7 @@ let mostrar_utiles=()=>{
             
         }
     };
-};
+
 
 function filtrar() {
     var tabla = document.getElementById('tbl_utiles');

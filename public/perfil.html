@@ -8,18 +8,17 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/perfil.css">
     <link rel="stylesheet" href="css/barra_lateral.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- css de los estilos del listar de las tablas -->
     <link rel="stylesheet" href="css/listarutil.css">
     <link rel="stylesheet" href="css/listar_actividades.css">
-    <!-- <link rel="stylesheet" href="css/listar_actividades.css"> -->
     <link rel="stylesheet" href="css/listar_preguntas.css">
     <link rel="stylesheet" href="css/listar_becas.css">
     <link rel="stylesheet" href="css/listar_matricula.css">
@@ -29,6 +28,8 @@
     <link rel="stylesheet" href="css/listar_idiomas.css">
     <link rel="stylesheet" href="css/listar_nivel.css">
     <link rel="stylesheet" href="css/comentarios_perfil.css">
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/starrr.css">
     
     <title>Perfil</title>
@@ -92,11 +93,13 @@
 
             <div id="top_top_info">
                 <h1 id="nombre_institucion"></h1>
-                <li id="direccion_institucion"></li>
-                <li id="fundacion"></li>
+                <a class="modificar_perfil">Editar</a>
+
 
             </div>
             <div id="top_bottom_info">
+                <li id="direccion_institucion"></li>
+                <li id="fundacion"></li>
                 <li id="nombre_inscrito"></li>
                 <li id="generos"></li>
                 <li id="tipo"></li>
@@ -326,13 +329,24 @@
                 </div>
             </div>
             <div id="tab-11" class="tab-content">
-                <div id="form_contenedor">
-               
+                <div id="form_contenedor_comentarios">
+                    <div id="listar_comentarios">
+                    </div>
+                
                     <div id="div_registro_comentarios">
+                            <img class="padre_img" src="img/inicio_sesion/centro_educativo.png">
+                    <div class="rate">
+                            <label for=".starrr">Calificación</label>
                             <div class='starrr'></div>
-                        <!-- <label for="">Escribe tu comentario</label>
-                        <textarea id="textarea_comentario"></textarea>
-                        <button id="enviar_comentario">Enviar</button> -->
+                    </div>
+
+
+                        <div class="comment ">
+                                <label id="label_nombre">Escribe tu comentario</label>
+                                <textarea id="textarea_comentario" maxlength="128"></textarea>
+                        </div>
+
+                        <button id="enviar_comentario">Enviar</button>
                     </div>
                 </div>
             </div>
@@ -343,8 +357,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="js/starrr.js"></script>
-
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="js/starrr.js"></script>
+<!-- <script src="js/bootstrap.min.js"></script>
+<script src="js/starrr.js"></script> -->
 <script src="js/servicio_inicio.js"></script>
 <script src="js/servicio_utiles.js"></script>
 <script src="js/servicio_actividades.js"></script>
@@ -356,11 +373,13 @@
 <script src="js/servicio_registrar_etiqueta.js"></script>
 <script src="js/servicio_idioma.js"></script>
 <script src="js/servicio_nivel.js"></script>
+<script src="js/servicio_comentarios.js"></script>
 <!-- <script src="js/servicio_utiles.js"></script>
 <script src="js/controlador_url.js"></script> -->
+<script src="js/controlador_perfil.js"></script>
+<script src="js/controlador_listar_comentarios.js"></script>
 <script src="js/controlador_registrar_comentario.js"></script>
 <script src="js/controlador_barra_navegacion.js"></script>
-<script src="js/controlador_perfil.js"></script>
 <script src="js/controlador_listar_util.js"></script>
 <script src="js/controlador_listar_actividades.js"></script>
 <script src="js/controlador_listar_preguntas.js"></script>

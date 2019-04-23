@@ -4,7 +4,7 @@ const input_nombre_util=document.querySelector('#txt_nombre_util');
 const input_cantidad=document.querySelector('#nmb_util');
 const input_descripcion=document.querySelector('#txt_descripcion');
 const boton_aceptar=document.querySelector('#btn_aceptar');
-const id_usuario=sessionStorage.getItem('id_usuario');
+// const id_usuario=sessionStorage.getItem('id_usuario');
 
 let validacion=()=>{
     let error=false;
@@ -35,12 +35,12 @@ let validacion=()=>{
 
 let obtener_datos=()=>{
     if (validacion()==false) {
-        let id_institucion=id_usuario;
+        // let id_institucion=id_usuario;
         let util= input_nombre_util.value;
         let cantidad= input_cantidad.value;
         let descripcion=input_descripcion.value;
 
-        registrar_lista_utiles_mep(util,cantidad,descripcion,id_institucion);
+        registrar_lista_utiles_mep(util,cantidad,descripcion);
         
     } else {
         swal.fire({

@@ -36,66 +36,23 @@ const tab_5 = document.querySelector('#li_tab-5');
 
 
 
-$(document).ready(function(){
-	
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
+$(document).ready(function () {
 
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
+    $('ul.tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
 
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	})
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+    })
 
 })
 
 
 let idiomas = $("input[name='idiomas[]']")
-              .map(function(){return $(this).val();}).get();
-
-// $(document).ready(function() {
-// 	//variables
-// 	let pass1 = $('[name=pass1]');
-// 	let pass2 = $('[name=pass2]');
-// 	let confirmacion = "Las contraseñas si coinciden";
-//     let longitud = "La contraseña debe estar formada entre 8-16";
-// 	let negacion = "No coinciden las contraseñas";
-//     let vacio = "La contraseña no puede estar vacía";
-
- 
-	// //oculto por defecto el elemento span
-	// let span = $('<span></span>').insertAfter(pass2);
-	// span.hide();
-	// //función que comprueba las dos contraseñas
-	// function coincidePassword(){
-	// let valor1 = pass1.val();
-	// let valor2 = pass2.val();
-	// //muestro el span
-	// span.show().removeClass();
-	// //condiciones dentro de la función
-	// if(valor1 != valor2){
-	// span.text(negacion).addClass('negacion');	
-	// }
-	// if(valor1.length==0 || valor1==""){
-	// span.text(vacio).addClass('negacion');	
-    // }
-	// if(valor1.length<8 || valor1.length>16){
-	// span.text(longitud).addClass('negacion');
-    // }
-    // if(valor1.length<8 || valor1.length>16){
-    //     span.text(longitud).addClass('negacion');
-    //     }
-	// if(valor1.length!=0 && valor1==valor2){
-	// span.text(confirmacion).removeClass("negacion").addClass('confirmacion');
-	// }
-	// // }
-// 	// //ejecuto la función al soltar la tecla
-// 	// pass2.keyup(function(){
-// 	// coincidePassword();
-// 	// });
-// });
-
+    .map(function () { return $(this).val(); }).get();
 
 
 let validar = () => {
@@ -289,34 +246,43 @@ let validar = () => {
 let obtener_datos = () => {
 
     if (validar() == false) {
-        let institucion_nombre_encargado = input_institucion_nombre_encargado.value;
-        let institucion_apellido_encargado = input_institucion_apellido_encargado.value;
-        let institucion_departamento_encargado = input_institucion_departamento_encargado.value;
-        let institucion_telefono = input_institucion_telefono.value;
-        let institucion_correo_electronico = input_institucion_correo_electronico.value;
-        let institucion_nombre_inscrito = input_institucion_nombre_inscrito.value;
         let institucion_nombre = input_institucion_nombre.value;
-        let institucion_bachillerato_internacional = document.querySelector('#rbt_institucion_bachillerato_internacional input[type=radio]:checked').value;
-        let institucion_tipo = select_institucion_tipo.value;
-        // let institucion_idiomas = idiomas;
-        let institucion_generos = select_institucion_generos.value;
-        let institucion_ideologia = input_institucion_ideologia.value;
-        let institucion_fundacion = input_institucion_fundacion.value;
-        let institucion_referencia = input_institucion_referencia.value;
+        let institucion_nombre_inscrito = input_institucion_nombre_inscrito.value;
         let institucion_cedula = input_institucion_cedula.value;
+        let institucion_telefono = input_institucion_telefono.value;
+        let institucion_tipo = select_institucion_tipo.value;
+        let institucion_generos = select_institucion_generos.value;
         let institucion_provincia = select_institucion_provincia.value;
         let institucion_canton = select_institucion_canton.value;
         let institucion_distrito = select_institucion_distrito.value;
         let institucion_direccion = input_institucion_direccion.value;
+        let institucion_fundacion = input_institucion_fundacion.value;
+        let institucion_referencia = input_institucion_referencia.value;
+        let institucion_ideologia = input_institucion_ideologia.value;
+        let institucion_bachillerato_internacional = document.querySelector('#rbt_institucion_bachillerato_internacional input[type=radio]:checked').value;
+        let institucion_correo_electronico = input_institucion_correo_electronico.value;
         let institucion_sitio_web = input_institucion_sitio_web.value;
         let institucion_facebook = input_institucion_facebook.value;
         let institucion_twitter = input_institucion_twitter.value;
-        let institucion_correo_electronico_encargado = input_institucion_correo_electronico_encargado.value;
+        let institucion_nombre_encargado = input_institucion_nombre_encargado.value;
+        let institucion_apellido_encargado = input_institucion_apellido_encargado.value;
         let institucion_cedula_encargado = input_institucion_cedula_encargado.value;
+        let institucion_departamento_encargado = input_institucion_departamento_encargado.value;
+        let institucion_correo_electronico_encargado = input_institucion_correo_electronico_encargado.value;
         let institucion_fax = input_institucion_fax.value;
         let institucion_imagen = imagen_institucion.src;
 
-        registrar_usuario(institucion_nombre_encargado, institucion_apellido_encargado ,institucion_departamento_encargado, institucion_telefono, institucion_correo_electronico, institucion_nombre_inscrito, institucion_nombre, institucion_bachillerato_internacional, institucion_tipo,/*institucion_idiomas,*/ institucion_generos, institucion_ideologia, institucion_fundacion, institucion_referencia, institucion_cedula, institucion_provincia, institucion_canton, institucion_distrito, institucion_direccion, institucion_sitio_web, institucion_fax,institucion_imagen, institucion_facebook, institucion_twitter, institucion_correo_electronico_encargado, institucion_cedula_encargado);
+
+
+
+
+
+
+        // let institucion_idiomas = idiomas;
+
+
+
+        registrar_usuario(institucion_nombre, institucion_nombre_inscrito, institucion_cedula, institucion_telefono, institucion_tipo, institucion_generos, institucion_provincia, institucion_canton, institucion_distrito, institucion_direccion, institucion_fundacion, institucion_referencia, institucion_ideologia, institucion_bachillerato_internacional, institucion_correo_electronico, institucion_sitio_web, institucion_facebook, institucion_twitter, institucion_nombre_encargado, institucion_apellido_encargado, institucion_cedula_encargado, institucion_departamento_encargado, institucion_correo_electronico_encargado, institucion_fax, institucion_imagen);
 
     } else {
         swal.fire({
