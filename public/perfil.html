@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- css de los estilos del listar de las tablas -->
-    <link rel="stylesheet" href="css/listarutil.css">
+    <!-- <link rel="stylesheet" href="css/listarutil.css">
     <link rel="stylesheet" href="css/listar_actividades.css">
     <link rel="stylesheet" href="css/listar_preguntas.css">
     <link rel="stylesheet" href="css/listar_becas.css">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/listar_material_informativo.css">
     <link rel="stylesheet" href="css/listar_etiquetas.css">
     <link rel="stylesheet" href="css/listar_idiomas.css">
-    <link rel="stylesheet" href="css/listar_nivel.css">
+    <link rel="stylesheet" href="css/listar_nivel.css"> -->
     <link rel="stylesheet" href="css/comentarios_perfil.css">
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -111,26 +111,26 @@
         <div id="bottom_info">
             <div class="container">
                 <ul class="tabs">
-                    <li class="tab-link current" data-tab="tab-1"><i class="fas fa-pencil-ruler"></i> Útiles</li>
-                    <li class="tab-link" data-tab="tab-2"><i class="far fa-futbol"></i> Actividades</li>
-                    <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i> Preguntas frecuentes</li>
-                    <li class="tab-link" data-tab="tab-4"><i class="fas fa-hands-helping"></i> Becas</li>
-                    <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i> Costos</li>
-                    <li class="tab-link" data-tab="tab-6"><i class="far fa-newspaper"></i> Noticias</li>
-                    <li class="tab-link" data-tab="tab-7"><i class="fas fa-info"></i> Material Informativo</li>
-                    <li class="tab-link" data-tab="tab-8"><i class="fas fa-tags"></i> Etiquetas</li>
-                    <li class="tab-link" data-tab="tab-9"><i class="fas fa-globe-americas"></i> Idiomas</li>
-                    <li class="tab-link" data-tab="tab-10"><i class="fas fa-child"></i> Niveles</li>
-                    <li class="tab-link" data-tab="tab-11"><i class="far fa-comments"></i> Comentarios</li>
+                    <li class="tab-link current" data-tab="tab-1"><i class="fas fa-pencil-ruler" title="Útiles"></i></li>
+                    <li class="tab-link" data-tab="tab-2"><i class="far fa-futbol"></i> </li>
+                    <li class="tab-link" data-tab="tab-3"><i class="far fa-comment-dots"></i></li>
+                    <li class="tab-link" data-tab="tab-4"><i class="fas fa-hands-helping"></i></li>
+                    <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i></li>
+                    <li class="tab-link" data-tab="tab-6"><i class="far fa-newspaper"></i></li>
+                    <li class="tab-link" data-tab="tab-7"><i class="fas fa-info"></i></li>
+                    <li class="tab-link" data-tab="tab-8"><i class="fas fa-tags"></i></li>
+                    <li class="tab-link" data-tab="tab-9"><i class="fas fa-globe-americas"></i></li>
+                    <li class="tab-link" data-tab="tab-10"><i class="fas fa-child"></i></li>
+                    <li class="tab-link" data-tab="tab-11"><i class="far fa-comments"></i></li>
                 </ul>
             </div>
 
             <div id="tab-1" class="tab-content current">
                 <div id="form_contenedor">
 
-                    <label for="txt_filtro">Filtrar</label>
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
 
-                    <input type="text" id="txt_filtro_util" onkeyup="filtrar_util();">
+                    <input type="text" id="txt_filtro_util" onkeyup="filtrar_util();" placeholder="Buscar">
 
                     <table id="tbl_utiles">
 
@@ -150,8 +150,9 @@
             </div>
             <div id="tab-2" class="tab-content">
                 <div id="form_contenedor">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_actividad" onkeyup="filtrar_actividad();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_actividad" onkeyup="filtrar_actividad();" placeholder="Buscar" >
                     <table id="tbl_actividades">
                         <thead>
                             <tr>
@@ -171,8 +172,9 @@
             </div>
             <div id="tab-3" class="tab-content">
                 <div id="form_contenedor">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_pregunta" onkeyup="filtrar_pregunta();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_pregunta" onkeyup="filtrar_pregunta();" placeholder="Buscar" >
                     <div id="contenedor_pregunta">
                         <table id="tabla_pregunta">
                             <thead>
@@ -188,8 +190,9 @@
             </div>
             <div id="tab-4" class="tab-content">
                 <div id="form_contenedor">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_beca" onkeyup="filtrar_beca();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_beca" onkeyup="filtrar_beca();" placeholder="Buscar" >
                     <table id="tbl_becas">
                         <thead>
                             <tr>
@@ -206,8 +209,9 @@
             </div>
             <div id="tab-5" class="tab-content">
                 <div id="contenedor_formulario">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_costo" onkeyup="filtrar_costo();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_costo" onkeyup="filtrar_costo();" placeholder="Buscar" >
 
 
                     <table id="tbl_costos">
@@ -225,8 +229,9 @@
 
             <div id="tab-6" class="tab-content">
                 <div id="form_contenedor">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_noticia" onkeyup="filtrar_noticia();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_noticia" onkeyup="filtrar_noticia();" placeholder="Buscar" >
                     <table id="tbl_noticias">
                         <thead>
                             <tr>
@@ -246,8 +251,9 @@
             </div>
             <div id="tab-7" class="tab-content">
                 <div id="form_contenedor">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_material" onkeyup="filtrar_material();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_material" onkeyup="filtrar_material();" placeholder="Buscar" >
                     <table id="tbl_material_informativo">
                         <thead>
                             <tr>
@@ -272,8 +278,9 @@
             </div>
             <div id="tab-8" class="tab-content">
                 <div id="form_contenedor">
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_etiqueta" onkeyup="filtrar_etiqueta();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_etiqueta" onkeyup="filtrar_etiqueta();" placeholder="Buscar" >
                     <table id="tbl_etiquetas">
                         <thead>
                             <th>Etiqueta</th>
@@ -292,8 +299,9 @@
                         posee un nombre, la fecha y la hora en que se realizan, el lugar donde se realizaran, una descripción en
                         la cual se detalla en que consiste dicha actividad.</p> -->
                     <!-- <hr> -->
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_idioma" onkeyup="filtrar_idioma();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_idioma" onkeyup="filtrar_idioma();"  placeholder="Buscar" >
                     <table id="tbl_idiomas">
                         <thead>
                             <tr>
@@ -313,8 +321,9 @@
                         posee un nombre, la fecha y la hora en que se realizan, el lugar donde se realizaran, una descripción en
                         la cual se detalla en que consiste dicha actividad.</p> -->
                     <!-- <hr> -->
-                    <label for="txt_filtro">Filtrar</label>
-                    <input type="text" id="txt_filtro_nivel" onkeyup="filtrar_nivel();">
+                    <label for="txt_filtro"><i class="fas fa-search"></i></label>
+
+                    <input type="text" id="txt_filtro_nivel" onkeyup="filtrar_nivel();"  placeholder="Buscar" >
                     <table id="tbl_niveles">
                         <thead>
                             <tr>

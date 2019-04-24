@@ -121,23 +121,31 @@
 .container{
     margin-top: 20px;
     width: 100%;
-    height: 165px;
+    height: 30px;
     margin-bottom: 120px;
 }
-
-
-
+#form_contenedor label{
+    font-size: 20px;
+   
+}
+#form_contenedor input{
+    font-size: 20px;
+    padding-left: 5px;
+}
+#form_contenedor label, input{
+    margin-top: 33px;
+}
 ul.tabs{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-size: 25px;
+    font-size: 35px;
 }
 ul.tabs li{
     background: none;
     color:#3498db;
     display: inline-block;
-    padding: 30px 50px;
+    padding: 35px 35px;
     cursor: pointer;
 }
 ul.tabs li:hover{
@@ -192,6 +200,43 @@ ul.tabs li.current{
     text-decoration: none;
 }
 
+table {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #f1f2f6;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #2f3542;
+    border-style: ridge;
+    
+  }
+  table thead th{
+      background-color: #2f3542;
+    }
+   
+  
+table td, table th {
+    border-width: 1px;
+    
+        background-color: #fff;
+    padding: 15px;
+  }
+table th{
+      font-size: 20px;
+    color: #f1f2f6;
+  }
+table td{
+      word-break: normal;
+    text-align: center;
+    font-size: 15px;
+    border-style: solid;
+}
+table img{
+    width: 125px;
+    height: 125px;
+    border: solid 2px;
+}
 /**
 
 

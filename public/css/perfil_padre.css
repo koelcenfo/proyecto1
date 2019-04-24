@@ -5,16 +5,9 @@
 
 #perfil_padre{
     display: block;
-    border-block-end-style: dotted;
-     margin-top: 80px;
-    
-     margin-bottom: 5%;
-     margin-left: 500px;
-     width: 45%;
-      height: 70%;
-     /* min-height: 500px; */
+    width: 80%;
+    margin: auto;
      background-color: #fff;
-     border: dotted 8px #3b3a36;
 }
 
 

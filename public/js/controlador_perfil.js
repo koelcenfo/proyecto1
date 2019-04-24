@@ -105,6 +105,31 @@
             
         };
         
+        case 'Admin':
+        
+        for (let i = 0; i < info.length; i++) {
+            let id_perfil = getUrl();
+            if (info[i]['institucion_id'] == id_perfil) {
+                Imagen.src = info[i]['institucion_imagen'];
+                Nombre.innerHTML = info[i]['institucion_nombre'];
+                Provincia.innerHTML = 'Provincia: ' + info[i]['institucion_provincia'];
+                Canton.innerHTML = 'Cantón: ' + info[i]['institucion_canton'];
+                Distrito.innerHTML = 'Distrito: ' + info[i]['institucion_distrito'];
+                Direccion.innerHTML = 'Dirección exacta: ' + info[i]['institucion_direccion'];
+                Nombre_inscrito.innerHTML = 'Nombre inscrito: ' + info[i]['institucion_nombre_inscrito'];
+                Fundacion.innerHTML = 'Año de fundación: ' + info[i]['institucion_fundacion'];
+                Generos.innerHTML = 'Distribución de géneros: ' + info[i]['institucion_generos'];
+                Tipo.innerHTML = 'Tipo de centro educativo: ' + info[i]['institucion_tipo'];
+                Cedula.innerHTML = 'Cédula jurídica del centro educativo: ' + info[i]['institucion_cedula'];
+                Ideologia.innerHTML = 'Ideología del centro educativo: ' + info[i]['institucion_ideologia'];
+                Referencia.innerHTML = 'Referencia histórica del centro educativo: ' + info[i]['institucion_referencia'];
+                Numero.innerHTML = 'Número: ' + info[i]['institucion_telefono'];
+                Fax.innerHTML = 'Fax: ' + info[i]['institucion_fax'];
+                Web.innerHTML = 'Página web: ' + info[i]['institucion_sitio_web'];
+                modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];;
+            }
+
+        };
     }
 
 

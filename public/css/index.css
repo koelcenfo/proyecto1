@@ -186,7 +186,7 @@ table img{
 
 #herramientas_admin{
     width: 90%;
-    height: 550px;
+    height: 100%;
     display: block;
     margin: auto;
     background-color: #ffff;
@@ -304,6 +304,7 @@ ul.tabs_admin li.actual{
     color: #216592;
     border-radius: 10px;
     transform: scale(1.050);
+    
 }
 
 
@@ -312,7 +313,8 @@ ul.tabs_admin li.actual{
     padding: 20px;
     text-align: center;
     font-size: 27px;
-    color: #6e6e6c
+    color: #6e6e6c;
+
 }
 .contenido_tab.actual{
     display: inherit;
@@ -364,5 +366,7 @@ font-size: 27px;
     margin-bottom: 100px;
 
 }
-
-/**
+.container_table{
+    display: block;
+    height: 500px;
+}

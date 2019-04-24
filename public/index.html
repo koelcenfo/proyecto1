@@ -12,6 +12,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/barra_navegacion.css">
     <link rel="stylesheet" href="css/pie_de_pagina.css">
+    <link rel="stylesheet" href="css/buscar_informacion_index.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Prometeo</title>
 </head>
@@ -287,6 +288,32 @@
     
     
                         </div>
+                        
+                        <div id="tab-4_admin" class="contenido_tab">
+                            En esta sección, el centro educativo puede escoger las preguntas que hacen los padres de familia y que son más habituales en el centro educativo y de esta manera poder visualizarlas, para que los encargados de los estudiantes 
+                            puedan resolver sus interrogantes, de manera más fácil y rápida.
+    
+                            <input id="txtBusqueda" type="text" onkeyup="Buscar();">
+                            <div class="container_table">
+                                <table id="tbl_instituciones">
+        
+                                    <thead>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Provincia</th>
+                                            <th>Tipo</th>
+                                            <th>Visitar</th>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+    
+    
+                        </div>
     
     
                     </div>
@@ -418,6 +445,8 @@
         <script src="js/servicio_inicio.js"></script>
         <script src="js/servicio_utiles.js"></script>
         <script src="js/servicio_ranking_mep.js"></script>
+        <script src="js/servicio_registrar_etiqueta.js"></script>
+        <script src="js/buscar_informacion.js"></script>
         <script src="js/controlador_listar_ranking_mep.js"></script>
         <script src="js/controlador_barra_navegacion.js"></script>
         <script src="js/controlador_index.js"></script>
