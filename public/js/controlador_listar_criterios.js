@@ -7,20 +7,9 @@ let mostrar_datos = () => {
 
     for (let i = 0; i < criterio.length; i++) {
         let fila = tabla_criterio.insertRow();
-        let celda_criterios = fila.insertCell();
-        celda_criterios.innerHTML = criterio[0]['criterio'];
-        celda_criterios.innerHTML = criterio[0]['criterio2'];
-        celda_criterios.innerHTML = criterio[0]['criterio3'];
-        celda_criterios.innerHTML = criterio[0]['criterio4'];
-        celda_criterios.innerHTML = criterio[0]['criterio5'];
-        // 
-        let celda_porcentaje = fila.insertCell();
-        celda_porcentaje.innerHTML =criterio[0]['porcentaje'];
-        celda_porcentaje.innerHTML =criterio[0]['porcentaje2'];
-        celda_porcentaje.innerHTML =criterio[0]['porcentaje3'];
-        celda_porcentaje.innerHTML =criterio[0]['porcentaje4'];
-        celda_porcentaje.innerHTML =criterio[0]['porcentaje5'];
-        
+        fila.insertCell().innerHTML = criterio[i]['numero'];
+        fila.insertCell().innerHTML = criterio[i]['criterio'];
+        fila.insertCell().innerHTML = criterio[i]['puntaje'];
 
 
 
@@ -29,11 +18,20 @@ let mostrar_datos = () => {
 
 
 
-            let celda_configuracion = fila.insertCell();
+
+        let celda_configuracion = fila.insertCell();
         let boton_editar = document.createElement('a');
         boton_editar.href = `actualizar_criterio_evaluacion.html?id_criterio=${criterio[i]['_id']}`
         boton_editar.textContent = 'Editar';
+        boton_editar.classList.add('boton_editar');
         celda_configuracion.appendChild(boton_editar);
+
+
+        let boton_eliminar = document.createElement('a');
+        boton_eliminar.href = `eliminar_criterio_evaluacion.html?id_criterio=${criterio[i]['_id']}`
+        boton_eliminar.textContent = 'Eliminar';
+        boton_eliminar.classList.add('boton_eliminar');
+        celda_configuracion.appendChild(boton_eliminar);
 
 
 

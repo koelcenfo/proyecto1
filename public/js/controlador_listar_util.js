@@ -51,16 +51,8 @@ let mostrar_datos = () => {
 
 
             // 
-            let celda_configuracion = fila.insertCell();
-            let boton_editar = document.createElement('a');
             
-            boton_editar.textContent = 'Editar';
-            boton_editar.href = `actualizar_util.html?id_util=${util[i]['_id']}`
-            celda_configuracion.appendChild(boton_editar);
-            tabla_util.appendChild(celda_util);
-            tabla_util.appendChild(celda_descripcion);
-            tabla_util.appendChild(celda_cantidad);
-            tabla_util.appendChild(celda_configuracion);
+         
 
         }
 

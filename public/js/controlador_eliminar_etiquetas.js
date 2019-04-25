@@ -40,6 +40,32 @@ let obtener_datos = () => {
 };
 boton_eliminar.addEventListener('click',obtener_datos);
 
+/* 
+let institucion_nombre =
+let institucion_nombre_encargado =
+let institucion_apellido_encargado =
+let institucion_departamento_encargado =
+let institucion_telefono =
+let institucion_correo_electronico =
+let institucion_nombre_inscrito =
+let institucion_ideologia =
+let institucion_fundacion =
+let institucion_referencia =
+let institucion_tipo =
+let institucion_generos =
+let institucion_cedula =
+let institucion_provincia =
+let institucion_canton =
+let institucion_distrito =
+let institucion_direccion =
+let institucion_sitio_web =
+let institucion_fax =
+let institucion_imagen =
+let institucion_facebook =
+let institucion_twitter =
+let institucion_cedula_encargado =
+let institucion_correo_electronico_encargado = */
+
 
 
 

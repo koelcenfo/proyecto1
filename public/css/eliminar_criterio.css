@@ -47,6 +47,7 @@ html {
     border: none;
     outline-color: #1abc9c;
     text-align: center;
+    cursor: not-allowed;
 }
 
 #nmb_puntaje {
@@ -62,6 +63,7 @@ html {
     border: none;
     outline-color: #1abc9c;
     text-align: center;
+    cursor: not-allowed;
 }
 
 #txt_criterio {
@@ -77,6 +79,8 @@ html {
     border: none;
     outline-color: #1abc9c;
     resize: none;
+    cursor: not-allowed;
+
 }
 
 #txt_descripcion {

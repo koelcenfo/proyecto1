@@ -5,16 +5,9 @@ module.exports.registrar_criterio = (req, res) => {
         {
             id_criterio: req.body.ObjectId,
             id_institucion: req.body.id_institucion,
+            numero: req.body.numero,
             criterio: req.body.criterio,
-            criterio2: req.body.criterio2,
-            criterio3: req.body.criterio3,
-            criterio4: req.body.criterio4,
-            criterio5: req.body.criterio5,
-            porcentaje: req.body.porcentaje,
-            porcentaje2: req.body.porcentaje2,
-            porcentaje3: req.body.porcentaje3,
-            porcentaje4: req.body.porcentaje4,
-            porcentaje5: req.body.porcentaje5
+            puntaje: req.body.puntaje
         }
     )
     nuevo_criterio.save(function (error) {
@@ -89,5 +82,17 @@ module.exports.actualizar = function (req, res) {
                 res.json({ success: true, msg: `Se actualizó la etiqueta del centro educativo correctamente.` });
             }
         }
+    );
+}
+module.exports.eliminar = function (req, res) {
+    modelo_criterio.findByIdAndDelete(req.body.id,
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: 'No se pudo eliminar el criterio.' });
+            } else {
+                res.json({ success: true, msg: 'El criterio se eliminó correctamente.' });
+            }
+        }
+
     );
 }

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Visualizar etiquetas</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/listar_etiquetas.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/eliminar_criterio.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
-
-
+    <title>Eliminar criterio de evaluación</title>
 </head>
 
 <body>
@@ -18,13 +17,14 @@
             <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
             <!--Visitante-->
             <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
-            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro
+                centros
                 educativos</a>
             <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
             <!--Conectado-->
             <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png"
                     style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
-    
+
             <style type="text/css">
                 .estilo_imagen {
                     border-radius: 100px;
@@ -42,34 +42,42 @@
             <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
         </nav>
     </header>
-    <main>
-        <h1 id="titulo_registro">Etiquetas del centro educativo</h1>
+    <main id="contenido">
+        <h1 id="titulo_registro">Actualizar criterio de evaluación</h1>
         <div id="form_contenedor">
-            <label for="txt_filtro_etiqueta">Filtrar</label>
-            <input type="text" id="txt_filtro_etiqueta" onkeyup="filtrar_etiqueta();">
-            <table id="tbl_etiquetas">
-                <thead>
-                    <th>Etiqueta</th>
-                    <th>Descripción</th>
-                    
-                </thead>
-                <tbody>
+            <p id="info_p">se podrá actualizar un criterio de evaluación con su respectiva puntuación</p>
+            <hr>
+            <form>
+                <div>
+                    <label for="nmb_criterio">Numero de criterio:</label>
+                    <input type="number" id="nmb_criterio" disabled="disabled">
+                </div>
+                <div>
+                    <label for="txt_criterio">Criterio:</label>
+                    <textarea id="txt_criterio" disabled="disabled"></textarea>
+                </div>
+                <div>
+                    <label for="nmb_puntaje">Puntos:</label>
+                    <input type="number" id="nmb_puntaje" disabled="disabled">
+                </div>
 
-                </tbody>
-            </table>
-            <div id="contenedor_botones">
-                <button class="btn_atras" type="button" id="btn_atras"
-                    onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-            </div>
+
+                <div id="contenedor_botones">
+                    <button type="button" id="btn_atras"
+                        onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+                    <button type="button" id="btn_actualizar">Eliminar</button>
+                </div>
+            </form>
         </div>
     </main>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_inicio.js"></script>
-    <script src="js/servicio_registrar_etiqueta.js"></script>
-    <script src="js/controlador_listar_etiqueta.js"></script>
+    <script src="js/servicio_criterio.js"></script>
+    <script src="js/controlador_eliminar_criterio.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
-    <script src="js/controlador_imagen_sesion.js"></script>
     <script src="js/controlador_imagen_sesion.js"></script>
 
 

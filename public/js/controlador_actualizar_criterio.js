@@ -1,165 +1,90 @@
 'use strict';
-const input_criterio = document.querySelector('#txt_criterio');
-const input_criterio_2 = document.querySelector('#txt_criterio_2');
-const input_criterio_3 = document.querySelector('#txt_criterio_3');
-const input_criterio_4 = document.querySelector('#txt_criterio_4');
-const input_criterio_5 = document.querySelector('#txt_criterio_5');
-/*  */
-const input_porcentaje = document.querySelector('#txt_porcentaje');
-const input_porcentaje_2 = document.querySelector('#txt_porcentaje_2');
-const input_porcentaje_3 = document.querySelector('#txt_porcentaje_3');
-const input_porcentaje_4 = document.querySelector('#txt_porcentaje_4');
-const input_porcentaje_5 = document.querySelector('#txt_porcentaje_5');
-/*  */
+
+const input_numero = document.querySelector('#nmb_criterio');
+const input_nombre = document.querySelector('#txt_criterio');
+const input_puntaje = document.querySelector('#nmb_puntaje');
 const boton_actualizar = document.querySelector('#btn_actualizar');
+const id_usuario = sessionStorage.getItem('id_usuario');
+
+
 
 let get_param = (param) => {
     let url_string = window.location.href;
     let url = new URL(url_string);
     let id = url.searchParams.get(param);
+
     return id;
 };
+
 let _id = get_param('id_criterio');
 
-let criterio = buscar_criterio(_id);
-if (criterio) {
-    input_criterio.value = criterio[0]['criterio'];
-    input_criterio_2.value = criterio[0]['criterio2'];
-    input_criterio_3.value = criterio[0]['criterio3'];
-    input_criterio_4.value = criterio[0]['criterio4'];
-    input_criterio_5.value = criterio[0]['criterio5'];
-
-    input_porcentaje.value = criterio[0]['porcentaje'];
-    input_porcentaje_2.value = criterio[0]['porcentaje2'];
-    input_porcentaje_3.value = criterio[0]['porcentaje3'];
-    input_porcentaje_4.value = criterio[0]['porcentaje4'];
-    input_porcentaje_5.value = criterio[0]['porcentaje5'];
+let criterios = buscar_criterio(_id);
 
 
-}
-let validar = () => {
 
-    let error = false;
-    if (input_criterio.value == '') {
-        error = true;
-        input_criterio.classList.add('error_input');
-    } else {
-        input_criterio.classList.remove('error_input');
-    }
-    if (input_criterio_2.value == '') {
-        error = true;
-        input_criterio_2.classList.add('error_input');
-    } else {
-        input_criterio_2.classList.remove('error_input');
-    }
-    if (input_criterio_3.value == '') {
-        error = true;
-        input_criterio_3.classList.add('error_input');
-    } else {
-        input_criterio_3.classList.remove('error_input');
-    }
-    if (input_criterio_3.value == '') {
-        error = true;
-        input_criterio_3.classList.add('error_input');
-    } else {
-        input_criterio_3.classList.remove('error_input');
-    }
-    if (input_criterio_4.value == '') {
-        error = true;
-        input_criterio_4.classList.add('error_input');
-    } else {
-        input_criterio_4.classList.remove('error_input');
-    }
-    if (input_criterio_5.value == '') {
-        error = true;
-        input_criterio_5.classList.add('error_input');
-    } else {
-        input_criterio_5.classList.remove('error_input');
-    }
-    if (input_porcentaje.value == '') {
-        error = true;
-        input_porcentaje.classList.add('error_input');
-    } else {
-        input_porcentaje.classList.remove('error_input');
-    }
-    if (input_porcentaje_2.value == '') {
-        error = true;
-        input_porcentaje_2.classList.add('error_input');
-    } else {
-        input_porcentaje_2.classList.remove('error_input');
-    }
-    if (input_porcentaje_3.value == '') {
-        error = true;
-        input_porcentaje_3.classList.add('error_input');
-    } else {
-        input_porcentaje_3.classList.remove('error_input');
-    }
-    if (input_porcentaje_4.value == '') {
-        error = true;
-        input_porcentaje_4.classList.add('error_input');
-    } else {
-        input_porcentaje_4.classList.remove('error_input');
-    }
-    if (input_porcentaje_5.value == '') {
-        error = true;
-        input_porcentaje_5.classList.add('error_input');
-    } else {
-        input_porcentaje_5.classList.remove('error_input');
-    }
-    return error;
 
+if (criterios) {
+    input_numero.value = criterios[0]['numero'];
+    input_nombre.value = criterios[0]['criterio'];
+    input_puntaje.value = criterios[0]['puntaje'];
+    
 }
 let obtener_datos = () => {
-    if (validar() == false) {
-        let criterio = input_criterio.value;
-        let criterio2 = input_criterio_2.value;
-        let criterio3 = input_criterio_3.value;
-        let criterio4 = input_criterio_4.value;
-        let criterio5 = input_criterio_5.value;
-        /*  */
-        let porcentaje = input_porcentaje.value;
-        let porcentaje2 = input_porcentaje_2.value;
-        let porcentaje3 = input_porcentaje_3.value;
-        let porcentaje4 = input_porcentaje_4.value;
-        let porcentaje5 = input_porcentaje_5.value;
-        actualizar_criterio(_id, criterio, criterio2, criterio3, criterio4, criterio5, porcentaje, porcentaje2, porcentaje3, porcentaje4, porcentaje5)
+
+    let numero = input_numero.value;
+    let criterio = input_nombre.value;
+    let puntaje = input_puntaje.value;
+
+    Swal.fire({
+        title: '¿Está seguro que desea actualizar la pregunta?',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí'
+    }).then((result) => {
+        if (result.value) {
+            actualizar_criterio(_id, numero, criterio, puntaje);
+
+        }
+    })
+}
+let validar = () => {
+    let error = false;
+    if (input_numero.value == '') {
+        error = true;
+        input_numero.classList.add('error_input');
     } else {
-        swal.fire(
-            {
-                type: 'error',
-                title: 'Revise cada campo del formulario.',
-                text: 'El criterio de evaluación no se actualizó correctamente.'
-            }
-        );
+        input_numero.classList.add('error_input');
     }
-};
+    if (input_nombre.value == '') {
+        error = true;
+        input_nombre.classList.add('error_input');
+    } else {
+        input_nombre.classList.add('error_input');
+    }
+    if (input_puntaje.value == '') {
+        error = true;
+        input_puntaje.classList.add('error_input');
+    } else {
+        input_puntaje.classList.add('error_input');
+    }
+
+    return error;
+}
 boton_actualizar.addEventListener('click', obtener_datos);
 $(boton_actualizar).on('click', function () {
-    if (validar() == true) {
-        input_criterio.value;
-        input_criterio_2.value;
-        input_criterio_3.value;
-        input_criterio_4.value;
-        input_criterio_5.value;
+    if (validar() == false) {
+        let numero = input_numero.value;
+        let criterio = input_nombre.value;
+        let puntaje = input_puntaje.value;
 
-        input_porcentaje.value;
-        input_porcentaje_2.value;
-        input_porcentaje_3.value;
-        input_porcentaje_4.value;
-        input_porcentaje_5.value;
-
+        registrar_criterio(numero, criterio, puntaje,id_institucion);
     } else {
-        $(input_criterio).val('');
-        $(input_criterio_2).val('');
-        $(input_criterio_3).val('');
-        $(input_criterio_4).val('');
-        $(input_criterio_5).val('');
-        $(input_porcentaje).val('');
-        $(input_porcentaje_2).val('');
-        $(input_porcentaje_3).val('');
-        $(input_porcentaje_4).val('');
-        $(input_porcentaje_5).val('');
-
+        swal.fire({
+            type: 'error',
+            title: 'La pregunta no pudo ser actualizada.',
+            text: 'Por favor verifique que los campos que están resaltados estén llenos.'
+        });
     }
-
 })

@@ -30,4 +30,10 @@ router.route('/actualizar_criterio')
             api_criterios.actualizar(req, res);
         }
     )
+router.route('/eliminar_criterio')
+    .post(
+        function (req, res) {
+            api_criterios.eliminar(req, res);
+        }
+    )
 module.exports = router;
