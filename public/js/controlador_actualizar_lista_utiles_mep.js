@@ -60,7 +60,7 @@ let validacion=()=>{
       input_nombre_util.classList.remove('error_input');
   }
 
-  if (input_cantidad.value=='') {
+  if (input_cantidad.value=='' || input_cantidad.value <0) {
       error=true;
       input_cantidad.classList.add('error_input');
   } else {
@@ -92,7 +92,7 @@ $(boton_aceptar).on('click',function () {
   swal.fire({
     type:'warning',
     title: 'Los útiles no pudieron ser actualizados.',
-    text: 'Por favor verifique que los campos que están resaltados estén llenos.'
+    text: 'Por favor verifique que los campos que están resaltados estén llenos y no contengan números negativos.'
 });
 }
 

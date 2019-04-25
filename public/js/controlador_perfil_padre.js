@@ -13,6 +13,7 @@ if (tipo_usuario == 'Padre') {
             
             perfil_padre.innerHTML = ''
 
+            // let fila = perfil_padre.insertRow();
 
             let contenedor_perfil = document.createElement('div');
             contenedor_perfil.classList.add('contenedor_perfil');
@@ -108,6 +109,10 @@ if (tipo_usuario == 'Padre') {
             let label_cedula = document.createElement('h1');
             label_cedula.innerHTML = "Cédula";
             label_cedula.classList.add('label');
+
+            let boton_editar=document.createElement('a');
+            let boton_eliminar=document.createElement('a');
+
             contenedor_perfil.appendChild(imagen);
             // contenedor_perfil.appendChild(label_nombre);
             contenedor_perfil.appendChild(nombre);
@@ -134,6 +139,21 @@ if (tipo_usuario == 'Padre') {
             contenedor_perfil.appendChild(label_cedula);
             contenedor_perfil.appendChild(cedula);
             perfil_padre.appendChild(contenedor_perfil);
+            contenedor_perfil.appendChild(boton_editar);
+            contenedor_perfil.appendChild(boton_eliminar);
+            boton_editar.classList.add('boton_editar');
+            boton_editar.textContent='Editar';//textContent lo que muestra en la tabla 'Editar'
+            boton_editar.href=`actualizar_perfil_padre.html?id_padres=${padre[i]['_id']}`;
+            // let celda_configuración=fila.insertCell();
+            boton_eliminar.classList.add('boton_eliminar');
+           boton_eliminar.textContent='Eliminar';
+           boton_eliminar.href=`eliminar_padres.html?id_padres=${padre[i]['_id']}`;
+
+          
+            //Para el estilo
+           
+
+           
 
         }else{
 
@@ -141,7 +161,7 @@ if (tipo_usuario == 'Padre') {
         }
 
 
-
+      
     
 
         

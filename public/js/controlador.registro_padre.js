@@ -1,4 +1,4 @@
-'uses strict'
+'use strict';
 
 
 const input_padre_nombre = document.querySelector('#txt_padre_nombre');

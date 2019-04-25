@@ -51,3 +51,14 @@ let obtener_datos = () => {
 };
 
 boton_registrar.addEventListener('click', obtener_datos);
+$(boton_registrar).on('click',function () {
+    if (validar()==true) {
+        input_nombre.value;
+        input_tipo.value;
+        input_descripcion.value;
+    }else{
+        $(input_nombre).val('');
+        $(input_tipo).val('');
+        $(input_descripcion).val('');
+    }
+  });

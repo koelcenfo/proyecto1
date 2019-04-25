@@ -10,6 +10,35 @@
      background-color: #fff;
 }
 
+.boton_editar{
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
+    background-color: #2c2c54;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    .boton_editar:hover{
+    background-color: #3498db;
+    }
+    
+    .boton_eliminar{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #2c2c54;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    .boton_eliminar:hover{
+        background-color: #e74c3c;
+        }
+
 
 .imagen_padre{
     display: block;

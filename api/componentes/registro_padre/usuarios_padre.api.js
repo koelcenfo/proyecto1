@@ -85,3 +85,42 @@ module.exports.listar_padre = (req, res) => {
         }
     )
 };
+
+module.exports.buscar_por_id=function(req,res){
+    model_padre.find({_id: req.body.id_padres}).then(
+        function(padres){
+            if (padres) {
+                res.json({success: true, padres: padres});
+            } else {
+                res.json({success: false, padres: padres});
+            }
+        }
+    );
+}
+
+module.exports.actualizar=function(req,res){
+    model_padre.findByIdAndUpdate(req.body.id,{$set: req.body},
+        
+        function(error){
+            if (error) {
+                res.json({success: false, msg: 'No se pudo actualizar el perfil.'});
+            } else {
+                res.json({success: true, msg: 'El perfil se actualizó correctamente.'});
+            }
+        }
+        
+        );
+}
+
+module.exports.eliminar=function(req,res){
+    model_padre.findByIdAndDelete(req.body.id,
+        function(error){
+            if (error) {
+                res.json({success: false, msg:'No se pudo eliminar el perfil.'});
+            } else {
+                res.json({success: true, msg:'El perfil se eliminó correctamente.'}); 
+            }
+        }
+        
+        );
+}
