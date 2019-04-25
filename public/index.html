@@ -17,24 +17,19 @@
     <title>Prometeo</title>
 </head>
 
-<body onload="herramientas()">
+<body onload="herramientas()" onload="sort_age()">          
+
     <!--Contenido de la Pagina-->
 
-        <header>
-            <nav class="barra_navegacion" style="position:fixed">
-                <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';" style="display:none"></div>
+    <header>
+            <nav class="barra_navegacion">
+                <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
                 <!--Visitante-->
                 <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
                 <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
                 <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
                 <!--Conectado-->
-                <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png" style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
-
-                <style type="text/css">
-                .estilo_imagen{
-                    border-radius: 100px;
-                }
-                </style>
+                <a href="http://localhost:3000/public/perfil.html"><i class="fas fa-id-card-alt"></i> Perfil</a>
                 <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
                 <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
                 <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
@@ -52,8 +47,20 @@
             <div id="prometeo_imagen" ></div>
         </div>
 
+        <h1 id="titulo_registro">Ranking de las mejores instituciones por los usuarios</h1>
+        <table id="tbl_instituciones">
 
+                <thead>
+                        <th>Nombre</th>
+                        <th>Estrellas</th>
+                </thead>
+                <tbody id="table1">
 
+                </tbody>
+            </table>  
+            <div id="listas_usuarios">
+
+            </div>
             <div id="listas_de_institucion">
                 <h1 id="titulo_herrramientas">Herramientas del centro educativo.</h1>
                 <div class="container">
@@ -373,16 +380,7 @@
                     </tbody>
                 </table>
             </div>
-            <!-- <table id="tbl_ranking_mep">
-                            <thead>
-                                <tr>
-                                    <th>Nombre del Centro Educativo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>     -->
+
             <div id="info">
                 <div id="info_carta">
                     <div class="info_imagen" id="imagen_1"></div>
@@ -446,8 +444,9 @@
         <script src="js/servicio_utiles.js"></script>
         <script src="js/servicio_ranking_mep.js"></script>
         <script src="js/servicio_registrar_etiqueta.js"></script>
-        <script src="js/buscar_informacion.js"></script>
+        <script src="js/servicio_estrellas.js"></script>
         <script src="js/controlador_listar_ranking_mep.js"></script>
+        <script src="js/controlador_listar_mejores.js"></script>
         <script src="js/controlador_barra_navegacion.js"></script>
         <script src="js/controlador_index.js"></script>
         <!-- Controlador de la imagen de la barra de navegacion -->

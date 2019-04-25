@@ -2,7 +2,7 @@
 const listar_de_comentarios = document.querySelector('#listar_comentarios');
 
 let mostrar_comentarios = () =>{
-
+    let hay_comentarios=false;
     listar_de_comentarios.innerHTML = '';
     let comentarios_registrados = listar_comentarios();
 
@@ -19,6 +19,8 @@ let mostrar_comentarios = () =>{
     for (let k = 0; k < comentarios_registrados.length; k++) {
         
         if (comentarios_registrados[k]['id_institucion']==id_institucion) {
+
+            hay_comentarios=true;
 
             let contenedor = document.createElement('div');
             contenedor.classList.add('comentario');
@@ -73,14 +75,15 @@ let mostrar_comentarios = () =>{
             
             }
 
+            
 
-        }else{
-            let no_hay_comentarios = document.createElement('h1');
-            no_hay_comentarios.classList.add('no_hay_comentarios');
-            no_hay_comentarios.innerHTML = 'No hay comentarios registrados en el centro educativo'
-            listar_de_comentarios.appendChild(no_hay_comentarios);
-            break;
         }
+    }
+    if (hay_comentarios==false) {
+                   let no_hay_comentarios = document.createElement('h1');
+           no_hay_comentarios.classList.add('no_hay_comentarios');
+           no_hay_comentarios.innerHTML = 'No hay comentarios registrados en el centro educativo'
+           listar_de_comentarios.appendChild(no_hay_comentarios);
     }
 }
 mostrar_comentarios();

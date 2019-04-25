@@ -3,6 +3,8 @@
 const tabla_ranking_mep = document.querySelector('#tbl_ranking_mep tbody');
 
 let mostrar_ranking_mep = () => {
+
+    
     let ranking = listar_ranking_mep();
     
     for (let i = 0; i < ranking.length; i++) {

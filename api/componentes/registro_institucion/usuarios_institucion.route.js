@@ -39,4 +39,10 @@ router.route('/actualizar_institucion')
            api_institucion.actualizar(req, res);
         }
     );
+router.route('/eliminar_institucion')
+    .post(
+        function (req, res) {
+            api_institucion.eliminar(req, res);
+        }
+    )
 module.exports = router;

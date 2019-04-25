@@ -26,6 +26,8 @@
     
     };
 
+    let estrellas_calificadas = mostrar_estrellas();
+
     let info = listar_institucion();
 
     let tipo_cliente = sessionStorage.getItem('tipo_usuario');
@@ -51,7 +53,12 @@
     let Fax = document.querySelector('#fax_institucion');
     let Web = document.querySelector('#web_institucion');
     let modificar_perfil = document.querySelector('.modificar_perfil');
-
+    let contenedor_estrellas = document.querySelector('#estrellas_calificas');
+    let estrellas_calificadas_1;
+    let estrellas_calificadas_2;
+    let estrellas_calificadas_3;
+    let estrellas_calificadas_4;
+    let estrellas_calificadas_5;
     switch(tipo_cliente){
         
         case 'Institucion':
@@ -74,7 +81,176 @@
                 Numero.innerHTML = 'Número: ' + info[i]['institucion_telefono'];
                 Fax.innerHTML = 'Fax: ' + info[i]['institucion_fax'];
                 Web.innerHTML = 'Página web: ' + info[i]['institucion_sitio_web'];
-                modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];;
+                modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];
+                switch (estrellas_calificadas) {
+
+                    case 0:
+                    estrellas_calificadas_1 = document.createElement('i');
+                    estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_1.style = 'font-size:20px';
+                    estrellas_calificadas_1.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_2 = document.createElement('i');
+                    estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_2.style = 'font-size:20px';
+                    estrellas_calificadas_2.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_3 = document.createElement('i');
+                    estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_3.style = 'font-size:20px';
+                    estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_4 = document.createElement('i');
+                    estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_4.style = 'font-size:20px';
+                    estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_5 = document.createElement('i');
+                    estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_5.style = 'font-size:20px';
+                    estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                    break;
+    
+
+
+                    case 1:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 2:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 3:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 4:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 5:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fas fa-star"></i>';
+                        break;
+        
+                    default:
+                        break;
+                }
             }
 
         };
@@ -99,7 +275,175 @@
                 Numero.innerHTML = 'Número: ' + info[i]['institucion_telefono'];
                 Fax.innerHTML = 'Fax: ' + info[i]['institucion_fax'];
                 Web.innerHTML = 'Página web: ' + info[i]['institucion_sitio_web'];
+                switch (estrellas_calificadas) {
 
+                    case 0:
+                    estrellas_calificadas_1 = document.createElement('i');
+                    estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_1.style = 'font-size:20px';
+                    estrellas_calificadas_1.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_2 = document.createElement('i');
+                    estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_2.style = 'font-size:20px';
+                    estrellas_calificadas_2.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_3 = document.createElement('i');
+                    estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_3.style = 'font-size:20px';
+                    estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_4 = document.createElement('i');
+                    estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_4.style = 'font-size:20px';
+                    estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_5 = document.createElement('i');
+                    estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_5.style = 'font-size:20px';
+                    estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                    break;
+    
+
+
+                    case 1:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 2:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 3:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 4:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 5:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fas fa-star"></i>';
+                        break;
+        
+                    default:
+                        break;
+                }
             }
 
             
@@ -126,12 +470,186 @@
                 Numero.innerHTML = 'Número: ' + info[i]['institucion_telefono'];
                 Fax.innerHTML = 'Fax: ' + info[i]['institucion_fax'];
                 Web.innerHTML = 'Página web: ' + info[i]['institucion_sitio_web'];
-                modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];;
+                modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];
+                switch (estrellas_calificadas) {
+
+                    case 0:
+                    estrellas_calificadas_1 = document.createElement('i');
+                    estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_1.style = 'font-size:20px';
+                    estrellas_calificadas_1.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_2 = document.createElement('i');
+                    estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_2.style = 'font-size:20px';
+                    estrellas_calificadas_2.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_3 = document.createElement('i');
+                    estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_3.style = 'font-size:20px';
+                    estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_4 = document.createElement('i');
+                    estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_4.style = 'font-size:20px';
+                    estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+    
+                    estrellas_calificadas_5 = document.createElement('i');
+                    estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                    // estrellas_calificadas_5.style = 'font-size:20px';
+                    estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                    break;
+    
+
+
+                    case 1:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 2:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 3:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fa fa-star-o"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 4:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fa fa-star-o"></i>';
+                        break;
+        
+                    case 5:
+                        estrellas_calificadas_1 = document.createElement('i');
+                        estrellas_calificadas_1.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_1.style = 'font-size:20px';
+                        estrellas_calificadas_1.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_2 = document.createElement('i');
+                        estrellas_calificadas_2.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_2.style = 'font-size:20px';
+                        estrellas_calificadas_2.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_3 = document.createElement('i');
+                        estrellas_calificadas_3.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_3.style = 'font-size:20px';
+                        estrellas_calificadas_3.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_4 = document.createElement('i');
+                        estrellas_calificadas_4.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_4.style = 'font-size:20px';
+                        estrellas_calificadas_4.innerHTML = '<i class="fas fa-star"></i>';
+        
+                        estrellas_calificadas_5 = document.createElement('i');
+                        estrellas_calificadas_5.style = 'color:#3498db;font-size:45px;';
+                        // estrellas_calificadas_5.style = 'font-size:20px';
+                        estrellas_calificadas_5.innerHTML = '<i class="fas fa-star"></i>';
+                        break;
+        
+                    default:
+                        break;
+                }
             }
 
         };
-    }
 
+        contenedor_estrellas.appendChild(estrellas_calificadas_1);
+        contenedor_estrellas.appendChild(estrellas_calificadas_2);
+        contenedor_estrellas.appendChild(estrellas_calificadas_3);
+        contenedor_estrellas.appendChild(estrellas_calificadas_4);
+        contenedor_estrellas.appendChild(estrellas_calificadas_5);
+    }
 
 
 

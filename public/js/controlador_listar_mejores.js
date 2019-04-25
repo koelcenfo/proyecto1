@@ -27,40 +27,61 @@ var tabla = document.getElementById('tbl_instituciones');
 let mostrar_datos = () => {
     let etiquetas = listar_etiqueta();
     let institucion = listar_institucion();
+    let estrellitas = [];
+    let estrellas = listar_estrellas();
+    let cantidad_estrellas=0;
+    let star =[];
+    for(let i = 0; i < institucion.length; i++){
+        for (let u = 0; u < estrellas.length; u++) {
+
+            /*--------------Preguntamos si hay estrellas registradas para el centro en concreto--------------*/
+            if (estrellas[u]['id_institucion'] == institucion[i]['institucion_id']) {
+
+            estrellitas = estrellitas + estrellas[u]['estrellas']
+            cantidad_estrellas++;
+            }
+
+        }
+        
+
+        if (cantidad_estrellas > 0) {
+        
+    
+            let cantidad = estrellitas / cantidad_estrellas;
+    
+        star = star + Math.round(cantidad);
+            
+        }
+    }
+    let numbers=[star]
+    const numberSorter = (a, b) => b - a;
+    numbers.sort(numberSorter);
+    console.log(numbers);
 
     for(let i = 0; i < institucion.length; i++){
+
+        
         
         let fila = tabla.insertRow();
 
-        let imagen = fila.insertCell();
+        // let imagen = fila.insertCell();
 
-        let imagen_perfil = document.createElement('img');
+        // let imagen_perfil = document.createElement('img');
 
-        let etiqueta_row = tabla.insertRow();
+        // let etiqueta_row = tabla.insertRow();
 
-        imagen_perfil.src = institucion[i]['institucion_imagen'];
+        // imagen_perfil.src = institucion[i]['institucion_imagen'];
         
-        imagen_perfil.classList.add('imagen_buscar');
+        // imagen_perfil.classList.add('imagen_buscar');
 
-        imagen.appendChild(imagen_perfil);
+        // imagen.appendChild(imagen_perfil);
        
         fila.insertCell().innerHTML = institucion[i]['institucion_nombre'];
         
-        fila.insertCell().innerHTML = institucion[i]['institucion_provincia'];
+        // fila.insertCell().innerHTML = institucion[i]['institucion_distrito'];
 
-        fila.insertCell().innerHTML = institucion[i]['institucion_tipo'];
+        // fila.insertCell().innerHTML = institucion[i]['institucion_tipo'];
 
-        // for (let u = 0; u < etiquetas.length; u++) {
-            
-        //     if (etiquetas[u]['id_institucion'] == institucion[i]['institucion_id']) {
-
-        //         etiqueta_row.textContent =etiquetas[0]['etiqueta']+',';
-                
-        //     }else{
-        //         fila.insertCell().innerHTML = 'No hay etiquetas';
-        //     }
-            
-        // }
         let mostrar_estrellas = () => {
             let estrellas = listar_estrellas();
             let id_institucion = institucion[i]['institucion_id'];
@@ -104,24 +125,6 @@ let mostrar_datos = () => {
         }
 
         
-
-        let link_perfil =fila.insertCell();
-
-        let boton_perfil = document.createElement('a');
-        
-        boton_perfil.classList.add('link');
-        
-        boton_perfil.textContent = 'Visitar';
-
-        boton_perfil.href ='http://localhost:3000/public/perfil.html?/'+institucion[i]['institucion_id'];
-        
-        link_perfil.appendChild(boton_perfil);
-        let celda_eliminar = fila.insertCell();
-        let boton_eliminar = document.createElement('a');
-        boton_eliminar.textContent = 'Eliminar';
-        boton_eliminar.href=`eliminar_colegio.html?id_institucion=${institucion[i]['_id']}`;
-        boton_eliminar.classList.add('eliminar');
-        celda_eliminar.appendChild(boton_eliminar);
     };          
 };
 
@@ -184,8 +187,33 @@ function Buscar() {
 //         }
 //     }
 // }
-let numbers=[5,3,4,5,5,8,9,10]
-const numberSorter = (a, b) => b - a;
-numbers.sort(numberSorter);
-console.log(numbers);
 mostrar_datos();
+
+function sort_age() 
+{
+ var table=$('#tbl_instituciones');
+ var tbody =$('#table1');
+
+ tbody.find('tr').sort(function(a, b) 
+ {
+  if($('#age_order').val()=='asc') 
+  {
+   return $('td:last', a).text().localeCompare($('td:last', b).text());
+  }
+  else 
+  {
+   return $('td:last', b).text().localeCompare($('td:last', a).text());
+  }
+		
+ }).appendTo(tbody);
+	
+ var sort_order=$('#age_order').val();
+ if(sort_order=="asc")
+ {
+  document.getElementById("age_order").value="desc";
+ }
+ if(sort_order=="desc")
+ {
+  document.getElementById("age_order").value="asc";
+ }
+}

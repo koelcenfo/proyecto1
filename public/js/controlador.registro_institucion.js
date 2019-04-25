@@ -254,7 +254,7 @@ let obtener_datos = () => {
         let institucion_generos = select_institucion_generos.value;
         let institucion_provincia = select_institucion_provincia.selectedOptions[0].textContent;
         let institucion_canton = select_institucion_canton.selectedOptions[0].textContent;
-        let institucion_distrito = select_institucion_distrito.value;
+        let institucion_distrito = select_institucion_distrito.selectedOptions[0].textContent;
         let institucion_direccion = input_institucion_direccion.value;
         let institucion_fundacion = input_institucion_fundacion.value;
         let institucion_referencia = input_institucion_referencia.value;

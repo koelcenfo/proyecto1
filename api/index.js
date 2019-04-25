@@ -119,6 +119,8 @@ app.use('/api', registrar_idioma);
 const becas = require('./componentes/becas/becas.route');
 app.use('/api', becas);
 
+const estrellas = require('./componentes/estrellas_institucion/estrellas_institucion.route');
+app.use('/api', estrellas);
 
 const instituciones_cercanas=require('./componentes/instituciones_cercanas/instituciones_cercanas.route');
 app.use('/api', instituciones_cercanas);

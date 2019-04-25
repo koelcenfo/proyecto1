@@ -63,24 +63,28 @@
             <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
         </nav>
     </header>
-            <h1 id="titulo_busqueda">Búsqueda de centros educativos</h1>
+    <div id="container">
+        <h1 id="titulo_busqueda">Búsqueda de centros educativos</h1>
             
             
         
-            <input id="txtBusqueda" type="text" onkeyup="Buscar();">
-                    <table id="tbl_instituciones">
+        <input id="txtBusqueda" type="text" onkeyup="Buscar();">
+                <table id="tbl_instituciones">
 
-                            <thead>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Provincia</th>
-                                    <th>Tipo</th>
-                                    <th>Visitar</th>
-                            </thead>
-                            <tbody>
-                                
-                            </tbody>
-                        </table>
+                        <thead>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Provincia</th>
+                                <th>Tipo</th>
+                                <th>Estrellas</th>
+                                <th>Visitar</th>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>  
+    </div>
+
         
 
 
@@ -92,5 +96,6 @@
     <script src="js/servicio_registrar_etiqueta.js"></script>
     <script src="js/controlador_registrar_etiqueta.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/servicio_estrellas.js"></script>
     <script src="js/buscar_informacion.js"></script>
 </html>
