@@ -10,7 +10,7 @@
 }
 .ranking_mep{   
     margin: auto;
-    width: 90%;
+    width: 65%;
 }
 #contenedor_imagen{
     display: inline-block;
@@ -407,4 +407,43 @@ font-size: 27px;
 #listas_usuarios{
     margin: auto;
     width: 30%;
+}
+#tbl_instituciones_m{
+    width: 100%;
+    background-color: #f1f2f6;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #2f3542;
+    border-style: ridge;
+    color: black;
+    margin-top: 50px;
+}
+#tbl_instituciones_m td,th{
+    display: table-cell;
+    width: 50%;
+    color: black;
+    padding: 15px;
+}
+#tbl_instituciones_m thead {
+    background-color: #2f3542;
+    color: #f1f2f6;
+    border: none;
+
+  }
+  #tbl_instituciones_m td{
+    word-break: normal;
+  text-align: center;
+  background-color: #f1f2f6;
+  font-size: 15px;
+  border: 1px;
+  border-style: solid;
+  color: black;
+}
+#tbl_instituciones_m th{
+    font-size: 20px;
+    color: #f1f2f6;
+}
+.mejores_instituciones{
+    margin: auto;
+    width: 65%;
 }

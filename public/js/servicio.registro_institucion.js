@@ -45,7 +45,7 @@ let registrar_usuario = (pinstitucion_nombre,pinstitucion_nombre_inscrito,pinsti
             showConfirmButton: false,
             timer: 4000
         });
-        /*setTimeout("window.location.href = 'index.html';",4500);*/
+        setTimeout("window.location.href = 'index.html';",4500);
     });
     
     request.fail(function(msg){
