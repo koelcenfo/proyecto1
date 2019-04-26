@@ -42,9 +42,9 @@ let registrar_material_informativo = (preglamento, pproceso_matricula, psistema_
         swal.fire({
             type: 'success',
             title: '¡Material informativo enviado de forma exitosa!',
-            onClose: () => {
-                window.location.href = 'listar_material_informativo.html';
-            }
+            // onClose: () => {
+            //     window.location.href = 'listar_material_informativo.html';
+            // }
             // text: `Saludos estimado(a) usuario la noticia "${ptitulo}" ha sido registrada en el sistema.`
         });
     });

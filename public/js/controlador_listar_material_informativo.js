@@ -3,11 +3,15 @@ const tabla_informacion = document.querySelector('#tbl_material_informativo tbod
 
 let mostrar_informacion = () => {
     let informacion = listar_material_informativo();
-    let id_institucion = sessionStorage.getItem('id_usuario');
-    if (tipo_usuario == 'Institucion') {
-        id_institucion = sessionStorage.getItem('id_usuario')
-    } else {
-        id_institucion = getUrl();
+    // let id_institucion = sessionStorage.getItem('id_usuario');
+    
+    let id_institucion;
+    let tipo_usuario=sessionStorage.getItem('tipo_usuario');
+
+    if (tipo_usuario=='Institucion') {
+        id_institucion=sessionStorage.getItem('id_usuario');
+    }else{
+        id_institucion=getUrl();
     }
 
     for (let i = 0; i < informacion.length; i++) {
