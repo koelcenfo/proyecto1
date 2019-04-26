@@ -72,3 +72,16 @@ module.exports.actualizar=function(req,res){
         
         );
 }
+
+module.exports.eliminar=function(req,res){
+    model_idioma.findByIdAndDelete(req.body.id,
+        function(error){
+            if (error) {
+                res.json({success: false, msg:'No se pudo eliminar el idioma.'});
+            } else {
+                res.json({success: true, msg:'El idioma se eliminó correctamente.'});  
+            }
+        }
+        
+        );
+}

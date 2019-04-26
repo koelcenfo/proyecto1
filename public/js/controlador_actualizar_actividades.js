@@ -107,23 +107,13 @@ let validacion=()=>{
 boton_aceptar.addEventListener('click', obtener_datos);
 $(boton_aceptar).on('click',function () {
 
-    if (validacion()==false) {
-        let nombre=input_nombre.value;
-        let fecha=input_fecha.value;
-        let hora=input_hora.value;
-        let lugar=input_lugar.value;
-        let descripcion=textarea_descripcion.value;
-        let imagen=img_actividades.src;
-
-        registrar_actividades(nombre,fecha,hora,lugar,descripcion,id_institucion,imagen);
-
-    } else {
+    if (validacion()==true) {
         swal.fire({
             type:'warning',
             title: 'La actividad no pudo ser actualizada.',
             text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
-    }
+    } 
 
 
 })

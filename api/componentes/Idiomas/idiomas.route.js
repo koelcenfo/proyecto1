@@ -37,4 +37,11 @@ router.route('/actualizar_idioma')
     }
 );
 
+router.route('/eliminar_idioma')
+.post(
+    function(req,res){
+        api_idioma.eliminar(req,res);
+    }
+);
+
 module.exports = router;

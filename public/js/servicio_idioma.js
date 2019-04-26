@@ -109,3 +109,40 @@ let actualizar_idioma = (pidiomas, pdescripcion,pid ) => {
     });
 
 }
+
+
+let eliminar_idioma=(pidiomas, pdescripcion,pid)=> {
+  let request=$.ajax({
+    url:'http://localhost:4000/api/eliminar_idioma',
+    method: "POST",
+    data: {
+      idiomas : pidiomas,
+      descripcion : pdescripcion,
+      id : pid
+    },
+
+    dataType: "json",
+        contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+});
+
+request.done(function(res){
+  swal.fire({
+      type: 'success',
+      title: 'Se ha eliminado el idioma con éxito.',
+      text: res.msg,
+      onClose: ()=>{
+          window.location.href='listar_idioma.html';
+      }
+  });
+});
+
+request.fail(function(res){
+  swal.fire({
+      type : 'error',
+      title : 'Proceso no realizado',
+      text : res.msg
+  });
+
+});
+
+}

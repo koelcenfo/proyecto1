@@ -113,24 +113,15 @@ let validacion=()=>{
 boton_aceptar.addEventListener('click',obtener_datos);
 $(boton_aceptar).on('click',function () {
 
-  if (validacion()==false) {
+  if (validacion()==true) {
 
-    let titulo=input_titulo.value;
-    let fecha=input_fecha.value;
-    let hora=input_hora.value;
-    let lugar=input_lugar.value;
-    let descripcion=textarea_descripcion.value;
-    let imagen=img_noticias.src;
-
-    registrar_noticias(titulo,fecha,hora,lugar,descripcion,id_institucion,imagen);
-
-} else {
     swal.fire({
         type:'warning',
         title: 'La noticia no pudo ser actualizada.',
         text: 'Por favor verifique que los campos que están resaltados estén llenos.'
     });
-}
+
+} 
 
 
 });
