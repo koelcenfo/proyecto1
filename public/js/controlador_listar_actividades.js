@@ -45,6 +45,7 @@ let mostrar_actividades = () => {
             }
            
             if (tipo_usuario=='Institucion') {
+                let celda_configuracion=fila.insertCell();
                            //Creación del boton editar
             let boton_editar=document.createElement('a');
             //Para el estilo
@@ -52,13 +53,13 @@ let mostrar_actividades = () => {
             boton_editar.textContent='Editar';//textContent lo que muestra en la tabla 'Editar'
             boton_editar.href=`actualizar_actividades.html?id_institucion=${actividades[i]['_id']}`;
 
-            celda_configuración.appendChild(boton_editar);
+            celda_configuracion.appendChild(boton_editar);
 
         //    let celda_eliminar=fila.insertCell();
            let boton_eliminar=document.createElement('a');
             boton_eliminar.classList.add('boton_eliminar');
            boton_eliminar.textContent='Eliminar';
-           celda_configuración.appendChild(boton_eliminar);
+           celda_configuracion.appendChild(boton_eliminar);
            boton_eliminar.href=`eliminar_actividades.html?id_institucion=${actividades[i]['_id']}`; 
             }
 

@@ -4,35 +4,34 @@ html{
 }
 
 .boton_editar{
-margin-left: 10px;
-padding: 10px;
-padding-left: 15px;
-padding-right: 15px;
-background-color: #2c2c54;
-color: #fff;
-border-radius: 5px;
-text-decoration: none;
-cursor: pointer;
-}
-
-.boton_editar:hover{
-background-color: #3498db;
-}
-
-.boton_eliminar{
-margin-left: 10px;
-padding: 10px;
-background-color: #2c2c54;
-color: #fff;
-border-radius: 5px;
-text-decoration: none;
-cursor: pointer;
-}
-
-.boton_eliminar:hover{
-    background-color: #e74c3c;
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
     }
-
+    
+    /* .boton_editar:hover{
+    background-color: #3498db;
+    } */
+    
+    .boton_eliminar{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* .boton_eliminar:hover{
+        background-color: #e74c3c;
+        } */
 
 #info_p{
     text-align: center;

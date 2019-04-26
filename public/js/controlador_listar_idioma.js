@@ -25,6 +25,7 @@ let mostrar_idiomas = () => {
                 let idioma_configuracion = fila.insertCell();
 
                 let boton_editar = document.createElement('a');
+                boton_editar.classList.add('boton_editar');
                 boton_editar.textContent = 'Editar';
                 boton_editar.href = `actualizar_idioma.html?id_institucion=${idiomas[i]['_id']}`;
     
