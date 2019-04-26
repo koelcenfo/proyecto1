@@ -13,7 +13,7 @@
 
 </head>
 
-<body id="contenedor">
+<body>
     <header>
         <nav class="barra_navegacion" style="position:fixed">
             <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
@@ -52,15 +52,26 @@
         <hr>
         <div id="formulario">
             <form>
-                <div class="util">
-                    <label for="txt_util">Útil:</label>
-                    <input type="text" id="txt_util">
+                <div id="contenedor_niveles">
+
+                </div>
+                <div id="contenedor_util">
+
+                </div>
+                <div>
+                    <label for="txt_descripcion">Descripcion</label>
+                    <textarea id="txt_descripcion"></textarea>
+                </div>
+                <div>
+                    <label for="nmb_cantidad">Cantidad</label>
+                    <input type="number" id="nmb_cantidad">
+
                 </div>
 
                 <div class="contenedor_botones">
                     <button class="btn_atras" type="button" id="btn_atras"
                         onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
-                        
+
                     <button type="button" id="btn_enviar">Registrar</button>
                 </div>
 
@@ -74,6 +85,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/servicio_utiles.js"></script>
+    <script src="js/servicios_lista_utiles_mep.js"></script>
+    <script src="js/servicio_nivel.js"></script>
     <script src="js/controlador_util.js"></script>
     <script src="js/servicio_inicio.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>

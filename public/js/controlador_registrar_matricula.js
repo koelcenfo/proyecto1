@@ -1,16 +1,24 @@
 'use strict';
-const select_nivel = document.querySelector('#slt_nivel');
+
 const input_matricula = document.querySelector('#nmb_matricula');
 const input_mensualidad = document.querySelector('#nmb_mensualidad');
 const boton_registrar = document.querySelector('#btn_registrar');
 const id_usuario = sessionStorage.getItem('id_usuario');
-const nivel = sessionStorage.getItem('institucion_niveles');
+let niveles = listar_niveles();
+const contenedor_niveles = document.querySelector('#contenedor_niveles');
+let select_nivel = document.createElement('select');
+select_nivel.setAttribute("id", "slt_nivel");
+for (let i = 0; i < niveles.length; i++) {
+    let opcion = new Option(niveles[i]['nombre']);
 
-if (nivel == 'Secundaria') {
-    $("select_nivel option[value='Primero']").remove;
-} else {
+
+    select_nivel.options.add(opcion);
+
+    contenedor_niveles.appendChild(select_nivel);
 
 }
+
+
 
 let validar = () => {
     let error = false;

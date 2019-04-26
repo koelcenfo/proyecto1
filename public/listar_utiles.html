@@ -49,27 +49,29 @@
         <div id="form_contenedor">
             <label for="txt_filtro_util">Filtrar</label>
             <input type="text" id="txt_filtro_util" onkeyup="filtrar_util();">
-            
-                <table id="tbl_utiles">
-                    <thead>
-                        <th>Útil</th>
-                        <th>Descripción</th>
-                        <th>Cantidad</th>
-                        
-                    </thead>
-                    <tbody>
-                        
-    
-    
-                    </tbody>
-    
-                </table>
-            
+
+            <table id="tbl_utiles">
+                <thead>
+                    <th>Nivel</th>
+                    <th>Útil</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th></th>
+
+                </thead>
+                <tbody>
+
+
+
+                </tbody>
+
+            </table>
+
 
             <div id="contenedor_botones">
                 <button type="button" id="btn_registrar">Registrar</button>
                 <button class="btn_atras" type="button" id="btn_atras"
-                onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+                    onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
             </div>
 
         </div>
@@ -79,11 +81,13 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_utiles.js"></script>
+    <script src="js/servicio_nivel.js"></script>
+    <script src="js/servicios_lista_utiles_mep.js"></script>
     <script src="js/controlador_listar_util.js"></script>
     <script src="js/servicio_inicio.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/controlador_imagen_sesion.js"></script>
-    
+
 
 
 

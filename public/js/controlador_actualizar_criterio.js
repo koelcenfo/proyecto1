@@ -27,7 +27,7 @@ if (criterios) {
     input_numero.value = criterios[0]['numero'];
     input_nombre.value = criterios[0]['criterio'];
     input_puntaje.value = criterios[0]['puntaje'];
-    
+
 }
 let obtener_datos = () => {
 
@@ -75,15 +75,9 @@ let validar = () => {
 boton_actualizar.addEventListener('click', obtener_datos);
 $(boton_actualizar).on('click', function () {
     if (validar() == false) {
-        let numero = input_numero.value;
-        let criterio = input_nombre.value;
-        let puntaje = input_puntaje.value;
-
-        registrar_criterio(numero, criterio, puntaje,id_institucion);
-    } else {
         swal.fire({
             type: 'error',
-            title: 'La pregunta no pudo ser actualizada.',
+            title: 'El Criterio no pudo ser actualizado.',
             text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
     }

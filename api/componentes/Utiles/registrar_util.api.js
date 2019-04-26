@@ -4,10 +4,13 @@ module.exports.registrar_util = (req, res) => {
     let nuevo_util = new modelo_util(
         {
             id_util: req.body.ObjectId,
-            id_institucion: req.body.id_institucion,
+            nivel: req.body.nivel,
             util: req.body.util,
+            descripcion: req.body.descripcion,
+            cantidad: req.body.cantidad,
+            id_institucion: req.body.id_institucion,
             estado: 'Activo'
-            
+
 
 
 

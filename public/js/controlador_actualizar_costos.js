@@ -1,8 +1,10 @@
 'use strict';
 const boton_actualizar = document.querySelector('#btn_actualizar');
-const slt_nivel = document.querySelector('#slt_nivel');
+const select_nivel = document.createElement('select');
+
 const input_matricula = document.querySelector('#nmb_matricula');
 const input_mensualidad = document.querySelector('#nmb_mensualidad');
+let nivel = listar_niveles();
 let get_param = (param) => {
     let url_string = window.location.href;
     let url = new URL(url_string);
@@ -12,9 +14,20 @@ let get_param = (param) => {
 
 let _id = get_param('id_costo');
 
+let niveles = listar_niveles();
 let costo = buscar_costo(_id);
 let mostrar_datos = () => {
-    slt_nivel.value = costo[0]['nivel'];
+    const contenedor_niveles = document.querySelector('#contenedor_niveles');
+    select_nivel.setAttribute("id", "slt_nivel");
+    for (let i = 0; i < niveles.length; i++) {
+        let opcion = new Option(niveles[i]['nombre']);
+
+
+        select_nivel.options.add(opcion);
+
+        contenedor_niveles.appendChild(select_nivel);
+
+    }
     input_matricula.value = costo[0]['matricula'];
     input_mensualidad.value = costo[0]['mensualidad'];
 }
@@ -22,7 +35,7 @@ if (costo) {
     mostrar_datos();
 }
 let obtener_datos = () => {
-    let nivel = slt_nivel.value;
+    let nivel = select_nivel.value;
     let matricula = input_matricula.value;
     let mensualidad = input_mensualidad.value;
     Swal.fire({
@@ -65,20 +78,13 @@ let validar = () => {
 
 boton_actualizar.addEventListener('click', obtener_datos);
 $(boton_actualizar).on('click', function () {
-    if (validar() == false) {
-        let nivel = select_nivel.value;
-        let matricula = input_matricula.value;
-        let mensualidad = input_mensualidad.value;
-        let id_institucion = id_usuario;
-        registrar_costos(nivel, matricula, mensualidad, id_institucion)
-    } else {
+    if (validar() == true) {
         swal.fire({
-            type:'warning',
+            type: 'warning',
             title: 'El costo no pudo ser actualizado.',
             text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
-
-    }
+    } 
 })
 
 

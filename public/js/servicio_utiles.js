@@ -1,14 +1,17 @@
 'use strict';
 
-let registrar_util = (putil, pid_intitucion) => {
+let registrar_util = (pnivel, putil, pdescripcion, pcantidad, pid_intitucion) => {
 
   let request = $.ajax({
     url: "http://localhost:4000/api/registrar_util",
     method: "POST",
     data: {
+      nivel: pnivel,
       util: putil,
+      descripcion: pdescripcion,
+      cantidad: pcantidad,
       id_institucion: pid_intitucion
-      
+
 
     },
     dataType: "json",
@@ -103,12 +106,12 @@ let actualizar_util = (pid, putil, pdescripcion) => {
         type: 'success',
         title: 'Se ha actualizado correctamente el util y su descripción.',
         text: 'Informacion del util actualizada correctamente.',
-        
+
       }
-      );
-        onClose:()=>{
-          window.location.href()
-        }
+    );
+    onClose: () => {
+      window.location.href()
+    }
   }
   );
 

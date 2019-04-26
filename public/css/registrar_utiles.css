@@ -101,3 +101,43 @@ label{
     height: 51px;
     margin-bottom: 100px;
 }
+#slt_nivel{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    outline-color: #1abc9c;
+    text-align: center; 
+}
+#slt_util{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    outline-color: #1abc9c;
+    text-align: center;  
+}
+#nmb_cantidad{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    
+    outline-color: #1abc9c;
+    text-align: center; 
+}

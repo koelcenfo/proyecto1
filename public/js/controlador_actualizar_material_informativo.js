@@ -127,25 +127,12 @@ let validar = () => {
 }
 boton_actualizar.addEventListener('click', obtener_informacion);
 $(boton_actualizar).on('click', function () {
-    if (validar() == false) {
-        let reglamento = textarea_reglamento.value;
-        let proceso_matricula = textarea_proceso_matricula.value;
-        let sistema_evaluacion = textarea_sistema_evaluacion.value;
-        let recomendaciones = textarea_recomendaciones.value;
-        let areas_informativas = textarea_areas_informativas.value;
-        let seccion_ayuda = textarea_seccion_ayuda.value;
-        let talleres_adicionales = textarea_talleres_adicionales.value;
-        let deportes = textarea_deportes.value;
-        let informacion_adicional = textarea_informacion_adicional.value;
-        registrar_material_informativo(reglamento, proceso_matricula, sistema_evaluacion, recomendaciones,
-            areas_informativas, seccion_ayuda, talleres_adicionales, deportes, informacion_adicional, id_institucion);
-    } else {
+    if (validar() == true) {
         swal.fire({
             type: 'warning',
-            title: 'La informacion del material informativo no pudo ser actualizada.',
+            title: 'El material informativo no pudo ser actualizado.',
             text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
-    }
+    } 
 })
-
 

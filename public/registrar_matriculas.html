@@ -17,13 +17,14 @@
             <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
             <!--Visitante-->
             <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
-            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro
+                centros
                 educativos</a>
             <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
             <!--Conectado-->
             <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png"
                     style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
-    
+
             <style type="text/css">
                 .estilo_imagen {
                     border-radius: 100px;
@@ -48,23 +49,9 @@
             <form>
                 <p id="info_p">Se puede registrar la matricula por nivel del centro educativo</p>
                 <hr>
-                <div>
-                    <label for="slt_nivel">Nivel:</label>
-                    <select id="slt_nivel">
-                        <option value="Seleccione el nivel">Seleccione el nivel</option>
-                        <option value="Primero">Primero</option>
-                        <option value="Segundo">Segundo</option>
-                        <option value="Tercero">Tercero</option>
-                        <option value="Cuarto">Cuarto</option>
-                        <option value="Quinto">Quinto</option>
-                        <option value="Sexto">Sexto</option>
-                        <option value="Septimo">Séptimo</option>
-                        <option value="Octavo">Octavo</option>
-                        <option value="Noveno">Noveno</option>
-                        <option value="Décimo">Décimo</option>
-                        <option value="Undécimo">Undécimo</option>
-                        <option value="Duodécimo">Duodécimo</option>
-                    </select>
+                <div id="contenedor_niveles">
+
+
 
                 </div>
                 <div>
@@ -88,6 +75,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_registro_matricula.js"></script>
+    <script src="js/servicio_nivel.js"></script>
     <script src="js/controlador_registrar_matricula.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/servicio_inicio.js"></script>
