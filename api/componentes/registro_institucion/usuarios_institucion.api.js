@@ -82,7 +82,47 @@ module.exports.registrar_institucion = (req, res) =>{
                 from : 'servicio.soporte.prometeo@gmail.com',
                 to : nuevo_institucion.institucion_correo_electronico,
                 subject :'Bienvenido a Prometeo ',
-                text : `su contrasena es ${nuevo_institucion.institucion_contrasena}`
+                html : `<html>
+                <head>
+                  <link href="https://http://localhost:3000/public/inicio_sesion.htmfonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+                  <style>
+                   .wrapper{
+                  background : #2c2c54;
+                  font-family: 'Roboto', sans-serif;
+                }
+                .container{
+                  margin: 0 auto;
+                  background: #fff;
+                  width: 500px;
+                  text-align: center;
+                  padding: 10px;
+                }
+                .boton{
+                  background: #2c2c54;;
+                  color: #fff;
+                  display: block;
+                  padding: 15px;
+                  text-decoration: none;
+                  width: 50%;
+                  margin: 0 auto;
+                }
+                </style>
+                </head>
+                <body class="wrapper">
+                  <div class="container">
+                    <h1>Bienvenido a Prometeo</h1>
+                  
+                  <p>El lugar donde puedes encontrar el centro educativo ideal para el desarrollo del aprendizaje
+                          de tu hijo.</p>
+                  <p>El correo electrónico asociado es: ${nuevo_institucion.institucion_correo_electronico}</p>
+                  <p>Su contraseña es:${nuevo_institucion.institucion_contrasena}</p>
+                  <p>Para ingresar presione el siguiente botón<p> 
+                    <a href="http://localhost:3000/public/inicio_sesion.html" class="boton">Prometeo </a>
+                  </div>
+                  
+                </body>
+                
+              </html>`
             };
             transporter.sendMail(mailOptions, function(error, info){
                 if(error){
