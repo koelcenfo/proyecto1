@@ -46,7 +46,7 @@ let obtener_datos = () => {
     let info_adicional = textarea_informacion_adicional.value;
 
     Swal.fire({
-        title: '¿Está seguro que desea eliminar la informacion del material informativo?',
+        title: '¿Está seguro que desea eliminar la información del material informativo?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

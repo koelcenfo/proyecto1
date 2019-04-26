@@ -218,7 +218,7 @@ let obtener_datos = () => {
     } else {
         swal.fire({
             type: 'warning',
-            title: 'La lista no fue registrada.',
+            title: 'La lista de útiles no fue registrada.',
             text: 'Por favor verifique los campos que están resaltados.'
         });
     }
