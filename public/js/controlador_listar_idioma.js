@@ -29,6 +29,12 @@ let mostrar_idiomas = () => {
 
             idioma_configuracion.appendChild(boton_editar);
 
+            let boton_eliminar=document.createElement('a');
+            boton_eliminar.classList.add('boton_eliminar');
+           boton_eliminar.textContent='Eliminar';
+           idioma_configuracion.appendChild(boton_eliminar);
+           boton_eliminar.href=`eliminar_idioma.html?id_institucion=${idiomas[i]['_id']}`;
+
         }
     };
 

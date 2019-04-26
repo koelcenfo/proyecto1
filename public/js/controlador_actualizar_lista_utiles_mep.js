@@ -80,20 +80,13 @@ let validacion=()=>{
 
 boton_aceptar.addEventListener('click', obtener_datos);
 $(boton_aceptar).on('click',function () {
-  if (validacion()==false) {
-
-    let util= input_nombre_util.value;
-    let cantidad= input_cantidad.value;
-    let descripcion=input_descripcion.value;
-
-    registrar_lista_utiles_mep(util,cantidad,descripcion,id_institucion);
-    
-} else {
-  swal.fire({
-    type:'warning',
-    title: 'Los útiles no pudieron ser actualizados.',
-    text: 'Por favor verifique que los campos que están resaltados estén llenos y no contengan números negativos.'
-});
+  if (validacion()==true) {
+    swal.fire({
+        type:'warning',
+        title: 'Los útiles no pudieron ser actualizados.',
+        text: 'Por favor verifique que los campos que están resaltados estén llenos y no contengan números negativos.'
+    });
+  
 }
 
 })

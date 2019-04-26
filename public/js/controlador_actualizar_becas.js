@@ -85,18 +85,12 @@ boton_registrar.addEventListener('click', obtener_datos);
 $(boton_registrar).on('click',function () {
 
 
-    if (validar()==false) {
-        let nombre = input_nombre.value;
-        let tipo = input_tipo.value;
-        let descripcion = input_descripcion.value;
-
-        registrar_becas(id_institucion, nombre, tipo, descripcion);
-    } else {
+    if (validar()==true) {
         swal.fire({
             type: 'warning',
             title: 'La beca no pudo ser actualizada.',
             text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
-    }
+    } 
 
 })

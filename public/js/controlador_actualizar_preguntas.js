@@ -69,18 +69,13 @@ let validar = () => {
 boton_registrar.addEventListener('click',obtener_datos);
 $(boton_registrar).on('click',function () {
 
-  if (validar() == false) {
+  if (validar() == true) {
 
-    let pregunta = input_pregunta.value;
-    let respuesta = input_respuesta.value;
-
-    registrar_pregunta(pregunta, respuesta, id_institucion);
-} else {
     swal.fire({
         type: 'error',
         title: 'La pregunta no pudo ser actualizada.',
         text: 'Por favor verifique que los campos que están resaltados estén llenos.'
     });
-};
+}
 
 });
