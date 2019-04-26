@@ -2,7 +2,8 @@
 const input_descripcion = document.querySelector('#txt_descripcion');
 const id_usuario = sessionStorage.getItem('id_usuario');
 let niveles = listar_niveles();
-const contenedor_nivel = document.querySelector('#contenedor_nivel');
+const contenedor_nivel = document.querySelector('#contenedor_niveles');
+const contenedor_util = document.querySelector('#contenedor_util');
 const input_cantidad = document.querySelector('#nmb_cantidad');
 let select_nivel = document.createElement('select');
 let label_nivel = document.createElement('label');
@@ -11,26 +12,28 @@ label_nivel.setAttribute("for", select_nivel);
 select_nivel.setAttribute("id", "slt_nivel");
 
 for (let i = 0; i < niveles.length; i++) {
-  let opcion = new Option(niveles[i]['nombre']);
+  if (niveles[i]['id_institucion']==id_usuario) {
+    let opcion = new Option(niveles[i]['nombre']);
 
 
-  select_nivel.options.add(opcion);
-  contenedor_niveles.appendChild(label_nivel);
-  contenedor_niveles.appendChild(select_nivel);
+    select_nivel.options.add(opcion);
+  }
+
+  contenedor_nivel.appendChild(label_nivel);
+  contenedor_nivel.appendChild(select_nivel);
 
 }
 
 let utiles = listar_utiles_mep();
-const contenedor_util = document.querySelector('#contenedor_util');
 let select_util = document.createElement('select');
 let label_util = document.createElement('label');
 label_util.innerHTML = "Util";
 label_util.setAttribute("for", select_util);
 select_util.setAttribute("id", "slt_util");
 
-for (let i = 0; i < utiles.length; i++) {
-      
-  if (utiles[i]['id_institucion']==id_usuario) {
+
+  for (let i = 0; i < utiles.length; i++) {
+
     
     let opcion = new Option(utiles[i]['nombre_util']);
 
@@ -39,7 +42,7 @@ for (let i = 0; i < utiles.length; i++) {
     contenedor_util.appendChild(label_util);
     contenedor_util.appendChild(select_util);
 
-  }
+  
 
 }
 

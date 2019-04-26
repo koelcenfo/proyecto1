@@ -6,17 +6,24 @@ const boton_registrar = document.querySelector('#btn_registrar');
 const id_usuario = sessionStorage.getItem('id_usuario');
 let niveles = listar_niveles();
 const contenedor_niveles = document.querySelector('#contenedor_niveles');
+
 let select_nivel = document.createElement('select');
+
 select_nivel.setAttribute("id", "slt_nivel");
+
 let label_nivel = document.createElement('a');
+
 label_nivel.textContent = 'Nivel';
 label_nivel.setAttribute("for",select_nivel);
 label_nivel.classList.add('label');
 for (let i = 0; i < niveles.length; i++) {
-    let opcion = new Option(niveles[i]['nombre']);
 
 
-    select_nivel.options.add(opcion);
+    if (niveles[i]['id_institucion']==id_usuario) {
+        let opcion = new Option(niveles[i]['nombre']);  
+        select_nivel.options.add(opcion);
+    }
+
     contenedor_niveles.appendChild(label_nivel);
     contenedor_niveles.appendChild(select_nivel);
 
