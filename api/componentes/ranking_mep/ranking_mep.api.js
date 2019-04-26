@@ -29,7 +29,7 @@ module.exports.registrar = (req, res) => {
             res.json(
                 {
                     success: true,
-                    msg: `Se registró correctamente el ranking del MEP`
+                    msg: `Se registró correctamente el ranking del MEP.`
                 }
             );
 
@@ -54,7 +54,7 @@ module.exports.listar_ranking_mep = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        ranking: 'No hay ranking'
+                        ranking: 'No hay ranking.'
                     }
                 )
             }

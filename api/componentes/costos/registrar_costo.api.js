@@ -83,7 +83,7 @@ module.exports.actualizar = function (req, res) {
     modelo_costo.findByIdAndUpdate(req.body.id, { $set: req.body },
         function (error) {
             if (error) {
-                res.json({ success: false, msg: `No se pudo actualizar la informacion de los costos.` });
+                res.json({ success: false, msg: `No se pudo actualizar la información de los costos.` });
             } else {
                 res.json({ success: true, msg: `Se ha actualizado el costo de la matrícula y mensualidad correctamente.` });
 

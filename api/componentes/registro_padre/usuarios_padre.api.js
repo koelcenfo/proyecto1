@@ -32,7 +32,7 @@ module.exports.registrar_padre = (req, res) => {
             res.json(
                 {
                     success: true,
-                    msg: `Se registro satisfactoriamente el usuario`
+                    msg: `Se registró satisfactoriamente el usuario`
                 }
             );
         }

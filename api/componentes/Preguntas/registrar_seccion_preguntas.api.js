@@ -15,12 +15,12 @@ module.exports.registrar = (req, res) => {
         if (error) {
             res.json({
                 success: false,
-                msg: `no se registro la pregunta`
+                msg: `No se registro la pregunta.`
             });
         } else {
             res.json({
                 success: true,
-                msg: `se registro la pregunta de manera correcta`
+                msg: `se registró la pregunta de manera correcta.`
             }
             );
         }
@@ -41,7 +41,7 @@ module.exports.listar_pregunta = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        msg: `no se encontró pregunta alguna`
+                        msg: `No se encontró pregunta alguna.`
 
                     }
                 )
@@ -69,9 +69,9 @@ module.exports.actualizar=function(req,res){
     modelo_pregunta.findByIdAndUpdate(req.body.id,{$set: req.body},
         function(error){
             if (error) {
-                res.json({success: false, msg:'No se pudo actualizar la pregunta'});
+                res.json({success: false, msg:'No se pudo actualizar la pregunta.'});
             } else {
-                res.json({success: true, msg:'La pregunta se actualizó correctamente'});
+                res.json({success: true, msg:'La pregunta se actualizó correctamente.'});
             }
         }
         

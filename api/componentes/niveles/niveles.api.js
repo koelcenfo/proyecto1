@@ -22,7 +22,7 @@ module.exports.registrar=(req,res)=>{
             res.json(
                 {
                     success: true,
-                    msg: `Se registro correctamente el nivel del centro educativo`
+                    msg: `Se registró correctamente el nivel del centro educativo`
                 }
             );
         }

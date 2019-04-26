@@ -14,7 +14,7 @@ module.exports.registrar_idioma = (req, res) => {
         if(error){
                 res.json({
                     success : false,
-                    msg : `No se pudo registrar el idioma, ocurrio el siguiente error ${error}`
+                    msg : `No se pudo registrar el idioma, ocurrió el siguiente error ${error}`
                 }
                 );
         }else{

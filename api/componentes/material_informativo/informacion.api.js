@@ -86,7 +86,7 @@ module.exports.actualizar = function (req, res) {
             if (error) {
                 res.json({ success: false, msg: `No se ha podido actualizar la informacion del material informativo` });
             } else {
-                res.json({ success: true, msg: `Se actualizó la informacion del material informativo con exito` });
+                res.json({ success: true, msg: `Se actualizó la información del material informativo con exito` });
             }
         }
     )
@@ -96,9 +96,9 @@ module.exports.eliminar = function (req, res) {
     modelo_informacion.findByIdAndDelete(req.body.id,
         function (error) {
             if (error) {
-                res.json({ success: false, msg: `No se ha podido eliminar la informacion del material informativo` });
+                res.json({ success: false, msg: `No se ha podido eliminar la información del material informativo.` });
             } else {
-                res.json({ success: true, msg: `Se eliminó la informacion del material informativo con exito` });
+                res.json({ success: true, msg: `Se eliminó la información del material informativo con exito.` });
             }
         }
 
