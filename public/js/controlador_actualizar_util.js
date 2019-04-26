@@ -46,6 +46,28 @@ let mostrar_datos = () => {
 if (util) {
     mostrar_datos();
 }
+let obtener_datos = () => {
+    
+    let nivel = select_nivel.value;
+    let util = select_util.value;
+    let descripcion = input_descripcion.value;
+    let cantidad = input_cantidad.value;
+        Swal.fire({
+            title: '¿Está seguro que desea actualizar el útil?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí'
+        }).then((result) => {
+            if (result.value) {
+    
+                actualizar_util(_id, nivel, util, descripcion, cantidad);
+                
+            }
+        })
+        
+}
 let validar = () => {
     let error = false;
     if (input_descripcion.value == '') {
@@ -63,24 +85,15 @@ let validar = () => {
     }
     return error;
 }
-let obtener_datos = () => {
-    if (validar() == false) {
-        let nivel = select_nivel.value;
-        let util = select_util.value;
-        let descripcion = input_descripcion.value;
-        let cantidad = input_cantidad.value;
-        actualizar_util(_id, nivel, util, descripcion, cantidad);
-
-    } else {
-        swal.fire(
-            {
-                type: 'error',
-                title: '¡Revise los campos nuevamente!',
-                text: 'No se ha podido actualizar la informacion del útil del centro educativo'
-            }
-        )
-    }
-}
 
 
 boton_actualizar.addEventListener('click', obtener_datos);
+$(boton_actualizar).on('click', function (params) {
+    if (validar() == true) {
+        swal.fire({
+            type: 'error',
+            title: 'El útil no pudo ser actualizado.',
+            text: 'Por favor verifique que los campos que están resaltados estén llenos.'
+        });
+    }
+})

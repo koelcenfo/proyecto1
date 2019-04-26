@@ -74,7 +74,7 @@ let validar = () => {
 }
 boton_actualizar.addEventListener('click', obtener_datos);
 $(boton_actualizar).on('click', function () {
-    if (validar() == false) {
+    if (validar() == true) {
         swal.fire({
             type: 'error',
             title: 'El Criterio no pudo ser actualizado.',

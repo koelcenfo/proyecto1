@@ -141,7 +141,7 @@ let eliminar_util = (pid, pnivel, putil, pdescripcion, pcantidad) => {
     swal.fire(
       {
         type: 'success',
-        title: 'Se ha eliminado correctamente el util.',
+        title: 'Se ha eliminado correctamente el útil.',
         text: 'Informacion del util eliminada correctamente.',
         onClose: () => {
           window.location.href = 'listar_utiles.html';

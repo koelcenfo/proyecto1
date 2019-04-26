@@ -60,15 +60,11 @@ let validar = () => {
 }
 boton_actualizar.addEventListener('click', obtener_datos);
 $(boton_actualizar).on('click', function (params) {
-    if (validar() == false) {
-        let etiqueta = input_etiqueta.value;
-        let descripcion = input_descripcion.value;
-        registrar_datos(id_institucion, etiqueta, descripcion);
-    } else {
+    if (validar() == true) {
         swal.fire({
             type: 'error',
             title: 'La etiqueta no pudo ser actualizada.',
-            text: 'Por favor verifique que los campos que están resaltados en rojo estén llenos.'
+            text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
     }
 })

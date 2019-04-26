@@ -95,7 +95,10 @@ let actualizar_criterio = (pid, pnumero_criterio, pcriterio, ppuntaje) => {
             {
                 type: 'success',
                 title: 'Informacion del criterio actualizada correctamente.',
-                text: 'La información del criterio de evaluación fue actualizada correctamente.'
+                text: 'La información del criterio de evaluación fue actualizada correctamente.',
+                onClose: () => {
+                    window.location.href = 'listar_criterios.html'
+            }
             }
         );
     });
@@ -124,7 +127,7 @@ let eliminar_criterio = (pid, pnumero_criterio, pcriterio, ppuntaje) => {
         swal.fire({
             type: 'success',
             title: 'Se ha eliminado la etiqueta con éxito.',
-            text: res.msg,
+            text: 'La etiqueta se ha eliminado de manera exitosa',
             onClose: () => {
                 window.location.href = 'listar_criterios.html';
             }
