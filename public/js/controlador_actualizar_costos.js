@@ -1,7 +1,11 @@
 'use strict';
 const boton_actualizar = document.querySelector('#btn_actualizar');
 const select_nivel = document.createElement('select');
-
+let label_nivel = document.createElement('label');
+label_nivel.textContent = 'Nivel';
+label_nivel.setAttribute("for",select_nivel);
+label_nivel.classList.add('label');
+const id_usuario = sessionStorage.getItem('id_usuario');
 const input_matricula = document.querySelector('#nmb_matricula');
 const input_mensualidad = document.querySelector('#nmb_mensualidad');
 let nivel = listar_niveles();
@@ -20,11 +24,14 @@ let mostrar_datos = () => {
     const contenedor_niveles = document.querySelector('#contenedor_niveles');
     select_nivel.setAttribute("id", "slt_nivel");
     for (let i = 0; i < niveles.length; i++) {
-        let opcion = new Option(niveles[i]['nombre']);
 
+        if (niveles[i]['id_institucion'] == id_usuario) {
+            let opcion = new Option(niveles[i]['nombre']);
+            select_nivel.options.add(opcion);
 
-        select_nivel.options.add(opcion);
+        }
 
+        contenedor_niveles.appendChild(label_nivel);
         contenedor_niveles.appendChild(select_nivel);
 
     }
@@ -84,7 +91,7 @@ $(boton_actualizar).on('click', function () {
             title: 'El costo no pudo ser actualizado.',
             text: 'Por favor verifique que los campos que están resaltados estén llenos.'
         });
-    } 
+    }
 })
 
 

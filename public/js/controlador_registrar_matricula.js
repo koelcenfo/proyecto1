@@ -11,7 +11,7 @@ let select_nivel = document.createElement('select');
 
 select_nivel.setAttribute("id", "slt_nivel");
 
-let label_nivel = document.createElement('a');
+let label_nivel = document.createElement('label');
 
 label_nivel.textContent = 'Nivel';
 label_nivel.setAttribute("for",select_nivel);
