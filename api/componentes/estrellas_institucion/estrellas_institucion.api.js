@@ -7,6 +7,7 @@ module.exports.registrar=(req,res)=>{
             id_estrellas: req.body.ObjectId,
             id_institucion: req.body.id_institucion,
             estrellas: req.body.estrellas,
+            promedio: req.body.promedio,
             estado: 'Activo'
         }
     );

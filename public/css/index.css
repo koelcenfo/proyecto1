@@ -370,10 +370,25 @@ font-size: 27px;
     display: block;
     height: 500px;
 }
-
+.eliminar{
+    
+    padding: 10px 25px;
+    text-align: center;
+    vertical-align: bottom;
+    margin:0 auto;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #ff0000;
+    text-decoration: none;
+    
+}
 /*Css de la tabla*/
 #tbl_instituciones {
-    width: 23%;
+    width: 70%;
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: #f1f2f6;
@@ -384,7 +399,7 @@ font-size: 27px;
     color: black;
   }
   
-#tbl_instituciones td, #tbl_instituciones th {
+/* #tbl_instituciones td, #tbl_instituciones th {
     border-width: 1px;
     border-color: #2f3542;
 
@@ -407,7 +422,7 @@ font-size: 27px;
 #listas_usuarios{
     margin: auto;
     width: 30%;
-}
+} */
 #tbl_instituciones_m{
     width: 100%;
     background-color: #f1f2f6;

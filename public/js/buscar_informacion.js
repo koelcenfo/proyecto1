@@ -25,7 +25,7 @@
 
 var tabla = document.getElementById('tbl_instituciones');
 let mostrar_datos = () => {
-    let etiquetas = listar_etiqueta();
+    // let etiquetas = listar_etiqueta();
     let institucion = listar_institucion();
 
     for(let i = 0; i < institucion.length; i++){
@@ -36,7 +36,7 @@ let mostrar_datos = () => {
 
         let imagen_perfil = document.createElement('img');
 
-        let etiqueta_row = tabla.insertRow();
+        // let etiqueta_row = tabla.insertRow();
 
         imagen_perfil.src = institucion[i]['institucion_imagen'];
         
@@ -116,12 +116,18 @@ let mostrar_datos = () => {
         boton_perfil.href ='http://localhost:3000/public/perfil.html?/'+institucion[i]['institucion_id'];
         
         link_perfil.appendChild(boton_perfil);
-        let celda_eliminar = fila.insertCell();
-        let boton_eliminar = document.createElement('a');
-        boton_eliminar.textContent = 'Eliminar';
-        boton_eliminar.href=`eliminar_colegio.html?id_institucion=${institucion[i]['_id']}`;
-        boton_eliminar.classList.add('eliminar');
-        celda_eliminar.appendChild(boton_eliminar);
+
+        if (tipo_usuario == 'Admin') {
+            let celda_eliminar = fila.insertCell();
+
+            let boton_eliminar = document.createElement('a');
+            
+            boton_eliminar.textContent = 'Eliminar';
+            boton_eliminar.href=`eliminar_colegio.html?id_institucion=${institucion[i]['_id']}`;
+            boton_eliminar.classList.add('eliminar');
+            celda_eliminar.appendChild(boton_eliminar);
+        }
+
     };          
 };
 

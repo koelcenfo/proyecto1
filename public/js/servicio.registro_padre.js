@@ -80,14 +80,14 @@ let actualizar_padres=(ppadre_nombre, ppadre_apellido, ppadre_correo_electronico
     });
 
     request.done(function(res){
-        swal.fire({
-            type: 'success',
-            title: 'Actualización realizada con éxito.',
-            text: res.msg,
-            onClose: ()=>{
-                window.location.href='perfil_padre.html';
-            }
-        });
+            swal.fire({
+                type: 'success',
+                title: 'Actualización realizada con éxito.',
+                text: res.msg,
+                onClose: ()=>{
+                    window.location.href='perfil_padre.html';
+                }
+            });
     });
 
 

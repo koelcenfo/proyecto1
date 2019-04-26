@@ -1,11 +1,12 @@
 'use strict';
 
-let registrar_estrellas = (pid_institucion,pnombre,pimagen,pcomentario,pstars) => {
+let registrar_estrellas = (pid_institucion,pnombre,pimagen,pcomentario,ppromedio,pstars) => {
     let request = $.ajax({
         url: 'http://localhost:4000/api/registrar_estrellas',
         method: "POST",
         data: {
             id_institucion: pid_institucion,
+            promedio :ppromedio,
             estrellas : pstars,
         },
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

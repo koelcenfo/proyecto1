@@ -56,21 +56,19 @@ html{
 }
 
 
-th{
+#tbl_instituciones th{
     width: 200px;
     font-size: 35px;
     display: table-cell;
 }
-td{
+#tbl_instituciones td{
     font-size: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
     vertical-align: middle;
     text-align: center; 
 }
-td:hover{
-    
-}
+
 .imagen_buscar{
     width: 100px;
     height: 100px;

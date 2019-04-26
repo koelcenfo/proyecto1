@@ -22,16 +22,21 @@ let get_param=(param)=>{
     return id;
 };
 
+
+
+
+
 let _id=get_param('id_padres');
 
 let padres=buscar_padres(_id);
 
 let mostrar_datos=()=>{
+
     input_padre_nombre.value=padres[0]['padre_nombre'];
     input_padre_apellido.value=padres[0]['padre_apellido'];
     input_padre_correo_electronico.value=padres[0]['padre_correo_electronico'];
     input_padre_hijos.value=padres[0]['padre_hijos'];
-    input_padre_fecha.value=padres[0]['padre_fecha'];
+    input_padre_fecha.value= new Date(padres[0]['padre_fecha']).toISOString().substring(0, 10);
     input_padre_direccion.value=padres[0]['padre_direccion'];
     input_padre_telefono.value=padres[0]['padre_telefono'];
     input_padre_nacionalidad.value=padres[0]['padre_nacionalidad'];
@@ -57,21 +62,21 @@ let obtener_datos=()=>{
     let contrasena=input_padre_contrasena.value;
     let imagen=imagen_padre.src;
 
-
-    Swal.fire({
-        title: '¿Está seguro que desea actualizar el perfil?',
-        type: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sí'
-      }).then((result) => {
-        if (result.value) {
-            actualizar_padres(nombre,apellido,correo,hijos,fecha,direccion,telefono,nacionalidad,cedula,contrasena,imagen,_id);
-        }
-      }) 
+    actualizar_padres(nombre,apellido,correo,hijos,fecha,direccion,telefono,nacionalidad,cedula,contrasena,imagen,_id);
+    // Swal.fire({
+    //     title: '¿Está seguro que desea actualizar el perfil?',
+    //     type: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Sí'
+    //   }).then((result) => {
+    //     if (result.value) {
+          
+    //     }
+    //   }) 
 };
-
+boton_registrar.addEventListener('click', obtener_datos);
 
 /***Parte para validar que en la actualización no dejen campos vacios en el formulario***/
 
@@ -152,7 +157,7 @@ let obtener_datos=()=>{
 //   return error;
 // };
 
-// boton_registrar.addEventListener('click', obtener_datos);
+
 // $(boton_registrar).on('click',function () {
 
 //   if (validar() == false) {

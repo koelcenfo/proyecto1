@@ -1,7 +1,7 @@
 'use strict';
 
 var tabla = document.getElementById('tbl_instituciones_m');
-let mostrar_datos = () => {
+let mostrar_datos_tabla = () => {
     let etiquetas = listar_etiqueta();
     let institucion = listar_institucion();
     let estrellitas = [];
@@ -85,7 +85,9 @@ let mostrar_datos = () => {
 
         }
 
-        
+    if (i==9) {
+        break;
+         }
     };          
 };
 
@@ -114,7 +116,7 @@ function Buscar() {
     }
 };
 
-mostrar_datos();
+mostrar_datos_tabla();
 
 function sort_age() 
 {
