@@ -21,19 +21,22 @@ let mostrar_idiomas = () => {
             fila.insertCell().innerHTML = idiomas[i]['idiomas'];
             fila.insertCell().innerHTML = idiomas[i]['descripcion'];
 
-            let idioma_configuracion = fila.insertCell();
+            if (idiomas[i]['id_institucion'] == id_institucion) {  
+                let idioma_configuracion = fila.insertCell();
 
-            let boton_editar = document.createElement('a');
-            boton_editar.textContent = 'Editar';
-            boton_editar.href = `actualizar_idioma.html?id_institucion=${idiomas[i]['_id']}`;
+                let boton_editar = document.createElement('a');
+                boton_editar.textContent = 'Editar';
+                boton_editar.href = `actualizar_idioma.html?id_institucion=${idiomas[i]['_id']}`;
+    
+                idioma_configuracion.appendChild(boton_editar);
+    
+                let boton_eliminar=document.createElement('a');
+                boton_eliminar.classList.add('boton_eliminar');
+               boton_eliminar.textContent='Eliminar';
+               idioma_configuracion.appendChild(boton_eliminar);
+               boton_eliminar.href=`eliminar_idioma.html?id_institucion=${idiomas[i]['_id']}`;
+            }
 
-            idioma_configuracion.appendChild(boton_editar);
-
-            let boton_eliminar=document.createElement('a');
-            boton_eliminar.classList.add('boton_eliminar');
-           boton_eliminar.textContent='Eliminar';
-           idioma_configuracion.appendChild(boton_eliminar);
-           boton_eliminar.href=`eliminar_idioma.html?id_institucion=${idiomas[i]['_id']}`;
 
         }
     };

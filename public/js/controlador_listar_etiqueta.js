@@ -17,18 +17,23 @@ let mostrar_datos_etiqueta = () => {
             fila.insertCell().innerHTML = etiquetas[i]['etiqueta'];
             fila.insertCell().innerHTML = etiquetas[i]['descripcion'];
 
-            let celda_configuracion = fila.insertCell();
-            let boton_editar = document.createElement('a');
-            boton_editar.classList.add('boton_editar');
-            boton_editar.textContent = 'Editar';
-            boton_editar.href = `actualizar_etiqueta.html?id_etiqueta=${etiquetas[i]['_id']}`
-            celda_configuracion.appendChild(boton_editar);
-            // 
-            let boton_eliminar = document.createElement('a');
-            boton_eliminar.classList.add('boton_eliminar')
-            boton_eliminar.textContent = 'Eliminar';
-            boton_eliminar.href = `eliminar_etiquetas.html?id_etiqueta=${etiquetas[i]['_id']}`;
-            celda_configuracion.appendChild(boton_eliminar);
+            if (tipo_usuario=='Institucion') {
+
+
+                let celda_configuracion = fila.insertCell();
+                let boton_editar = document.createElement('a');
+                boton_editar.classList.add('boton_editar');
+                boton_editar.textContent = 'Editar';
+                boton_editar.href = `actualizar_etiqueta.html?id_etiqueta=${etiquetas[i]['_id']}`
+                celda_configuracion.appendChild(boton_editar);
+                // 
+                let boton_eliminar = document.createElement('a');
+                boton_eliminar.classList.add('boton_eliminar')
+                boton_eliminar.textContent = 'Eliminar';
+                boton_eliminar.href = `eliminar_etiquetas.html?id_etiqueta=${etiquetas[i]['_id']}`;
+                celda_configuracion.appendChild(boton_eliminar);
+            }
+
         }
 
     };

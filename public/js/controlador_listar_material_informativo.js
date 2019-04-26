@@ -29,17 +29,21 @@ let mostrar_informacion = () => {
             fila.insertCell().innerHTML = informacion[i]['deportes'];
             fila.insertCell().innerHTML = informacion[i]['informacion_adicional'];
 
-            let celda_configuracion = fila.insertCell();
-            let boton_editar = document.createElement('a');
-            boton_editar.textContent = 'Editar';
-            boton_editar.href = `actualizar_material_informativo.html?id_material=${informacion[i]['_id']}`
-            boton_editar.classList.add('boton_editar');
-            celda_configuracion.appendChild(boton_editar);
-            let boton_eliminar = document.createElement('a');
-            boton_eliminar.textContent = 'Eliminar';
-            boton_eliminar.classList.add('boton_eliminar');
-            boton_eliminar.href = `eliminar_material_informativo.html?id_material=${informacion[i]['_id']}`
-            celda_configuracion.appendChild(boton_eliminar);
+            if (tipo_usuario=='Institucion') {
+                let celda_configuracion = fila.insertCell();
+                let boton_editar = document.createElement('a');
+                boton_editar.textContent = 'Editar';
+                boton_editar.href = `actualizar_material_informativo.html?id_material=${informacion[i]['_id']}`
+                boton_editar.classList.add('boton_editar');
+                celda_configuracion.appendChild(boton_editar);
+                let boton_eliminar = document.createElement('a');
+                boton_eliminar.textContent = 'Eliminar';
+                boton_eliminar.classList.add('boton_eliminar');
+                boton_eliminar.href = `eliminar_material_informativo.html?id_material=${informacion[i]['_id']}`
+                celda_configuracion.appendChild(boton_eliminar);
+            }
+
+
         }
     };
 };

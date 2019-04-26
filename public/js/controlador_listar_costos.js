@@ -22,20 +22,24 @@ let mostrar_datos_costos = () => {
             fila.insertCell().innerHTML = costos[i]['matricula'];
             fila.insertCell().innerHTML = costos[i]['mensualidad'];
 
-            let celda_configuracion = fila.insertCell();
+            if (tipo_usuario=='Institucion') {
+                let celda_configuracion = fila.insertCell();
 
-            //Creacion del boton de editar
-            let boton_editar = document.createElement('a');
-            boton_editar.classList.add('boton_editar');
-            boton_editar.textContent = 'Editar';
-            boton_editar.href = `actualizar_costo.html?id_costo=${costos[i]['_id']}`
-            boton_editar.classList.add('boton_editar');
-            celda_configuracion.appendChild(boton_editar);
-            let boton_eliminar = document.createElement('a');
-            boton_eliminar.textContent = 'Eliminar';
-            boton_eliminar.classList.add('boton_eliminar');
-            boton_eliminar.href = `eliminar_costo.html?id_costo=${costos[i]['_id']}`
-            celda_configuracion.appendChild(boton_eliminar);
+                //Creacion del boton de editar
+                let boton_editar = document.createElement('a');
+                boton_editar.classList.add('boton_editar');
+                boton_editar.textContent = 'Editar';
+                boton_editar.href = `actualizar_costo.html?id_costo=${costos[i]['_id']}`
+                boton_editar.classList.add('boton_editar');
+                celda_configuracion.appendChild(boton_editar);
+                let boton_eliminar = document.createElement('a');
+                boton_eliminar.textContent = 'Eliminar';
+                boton_eliminar.classList.add('boton_eliminar');
+                boton_eliminar.href = `eliminar_costo.html?id_costo=${costos[i]['_id']}`
+                celda_configuracion.appendChild(boton_eliminar);
+
+            }
+
 
 
 

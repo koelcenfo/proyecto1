@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 let schema_ranking = new mongoose.Schema(
     {
+        id_ranking: { type: mongoose.Schema.ObjectId, auto: true },
         puesto1: { type: String, required: true, unique: true },
         puesto2: { type: String, required: true, unique: true },
         puesto3: { type: String, required: true, unique: true },

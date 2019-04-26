@@ -44,8 +44,8 @@ let mostrar_actividades = () => {
                 imagen.src = 'img/actividades/image-placeholder.png'
             }
            
-            let celda_configuración=fila.insertCell();
-            //Creación del boton editar
+            if (tipo_usuario=='Institucion') {
+                           //Creación del boton editar
             let boton_editar=document.createElement('a');
             //Para el estilo
             boton_editar.classList.add('boton_editar');
@@ -59,7 +59,9 @@ let mostrar_actividades = () => {
             boton_eliminar.classList.add('boton_eliminar');
            boton_eliminar.textContent='Eliminar';
            celda_configuración.appendChild(boton_eliminar);
-           boton_eliminar.href=`eliminar_actividades.html?id_institucion=${actividades[i]['_id']}`;
+           boton_eliminar.href=`eliminar_actividades.html?id_institucion=${actividades[i]['_id']}`; 
+            }
+
         }
     };
 
