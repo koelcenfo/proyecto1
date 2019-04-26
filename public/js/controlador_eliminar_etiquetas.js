@@ -25,7 +25,7 @@ let obtener_datos = () => {
     let descripcion = input_descripcion.value;
 
     Swal.fire({
-        title: '¿Está seguro que desea eliminar la pregunta?',
+        title: '¿Está seguro que desea eliminar la etiqueta?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

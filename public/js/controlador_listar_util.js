@@ -32,11 +32,17 @@ let mostrar_datos = () => {
 
 
             let celda_configuracion = fila.insertCell();
-            let boton_editar = document.querySelector('a');
+            let boton_editar = document.createElement('a');
             boton_editar.textContent = 'Editar';
+            boton_editar.classList.add('boton_editar');
             boton_editar.href = `actualizar_util.html?id_util=${utiles[i]['_id']}`
             celda_configuracion.appendChild(boton_editar);
 
+            let boton_eliminar = document.createElement('a');
+            boton_eliminar.textContent = 'Eliminar';
+            boton_eliminar.classList.add('boton_eliminar')
+            boton_eliminar.href = `eliminar_util.html?id_util=${utiles[i]['_id']}`
+            celda_configuracion.appendChild(boton_eliminar);
 
         }
 

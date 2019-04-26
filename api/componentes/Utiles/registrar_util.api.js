@@ -102,5 +102,16 @@ module.exports.actualizar = function (req, res) {
         }
     );
 }
+module.exports.eliminar = function (req, res) {
+    modelo_util.findByIdAndDelete(req.body.id,
+        function (error) {
+            if (error) {
+                res.json({ success: false, msg: 'No se pudo eliminar el útil.' });
+            } else {
+                res.json({ success: true, msg: 'El util se eliminó correctamente.' });
+            }
+        }
+    )
+};
 
 

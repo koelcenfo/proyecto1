@@ -31,5 +31,11 @@ router.route('/actualizar_util')
             api_utiles.actualizar(req, res);
         }
     );
+router.route('/eliminar_util')
+.post(
+    function (req,res) {
+        api_utiles.eliminar(req,res);
+    }
+)
 
 module.exports = router;

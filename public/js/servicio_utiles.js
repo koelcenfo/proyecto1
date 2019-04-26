@@ -87,14 +87,16 @@ let buscar_util = (id_util) => {
 
   return utiles;
 }
-let actualizar_util = (pid, putil, pdescripcion) => {
+let actualizar_util = (pid, pnivel, putil, pdescripcion, pcantidad) => {
   let request = $.ajax({
     url: "http://localhost:4000/api/actualizar_util",
     method: "POST",
     data: {
       id: pid,
+      nivel: pnivel,
       util: putil,
-      descripcion: pdescripcion
+      descripcion: pdescripcion,
+      cantidad: pcantidad
     },
     dataType: "json",
     contentType: 'application/x-www-form-urlencoded; charset=utf-8'
@@ -107,16 +109,52 @@ let actualizar_util = (pid, putil, pdescripcion) => {
         title: 'Se ha actualizado correctamente el util y su descripción.',
         text: 'Informacion del util actualizada correctamente.',
 
+        onClose: () => {
+          window.location.href = 'listar_utiles.html'
+        }
       }
     );
-    onClose: () => {
-      window.location.href()
-    }
   }
   );
 
   request.fail(function (jqXHR, textStatus) {
 
   });
+
+}
+let eliminar_util = (pid, pnivel, putil, pdescripcion, pcantidad) => {
+  let request = $.ajax({
+    url: "http://localhost:4000/api/eliminar_util",
+    method: "POST",
+    data: {
+      id: pid,
+      nivel: pnivel,
+      util: putil,
+      descripcion: pdescripcion,
+      cantidad: pcantidad
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8'
+  });
+
+  request.done(function (res) {
+    swal.fire(
+      {
+        type: 'success',
+        title: 'Se ha eliminado correctamente el util.',
+        text: 'Informacion del util eliminada correctamente.',
+        onClose: () => {
+          window.location.href = 'listar_utiles.html';
+        }
+
+      }
+    );
+  }
+  );
+
+  request.fail(function (jqXHR, textStatus) {
+
+  });
+
 
 }

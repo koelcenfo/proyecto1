@@ -1,21 +1,19 @@
 'use strict';
-const boton_actualizar = document.querySelector('#btn_enviar');
+const boton_eliminar = document.querySelector('#btn_enviar');
 const select_nivel = document.createElement('select');
 const select_util = document.createElement('select');
 const input_descripcion = document.querySelector('#txt_descripcion');
 const input_cantidad = document.querySelector('#nmb_cantidad');
-
 let utiles = listar_util();
 let get_param = (param) => {
     let url_string = window.location.href;
     let url = new URL(url_string);
-    let id = url.searchParams.get(param); /* toma el parámetro del url y retorna el valor */
+    let id = url.searchParams.get(param);
     return id;
-};
-
+}
 let _id = get_param('id_util');
-
 let util = buscar_util(_id);
+
 let mostrar_datos = () => {
     const contenedor_niveles = document.querySelector('#contenedor_niveles');
     select_nivel.setAttribute("id", "slt_nivel");
@@ -46,41 +44,24 @@ let mostrar_datos = () => {
 if (util) {
     mostrar_datos();
 }
-let validar = () => {
-    let error = false;
-    if (input_descripcion.value == '') {
-        input_descripcion.classList.add('error_input');
-        error = true;
-
-    } else {
-        input_descripcion.classList.remove('error_input');
-    }
-    if (input_cantidad.value == '') {
-        error = true;
-        input_cantidad.classList.add('error_input');
-    } else {
-        input_cantidad.classList.remove('error_input');
-    }
-    return error;
-}
 let obtener_datos = () => {
-    if (validar() == false) {
-        let nivel = select_nivel.value;
-        let util = select_util.value;
-        let descripcion = input_descripcion.value;
-        let cantidad = input_cantidad.value;
-        actualizar_util(_id, nivel, util, descripcion, cantidad);
+    let nivel = select_nivel.value;
+    let util = select_util.value;
+    let descripcion = input_descripcion.value;
+    let cantidad = input_cantidad.value;
 
-    } else {
-        swal.fire(
-            {
-                type: 'error',
-                title: '¡Revise los campos nuevamente!',
-                text: 'No se ha podido actualizar la informacion del útil del centro educativo'
-            }
-        )
-    }
+    Swal.fire({
+        title: '¿Está seguro que desea eliminar la etiqueta?',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí'
+    }).then((result) => {
+        if (result.value) {
+            eliminar_util(_id, nivel, util, descripcion, cantidad);
+        }
+    })
 }
+boton_eliminar.addEventListener('click', obtener_datos);
 
-
-boton_actualizar.addEventListener('click', obtener_datos);
