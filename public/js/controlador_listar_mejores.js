@@ -116,6 +116,8 @@ function Buscar() {
     }
 };
 
+
+
 mostrar_datos_tabla();
 
 function sort_age() 

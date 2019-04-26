@@ -35,31 +35,35 @@ let listas_de_institucion = document.querySelector('#listas_de_institucion');
 let herramientas_admin = document.querySelector('#herramientas_admin');
 let ranking_mep = document.querySelector('.ranking_mep');
 let info = document.querySelector('#info');
+let ranking_usuarios = document.querySelector('.mejores_instituciones');
     
     switch (usuario) {
         case 'Institucion':
         herramientas_admin.style.display = 'none'; 
         listas_de_institucion.style.display = 'block';
         ranking_mep.style.display = 'none'; 
-        info.style.display = 'none'; 
+        info.style.display = 'none';
+        ranking_usuarios.display = 'none'
             break;
     
         case 'Padre':
         herramientas_admin.style.display = 'none'; 
         listas_de_institucion.style.display = 'none'; 
         info.style.display = 'block';
+        ranking_usuarios.display = 'block'
             break;
         case 'Admin':
         info.style.display = 'none'; 
         herramientas_admin.style.display = 'block'; 
         listas_de_institucion.style.display = 'none'; 
-
+        ranking_usuarios.display = 'block'
         break;
 
         default:
         herramientas_admin.style.display = 'none'; 
         listas_de_institucion.style.display = 'none'; 
-        info.style.display = 'block'; 
+        // info.style.display = 'block'; 
+        ranking_usuarios.display = 'none'
     }
 
 

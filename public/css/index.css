@@ -12,6 +12,10 @@
     margin: auto;
     width: 65%;
 }
+.mejores_instituciones{
+    margin: auto;
+    width: 65%;
+}
 #contenedor_imagen{
     display: inline-block;
     width: 100%;
@@ -434,7 +438,6 @@ font-size: 27px;
     margin-top: 50px;
 }
 #tbl_instituciones_m td,th{
-    display: table-cell;
     width: 50%;
     color: black;
     padding: 15px;
@@ -457,8 +460,4 @@ font-size: 27px;
 #tbl_instituciones_m th{
     font-size: 20px;
     color: #f1f2f6;
-}
-.mejores_instituciones{
-    margin: auto;
-    width: 65%;
 }

@@ -31,7 +31,7 @@ let mostrar_datos=()=>{
     input_padre_apellido.value=padres[0]['padre_apellido'];
     input_padre_correo_electronico.value=padres[0]['padre_correo_electronico'];
     input_padre_hijos.value=padres[0]['padre_hijos'];
-    input_padre_fecha.value=padres[0]['padre_fecha'];
+    input_padre_fecha.value= new Date(padres[0]['padre_fecha']).toISOString().substring(0, 10);
     input_padre_direccion.value=padres[0]['padre_direccion'];
     input_padre_telefono.value=padres[0]['padre_telefono'];
     input_padre_nacionalidad.value=padres[0]['padre_nacionalidad'];
@@ -43,12 +43,15 @@ let mostrar_datos=()=>{
 if (padres) {
     mostrar_datos();
 }
-
+function cerrar_sesion() {
+  sessionStorage.clear();
+  window.location.href = 'index.html';
+}
 
 let obtener_datos=()=>{
     let nombre=input_padre_nombre.value;
     let apellido=input_padre_apellido.value;
-    let correo=input_padre_correo_electronico;
+    let correo=input_padre_correo_electronico.value;
     let hijos=input_padre_hijos.value;
     let fecha=input_padre_fecha.value;
     let direccion=input_padre_direccion.value;
@@ -57,7 +60,7 @@ let obtener_datos=()=>{
     let cedula=input_padre_cedula.value;
     let contrasena=input_padre_contrasena.value;
     let imagen=imagen_padre.src;
-
+    let identificacion = get_param('id_padres');
 
     Swal.fire({
         title: '¿Está seguro que desea eliminar el perfil?',
@@ -68,7 +71,8 @@ let obtener_datos=()=>{
         confirmButtonText: 'Sí'
       }).then((result) => {
         if (result.value) {
-            eliminar_padres(nombre,apellido,correo,hijos,fecha,direccion,telefono,nacionalidad,cedula,contrasena,imagen,_id);
+            eliminar_padres(nombre,apellido,correo,hijos,fecha,direccion,telefono,nacionalidad,cedula,contrasena,imagen,identificacion);
+            // cerrar_sesion();
         }
       }) 
 };

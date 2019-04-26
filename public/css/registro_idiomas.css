@@ -13,11 +13,12 @@ html{
     padding-right: 150px;
 }
 #form_contenedor{
+    padding-top: 50px;
     display: block;
     margin: auto;
     margin-bottom: 100px;
     width: 65%;
-    height: 750px;
+    height: 100%;
     background-color: #fff; 
     border-radius: 5px; 
 }
@@ -50,7 +51,7 @@ html{
     height: 250px;
     background-color: #dfe4ea;
     border-radius: 5px;
-    padding-left: 15px;
+    padding: 15px;
     margin-bottom: 40px;
     outline-color: #1abc9c;
     resize: none;
@@ -82,7 +83,7 @@ html{
     width: 70%;
     height: 51px;
     margin-bottom: 40px;
-    margin-top: 300px;
+    margin-top: 40px;
 }
 label{
     display: block;

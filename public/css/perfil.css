@@ -8,7 +8,7 @@
     padding-top: 5%;
     margin-bottom: 5%;
     width: 95%;
-    min-height: 1200px;
+    min-height: 1247px;
     background-color: #fff;
     
 }
@@ -78,9 +78,9 @@
         font-size: 20px;
         padding-top: 10px;
         padding-left: 11%;
-        color: #3498db;
+        color: rgb(231, 231, 231);;
         border-top: solid 1px;
-    }
+    }   
     #provincia_institucion, #canton_institucion, #distrito_institucion, #telefono_institucion, #web_institucion, #fax_institucion{
         font-size: 25px;
         padding-top: 10px;
@@ -90,14 +90,17 @@
     #top_bottom_info{
         display: block;
         float: left;
-        width: 100%;
+        width: 97%;
         height: 50%;
+        border: solid 1px rgb(231, 231, 231);
+        border-radius: 5px;
 
     }
      #direccion_institucion, #fundacion{
         font-size: 20px;
-        padding-top: 10px;
-        padding-left: 11%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+        padding-left: 5%;
        
     }
 
@@ -110,8 +113,9 @@
 }
 #nombre_inscrito, #generos, #idiomas, #tipo, #cedula_juridica, #ideologia, #referencia{
     font-size: 20px;
-    padding-top: 10px;
-    padding-left: 11%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 5%;
  
 }
 
@@ -122,7 +126,7 @@
     margin-top: 20px;
     width: 100%;
     height: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 275px;
 }
 #form_contenedor label{
     font-size: 20px;
@@ -139,7 +143,7 @@ ul.tabs{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-size: 35px;
+    font-size: 25px;
 }
 ul.tabs li{
     background: none;
@@ -171,7 +175,10 @@ ul.tabs li.current{
     border: solid 1px rgb(231, 231, 231);
     border-radius: 5px;
 }
-
+#top_bottom_info li{
+    list-style-type: none;
+    color: rgb(51, 51, 51)
+}
 .tab-content.current{
     display: inherit;
 }

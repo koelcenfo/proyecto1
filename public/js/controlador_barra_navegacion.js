@@ -35,7 +35,7 @@ if(conectado){
             enlaces[1].classList.add('ocultar');/**Registro Institución*/
             enlaces[2].classList.add('ocultar');/**Iniciar Sesión */
             enlaces[3].classList.add('ocultar');/**Perfil */
-            enlaces[4].classList.add('mostrar');/**Perfil Padre */
+            enlaces[4].classList.add('ocultar');/**Perfil Padre */
             enlaces[5].classList.add('mostrar');/**Buscar Centro Educativo */
             enlaces[6].classList.add('mostrar');/**Cerrar Sesion */
     }

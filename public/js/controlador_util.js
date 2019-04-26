@@ -1,5 +1,6 @@
 'use strict';
 const input_descripcion = document.querySelector('#txt_descripcion');
+const id_usuario = sessionStorage.getItem('id_usuario');
 let niveles = listar_niveles();
 const contenedor_nivel = document.querySelector('#contenedor_nivel');
 const input_cantidad = document.querySelector('#nmb_cantidad');
@@ -28,17 +29,22 @@ label_util.setAttribute("for", select_util);
 select_util.setAttribute("id", "slt_util");
 
 for (let i = 0; i < utiles.length; i++) {
-  let opcion = new Option(utiles[i]['nombre_util']);
+      
+  if (utiles[i]['id_institucion']==id_usuario) {
+    
+    let opcion = new Option(utiles[i]['nombre_util']);
 
 
-  select_util.options.add(opcion);
-  contenedor_util.appendChild(label_util);
-  contenedor_util.appendChild(select_util);
+    select_util.options.add(opcion);
+    contenedor_util.appendChild(label_util);
+    contenedor_util.appendChild(select_util);
+
+  }
 
 }
 
 
-const id_usuario = sessionStorage.getItem('id_usuario');
+
 const boton_atras = document.querySelector('#btn_atras');
 const boton_enviar = document.querySelector('#btn_enviar');
 

@@ -25,6 +25,7 @@
         return id;
     
     };
+    let top_top_info = document.querySelector('#top_top_info');
 
     let estrellas_calificadas = mostrar_estrellas();
 
@@ -52,7 +53,7 @@
     let Numero = document.querySelector('#telefono_institucion');
     let Fax = document.querySelector('#fax_institucion');
     let Web = document.querySelector('#web_institucion');
-    let modificar_perfil = document.querySelector('.modificar_perfil');
+    let modificar_perfil;
     let contenedor_estrellas = document.querySelector('#estrellas_calificas');
     let estrellas_calificadas_1;
     let estrellas_calificadas_2;
@@ -81,6 +82,8 @@
                 Numero.innerHTML = 'Número: ' + info[i]['institucion_telefono'];
                 Fax.innerHTML = 'Fax: ' + info[i]['institucion_fax'];
                 Web.innerHTML = 'Página web: ' + info[i]['institucion_sitio_web'];
+                modificar_perfil = document.createElement('a');
+                modificar_perfil.classList.add('#modificar_perfil');
                 modificar_perfil.href=`actualizar_centro_educativo.html?id_institucion=`+info[i]['_id'];
                 switch (estrellas_calificadas) {
 
@@ -643,7 +646,7 @@
             }
 
         };
-
+        top_top_info.appendChild(modificar_perfil);
         contenedor_estrellas.appendChild(estrellas_calificadas_1);
         contenedor_estrellas.appendChild(estrellas_calificadas_2);
         contenedor_estrellas.appendChild(estrellas_calificadas_3);

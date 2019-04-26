@@ -35,6 +35,7 @@ li{
     height: 300px;
     border-radius: 300px;
     border: solid 5px #3498db;
+    object-fit: cover;
 }
 #left_info{
     float: left;

@@ -99,9 +99,12 @@ let actualizar_idioma = (pidiomas, pdescripcion,pid ) => {
         {
           type: 'success',
           title: 'Idioma actualizado correctamente',
-          text: 'Se envió la información del idioma correctamente.'
+          text: 'Se envió la información del idioma correctamente.',
+          showConfirmButton: false,
+          timer: 4000
         }
       );
+      setTimeout("window.location.href = 'listar_idioma.html';",4500);
     });
 
     request.fail(function (jqXHR, textStatus) {
