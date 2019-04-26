@@ -19,7 +19,10 @@ let registrar_datos = (petiqueta, pdescripcion, pid_institucion) => {
             {
                 type: 'success',
                 title: 'informacion de etiqueta enviada correctamente',
-                text: 'las etiquetas fueron registradas con exito'
+                text: 'las etiquetas fueron registradas con exito',
+                onClose: () => {
+                    window.location.href = 'listar_etiquetas.html';
+                }
             }
         )
     });

@@ -1,7 +1,14 @@
 'use strict';
 const boton_actualizar = document.querySelector('#btn_enviar');
 const select_nivel = document.createElement('select');
+let label_nivel = document.createElement('label');
+label_nivel.textContent = 'Nivel';
+label_nivel.setAttribute("id", select_nivel);
+
 const select_util = document.createElement('select');
+let label_util = document.createElement('label');
+label_util.textContent = 'Útil';
+label_util.setAttribute("id", select_util);
 const input_descripcion = document.querySelector('#txt_descripcion');
 const input_cantidad = document.querySelector('#nmb_cantidad');
 
@@ -25,7 +32,7 @@ let mostrar_datos = () => {
 
 
         select_nivel.options.add(opcion);
-
+        contenedor_niveles.appendChild(label_nivel);
         contenedor_niveles.appendChild(select_nivel);
 
     }
@@ -34,7 +41,7 @@ let mostrar_datos = () => {
 
 
         select_util.options.add(opcion);
-
+        contenedor_niveles.appendChild(label_util);
         contenedor_niveles.appendChild(select_util);
 
     }
@@ -47,26 +54,26 @@ if (util) {
     mostrar_datos();
 }
 let obtener_datos = () => {
-    
+
     let nivel = select_nivel.value;
     let util = select_util.value;
     let descripcion = input_descripcion.value;
     let cantidad = input_cantidad.value;
-        Swal.fire({
-            title: '¿Está seguro que desea actualizar el útil?',
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí'
-        }).then((result) => {
-            if (result.value) {
-    
-                actualizar_util(_id, nivel, util, descripcion, cantidad);
-                
-            }
-        })
-        
+    Swal.fire({
+        title: '¿Está seguro que desea actualizar el útil?',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí'
+    }).then((result) => {
+        if (result.value) {
+
+            actualizar_util(_id, nivel, util, descripcion, cantidad);
+
+        }
+    })
+
 }
 let validar = () => {
     let error = false;

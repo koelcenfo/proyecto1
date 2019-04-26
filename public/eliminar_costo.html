@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/eliminar_costo.css">
     <link rel="stylesheet" href="css/barra_navegacion.css">
-    <title>Eliminar costos de la matricula</title>
+    <title>Eliminar costos de la matrícula</title>
 
 
 </head>
@@ -45,33 +45,18 @@
         </nav>
     </header>
     <main>
-        <h1>Costos de matricula y mensualidad por nivel</h1>
+        <h1>Costos de matrícula y mensualidad por nivel</h1>
 
         <div id="form_contenedor">
             <form>
-                <p id="info_p">Se puede registrar la matricula por nivel del centro educativo</p>
+                    <p id="info_p">Se puede eliminar la matrícula por nivel del centro educativo.</p>
                 <hr>
-                <div>
-                    <label for="slt_nivel">Nivel:</label>
-                    <select id="slt_nivel" disabled="disabled">
-                        <option value="Seleccione el nivel">Seleccione el nivel</option>
-                        <option value="Primero">Primero</option>
-                        <option value="Segundo">Segundo</option>
-                        <option value="Tercero">Tercero</option>
-                        <option value="Cuarto">Cuarto</option>
-                        <option value="Quinto">Quinto</option>
-                        <option value="Sexto">Sexto</option>
-                        <option value="Septimo">Séptimo</option>
-                        <option value="Octavo">Octavo</option>
-                        <option value="Noveno">Noveno</option>
-                        <option value="Décimo">Décimo</option>
-                        <option value="Undécimo">Undécimo</option>
-                        <option value="Duodécimo">Duodécimo</option>
-                    </select>
+                <div id="contenedor_niveles">
+                    
 
                 </div>
                 <div>
-                    <label for="nmb_matricula">Costo de la matricula:</label>
+                    <label for="nmb_matricula">Costo de la matrícula:</label>
                     <input type="number" id="nmb_matricula" disabled="disabled">
                 </div>
                 <div>
@@ -91,6 +76,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_registro_matricula.js"></script>
+    <script src="js/servicio_nivel.js"></script>
     <script src="js/controlador_eliminar_costo.js"></script>
     <script src="js/controlador_barra_navegacion.js"></script>
     <script src="js/servicio_inicio.js"></script>

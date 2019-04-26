@@ -24,7 +24,10 @@ let registrar_util = (pnivel, putil, pdescripcion, pcantidad, pid_intitucion) =>
       {
         type: 'success',
         title: 'Información de los útiles enviada correctamente.',
-        text: 'Se envió la informacion de los útiles correctamente.'
+        text: 'Se envió la informacion de los útiles correctamente.',
+        onClose: () => {
+          window.location.href = 'listar_utiles.html';
+        }
       }
     );
   });

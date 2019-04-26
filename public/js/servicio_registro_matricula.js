@@ -18,7 +18,10 @@ let registrar_costos = (pnivel, pmatricula, pmensualidad, pid_institucion) => {
             {
                 type: 'success',
                 title: 'Se ha registrado correctamente los costos de la matricula y mensualidad.',
-                text: 'Informacion de los costos de la matricula y mensualidad registrados correctamente.'
+                text: 'Informacion de los costos de la matricula y mensualidad registrados correctamente.',
+                onClose: () => {
+                    window.location.href = 'listar_costos.html'
+                }
             }
         );
     }
@@ -96,16 +99,16 @@ let actualizar_costo = (pid, pnivel, pmatricula, pmensualidad, pid_institucion) 
                 type: 'success',
                 title: 'Se ha actualizado correctamente los costos de la matricula y mensualidad.',
                 text: 'Informacion de los costos de la matricula y mensualidad actualizados correctamente.',
-                onClose:()=>{
-                   window.location.href='listar_costos.html';
+                onClose: () => {
+                    window.location.href = 'listar_costos.html';
                 }
             }
         );
     }
     );
 
-    request.fail(function (jqXHR, textStatus) { 
-        
+    request.fail(function (jqXHR, textStatus) {
+
     });
 }
 let eliminar_costo = (pid, pnivel, pmatricula, pmensualidad) => {
